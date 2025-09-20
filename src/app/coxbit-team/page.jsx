@@ -6,145 +6,33 @@ export default function CoxbitTeam() {
     {
       id: 1,
       name: "Mr. R. Ram Kumar",
-      position: "Chief Executive Officer",
       qualification: "MBA",
-      department: "Executive Leadership",
-      bio: "Ram Kumar leads the overall strategic direction and operations of the Centre of Excellence in Biotechnology. With his MBA background and extensive leadership experience, he drives organizational growth, oversees strategic partnerships, and ensures the achievement of COXBIT's mission in advancing biotechnology research and innovation.",
-      expertise: [
-        "Strategic Leadership",
-        "Business Development",
-        "Partnership Management",
-        "Organizational Growth",
-      ],
-      responsibilities: [
-        "Strategic planning and execution",
-        "Partnership development and management",
-        "Operational oversight and governance",
-        "Stakeholder relationship management",
-      ],
-      dailyActivities: [
-        "Strategic meetings and planning sessions",
-        "Partnership discussions and negotiations",
-        "Team leadership and coordination",
-        "Stakeholder communications",
-      ],
-      image: "/Team Members/ram kumar.jpg",
-      email: "ceo@coeb.tnau.ac.in",
-      phone: "8870281435",
+      image: "/Team Members/ram kumar.jpg"
     },
     {
       id: 2,
       name: "M. Selva Radhika Malar",
-      position: "Facility Manager",
       qualification: "MBA",
-      department: "Facility Management",
-      bio: "Radhika oversees the day-to-day operations and maintenance of all COXBIT facilities. She ensures optimal facility utilization, coordinates maintenance schedules, and manages the infrastructure that supports our research activities.",
-      expertise: [
-        "Facility Operations",
-        "Infrastructure Management",
-        "Maintenance Coordination",
-        "Resource Planning",
-      ],
-      responsibilities: [
-        "Facility maintenance and operations",
-        "Equipment scheduling and allocation",
-        "Safety protocol implementation",
-        "Vendor and contractor coordination",
-      ],
-      dailyActivities: [
-        "Facility inspection and maintenance oversight",
-        "Equipment status monitoring",
-        "Coordination with maintenance teams",
-        "Facility usage scheduling",
-      ],
-      image: "/Team Members/M. Selva Radhika Malar, MBA-COXBIT Manager.jpg",
-      email: "facility@coeb.tnau.ac.in",
+      image: "/Team Members/M. Selva Radhika Malar, MBA-COEB Manager.jpg"
     },
     {
       id: 3,
       name: "Dr. Kaviyapriya M",
-      position: "Research Associate",
       qualification: "Ph.D.",
-      department: "Research & Development",
-      bio: "Dr. Kaviyapriya leads cutting-edge research initiatives in biotechnology, contributing to innovative projects and scientific publications. With her doctoral expertise, she drives research excellence, mentors junior researchers, and collaborates with national and international research institutions.",
-      expertise: [
-        "Biotechnology Research",
-        "Scientific Analysis",
-        "Research Methodology",
-        "Publication & Documentation",
-      ],
-      responsibilities: [
-        "Leading research projects and initiatives",
-        "Scientific data analysis and interpretation",
-        "Research collaboration and networking",
-        "Mentoring and training researchers",
-      ],
-      dailyActivities: [
-        "Laboratory research and experimentation",
-        "Data analysis and documentation",
-        "Research team coordination",
-        "Scientific literature review",
-      ],
-      image: "/Team Members/kaviyapriya.jpg",
-      email: "research@coeb.tnau.ac.in",
+      image: "/Team Members/kaviyapriya.jpg"
     },
     {
       id: 4,
       name: "Th. K. Muthu Vignesh",
-      position: "Accounts & Financial Operations Manager",
       qualification: "M.Com, IB",
-      department: "Finance & Administration",
-      bio: "Vignesh handles all financial transactions, budget management, and accounting operations for COXBIT. He ensures proper financial documentation, manages vendor payments, and maintains compliance with financial regulations.",
-      expertise: [
-        "Financial Operations",
-        "Budget Management",
-        "Accounting Systems",
-        "Vendor Management",
-      ],
-      responsibilities: [
-        "Daily financial transactions processing",
-        "Budget tracking and reporting",
-        "Vendor payment management",
-        "Financial compliance monitoring",
-      ],
-      dailyActivities: [
-        "Processing purchase orders and payments",
-        "Financial record maintenance",
-        "Budget variance analysis",
-        "Coordination with procurement teams",
-      ],
-      image:
-        "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg",
-      email: "accounts@coeb.tnau.ac.in",
+      image: "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg"
     },
     {
       id: 5,
       name: "Ms. D. Kiruthika",
-      position: "Laboratory Care Coordinator",
       qualification: "M.Com",
-      department: "Laboratory Operations",
-      bio: "Kiruthika ensures the laboratories are properly maintained, clean, and ready for research activities. She coordinates lab cleaning schedules, monitors safety protocols, and assists researchers with lab setup requirements.",
-      expertise: [
-        "Laboratory Maintenance",
-        "Safety Protocols",
-        "Equipment Care",
-        "Cleanliness Standards",
-      ],
-      responsibilities: [
-        "Laboratory cleaning and maintenance",
-        "Safety equipment monitoring",
-        "Lab setup assistance",
-        "Inventory management support",
-      ],
-      dailyActivities: [
-        "Laboratory cleaning supervision",
-        "Equipment maintenance checks",
-        "Safety protocol implementation",
-        "Research support coordination",
-      ],
-      image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg",
-      email: "labcare@coeb.tnau.ac.in",
-    },
+      image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg"
+    }
   ];
 
   const operationalAreas = [
@@ -280,8 +168,7 @@ export default function CoxbitTeam() {
                 key={member.id}
                 className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
-                {/* Profile Photo */}
-                <div className="relative h-80">
+                <div className="relative h-64">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -289,88 +176,10 @@ export default function CoxbitTeam() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <h3 className="text-2xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-blue-200 font-semibold">
-                      {member.position}
-                    </p>
-                    <p className="text-sm opacity-90">{member.qualification}</p>
-                  </div>
                 </div>
-
-                <div className="p-6">
-                  <div className="text-center mb-6">
-                    <span className="inline-block bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 text-sm px-4 py-2 rounded-full font-semibold">
-                      {member.department}
-                    </span>
-                  </div>
-
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    {member.bio}
-                  </p>
-
-                  {/* Expertise */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">
-                      Core Expertise
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((skill, index) => (
-                        <span
-                          key={index}
-                          className="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-medium"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Daily Activities */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">
-                      Daily Activities
-                    </h4>
-                    <ul className="space-y-1">
-                      {member.dailyActivities.map((activity, index) => (
-                        <li
-                          key={index}
-                          className="text-gray-600 text-sm flex items-start"
-                        >
-                          <span className="text-green-500 mr-2 mt-1">✓</span>
-                          {activity}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Responsibilities */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-3">
-                      Key Responsibilities
-                    </h4>
-                    <ul className="space-y-1">
-                      {member.responsibilities.map((responsibility, index) => (
-                        <li
-                          key={index}
-                          className="text-gray-600 text-sm flex items-start"
-                        >
-                          <span className="text-blue-500 mr-2 mt-1">•</span>
-                          {responsibility}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Contact */}
-                  <div className="text-center">
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="inline-flex items-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg transition-all duration-300 font-semibold text-sm"
-                    >
-                      📧 Contact
-                    </a>
-                  </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                  <p className="text-gray-600">{member.qualification}</p>
                 </div>
               </div>
             ))}
