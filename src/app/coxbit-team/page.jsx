@@ -7,32 +7,33 @@ export default function CoxbitTeam() {
       id: 1,
       name: "Mr. R. Ram Kumar",
       qualification: "MBA",
-      image: "/Team Members/ram kumar.jpg"
+      image: "/Team Members/ram kumar.jpg",
     },
     {
       id: 2,
       name: "M. Selva Radhika Malar",
       qualification: "MBA",
-      image: "/Team Members/M. Selva Radhika Malar, MBA-COEB Manager.jpg"
+      image: "/Team Members/M. Selva Radhika Malar, MBA-COEB Manager.jpg",
     },
     {
       id: 3,
       name: "Dr. Kaviyapriya M",
       qualification: "Ph.D.",
-      image: "/Team Members/kaviyapriya.jpg"
+      image: "/Team Members/kaviyapriya.jpg",
     },
     {
       id: 4,
       name: "Th. K. Muthu Vignesh",
       qualification: "M.Com, IB",
-      image: "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg"
+      image:
+        "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg",
     },
     {
       id: 5,
       name: "Ms. D. Kiruthika",
       qualification: "M.Com",
-      image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg"
-    }
+      image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg",
+    },
   ];
 
   const operationalAreas = [
