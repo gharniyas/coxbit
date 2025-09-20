@@ -122,10 +122,10 @@ const NewsPopup = ({ isOpen, onClose, photo }) => {
                     <p>
                       This image showcases one of the latest developments and
                       activities at the Centre of Excellence in Biotechnology
-                      (CoEB) at Tamil Nadu Agricultural University.
+                      (COXBIT) at Tamil Nadu Agricultural University.
                     </p>
                     <p>
-                      CoEB continues to lead in agricultural biotechnology
+                      COXBIT continues to lead in agricultural biotechnology
                       research, fostering innovation through state-of-the-art
                       facilities and cutting-edge research programs.
                     </p>
@@ -172,7 +172,7 @@ const NewsPopup = ({ isOpen, onClose, photo }) => {
                     if (navigator.share) {
                       navigator.share({
                         title: photo.title,
-                        text: `Check out this update from CoEB: ${photo.title}`,
+                        text: `Check out this update from COXBIT: ${photo.title}`,
                         url: window.location.href,
                       });
                     }
@@ -185,7 +185,7 @@ const NewsPopup = ({ isOpen, onClose, photo }) => {
                   href="/contact"
                   className="border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-2 rounded-lg transition-colors duration-200 font-medium text-center"
                 >
-                  Contact CoEB
+                  Contact COXBIT
                 </a>
               </div>
             </div>

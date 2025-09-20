@@ -5,7 +5,7 @@ export default function About() {
   const milestones = [
     {
       year: "2018",
-      title: "CoEB Established",
+      title: "COXBIT Established",
       description:
         "Registered as Section 8 Company under the Companies Act 2013 on 16th August 2018",
     },
@@ -78,7 +78,7 @@ export default function About() {
     "Development of novel biobased agri-inputs for the benefit of farmers",
     "Human resource development by conducting training to students and scholars with entrepreneurial and technical skills",
     "Availability of analytical facility to students and research scholars",
-    "CoEB serves as a pipeline to transfer the agrotechnology in a large scale to the needy farmers",
+    "COXBIT serves as a pipeline to transfer the agrotechnology in a large scale to the needy farmers",
   ];
 
   return (
@@ -134,7 +134,7 @@ export default function About() {
             </h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                Centre of excellence in Biotechnology (CoEB) is being
+                Centre of excellence in Biotechnology (COXBIT) is being
                 established at Tamil Nadu Agricultural University with funding
                 support from Government of Tamil Nadu to create world class
                 infrastructure for Biotech Research and Innovation.
@@ -375,7 +375,7 @@ export default function About() {
               <span className="text-white text-2xl">🌟</span>
             </div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-6">
-              Benefits of CoEB
+              Benefits of COXBIT
             </h2>
             <ul className="space-y-4 text-gray-700">
               {benefits.map((benefit, index) => (

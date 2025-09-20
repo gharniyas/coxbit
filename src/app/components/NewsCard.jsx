@@ -31,7 +31,7 @@ const NewsCard = ({ photo, index, onCardClick, cardType = "grid" }) => {
           <h3 className="font-semibold text-gray-900 text-sm truncate">
             {photo.title}
           </h3>
-          <p className="text-gray-600 text-xs mt-1">CoEB Updates</p>
+          <p className="text-gray-600 text-xs mt-1">COXBIT Updates</p>
         </div>
       </div>
     );
@@ -61,7 +61,7 @@ const NewsCard = ({ photo, index, onCardClick, cardType = "grid" }) => {
             {photo.title}
           </h4>
           <p className="text-blue-600 text-xs font-medium mb-2">{photo.date}</p>
-          <p className="text-gray-600 text-xs">Latest updates from CoEB</p>
+          <p className="text-gray-600 text-xs">Latest updates from COXBIT</p>
         </div>
       </div>
     );

@@ -9,7 +9,7 @@ export default function BoardOfDirectors() {
     position: "Chairman cum Director",
     qualification: "Ph.D., FNAAS",
     department: "Director, CPMB&B, TNAU",
-    phone: "94890 56706",
+    phone: "94870 01028",
     image: "/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. N. Senthil.jpg",
   };
 

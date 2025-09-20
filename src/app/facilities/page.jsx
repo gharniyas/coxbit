@@ -10,7 +10,7 @@ export default function Facilities() {
       id: 1,
       title: "Centre of Excellence Building",
       description:
-        "Modern infrastructure housing all CoEB facilities under one roof at TNAU Coimbatore",
+        "Modern infrastructure housing all COXBIT facilities under one roof at TNAU Coimbatore",
       image: "/Facility Photos/CoEB building.jpg",
       altImage: "/Facility Photos/CoEB building photo.JPG",
       features: [

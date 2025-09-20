@@ -7,7 +7,7 @@ export default function Contact() {
       email: "coebiotech@tnau.ac.in",
       phone: "+91 94890 56706",
       icon: "📧",
-      description: "For general questions about CoEB facilities and services",
+      description: "For general questions about COXBIT facilities and services",
     },
     {
       title: "Research Collaboration",
@@ -35,32 +35,53 @@ export default function Contact() {
   const facilities = [
     {
       name: "Bio Laboratory",
-      description: "State-of-the-art biotechnology research laboratories with advanced equipment",
-      features: ["Proteomics & Metabolomics Platform", "Mass Spectrometry Suite", "Tissue Culture Facility"],
+      description:
+        "State-of-the-art biotechnology research laboratories with advanced equipment",
+      features: [
+        "Proteomics & Metabolomics Platform",
+        "Mass Spectrometry Suite",
+        "Tissue Culture Facility",
+      ],
       icon: "🔬",
     },
     {
       name: "Cabin Spaces",
-      description: "Private cabin spaces for researchers and visiting collaborators",
+      description:
+        "Private cabin spaces for researchers and visiting collaborators",
       features: ["Fully Furnished", "High-Speed Internet", "Air Conditioning"],
       icon: "🏠",
     },
     {
       name: "Seminar Hall",
-      description: "Modern seminar hall for conferences, training, and presentations",
-      features: ["100 Seating Capacity", "Audio-Visual Equipment", "Video Conferencing"],
+      description:
+        "Modern seminar hall for conferences, training, and presentations",
+      features: [
+        "100 Seating Capacity",
+        "Audio-Visual Equipment",
+        "Video Conferencing",
+      ],
       icon: "🎯",
     },
     {
       name: "Board Room",
-      description: "Executive board room for meetings and strategic discussions",
-      features: ["20 Seating Capacity", "Presentation Equipment", "Climate Controlled"],
+      description:
+        "Executive board room for meetings and strategic discussions",
+      features: [
+        "20 Seating Capacity",
+        "Presentation Equipment",
+        "Climate Controlled",
+      ],
       icon: "🤝",
     },
     {
       name: "Office Spaces",
-      description: "Administrative and support offices within the CoEB building",
-      features: ["Reception Area", "Administrative Offices", "Support Services"],
+      description:
+        "Administrative and support offices within the COXBIT building",
+      features: [
+        "Reception Area",
+        "Administrative Offices",
+        "Support Services",
+      ],
       icon: "🏢",
     },
   ];
@@ -68,11 +89,13 @@ export default function Contact() {
   const offices = [
     {
       name: "Centre of Excellence in Biotechnology",
-      address: "Tamil Nadu Agricultural University, Coimbatore - 641 003, Tamil Nadu, India",
+      address:
+        "Tamil Nadu Agricultural University, Coimbatore - 641 003, Tamil Nadu, India",
       phone: "+91 94890 56706",
       email: "coebiotech@tnau.ac.in",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM IST",
-      description: "Single building housing all CoEB facilities including bio labs, cabin spaces, seminar hall, board room, and office spaces",
+      description:
+        "Single building housing all COXBIT facilities including bio labs, cabin spaces, seminar hall, board room, and office spaces",
       alternateContacts: [
         { purpose: "Research Collaboration", phone: "+91 88702 81435" },
         { purpose: "Facility Booking", phone: "+91 73735 09696" },
@@ -89,10 +112,12 @@ export default function Contact() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Contact CoEB
+            Contact COXBIT
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with the Centre of Excellence in Biotechnology. All our facilities - bio labs, cabin spaces, seminar hall, board room, and offices - are located in a single building at TNAU, Coimbatore.
+            Get in touch with the Centre of Excellence in Biotechnology. All our
+            facilities - bio labs, cabin spaces, seminar hall, board room, and
+            offices - are located in a single building at TNAU, Coimbatore.
           </p>
         </div>
 
@@ -318,15 +343,19 @@ export default function Contact() {
         {/* Facilities in CoEB Building */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Facilities in CoEB Building
+            Facilities in COXBIT Building
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            All our facilities are conveniently located within a single building at Tamil Nadu Agricultural University, Coimbatore. 
-            This integrated approach allows for seamless collaboration and efficient operations.
+            All our facilities are conveniently located within a single building
+            at Tamil Nadu Agricultural University, Coimbatore. This integrated
+            approach allows for seamless collaboration and efficient operations.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {facilities.map((facility, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="text-4xl mb-4 text-center">{facility.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
                   {facility.name}
@@ -335,10 +364,15 @@ export default function Contact() {
                   {facility.description}
                 </p>
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-900">Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-900">
+                    Features:
+                  </h4>
                   <ul className="space-y-1">
                     {facility.features.map((feature, idx) => (
-                      <li key={idx} className="text-gray-600 text-sm flex items-start">
+                      <li
+                        key={idx}
+                        className="text-gray-600 text-sm flex items-start"
+                      >
                         <span className="text-blue-500 mr-2 mt-1">•</span>
                         {feature}
                       </li>
@@ -360,18 +394,23 @@ export default function Contact() {
             <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Centre of Excellence in Biotechnology (CoEB)
+                  Centre of Excellence in Biotechnology (COXBIT)
                 </h3>
                 <p className="text-gray-600">
-                  Single building housing all CoEB facilities including bio labs, cabin spaces, seminar hall, board room, and office spaces
+                  Single building housing all COXBIT facilities including bio
+                  labs, cabin spaces, seminar hall, board room, and office
+                  spaces
                 </p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3 text-gray-600">
                   <div className="flex items-start">
                     <span className="text-blue-600 mr-2 mt-1">📍</span>
-                    <p>Tamil Nadu Agricultural University (TNAU), Lawley Road, Coimbatore - 641003, Tamil Nadu, India</p>
+                    <p>
+                      Tamil Nadu Agricultural University (TNAU), Lawley Road,
+                      Coimbatore - 641003, Tamil Nadu, India
+                    </p>
                   </div>
                   <div className="flex items-center">
                     <span className="text-blue-600 mr-2">📞</span>
@@ -396,25 +435,42 @@ export default function Contact() {
                     <p>Monday - Friday: 9:00 AM - 5:00 PM IST</p>
                   </div>
                 </div>
-                
+
                 <div>
-                  <h4 className="font-semibold text-gray-900 mb-3">Alternate Contacts</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">
+                    Alternate Contacts
+                  </h4>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Research Collaboration</span>
-                      <a href="tel:+918870281435" className="text-blue-600 hover:text-blue-800 text-sm">
+                      <span className="text-sm text-gray-600">
+                        Research Collaboration
+                      </span>
+                      <a
+                        href="tel:+918870281435"
+                        className="text-blue-600 hover:text-blue-800 text-sm"
+                      >
                         +91 88702 81435
                       </a>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Facility Booking</span>
-                      <a href="tel:+917373509696" className="text-blue-600 hover:text-blue-800 text-sm">
+                      <span className="text-sm text-gray-600">
+                        Facility Booking
+                      </span>
+                      <a
+                        href="tel:+917373509696"
+                        className="text-blue-600 hover:text-blue-800 text-sm"
+                      >
                         +91 73735 09696
                       </a>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-600">Administration</span>
-                      <a href="tel:+919487001028" className="text-blue-600 hover:text-blue-800 text-sm">
+                      <span className="text-sm text-gray-600">
+                        Administration
+                      </span>
+                      <a
+                        href="tel:+919487001028"
+                        className="text-blue-600 hover:text-blue-800 text-sm"
+                      >
                         +91 9487001028
                       </a>
                     </div>
@@ -429,7 +485,8 @@ export default function Contact() {
         <section className="bg-white rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
           <p className="text-gray-600 mb-6">
-            Visit the Centre of Excellence in Biotechnology at Tamil Nadu Agricultural University, Coimbatore.
+            Visit the Centre of Excellence in Biotechnology at Tamil Nadu
+            Agricultural University, Coimbatore.
           </p>
           <div className="h-64 bg-gradient-to-r from-green-100 to-blue-200 rounded-lg flex items-center justify-center">
             <div className="text-center text-gray-600">
@@ -452,9 +509,9 @@ export default function Contact() {
                 Facility Access Information
               </h3>
               <p className="text-blue-700">
-                All CoEB facilities are located within a single building at TNAU campus. 
-                Prior appointment recommended for facility visits and equipment usage.
-                Contact facility booking:
+                All COXBIT facilities are located within a single building at
+                TNAU campus. Prior appointment recommended for facility visits
+                and equipment usage. Contact facility booking:
                 <a
                   href="tel:+917373509696"
                   className="font-semibold hover:underline ml-1"

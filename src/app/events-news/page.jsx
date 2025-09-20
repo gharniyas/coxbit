@@ -58,7 +58,7 @@ export default function EventsNews() {
     {
       image:
         "/Events - Trainings/5 - News/2025-2026/WhatsApp Image 2025-07-07 at 1.05.20 PM.jpeg",
-      title: "CoEB Highlights",
+      title: "COXBIT Highlights",
       date: "July 2025",
     },
     {
@@ -117,7 +117,7 @@ export default function EventsNews() {
       title: "Hands-on Training on High Throughput Analysis of Protein",
       date: "2024-02-15",
       time: "9:00 AM - 5:00 PM",
-      location: "CoEB Laboratory, TNAU Coimbatore",
+      location: "COXBIT Laboratory, TNAU Coimbatore",
       description:
         "Comprehensive training program on advanced protein analysis techniques using high-throughput platforms and mass spectrometry.",
       image:
@@ -137,7 +137,7 @@ export default function EventsNews() {
       title: "LCMS & HPLC Training Workshop",
       date: "2024-03-10",
       time: "9:00 AM - 4:00 PM",
-      location: "Analytical Laboratory, CoEB",
+      location: "Analytical Laboratory, COXBIT",
       description:
         "Intensive hands-on training on Liquid Chromatography Mass Spectrometry and High Performance Liquid Chromatography techniques.",
       image: "/Events - Trainings/3 - LCMS Training/_DSC0260.JPG",
@@ -156,7 +156,7 @@ export default function EventsNews() {
       title: "GCMS Training Program",
       date: "2024-04-05",
       time: "10:00 AM - 5:00 PM",
-      location: "Advanced Analytical Facility, CoEB",
+      location: "Advanced Analytical Facility, COXBIT",
       description:
         "Comprehensive training on Gas Chromatography Mass Spectrometry for metabolomics and environmental analysis applications.",
       image: "/Events - Trainings/4 - GCMS Training/_DSC1451.JPG",
@@ -175,7 +175,7 @@ export default function EventsNews() {
       title: "Bioentrepreneurship Ecosystem Meet",
       date: "2024-01-29",
       time: "2:00 PM - 6:00 PM",
-      location: "Conference Hall, CoEB",
+      location: "Conference Hall, COXBIT",
       description:
         "Building bioentrepreneurship ecosystem at TNAU to foster innovation and startup development in biotechnology sector.",
       image: "/Events - Trainings/1 - Bioentrpreneurship Meet/IMG_1386.JPG",
@@ -194,12 +194,12 @@ export default function EventsNews() {
   const news = [
     {
       id: 1,
-      title: "CoEB Establishes World-Class Biotechnology Infrastructure",
+      title: "COXBIT Establishes World-Class Biotechnology Infrastructure",
       date: "2024-08-16",
       excerpt:
         "Centre of Excellence in Biotechnology marks 6 years of groundbreaking research and innovation at TNAU with state-of-the-art facilities.",
       content:
-        "The Centre of Excellence in Biotechnology (CoEB) continues to lead biotechnology research and innovation with world-class infrastructure including advanced mass spectrometry platforms...",
+        "The Centre of Excellence in Biotechnology (COXBIT) continues to lead biotechnology research and innovation with world-class infrastructure including advanced mass spectrometry platforms...",
       image: "/Scrolling Photos/IMG_3387.JPG",
       category: "Infrastructure Development",
     },
@@ -208,9 +208,9 @@ export default function EventsNews() {
       title: "Government of Tamil Nadu Supports Biotechnology Innovation",
       date: "2024-07-20",
       excerpt:
-        "Continued funding support enables CoEB to expand research capabilities and develop biobased products for agricultural applications.",
+        "Continued funding support enables COXBIT to expand research capabilities and develop biobased products for agricultural applications.",
       content:
-        "With strong backing from the Government of Tamil Nadu, CoEB has been able to establish cutting-edge research facilities and launch innovative programs...",
+        "With strong backing from the Government of Tamil Nadu, COXBIT has been able to establish cutting-edge research facilities and launch innovative programs...",
       image: "/Scrolling Photos/IMG_6216.JPG",
       category: "Government Support",
     },
@@ -219,9 +219,9 @@ export default function EventsNews() {
       title: "Public-Private Partnership Model Drives Research Excellence",
       date: "2024-06-15",
       excerpt:
-        "CoEB's PPP approach successfully develops super active enzymes, bio molecules, and plant growth stimulants for commercial applications.",
+        "COXBIT's PPP approach successfully develops super active enzymes, bio molecules, and plant growth stimulants for commercial applications.",
       content:
-        "The public-private partnership model at CoEB has proven highly effective in translating research into practical applications that benefit farmers...",
+        "The public-private partnership model at COXBIT has proven highly effective in translating research into practical applications that benefit farmers...",
       image: "/Scrolling Photos/IMG_3500.JPG",
       category: "Research Achievement",
     },
@@ -241,9 +241,9 @@ export default function EventsNews() {
       title: "Sustainability Initiative: Tree Planting Program",
       date: "2024-04-22",
       excerpt:
-        "CoEB demonstrates commitment to environmental stewardship through comprehensive tree planting and sustainability programs.",
+        "COXBIT demonstrates commitment to environmental stewardship through comprehensive tree planting and sustainability programs.",
       content:
-        "As part of our commitment to environmental sustainability, CoEB has launched an extensive tree planting program that aligns with our biotechnology research goals...",
+        "As part of our commitment to environmental sustainability, COXBIT has launched an extensive tree planting program that aligns with our biotechnology research goals...",
       image: "/Scrolling Photos/Tree Planting.JPG",
       category: "Sustainability",
     },
@@ -586,7 +586,9 @@ export default function EventsNews() {
 
         {/* Newsletter Signup */}
         <section className="bg-gradient-to-br from-gray-800 via-blue-900 to-indigo-900 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">Stay Connected with CoEB</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Stay Connected with COXBIT
+          </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto leading-relaxed">
             Subscribe to our newsletter for updates on training programs,
             research breakthroughs, funding opportunities, and biotechnology

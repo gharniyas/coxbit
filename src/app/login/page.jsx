@@ -42,7 +42,7 @@ const LoginPage = () => {
         <div className="w-full max-w-md">
           {/* Logo Section */}
           <div className="text-center mb-8">
-            <div className="inline-block bg-gradient-to-br from-white via-indigo-50 to-purple-50 p-4 rounded-2xl shadow-xl border border-indigo-100/50 backdrop-blur-sm mb-4">
+            <div className="inline-block bg-gradient-to-br from-white via-indigo-50 to-purple-50 px-2 rounded-2xl shadow-xl border border-indigo-100/50 backdrop-blur-sm mb-4">
               <Image
                 src="/logo.png"
                 alt="COXBIT Logo"

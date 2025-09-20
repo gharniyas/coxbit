@@ -10,7 +10,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image
             src="/building/IMG_5188.JPG"
-            alt="CoEB Main Building"
+            alt="COXBIT Main Building"
             fill
             className="object-cover"
             priority
@@ -57,12 +57,12 @@ export default function Home() {
           {/* About Section */}
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 text-center">
-              About CoEB
+              About COXBIT
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Centre of excellence in Biotechnology (CoEB) is being
+                  Centre of excellence in Biotechnology (COXBIT) is being
                   established at Tamil Nadu Agricultural University with funding
                   support from Government of Tamil Nadu to create world class
                   infrastructure for Biotech Research and Innovation.
@@ -83,7 +83,7 @@ export default function Home() {
                   Company under the Companies Act 2013 on 16th of August 2018.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  The instrument facility was established at CoEB to initiate
+                  The instrument facility was established at COXBIT to initiate
                   high end research on genomics and metabolomics by the
                   researchers.
                 </p>
@@ -108,7 +108,7 @@ export default function Home() {
                 <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
                   <Image
                     src="/building/IMG_5188.JPG"
-                    alt="CoEB Main Building"
+                    alt="COXBIT Main Building"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -127,7 +127,7 @@ export default function Home() {
                 <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
                   <Image
                     src="/building/IMG_5195.JPG"
-                    alt="CoEB Research Complex"
+                    alt="COXBIT Research Complex"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -167,7 +167,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_1386.JPG"
-                      alt="CoEB Research Facility"
+                      alt="COXBIT Research Facility"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -185,7 +185,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_3387.JPG"
-                      alt="CoEB Biotechnology Research"
+                      alt="COXBIT Biotechnology Research"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -203,7 +203,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_3396.JPG"
-                      alt="CoEB Innovation Center"
+                      alt="COXBIT Innovation Center"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -219,7 +219,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_3500.JPG"
-                      alt="CoEB Analytical Facility"
+                      alt="COXBIT Analytical Facility"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -248,7 +248,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_3507.JPG"
-                      alt="CoEB Team Collaboration"
+                      alt="COXBIT Team Collaboration"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -264,7 +264,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_6216.JPG"
-                      alt="CoEB Infrastructure"
+                      alt="COXBIT Infrastructure"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -282,7 +282,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/IMG_6592.JPG"
-                      alt="CoEB Research Activities"
+                      alt="COXBIT Research Activities"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -300,7 +300,7 @@ export default function Home() {
                   <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <Image
                       src="/Scrolling Photos/Tree Planting.JPG"
-                      alt="CoEB Sustainability Initiative"
+                      alt="COXBIT Sustainability Initiative"
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-300"
                     />
@@ -341,7 +341,7 @@ export default function Home() {
                 </video>
                 <div className="p-6">
                   <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                    CoEB Research & Innovation Showcase
+                    COXBIT Research & Innovation Showcase
                   </h4>
                   <p className="text-gray-600">
                     Take a virtual tour of our Centre of Excellence in
@@ -567,7 +567,7 @@ export default function Home() {
                 <span className="text-white text-2xl">🌟</span>
               </div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
-                Benefits of CoEB
+                Benefits of COXBIT
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
@@ -613,7 +613,7 @@ export default function Home() {
                 <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
                   <Image
                     src="/QR Code - CoEB/QR - FB - CoEB.png"
-                    alt="Facebook QR Code - CoEB"
+                    alt="Facebook QR Code - COXBIT"
                     width={150}
                     height={150}
                     className="mx-auto"
@@ -636,7 +636,7 @@ export default function Home() {
                 <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
                   <Image
                     src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
-                    alt="Instagram QR Code - CoEB"
+                    alt="Instagram QR Code - COXBIT"
                     width={150}
                     height={150}
                     className="mx-auto"
@@ -659,7 +659,7 @@ export default function Home() {
                 <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
                   <Image
                     src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
-                    alt="LinkedIn QR Code - CoEB"
+                    alt="LinkedIn QR Code - COXBIT"
                     width={150}
                     height={150}
                     className="mx-auto"
