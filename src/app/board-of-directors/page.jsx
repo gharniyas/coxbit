@@ -60,7 +60,8 @@ export default function BoardOfDirectors() {
       name: "Dr. M.K. Kalarani",
       position: "Board of Director",
       qualification: "Ph.D.",
-      department: "Director, Crop Management, TNAU",
+      department:
+        "Special Officer (Publications), TNAU - Instant of Director Crop Management",
       image: "/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. M.K. Kalarani.jpg",
     },
     {

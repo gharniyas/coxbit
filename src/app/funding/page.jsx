@@ -440,7 +440,7 @@ const FundingPage = () => {
               <h3 className="text-lg font-semibold mb-2">
                 Application Support
               </h3>
-              <p className="text-blue-100">+91 94890 56706</p>
+              <p className="text-blue-100">+91 94870 01028</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Office Hours</h3>

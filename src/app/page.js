@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Marquee from "react-fast-marquee";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Hero Banner Section with Background Image */}
@@ -35,10 +38,16 @@ export default function Home() {
               support from Government of Tamil Nadu.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl backdrop-blur-sm">
+              <button
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl backdrop-blur-sm"
+                onClick={() => router.push("/facilities")}
+              >
                 Explore Our Services
               </button>
-              <button className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/30 transform hover:scale-105 transition-all duration-300 shadow-xl">
+              <button
+                className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/30 transform hover:scale-105 transition-all duration-300 shadow-xl"
+                onClick={() => router.push("/about")}
+              >
                 Learn More
               </button>
             </div>
@@ -720,7 +729,7 @@ export default function Home() {
                 </h4>
                 <div className="space-y-2">
                   <p>
-                    <strong>Phone:</strong> +91 94890 56706 / +91 88702 81435 /
+                    <strong>Phone:</strong> +91 94870 01028 / +91 88702 81435 /
                     +91 73735 09696
                   </p>
                   <p>

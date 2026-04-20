@@ -166,34 +166,44 @@ export default function Facilities() {
   // Analytical charges
   const analyticalCharges = [
     {
-      service: "LCMS analysis (Targeted)",
-      academic: "₹2,000",
-      industrial: "₹3,000",
-      international: "₹4,000",
+      sl: 1,
+      service: "GC-MS Volatile profiling + Data acquisition",
+      unit: "Per sample",
+      tnau: { unit: 1694.92, gst: 305.08, total: 2000 },
+      academic: { unit: 2500, gst: 450, total: 2950 },
+      industry: { unit: 3000, gst: 540, total: 3540 },
     },
     {
-      service: "GCMS analysis",
-      academic: "₹1,500",
-      industrial: "₹2,500",
-      international: "₹3,500",
+      sl: 2,
+      service: "GC-MS metabolite profiling + Data acquisition",
+      unit: "Per sample",
+      tnau: { unit: 2542.37, gst: 457.63, total: 3000 },
+      academic: { unit: 3750, gst: 675, total: 4425 },
+      industry: { unit: 4500, gst: 810, total: 5310 },
     },
     {
-      service: "MALDI-TOF analysis",
-      academic: "₹1,800",
-      industrial: "₹2,800",
-      international: "₹3,800",
+      sl: 3,
+      service: "LC-MS/MS",
+      unit: "Per sample",
+      tnau: { unit: 2542.37, gst: 457.63, total: 3000 },
+      academic: { unit: 4000, gst: 720, total: 4720 },
+      industry: { unit: 5000, gst: 900, total: 5900 },
     },
     {
-      service: "Sample preparation",
-      academic: "₹500",
-      industrial: "₹800",
-      international: "₹1,000",
+      sl: 4,
+      service: "HPLC (Standard+1 Sample)",
+      unit: "Per sample",
+      tnau: { unit: 1694.92, gst: 305.08, total: 2000 },
+      academic: { unit: 2500, gst: 450, total: 2950 },
+      industry: { unit: 3000, gst: 540, total: 3540 },
     },
     {
-      service: "Data analysis & interpretation",
-      academic: "₹1,000",
-      industrial: "₹1,500",
-      international: "₹2,000",
+      sl: 5,
+      service: "MALDI-TOFF",
+      unit: "Per Run",
+      tnau: { unit: 1694.92, gst: 305.08, total: 2000 },
+      academic: { unit: 3000, gst: 540, total: 3540 },
+      industry: { unit: 4000, gst: 720, total: 4720 },
     },
   ];
 
@@ -264,331 +274,72 @@ export default function Facilities() {
           </div>
         </section>
 
+        {/* DAVRES CoEB Video Section */}
+        <section className="mb-20">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              DAVRES CoEB Facility Overview
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A comprehensive overview of the DAVRES Centre of Excellence in Biotechnology facilities and research capabilities.
+            </p>
+          </div>
+          <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
+            <video
+              className="w-full h-auto"
+              muted
+              loop
+              playsInline
+              controls
+            >
+              <source src="/video/davrescoxbit.mov" type="video/quicktime" />
+              <source src="/video/davrescoxbit.mov" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
+
         {/* Cabin Images Horizontal Marquee */}
         <section className="mb-20">
-          <div className="horizontal-marquee-container">
-            <div className="horizontal-marquee">
-              {/* New cabin images */}
-              <Image
-                src="/cabin/IMG_1565.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1573.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1612.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1617.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1626.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1632.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1637.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1643.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1650.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1660.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-
-              {/* Original cabin images */}
-              <Image
-                src="/cabin/IMG_5353.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5332.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5321.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5311.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5303.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5292.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5286.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5282.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5263.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5261.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5249.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5234.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5220.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5214.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-
-              {/* Duplicate set for seamless loop */}
-              <Image
-                src="/cabin/IMG_1565.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1573.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1612.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1617.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1626.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1632.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1637.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1643.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1650.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_1660.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5353.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-              <Image
-                src="/cabin/IMG_5332.JPG"
-                alt="Cabin"
-                width={280}
-                height={200}
-                className="marquee-img"
-              />
-            </div>
-          </div>
-
-          <style jsx>{`
-            .horizontal-marquee-container {
-              overflow: hidden;
-              width: 100%;
-              height: 220px;
-              position: relative;
-              background: linear-gradient(
-                90deg,
-                rgba(248, 250, 252, 1) 0%,
-                rgba(248, 250, 252, 0) 10%,
-                rgba(248, 250, 252, 0) 90%,
-                rgba(248, 250, 252, 1) 100%
-              );
-            }
-
-            .horizontal-marquee {
-              display: flex;
-              gap: 1.5rem;
-              animation: scroll-horizontal 60s linear infinite;
-              width: max-content;
-            }
-
-            .marquee-img {
-              border-radius: 12px;
-              object-fit: cover;
-              transition: transform 0.3s ease, box-shadow 0.3s ease;
-              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-              flex-shrink: 0;
-            }
-
-            .marquee-img:hover {
-              transform: scale(1.05);
-              box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-              z-index: 10;
-            }
-
-            @keyframes scroll-horizontal {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-50%);
-              }
-            }
-
-            @media (max-width: 768px) {
-              .horizontal-marquee-container {
-                height: 180px;
-              }
-
-              .marquee-img {
-                width: 220px;
-                height: 160px;
-              }
-
-              .horizontal-marquee {
-                gap: 1rem;
-                animation-duration: 45s;
-              }
-            }
-          `}</style>
+          <Marquee speed={50} gradient={true} gradientColor={[248, 250, 252]} gradientWidth={80}>
+            {[
+              "/cabin/IMG_1565.JPG",
+              "/cabin/IMG_1573.JPG",
+              "/cabin/IMG_1612.JPG",
+              "/cabin/IMG_1617.JPG",
+              "/cabin/IMG_1626.JPG",
+              "/cabin/IMG_1632.JPG",
+              "/cabin/IMG_1637.JPG",
+              "/cabin/IMG_1643.JPG",
+              "/cabin/IMG_1650.JPG",
+              "/cabin/IMG_1660.JPG",
+              "/cabin/IMG_5353.JPG",
+              "/cabin/IMG_5332.JPG",
+              "/cabin/IMG_5321.JPG",
+              "/cabin/IMG_5311.JPG",
+              "/cabin/IMG_5303.JPG",
+              "/cabin/IMG_5292.JPG",
+              "/cabin/IMG_5286.JPG",
+              "/cabin/IMG_5282.JPG",
+              "/cabin/IMG_5263.JPG",
+              "/cabin/IMG_5261.JPG",
+              "/cabin/IMG_5249.JPG",
+              "/cabin/IMG_5234.JPG",
+              "/cabin/IMG_5220.JPG",
+              "/cabin/IMG_5214.JPG",
+            ].map((src, i) => (
+              <div key={i} className="mx-3">
+                <Image
+                  src={src}
+                  alt="Cabin"
+                  width={280}
+                  height={200}
+                  className="rounded-xl object-cover shadow-lg"
+                  style={{ height: "200px", width: "280px" }}
+                />
+              </div>
+            ))}
+          </Marquee>
         </section>
 
         {/* Main Facility Areas */}
@@ -721,90 +472,54 @@ export default function Facilities() {
           </div>
         </section>
 
-        {/* Fee Schedule Section */}
-        <section className="mb-20">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Infrastructure Fee Schedule
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-blue-50">
-                    <th className="border border-blue-200 px-4 py-3 text-left font-semibold text-blue-900">
-                      Facility/Service
-                    </th>
-                    <th className="border border-blue-200 px-4 py-3 text-left font-semibold text-blue-900">
-                      Pricing Model
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {feeSchedule.map((item, index) => (
-                    <tr key={index} className="hover:bg-blue-25">
-                      <td className="border border-blue-200 px-4 py-3 text-gray-800">
-                        {item.facility}
-                      </td>
-                      <td className="border border-blue-200 px-4 py-3 text-blue-600 font-medium">
-                        {item.charge}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
         {/* Analytical Services Charges */}
         <section className="mb-20">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Proteomics & Metabolomics Analytical Charges
+              Analytical Charges for Proteomics &amp; Metabolomics
             </h2>
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
+              <table className="w-full border-collapse text-sm">
                 <thead>
-                  <tr className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-                    <th className="border border-blue-300 px-4 py-3 text-left font-semibold">
-                      Service
-                    </th>
-                    <th className="border border-blue-300 px-4 py-3 text-center font-semibold">
-                      Academic/Research
-                    </th>
-                    <th className="border border-blue-300 px-4 py-3 text-center font-semibold">
-                      Industrial
-                    </th>
-                    <th className="border border-blue-300 px-4 py-3 text-center font-semibold">
-                      International
-                    </th>
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Sl. No</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Analysis / Service</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Unit</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>For TNAU</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>Other Academic Institutions</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>Industries / Private</th>
+                  </tr>
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {analyticalCharges.map((charge, index) => (
-                    <tr key={index} className="hover:bg-blue-25">
-                      <td className="border border-blue-200 px-4 py-3 text-gray-800 font-medium">
-                        {charge.service}
-                      </td>
-                      <td className="border border-blue-200 px-4 py-3 text-center text-green-600 font-semibold">
-                        {charge.academic}
-                      </td>
-                      <td className="border border-blue-200 px-4 py-3 text-center text-blue-600 font-semibold">
-                        {charge.industrial}
-                      </td>
-                      <td className="border border-blue-200 px-4 py-3 text-center text-purple-600 font-semibold">
-                        {charge.international}
-                      </td>
+                  {analyticalCharges.map((row) => (
+                    <tr key={row.sl} className="hover:bg-blue-50">
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.sl}</td>
+                      <td className="border border-gray-400 px-3 py-2 font-medium">{row.service}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.unit}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.tnau.unit}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.tnau.gst}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.tnau.total}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.academic.unit}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.academic.gst}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.academic.total}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.industry.unit}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">{row.industry.gst}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.industry.total}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
-            </div>
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm">
-                * Charges are subject to revision. Please contact for current
-                rates and detailed quotations.
-              </p>
             </div>
           </div>
         </section>

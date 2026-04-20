@@ -5,7 +5,7 @@ export default function Contact() {
     {
       title: "General Inquiries",
       email: "coebiotech@tnau.ac.in",
-      phone: "+91 94890 56706",
+      phone: "+91 94870 01028",
       icon: "📧",
       description: "For general questions about COXBIT facilities and services",
     },
@@ -91,7 +91,7 @@ export default function Contact() {
       name: "Centre of Excellence in Biotechnology",
       address:
         "Tamil Nadu Agricultural University, Coimbatore - 641 003, Tamil Nadu, India",
-      phone: "+91 94890 56706",
+      phone: "+91 94870 01028",
       email: "coebiotech@tnau.ac.in",
       hours: "Monday - Friday: 9:00 AM - 5:00 PM IST",
       description:
@@ -418,7 +418,7 @@ export default function Contact() {
                       href="tel:+919489056706"
                       className="hover:text-blue-600 transition-colors"
                     >
-                      +91 94890 56706
+                      +91 94870 01028
                     </a>
                   </div>
                   <div className="flex items-center">

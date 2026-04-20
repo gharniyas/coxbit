@@ -41,6 +41,42 @@ export default function About() {
     "Provide enabling environment and world-class infrastructure for research and education in biotechnology",
   ];
 
+  const pppModes = [
+    "MoUs in single window system enabling development of a strong business plan.",
+    "Exclusive Management Team is operating this section 8 company through board of directors of TNAU and a CEO.",
+    "Scalability of biobased products production and its feasibility research.",
+    "Obtaining stakeholders and farmers confidence by all possible means.",
+    "Our products will also focus on specific niche areas and strengthen our brand's online presence and expand help the network.",
+  ];
+
+  const services = [
+    {
+      title: "Floor / Knowledge Space",
+      icon: "🏢",
+      description:
+        "The knowledge space, cabin space and basic instrumental facilities are available in CoE in Biotechnology for public/private joint ventures in thrust areas of biotechnology viz, bioinformatics, Genomics, Molecular Diagnostics, Gene isolation, Cell culture, Agri inputs and farm machineries. The funds will be generated through service charges for knowledge space and mentoring.",
+    },
+    {
+      title: "Skill Development",
+      icon: "🎓",
+      description:
+        "Hands-on trainings, seminars will be conducted for young students and budding entrepreneurs for development of entrepreneurial skill and product development on cost basis.",
+    },
+    {
+      title: "Analytical Facility",
+      icon: "🔬",
+      description:
+        "The proteomics & Metabolomic facility was established at CoEB will be available to the students and researchers all over Tamil Nadu and India on charge basis. The revenue generated through the facility will be used for purchase of consumables and improvement of the facility.",
+    },
+  ];
+
+  const outcomes = [
+    "Creating world class facility under one roof for fullest utilization of native bio resources and man power of Tamil Nadu.",
+    "Improving yield potential of crops using biotechnological tools.",
+    "Effective translation of research into viable products through public partnership mode.",
+    "Commercialization of invention through business promotions.",
+  ];
+
   const activities = [
     {
       title: "Entrepreneurship Development",
@@ -126,6 +162,37 @@ export default function About() {
           </div>
         </section>
 
+        {/* Prelude Section */}
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+            Prelude
+          </h2>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              The vision of the Centre of Excellence in Biotechnology is to position Tamil Nadu as a leader on the global Biotechnology map by fostering investment and innovation in the biotechnology sector by providing an enabling environment and world class infrastructure. TNAU which is already a leader in the biotechnology sector in India is the fitting institution to setup the Centre of Excellence in Biotechnology.
+            </p>
+            <p>
+              CoE in Biotechnology is one among the 11 CoE's identified in Vision 2023, Phase II under theme 6, "Establishment of several Centres of Excellence (COE)" to foster innovation and knowledge creation. COEs will be developed on a Public-Private Partnership (PPP) model, with funding and participation by the industries.
+            </p>
+            <p>
+              The main objective of the Centre of Excellence in Biotechnology is to advance the development and application of various bio-based solutions aimed at enhancing agricultural productivity and sustainability. These solutions encompass a range of technologies and products, including bioinoculants, bio inputs, and bio stimulants.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-6">
+              {[
+                { title: "Bioinoculants", icon: "🦠", desc: "Microbial formulations containing beneficial bacteria, fungi, or algae applied to seeds, soil, or plants to improve nutrient availability and enhance disease resistance." },
+                { title: "Bio Inputs", icon: "🌱", desc: "Natural or biological substances utilized to enrich soil fertility and support sustainable agricultural practices, including organic fertilizers and biopesticides." },
+                { title: "Bio Stimulants", icon: "⚡", desc: "Substances or microorganisms applied to plants or soil to stimulate natural physiological processes, enhancing nutrient uptake and improving stress tolerance." },
+              ].map((item, i) => (
+                <div key={i} className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-100">
+                  <div className="text-3xl mb-3">{item.icon}</div>
+                  <h4 className="font-semibold text-gray-800 mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Main About Section with Image */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8">
@@ -186,6 +253,43 @@ export default function About() {
           </div>
         </div>
 
+        {/* About CoEB */}
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+            About CoEB
+          </h2>
+          <div className="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              The Biotech Council for Centre of Excellence in Biotechnology was established at Centre for Plant Molecular Biology and Biotechnology, TNAU funded by Tamil Nadu to create world class state of art infrastructure to foster Biotech Research and Innovation and development of biobased products under public-private partnership.
+            </p>
+            <p>
+              In this centre, research and development activities will be carried out under public-private partnership mode to develop super active enzymes / bio molecules, biobased products, hormones for fruit ripening, plant growth stimulants, similar bio-inputs, development of agri inputs and farm machineries for the commercial benefit of farmers.
+            </p>
+            <p>
+              The Centre of Excellence in Biotechnology Building has been constructed with an area of <strong>1.13 lakhs square ft</strong>, which includes knowledge and cabin space which can be occupied by start-ups, student entrepreneurs and established companies for research and development activities.
+            </p>
+            <p>
+              State of art facilities was established at Centre of Excellence in Biotechnology to initiate high end research on proteomics and metabolomics. Nine trainings have been successfully conducted and so far, <strong>2,700 samples</strong> have been analysed in this proteomics and metabolomics analytical facility.
+            </p>
+            <p>
+              CoE in Biotechnology signed MoA with <strong>nine startup / established companies</strong> to occupy the cabin space and eight companies are requested to occupy the floor space in CoEB. CoEB supports and plays a vital role in transforming the landscape of Startups in the Agri and Biotech with StartupTN.
+            </p>
+          </div>
+
+          {/* PPP Mode */}
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Public-Private Partnership Mode</h3>
+            <ol className="space-y-3">
+              {pppModes.map((mode, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-full flex items-center justify-center text-sm font-bold">{i + 1}</span>
+                  <span className="text-gray-700 leading-relaxed">{mode}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+
         {/* Vision & Goals */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-xl shadow-xl p-8 border border-blue-100/50 backdrop-blur-sm">
@@ -220,6 +324,37 @@ export default function About() {
           </div>
         </div>
 
+        {/* Services Available */}
+        <div className="mb-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">
+              Services Available in CoEB
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, i) => (
+              <div key={i} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 hover:shadow-2xl transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Outcomes */}
+        <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl shadow-xl p-8 mb-16 text-white">
+          <h2 className="text-3xl font-bold mb-8 text-center">Outcome from CoEB</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {outcomes.map((outcome, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">✓</span>
+                <p className="leading-relaxed">{outcome}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Strategic Partnerships */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -235,18 +370,16 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* TNAU Partnership */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 text-center hover:shadow-2xl transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
+              <div className="w-40 h-28 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center p-2">
                 <Image
                   src="/TNA logo.jpg"
-                  alt="Tamil Nadu Agricultural University"
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-cover"
+                  alt="TNAPEx"
+                  width={160}
+                  height={112}
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                Tamil Nadu Agricultural University
-              </h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">TNAPEx</h3>
               <p className="text-gray-600 leading-relaxed">
                 Our primary academic partner, providing world-class research
                 infrastructure and educational excellence in agricultural
@@ -352,7 +485,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Benefits Section with Image */}
+        {/* Benefits Section */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div className="relative h-80 rounded-xl overflow-hidden">
             <Image
@@ -363,9 +496,7 @@ export default function About() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-lg font-semibold">
-                Sustainability Initiative
-              </h3>
+              <h3 className="text-lg font-semibold">Sustainability Initiative</h3>
               <p className="text-sm opacity-90">Environmental stewardship</p>
             </div>
           </div>
@@ -386,6 +517,21 @@ export default function About() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Benefits to Farmers */}
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-xl border border-green-100/50 p-8 mb-16">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <span className="text-white text-2xl">🌾</span>
+            </div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+              Benefits to Farmers
+            </h2>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            The crop plants at field level were exposed to pests and diseases, which evolve for resistance due to changing climate scenarios. The biobased agri-inputs will be developed through public-private partnership mode and the novel products will be available to the farmers to control pests and diseases in various crops. Development of biobased products will reduce the usage of chemical pesticides, in turn environmental pollution is reduced.
+          </p>
         </div>
 
         {/* Timeline Section */}
@@ -561,7 +707,7 @@ export default function About() {
                 <p>
                   <strong>Phone:</strong>
                 </p>
-                <p className="text-blue-200">+91 94890 56706</p>
+                <p className="text-blue-200">+91 94870 01028</p>
                 <p className="text-blue-200">+91 88702 81435</p>
                 <p className="text-blue-200">+91 73735 09696</p>
                 <p className="mt-4">

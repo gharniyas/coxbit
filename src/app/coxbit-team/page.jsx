@@ -13,7 +13,8 @@ export default function CoxbitTeam() {
       id: 2,
       name: "M. Selva Radhika Malar",
       qualification: "MBA",
-      image: "/Team Members/M. Selva Radhika Malar, MBA-COEB Manager.jpg",
+      designation: "COXBIT Manager",
+      image: "/Team Members/Radhika.jpeg",
     },
     {
       id: 3,
@@ -25,6 +26,7 @@ export default function CoxbitTeam() {
       id: 4,
       name: "Th. K. Muthu Vignesh",
       qualification: "M.Com, IB",
+      designation: "Accounts Manager",
       image:
         "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg",
     },
@@ -32,6 +34,7 @@ export default function CoxbitTeam() {
       id: 5,
       name: "Ms. D. Kiruthika",
       qualification: "M.Com",
+      designation: "COXBIT Assistant",
       image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg",
     },
   ];
@@ -180,6 +183,11 @@ export default function CoxbitTeam() {
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                  {member.designation && (
+                    <p className="text-blue-600 font-medium mb-1">
+                      {member.designation}
+                    </p>
+                  )}
                   <p className="text-gray-600">{member.qualification}</p>
                 </div>
               </div>
