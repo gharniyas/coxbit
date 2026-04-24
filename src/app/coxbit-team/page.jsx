@@ -7,7 +7,7 @@ export default function CoxbitTeam() {
       id: 1,
       name: "Mr. R. Ram Kumar",
       qualification: "MBA",
-      designation: "COE",
+      designation: "Chief Executive Officer",
       image: "/Team Members/ram kumar.jpg",
     },
     {
@@ -22,7 +22,7 @@ export default function CoxbitTeam() {
       name: "Dr. KAVIYAPRIYA M Ph. D (Plant Biotechnology)",
       qualification: "Ph.D.",
       designation: "Research Associate, COXBIT",
-      image: "/Team Members/kaviya.jpeg",
+      image: "/kaviya.jpeg",
     },
     {
       id: 4,
