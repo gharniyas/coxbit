@@ -26,22 +26,37 @@ const RegisterPage = () => {
             <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">
               Join COXBIT
             </h1>
-            <p className="text-gray-600">Register for Analytical Facility at CoEB</p>
+            <p className="text-gray-600">
+              Register for Analytical Facility at COXBIT
+            </p>
           </div>
 
           {/* Card */}
           <div className="bg-gradient-to-br from-white via-indigo-50/50 to-purple-50/50 backdrop-blur-sm rounded-2xl shadow-xl border border-indigo-100/50 p-8">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full flex items-center justify-center mx-auto">
-                <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <svg
+                  className="w-8 h-8 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
                 </svg>
               </div>
 
               <div>
-                <h2 className="text-lg font-semibold text-gray-800 mb-1">Registration Form</h2>
+                <h2 className="text-lg font-semibold text-gray-800 mb-1">
+                  Registration Form
+                </h2>
                 <p className="text-sm text-gray-500">
-                  Click the button below to complete your registration via our official Google Form.
+                  Click the button below to complete your registration via our
+                  official Google Form.
                 </p>
               </div>
 
@@ -55,11 +70,10 @@ const RegisterPage = () => {
               </a>
 
               <p className="text-xs text-gray-400">
-                You will be redirected to Google Forms to complete your registration.
+                You will be redirected to Google Forms to complete your
+                registration.
               </p>
             </div>
-
-
           </div>
         </div>
       </div>

@@ -32,14 +32,15 @@ const Header = () => {
     <header className="bg-gradient-to-r from-white via-blue-50 to-indigo-50 shadow-xl backdrop-blur-md border-b border-blue-100/20 px-4 py-2 fixed top-0 left-0 w-full z-30">
       <div className="flex justify-between items-center h-14">
         {/* Logo Section */}
-        <div className="flex-shrink-0 flex items-center pl-2">
+        <div className="flex-shrink-0 flex items-center pl-2 overflow-hidden rounded-lg" style={{ width: 120, height: 60 }}>
           <Image
             src="/logo.jpeg"
             alt="COXBIT Logo"
-            width={160}
-            height={48}
+            width={200}
+            height={100}
             priority
-            className="h-10 w-auto object-contain"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: 'center' }}
           />
         </div>
 

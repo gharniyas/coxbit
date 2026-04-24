@@ -18,16 +18,16 @@ export default function Contact() {
     },
     {
       title: "Facility Booking",
-      email: "facility@coeb.tnau.ac.in",
+      email: "coebiotech@tnau.ac.in",
       phone: "+91 73735 09696",
       icon: "🏢",
       description: "Cabin space, seminar hall, and board room reservations",
     },
     {
       title: "Administrative Services",
-      email: "admin@coeb.tnau.ac.in",
+      email: "coebiotech@tnau.ac.in",
       phone: "+91 9487001028",
-      icon: "�",
+      icon: "🏢",
       description: "Office space, billing, and general administration",
     },
   ];

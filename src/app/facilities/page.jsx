@@ -278,20 +278,15 @@ export default function Facilities() {
         <section className="mb-20">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              DAVRES CoEB Facility Overview
+              DAVRES COXBIT Facility Overview
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              A comprehensive overview of the DAVRES Centre of Excellence in Biotechnology facilities and research capabilities.
+              A comprehensive overview of the DAVRES Centre of Excellence in
+              Biotechnology facilities and research capabilities.
             </p>
           </div>
           <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              className="w-full h-auto"
-              muted
-              loop
-              playsInline
-              controls
-            >
+            <video className="w-full h-auto" muted loop playsInline controls>
               <source src="/video/davrescoxbit.mov" type="video/quicktime" />
               <source src="/video/davrescoxbit.mov" type="video/mp4" />
               Your browser does not support the video tag.
@@ -301,7 +296,12 @@ export default function Facilities() {
 
         {/* Cabin Images Horizontal Marquee */}
         <section className="mb-20">
-          <Marquee speed={50} gradient={true} gradientColor={[248, 250, 252]} gradientWidth={80}>
+          <Marquee
+            speed={50}
+            gradient={true}
+            gradientColor={[248, 250, 252]}
+            gradientWidth={80}
+          >
             {[
               "/cabin/IMG_1565.JPG",
               "/cabin/IMG_1573.JPG",
@@ -482,40 +482,112 @@ export default function Facilities() {
               <table className="w-full border-collapse text-sm">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Sl. No</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Analysis / Service</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center" rowSpan={2}>Unit</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>For TNAU</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>Other Academic Institutions</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center" colSpan={3}>Industries / Private</th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      rowSpan={2}
+                    >
+                      Sl. No
+                    </th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      rowSpan={2}
+                    >
+                      Analysis / Service
+                    </th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      rowSpan={2}
+                    >
+                      Unit
+                    </th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      colSpan={3}
+                    >
+                      For TNAU
+                    </th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      colSpan={3}
+                    >
+                      Other Academic Institutions
+                    </th>
+                    <th
+                      className="border border-gray-400 px-3 py-2 text-center"
+                      colSpan={3}
+                    >
+                      Industries / Private
+                    </th>
                   </tr>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center">Unit cost</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center">GST (18%)</th>
-                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">Total</th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      Unit cost
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      GST (18%)
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">
+                      Total
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      Unit cost
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      GST (18%)
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">
+                      Total
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      Unit cost
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center">
+                      GST (18%)
+                    </th>
+                    <th className="border border-gray-400 px-3 py-2 text-center font-bold">
+                      Total
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {analyticalCharges.map((row) => (
                     <tr key={row.sl} className="hover:bg-blue-50">
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.sl}</td>
-                      <td className="border border-gray-400 px-3 py-2 font-medium">{row.service}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.unit}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.tnau.unit}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.tnau.gst}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.tnau.total}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.academic.unit}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.academic.gst}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.academic.total}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.industry.unit}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center">{row.industry.gst}</td>
-                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">{row.industry.total}</td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.sl}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 font-medium">
+                        {row.service}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.unit}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.tnau.unit}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.tnau.gst}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">
+                        {row.tnau.total}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.academic.unit}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.academic.gst}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">
+                        {row.academic.total}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.industry.unit}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center">
+                        {row.industry.gst}
+                      </td>
+                      <td className="border border-gray-400 px-3 py-2 text-center font-bold">
+                        {row.industry.total}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
