@@ -1,17 +1,43 @@
 import Image from "next/image";
 import React from "react";
-import { FaLinkedinIn, FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
+import { MdOutlineInfo, MdOutlinePeople, MdOutlineScience, MdOutlineContactPhone } from "react-icons/md";
+import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
 
 const Footer = () => {
   const navigationLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/events-news", label: "Events & News" },
-    { href: "/board-of-directors", label: "Board of Directors" },
-    { href: "/coxbit-team", label: "Coxbit Team" },
-    { href: "/facilities", label: "Facilities" },
-    { href: "/funding", label: "Funding" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", label: "Home", icon: <AiOutlineHome size={16} /> },
+    { 
+      label: "About", 
+      icon: <MdOutlineInfo size={16} />,
+      submenu: [
+        { href: "/about", label: "About Coxbit" },
+        { href: "/coxbit-team", label: "Coxbit Team" },
+      ]
+    },
+    { 
+      label: "Facilities", 
+      icon: <BsBuilding size={16} />,
+      submenu: [
+        { href: "/facilities#lab", label: "Laboratory Services" },
+        { href: "/facilities#entrepreneurship", label: "Entrepreneurship Services" },
+        { href: "/facilities#skill", label: "Skill Building" },
+      ]
+    },
+    { href: "/events-news", label: "Event & Training", icon: <BsCalendarEvent size={16} /> },
+    { 
+      label: "Eco System Partners",
+      icon: <MdOutlineScience size={16} />,
+      submenu: [
+        { href: "#tnapex", label: "TNApex" },
+        { href: "#edi", label: "EDI" },
+        { href: "#startuptn", label: "Startup TN" },
+      ]
+    },
+    { href: "/contact", label: "Contact Us", icon: <MdOutlineContactPhone size={16} /> },
+    { href: "/startup-opportunities", label: "Startup Opportunities", icon: <MdOutlineScience size={16} /> },
   ];
 
   const quickLinks = [
@@ -38,12 +64,12 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Image
-                src="/logo.png"
+                src="/logo.jpeg"
                 alt="COXBIT Logo"
-                width={160}
+                width={180}
                 height={60}
                 priority
-                className="brightness-0 invert mb-4"
+                className="h-14 w-auto object-contain mb-4"
               />
 
               {/* Partner Logos */}
@@ -101,12 +127,34 @@ const Footer = () => {
             <ul className="space-y-3">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    {link.label}
-                  </a>
+                  {link.submenu ? (
+                    <div>
+                      <div className="text-gray-300 text-sm flex items-center gap-2 mb-2 font-medium">
+                        <span className="text-indigo-400">{link.icon}</span>
+                        {link.label}
+                      </div>
+                      <ul className="ml-7 space-y-2">
+                        {link.submenu.map((sub, subIndex) => (
+                          <li key={subIndex}>
+                            <a
+                              href={sub.href}
+                              className="text-gray-400 hover:text-white transition-colors duration-200 text-sm block"
+                            >
+                              {sub.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm flex items-center gap-2 group"
+                    >
+                      <span className="text-indigo-400 group-hover:text-indigo-300">{link.icon}</span>
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -133,35 +181,40 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4 text-sm">
-              <div>
-                <p className="text-gray-300 mb-1">Email</p>
-                <a
-                  href="mailto:info@coxbit.com"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  coebiotech@tnau.ac.in
-                </a>
+              <div className="flex items-start gap-3">
+                <MdEmail className="text-indigo-400 mt-1 flex-shrink-0" size={18} />
+                <div>
+                  <p className="text-gray-300 mb-1 font-medium">Email</p>
+                  <a
+                    href="mailto:coebiotech@tnau.ac.in"
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    coebiotech@tnau.ac.in
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="text-gray-300 mb-1">Phone</p>
-                <a
-                  href="tel:+15551234567"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  +91 9487001028
-                </a>
+              <div className="flex items-start gap-3">
+                <MdPhone className="text-indigo-400 mt-1 flex-shrink-0" size={18} />
+                <div>
+                  <p className="text-gray-300 mb-1 font-medium">Phone</p>
+                  <a
+                    href="tel:+919487001028"
+                    className="text-blue-400 hover:text-blue-300 transition-colors block"
+                  >
+                    +91 94870 01028
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="text-gray-300 mb-1">Address</p>
-                <p className="text-lg font-semibold text-white mb-4">
-                  Director, Centre of Excellence in Biotechnology
-                </p>
-                <p className="text-gray-400">
-                  Tamil Nadu Agricultural University
-                </p>
-                <p className="text-gray-400">
-                  Coimbatore - 641 003, Tamil Nadu, India
-                </p>
+              <div className="flex items-start gap-3">
+                <MdLocationOn className="text-indigo-400 mt-1 flex-shrink-0" size={18} />
+                <div>
+                  <p className="text-gray-300 mb-1 font-medium">Address</p>
+                  <p className="text-gray-400 leading-relaxed">
+                    Tamil Nadu Agricultural University<br />
+                    Coimbatore - 641 003<br />
+                    Tamil Nadu, India
+                  </p>
+                </div>
               </div>
             </div>
           </div>

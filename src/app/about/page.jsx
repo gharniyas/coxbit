@@ -1,809 +1,282 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import { MdInfo, MdLightbulb, MdTrackChanges, MdScience, MdDescription, MdHandshake } from "react-icons/md";
 
 export default function About() {
-  const milestones = [
+  const [activeTab, setActiveTab] = useState("about");
+  const [expandedFacility, setExpandedFacility] = useState(null);
+
+  const tabs = [
+    { id: "about", label: "About COXBIT", icon: <MdInfo size={20} /> },
+    { id: "why", label: "Why COXBIT", icon: <MdLightbulb size={20} /> },
+    { id: "focus", label: "Key Focus Areas", icon: <MdTrackChanges size={20} /> },
+    { id: "facilities", label: "Facilities", icon: <MdScience size={20} /> },
+    { id: "programs", label: "Programs", icon: <MdDescription size={20} /> },
+    { id: "partners", label: "Partners", icon: <MdHandshake size={20} /> },
+  ];
+
+  const focusAreas = [
+    { title: "Research to Product", desc: "Translating research into market-ready biotech products", icon: "🧬" },
+    { title: "Startup Support", desc: "Supporting startups through incubation, mentoring, and infrastructure", icon: "🚀" },
+    { title: "Funding Access", desc: "Facilitating access to government funding and startup schemes", icon: "💰" },
+    { title: "Industry Collaboration", desc: "Strengthening industry–academia collaboration", icon: "🤝" },
+    { title: "Skill Development", desc: "Building skilled human resources through training", icon: "🎓" },
+    { title: "Advanced Labs", desc: "Providing advanced analytical and research facilities", icon: "🔬" },
+  ];
+
+  const facilities = [
     {
-      year: "2018",
-      title: "COXBIT Established",
-      description:
-        "Registered as Section 8 Company under the Companies Act 2013 on 16th August 2018",
+      id: 1,
+      title: "Micropropagation and Plant Tissue Culture Facility",
+      icon: "🌱",
+      desc: "Strategically designed facility supporting innovation, entrepreneurship and advanced research in plant biotechnology.",
+      details: "The facility includes media preparation room, aseptic transfer area with laminar airflow cabinets, sterilization unit with autoclaves, controlled primary growth room, and primary hardening facility with poly tunnel house. Standardized protocols available for Syngonium, banana and sugarcane.",
     },
     {
-      year: "2019",
-      title: "Infrastructure Development",
-      description:
-        "World-class biotechnology infrastructure established with government funding",
+      id: 2,
+      title: "Advanced Bioinformatics Server for AI-Driven Research",
+      icon: "💻",
+      desc: "High-performance computational platform with 512 GB RAM for AI-driven biological data analysis.",
+      details: "Supports genomics, transcriptomics, proteomics, metabolomics analysis. Equipped with OmicsBox and Discovery Studio for OMICS data analysis, molecular modelling and AI-assisted agricultural research. Virtual machine-based access for flexible, scalable computing.",
     },
     {
-      year: "2020",
-      title: "Equipment Installation",
-      description:
-        "High-end analytical equipment installed for proteomics and metabolomics research",
+      id: 3,
+      title: "DBT-Supported Phenomics Platform",
+      icon: "🌾",
+      desc: "Advanced platform for climate-smart agriculture with ₹339.32 lakhs project outlay.",
+      details: "Features automatic rainout shelter (38m × 8m), drought simulation system, Automatic Mini-Lysimeter system for monitoring soil moisture dynamics. Enables precision phenotyping for drought tolerance and climate resilience research.",
     },
     {
-      year: "2021",
-      title: "Research Initiatives",
-      description:
-        "Public-private partnership research programs launched for agricultural biotech",
-    },
-    {
-      year: "Present",
-      title: "Innovation Leadership",
-      description:
-        "Leading biotechnology innovation and sustainable agricultural solutions",
+      id: 4,
+      title: "Native Species Seed Vault with Cryogenic Facility",
+      icon: "❄️",
+      desc: "State-level germplasm repository for long-term preservation of indigenous plant species.",
+      details: "Cryogenic storage facility for rare, threatened, and economically important native species. Functions as research and reference centre for seed physiology, cryobiology, and genetic characterization. Project outlay: ₹10.50 lakh.",
     },
   ];
 
-  const goals = [
-    "Position Tamil Nadu as a leader on the global biotechnology map",
-    "Foster investment and innovation in the biotechnology sector",
-    "Provide enabling environment and world-class infrastructure for research and education in biotechnology",
-  ];
-
-  const pppModes = [
-    "MoUs in single window system enabling development of a strong business plan.",
-    "Exclusive Management Team is operating this section 8 company through board of directors of TNAU and a CEO.",
-    "Scalability of biobased products production and its feasibility research.",
-    "Obtaining stakeholders and farmers confidence by all possible means.",
-    "Our products will also focus on specific niche areas and strengthen our brand's online presence and expand help the network.",
-  ];
-
-  const services = [
+  const programs = [
     {
-      title: "Floor / Knowledge Space",
-      icon: "🏢",
-      description:
-        "The knowledge space, cabin space and basic instrumental facilities are available in CoE in Biotechnology for public/private joint ventures in thrust areas of biotechnology viz, bioinformatics, Genomics, Molecular Diagnostics, Gene isolation, Cell culture, Agri inputs and farm machineries. The funds will be generated through service charges for knowledge space and mentoring.",
+      title: "COXBIT–TNAPEx Programme",
+      subtitle: "MSME Food Product Development and Value Addition",
+      budget: "₹20,00,000",
+      desc: "Supporting MSMEs in new product design and technical assistance under TNAPEx–RAMP Programme. Focus on functional food development and value addition of agro-based resources.",
     },
     {
-      title: "Skill Development",
-      icon: "🎓",
-      description:
-        "Hands-on trainings, seminars will be conducted for young students and budding entrepreneurs for development of entrepreneurial skill and product development on cost basis.",
-    },
-    {
-      title: "Analytical Facility",
-      icon: "🔬",
-      description:
-        "The proteomics & Metabolomic facility was established at COXBIT will be available to the students and researchers all over Tamil Nadu and India on charge basis. The revenue generated through the facility will be used for purchase of consumables and improvement of the facility.",
+      title: "BIRAC E-YUVA Programme",
+      subtitle: "Bio-Entrepreneurship and Innovation Support",
+      budget: "BIRAC-DBT Funded",
+      desc: "Empowering Youth for Undertaking Value Added Innovations. Supporting undergraduate, postgraduate and postdoctoral innovators through structured training, mentorship, and funding.",
     },
   ];
 
-  const outcomes = [
-    "Creating world class facility under one roof for fullest utilization of native bio resources and man power of Tamil Nadu.",
-    "Improving yield potential of crops using biotechnological tools.",
-    "Effective translation of research into viable products through public partnership mode.",
-    "Commercialization of invention through business promotions.",
-  ];
-
-  const activities = [
+  const partners = [
     {
-      title: "Entrepreneurship Development",
-      description:
-        "Nurturing technology-oriented entrepreneurs and start-up firms focusing on biotechnology for progressive agriculture",
-      icon: "🚀",
+      name: "EDII-TN",
+      full: "Entrepreneurship Development and Innovation Institute",
+      logo: "/innovation logo.jpg",
+      desc: "Promotes entrepreneurship through training, mentoring, incubation, and financial assistance. Provides access to government funding schemes, seed support and innovation vouchers (IVP-A and IVP-B).",
     },
     {
-      title: "Bioproduct Development",
-      description:
-        "Bioproduct development and facilitating certification services for commercial applications",
-      icon: "🧪",
+      name: "StartupTN",
+      full: "Tamil Nadu Startup and Innovation Mission",
+      logo: "/innovation logo.jpg",
+      desc: "Government of Tamil Nadu's initiative building a dynamic startup ecosystem. StartupTN Regional Hub – Coimbatore is located within COXBIT premises, providing seamless access to funding and support.",
     },
     {
-      title: "Skill Development",
-      description:
-        "Nurturing young talents through comprehensive skill development programmes",
-      icon: "🎓",
+      name: "TNAPEx",
+      full: "Tamil Nadu Food Processing and Agri Export Promotion Corporation",
+      logo: "/TNA logo.jpg",
+      desc: "Strengthens MSMEs in food processing and value-added product development. COXBIT serves as technical support partner under RAMP Programme, supporting 10+ startups with financial assistance.",
     },
-    {
-      title: "Research Support",
-      description:
-        "Programmed resource mobilization and support bioproduct development research systematically",
-      icon: "🔬",
-    },
-    {
-      title: "Knowledge Transfer",
-      description:
-        "Knowledge dissemination about bioproducts to the farming community for better agricultural practices",
-      icon: "📚",
-    },
-  ];
-
-  const benefits = [
-    "Development of novel biobased agri-inputs for the benefit of farmers",
-    "Human resource development by conducting training to students and scholars with entrepreneurial and technical skills",
-    "Availability of analytical facility to students and research scholars",
-    "COXBIT serves as a pipeline to transfer the agrotechnology in a large scale to the needy farmers",
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-transparent to-indigo-100/20"></div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              About Centre of Excellence in Biotechnology
-            </span>
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            Centre of Excellence in Biotechnology
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Creating world-class infrastructure for Biotech Research and
-            Innovation at Tamil Nadu Agricultural University with funding
-            support from Government of Tamil Nadu.
+          <p className="text-lg text-indigo-600 font-semibold italic mb-2">
+            Lab to Land. Idea to Impact. Science to Society.
+          </p>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            A Section 8 Company under Companies Act, 2013 | Tamil Nadu Agricultural University
           </p>
         </div>
 
-        {/* About Us Video Section */}
-        <section className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Watch our journey of excellence in biotechnology research and
-              innovation at Tamil Nadu Agricultural University.
-            </p>
-          </div>
-
-          <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
-            <video
-              className="w-full h-auto"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-            >
-              <source src="/video/aboutus.MP4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </section>
-
-        {/* Prelude Section */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-            Prelude
-          </h2>
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              The vision of the Centre of Excellence in Biotechnology is to
-              position Tamil Nadu as a leader on the global Biotechnology map by
-              fostering investment and innovation in the biotechnology sector by
-              providing an enabling environment and world class infrastructure.
-              TNAU which is already a leader in the biotechnology sector in
-              India is the fitting institution to setup the Centre of Excellence
-              in Biotechnology.
-            </p>
-            <p>
-              CoE in Biotechnology is one among the 11 CoE's identified in
-              Vision 2023, Phase II under theme 6, "Establishment of several
-              Centres of Excellence (COE)" to foster innovation and knowledge
-              creation. COEs will be developed on a Public-Private Partnership
-              (PPP) model, with funding and participation by the industries.
-            </p>
-            <p>
-              The main objective of the Centre of Excellence in Biotechnology is
-              to advance the development and application of various bio-based
-              solutions aimed at enhancing agricultural productivity and
-              sustainability. These solutions encompass a range of technologies
-              and products, including bioinoculants, bio inputs, and bio
-              stimulants.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-6">
-              {[
-                {
-                  title: "Bioinoculants",
-                  icon: "🦠",
-                  desc: "Microbial formulations containing beneficial bacteria, fungi, or algae applied to seeds, soil, or plants to improve nutrient availability and enhance disease resistance.",
-                },
-                {
-                  title: "Bio Inputs",
-                  icon: "🌱",
-                  desc: "Natural or biological substances utilized to enrich soil fertility and support sustainable agricultural practices, including organic fertilizers and biopesticides.",
-                },
-                {
-                  title: "Bio Stimulants",
-                  icon: "⚡",
-                  desc: "Substances or microorganisms applied to plants or soil to stimulate natural physiological processes, enhancing nutrient uptake and improving stress tolerance.",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-5 border border-blue-100"
-                >
-                  <div className="text-3xl mb-3">{item.icon}</div>
-                  <h4 className="font-semibold text-gray-800 mb-2">
-                    {item.title}
-                  </h4>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Main About Section with Image */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-              Our Foundation
-            </h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                Centre of excellence in Biotechnology (COXBIT) is being
-                established at Tamil Nadu Agricultural University with funding
-                support from Government of Tamil Nadu to create world class
-                infrastructure for Biotech Research and Innovation.
-              </p>
-              <p>
-                Research and development activities will be carried out under
-                public-private partnership mode to develop super active
-                enzymes/bio molecules, biobased products, hormones for fruit
-                ripening, plant growth stimulants and similar bio-inputs for the
-                commercial benefit of farmers.
-              </p>
-              <p>
-                Independent and free-standing Section 8 company by leveraging
-                strengths of TNAU-BIOTECH COUNCIL FOR ESTABLISHMENT OF CENTRE OF
-                EXCELLENCE IN BIOTECHNOLOGY was registered as Section 8 Company
-                under the Companies Act 2013 on 16th of August 2018.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="relative h-64">
-              <Image
-                src="/Events - Trainings/3 - LCMS Training/_DSC0260.JPG"
-                alt="LCMS Training Laboratory"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-lg font-semibold">
-                  LCMS Training Laboratory
-                </h3>
-                <p className="text-sm opacity-90">
-                  Hands-on analytical training
-                </p>
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                Advanced Analytical Training
-              </h3>
-              <p className="text-gray-600">
-                Our facility provides comprehensive hands-on training on LCMS,
-                GCMS, and high-throughput protein analysis, featuring
-                state-of-the-art equipment and expert guidance.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* About COXBIT */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-            About COXBIT
-          </h2>
-          <div className="space-y-4 text-gray-700 leading-relaxed">
-            <p>
-              The Biotech Council for Centre of Excellence in Biotechnology was
-              established at Centre for Plant Molecular Biology and
-              Biotechnology, TNAU funded by Tamil Nadu to create world class
-              state of art infrastructure to foster Biotech Research and
-              Innovation and development of biobased products under
-              public-private partnership.
-            </p>
-            <p>
-              In this centre, research and development activities will be
-              carried out under public-private partnership mode to develop super
-              active enzymes / bio molecules, biobased products, hormones for
-              fruit ripening, plant growth stimulants, similar bio-inputs,
-              development of agri inputs and farm machineries for the commercial
-              benefit of farmers.
-            </p>
-            <p>
-              The Centre of Excellence in Biotechnology Building has been
-              constructed with an area of <strong>1.13 lakhs square ft</strong>,
-              which includes knowledge and cabin space which can be occupied by
-              start-ups, student entrepreneurs and established companies for
-              research and development activities.
-            </p>
-            <p>
-              State of art facilities was established at Centre of Excellence in
-              Biotechnology to initiate high end research on proteomics and
-              metabolomics. Nine trainings have been successfully conducted and
-              so far, <strong>2,700 samples</strong> have been analysed in this
-              proteomics and metabolomics analytical facility.
-            </p>
-            <p>
-              CoE in Biotechnology signed MoA with{" "}
-              <strong>nine startup / established companies</strong> to occupy
-              the cabin space and eight companies are requested to occupy the
-              floor space in COXBIT. COXBIT supports and plays a vital role in
-              transforming the landscape of Startups in the Agri and Biotech
-              with StartupTN.
-            </p>
-          </div>
-
-          {/* PPP Mode */}
-          <div className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
-              Public-Private Partnership Mode
-            </h3>
-            <ol className="space-y-3">
-              {pppModes.map((mode, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-7 h-7 bg-gradient-to-br from-blue-500 to-indigo-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
-                    {i + 1}
-                  </span>
-                  <span className="text-gray-700 leading-relaxed">{mode}</span>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-
-        {/* Vision & Goals */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 rounded-xl shadow-xl p-8 border border-blue-100/50 backdrop-blur-sm">
-            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
-              <span className="text-white text-2xl">🎯</span>
-            </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-              Our Vision
-            </h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To develop high-end laboratories, biobased products through
-              public-private partnership and quality human resource in the
-              biotech sector.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-white via-indigo-50 to-purple-50 rounded-xl shadow-xl p-8 border border-indigo-100/50 backdrop-blur-sm">
-            <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
-              <span className="text-white text-2xl">🚀</span>
-            </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Our Goals
-            </h2>
-            <ul className="space-y-3 text-gray-700">
-              {goals.map((goal, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-indigo-500 mr-2 mt-1">•</span>
-                  <span>{goal}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Services Available */}
-        <div className="mb-16">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">
-              Services Available in COXBIT
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 hover:shadow-2xl transition-all duration-300"
+        {/* Tab Navigation */}
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 mb-6 overflow-x-auto">
+          <div className="flex min-w-max">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex-1 px-6 py-4 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 border-b-4 whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? "border-indigo-600 text-indigo-600 bg-indigo-100"
+                    : "border-transparent text-gray-600 hover:text-indigo-600 hover:bg-gray-50"
+                }`}
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed text-sm">
-                  {service.description}
+                {tab.icon}
+                <span>{tab.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Tab Content */}
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 md:p-8">
+          {/* About COXBIT */}
+          {activeTab === "about" && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">About COXBIT</h2>
+              <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  The Centre of Excellence in Biotechnology (COXBIT) is a pioneering initiative established at Tamil Nadu Agricultural University (TNAU) with the support of the Government of Tamil Nadu. Operating under a <strong>Public–Private Partnership (PPP)</strong> mode, COXBIT serves as a dynamic platform to foster innovation, accelerate biotechnology research and translate scientific discoveries into scalable, real-world solutions.
+                </p>
+                <p>
+                  COXBIT is designed to bridge the gap between academia, industry and startups, creating a collaborative ecosystem that nurtures innovation from concept to commercialization. With access to state-of-the-art laboratories, advanced instrumentation and domain expertise and technology-driven entrepreneurship infrastructure, including dedicated cabin and floor spaces, the centre empowers researchers, entrepreneurs and enterprises to develop cutting-edge technologies and high-impact biobased products.
+                </p>
+                <p>
+                  The centre focuses on advancing biomolecules, high-performance enzymes, plant growth stimulants, sustainable agricultural bio-inputs, biopharmaceuticals, functional foods and nutraceuticals, while enabling technologies that enhance crop productivity, improve post-harvest management and support climate-resilient agriculture.
+                </p>
+                <p>
+                  COXBIT provides <strong>end-to-end support</strong> including product development, incubation support, technology validation, industry collaboration and market linkage, helping innovators transform ideas into impactful solutions. By integrating science, innovation and entrepreneurship, the centre is driving a new era of biotechnology-led transformation in agriculture and allied sectors.
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Outcomes */}
-        <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl shadow-xl p-8 mb-16 text-white">
-          <h2 className="text-3xl font-bold mb-8 text-center">
-            Outcome from COXBIT
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {outcomes.map((outcome, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span className="flex-shrink-0 w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
-                  ✓
-                </span>
-                <p className="leading-relaxed">{outcome}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Strategic Partnerships */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-              Our Strategic Partners
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Collaborating with leading institutions to advance biotechnology
-              research and innovation
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* TNAU Partnership */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 text-center hover:shadow-2xl transition-all duration-300">
-              <div className="w-40 h-28 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg bg-white flex items-center justify-center p-2">
-                <Image
-                  src="/TNA logo.jpg"
-                  alt="TNAPEx"
-                  width={160}
-                  height={112}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">TNAPEx</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our primary academic partner, providing world-class research
-                infrastructure and educational excellence in agricultural
-                biotechnology.
-              </p>
             </div>
+          )}
 
-            {/* Innovation Partnership */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 text-center hover:shadow-2xl transition-all duration-300">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src="/innovation logo.jpg"
-                  alt="Innovation Partner"
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">
-                Innovation Excellence
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Driving cutting-edge research and development initiatives in
-                biotechnology innovation and sustainable agricultural solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Advanced Equipment Section */}
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">
-                High-Throughput Analytical Platform
-              </h2>
+          {/* Why COXBIT */}
+          {activeTab === "why" && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why COXBIT</h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Our facility features state-of-the-art equipment for proteomics
-                and metabolomics research, enabling breakthrough discoveries in
-                biotechnology and agricultural sciences.
+                At COXBIT, we emphasize four core transformations that innovators and startups undergo during their journey. These transformations are designed to ensure that early-stage ideas evolve into scalable, impactful and market-ready biotechnology solutions.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800">
-                    Mass Spectrometry:
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• MALDI TOF/TOF Mass Spectrometer</li>
-                    <li>• LCMS-8045 Triple Quadrupole</li>
-                    <li>• GCMS TQ-8040 NX Triple Quadrupole</li>
-                  </ul>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-gray-800">
-                    Chromatography:
-                  </h4>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Preparative HPLC System</li>
-                    <li>• UHPLC system</li>
-                    <li>• Nano LC System</li>
-                  </ul>
-                </div>
+                {[
+                  { icon: "🔬", text: "Transforming Proof-of-Concepts into Market-Ready Biotech Products through Advanced Technical Validation and Infrastructure Support" },
+                  { icon: "🚀", text: "Shaping Early-Stage Ideas into Viable Enterprises through Strategic Mentoring, Capacity Building, and Technology-Driven Entrepreneurship Support" },
+                  { icon: "👥", text: "Strengthening Human Capital through Capacity Building Programs, Skill Development and Hands-on Training in Advanced Biotechnology" },
+                  { icon: "💼", text: "Evolving Innovative Biotech Solutions into Investment-Ready Ventures through Industry Linkages, Market Access and Investor Connect" },
+                  { icon: "💰", text: "Enabling access to Government startup funding through scheme linkages, proposal support and guidance on funding opportunities" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+                    <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                    <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="relative h-80 rounded-xl overflow-hidden">
-              <Image
-                src="/Events - Trainings/4 - GCMS Training/_DSC1451.JPG"
-                alt="GCMS Training Laboratory"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-lg font-semibold">GCMS Training Lab</h3>
-                <p className="text-sm opacity-90">
-                  Advanced analytical equipment
-                </p>
+          )}
+
+          {/* Key Focus Areas */}
+          {activeTab === "focus" && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Focus Areas</h2>
+              <div className="grid md:grid-cols-3 gap-4">
+                {focusAreas.map((area, i) => (
+                  <div key={i} className="bg-gradient-to-br from-white to-blue-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition-shadow">
+                    <div className="text-4xl mb-3">{area.icon}</div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{area.title}</h3>
+                    <p className="text-gray-600 text-sm">{area.desc}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
+          )}
 
-        {/* Activities Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Our Key Activities
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {activities.map((activity, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="text-4xl mb-4 text-center">{activity.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 text-center">
-                  {activity.title}
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  {activity.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          <div className="relative h-80 rounded-xl overflow-hidden">
-            <Image
-              src="/Scrolling Photos/Tree Planting.JPG"
-              alt="Sustainability Initiative - Tree Planting"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-            <div className="absolute bottom-4 left-4 text-white">
-              <h3 className="text-lg font-semibold">
-                Sustainability Initiative
-              </h3>
-              <p className="text-sm opacity-90">Environmental stewardship</p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-white via-green-50 to-emerald-50 rounded-xl shadow-xl p-8 border border-green-100/50">
-            <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
-              <span className="text-white text-2xl">🌟</span>
-            </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-6">
-              Benefits of COXBIT
-            </h2>
-            <ul className="space-y-4 text-gray-700">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span className="leading-relaxed">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Benefits to Farmers */}
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl shadow-xl border border-green-100/50 p-8 mb-16">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0">
-              <span className="text-white text-2xl">🌾</span>
-            </div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              Benefits to Farmers
-            </h2>
-          </div>
-          <p className="text-gray-700 leading-relaxed">
-            The crop plants at field level were exposed to pests and diseases,
-            which evolve for resistance due to changing climate scenarios. The
-            biobased agri-inputs will be developed through public-private
-            partnership mode and the novel products will be available to the
-            farmers to control pests and diseases in various crops. Development
-            of biobased products will reduce the usage of chemical pesticides,
-            in turn environmental pollution is reduced.
-          </p>
-        </div>
-
-        {/* Timeline Section */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Our Journey
-          </h2>
-          <div className="relative">
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600"></div>
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`relative flex items-center ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
-                >
-                  <div
-                    className={`flex-1 ${
-                      index % 2 === 0 ? "md:pr-8" : "md:pl-8"
-                    }`}
+          {/* Facilities */}
+          {activeTab === "facilities" && (
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Facilities</h2>
+              {facilities.map((facility) => (
+                <div key={facility.id} className="border border-blue-100 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => setExpandedFacility(expandedFacility === facility.id ? null : facility.id)}
+                    className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-colors"
                   >
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 shadow-md">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">
-                        {milestone.year}
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl">{facility.icon}</span>
+                      <div className="text-left">
+                        <h3 className="font-bold text-gray-900">{facility.title}</h3>
+                        <p className="text-sm text-gray-600">{facility.desc}</p>
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        {milestone.title}
-                      </h3>
-                      <p className="text-gray-600">{milestone.description}</p>
+                    </div>
+                    <svg
+                      className={`w-5 h-5 text-gray-600 transition-transform ${expandedFacility === facility.id ? "rotate-180" : ""}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {expandedFacility === facility.id && (
+                    <div className="p-4 bg-white border-t border-blue-100">
+                      <p className="text-gray-700 leading-relaxed">{facility.details}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Programs */}
+          {activeTab === "programs" && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Programs</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {programs.map((program, i) => (
+                  <div key={i} className="bg-gradient-to-br from-white to-indigo-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-shadow">
+                    <div className="flex items-start justify-between mb-3">
+                      <h3 className="text-xl font-bold text-gray-900">{program.title}</h3>
+                      <span className="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full font-semibold">{program.budget}</span>
+                    </div>
+                    <p className="text-indigo-600 font-semibold text-sm mb-3">{program.subtitle}</p>
+                    <p className="text-gray-700 text-sm leading-relaxed">{program.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Partners */}
+          {activeTab === "partners" && (
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Knowledge & Ecosystem Partners</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {partners.map((partner, i) => (
+                  <div key={i} className="bg-white rounded-xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-xl transition-shadow">
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 text-center">
+                      <div className="w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden bg-white shadow-md flex items-center justify-center">
+                        <Image src={partner.logo} alt={partner.name} width={60} height={60} className="object-contain" />
+                      </div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{partner.name}</h3>
+                      <p className="text-xs text-gray-600">{partner.full}</p>
+                    </div>
+                    <div className="p-4">
+                      <p className="text-gray-700 text-sm leading-relaxed">{partner.desc}</p>
                     </div>
                   </div>
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Research Infrastructure Gallery */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-            Training Programs & Laboratory Facilities
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="relative h-64 rounded-lg overflow-hidden group">
-              <Image
-                src="/Events - Trainings/2 - Hands on training on High throughput analysis of Protein/Training Participants.JPG"
-                alt="Protein Analysis Training"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="font-semibold">Protein Analysis Training</h3>
-                <p className="text-sm opacity-90">High-throughput analysis</p>
-              </div>
-            </div>
-
-            <div className="relative h-64 rounded-lg overflow-hidden group">
-              <Image
-                src="/Events - Trainings/1 - Bioentrpreneurship Meet/IMG_1386.JPG"
-                alt="Bioentrepreneurship Meet"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="font-semibold">Bioentrepreneurship</h3>
-                <p className="text-sm opacity-90">Innovation ecosystem</p>
-              </div>
-            </div>
-
-            <div className="relative h-64 rounded-lg overflow-hidden group">
-              <Image
-                src="/Scrolling Photos/IMG_6592.JPG"
-                alt="Research Activities"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="font-semibold">Research Excellence</h3>
-                <p className="text-sm opacity-90">Innovation in progress</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Training Programs Section */}
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">
-              Specialized Training Programs
-            </h3>
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🔬</span>
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">
-                  LCMS Training
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Hands-on training on Liquid Chromatography Mass Spectrometry
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">⚗️</span>
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">
-                  GCMS Training
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Gas Chromatography Mass Spectrometry analytical techniques
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">🧬</span>
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">
-                  Protein Analysis
-                </h4>
-                <p className="text-sm text-gray-600">
-                  High-throughput protein analysis and characterization
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 text-center">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl">💡</span>
-                </div>
-                <h4 className="font-semibold text-gray-800 mb-2">
-                  Bioentrepreneurship
-                </h4>
-                <p className="text-sm text-gray-600">
-                  Innovation ecosystem and startup development
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="bg-gradient-to-br from-gray-800 via-blue-900 to-indigo-900 text-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Contact Information
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">
-                Address
-              </h3>
-              <p className="leading-relaxed mb-4">
-                <strong>
-                  Biotech Council for Establishment of Centre of Excellence in
-                  Biotechnology
-                </strong>
-              </p>
-              <p className="leading-relaxed">
-                Tamil Nadu Agricultural University
-                <br />
-                Coimbatore – 641 003, Tamil Nadu, India
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">
-                Contact Details
-              </h3>
-              <div className="space-y-2">
-                <p>
-                  <strong>Phone:</strong>
-                </p>
-                <p className="text-blue-200">+91 94870 01028</p>
-                <p className="text-blue-200">+91 88702 81435</p>
-                <p className="text-blue-200">+91 73735 09696</p>
-                <p className="mt-4">
-                  <strong>Email:</strong>
-                </p>
-                <p>
-                  <a
-                    href="mailto:coebiotech@tnau.ac.in"
-                    className="text-blue-300 hover:text-blue-200 transition-colors"
-                  >
-                    coebiotech@tnau.ac.in
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Contact CTA */}
+        <div className="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl shadow-xl p-8 text-center text-white">
+          <h2 className="text-2xl font-bold mb-3">Ready to Innovate with COXBIT?</h2>
+          <p className="mb-6 opacity-90">Whether it's developing a novel biotech solution, scaling a startup or enabling industry-ready technologies, COXBIT stands as a catalyst for innovation.</p>
+          <a href="/contact" className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
+            Get in Touch
+          </a>
         </div>
       </div>
     </div>
