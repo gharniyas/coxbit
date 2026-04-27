@@ -19,8 +19,8 @@ export default function CoxbitTeam() {
     },
     {
       id: 3,
-      name: "Dr. KAVIYAPRIYA M Ph. D (Plant Biotechnology)",
-      qualification: "Ph.D.",
+      name: "Dr. KAVIYAPRIYA M",
+      qualification: "Ph.D. (Plant Biotechnology)",
       designation: "Research Associate, COXBIT",
       image: "/kaviya.jpeg",
     },
@@ -184,13 +184,17 @@ export default function CoxbitTeam() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-bold mb-2">
+                    {member.name}{" "}
+                    {member.qualification && (
+                      <span className="text-gray-500 font-normal text-base">{member.qualification}</span>
+                    )}
+                  </h3>
                   {member.designation && (
-                    <p className="text-blue-600 font-medium mb-1">
+                    <p className="text-blue-600 font-medium">
                       {member.designation}
                     </p>
                   )}
-                  <p className="text-gray-600">{member.qualification}</p>
                 </div>
               </div>
             ))}
