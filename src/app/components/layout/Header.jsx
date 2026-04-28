@@ -23,27 +23,16 @@ const Header = () => {
     {
       href: "/",
       label: "Home",
-      icon: <AiOutlineHome className="w-5 h-5 mr-1.5" size={18} />,
+      icon: <AiOutlineHome size={16} />,
     },
     {
+      href: "/about",
       label: "About",
-      icon: <MdOutlineInfo size={18} className="mr-1.5" />,
-      dropdown: [
-        {
-          href: "/about",
-          label: "About Coxbit",
-          icon: <MdOutlineInfo size={16} className="mr-2" />,
-        },
-        {
-          href: "/coxbit-team",
-          label: "Coxbit Team",
-          icon: <MdOutlinePeople size={16} className="mr-2" />,
-        },
-      ],
+      icon: <MdOutlineInfo size={16} />,
     },
     {
       label: "Facilities",
-      icon: <BsBuilding size={18} className="mr-1.5" />,
+      icon: <BsBuilding size={16} />,
       dropdown: [
         {
           href: "/facilities#lab",
@@ -60,43 +49,53 @@ const Header = () => {
           label: "Skill and Capacity Building",
           icon: <FaChalkboardTeacher size={14} className="mr-2" />,
         },
+        {
+          href: "/facilities#services",
+          label: "Services Offered",
+          icon: <FaFlask size={14} className="mr-2" />,
+        },
       ],
     },
     {
-      href: "/events-news",
-      label: "Event & Training",
-      icon: <BsCalendarEvent size={18} className="mr-1.5" />,
+      href: "/projects",
+      label: "Projects",
+      icon: <MdOutlineScience size={16} />,
     },
     {
       label: "Eco System Partners",
-      icon: <MdOutlineHandshake size={18} className="mr-1.5" />,
+      icon: <MdOutlineHandshake size={16} />,
       dropdown: [
-        {
-          href: "#tnapex",
-          label: "TNApex",
-          icon: <FaCheckCircle size={14} className="mr-2" />,
-        },
-        {
-          href: "#edi",
-          label: "EDI",
-          icon: <FaCheckCircle size={14} className="mr-2" />,
-        },
         {
           href: "#startuptn",
           label: "Startup TN",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
+        {
+          href: "#edi",
+          label: "EDII-TN",
+          icon: <FaCheckCircle size={14} className="mr-2" />,
+        },
+        {
+          href: "#tnapex",
+          label: "TNAPEx",
+          icon: <FaCheckCircle size={14} className="mr-2" />,
+        },
       ],
-    },
-    {
-      href: "/contact",
-      label: "Contact Us",
-      icon: <MdOutlineContactPhone size={18} className="mr-1.5" />,
     },
     {
       href: "/startup-opportunities",
       label: "Startup Opportunities",
-      icon: <MdOutlineRocketLaunch size={18} className="mr-1.5" />,
+      icon: <MdOutlineRocketLaunch size={16} />,
+    },
+    {
+      href: "/events-news",
+      label: "Event & Training",
+      icon: <BsCalendarEvent size={16} />,
+    },
+    {
+      href: "/contact",
+      label: "Contact Us",
+      icon: <MdOutlineContactPhone size={16} />,
     },
   ];
 
@@ -128,7 +127,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center">
+        <nav className="hidden md:flex items-center" style={{ background: '#139600', borderRadius: '0px' }}>
           <div className="flex items-stretch gap-1">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
@@ -143,11 +142,14 @@ const Header = () => {
                     tabIndex={0}
                   >
                     <button
-                      className={`font-medium text-sm flex items-center gap-1 focus:outline-none px-3 py-2 transition-colors duration-200 rounded-xl ${
+                      className={`font-medium text-xs flex items-center gap-1.5 focus:outline-none px-2 py-2 transition-colors duration-200 rounded-none ${
                         isDropdownActive
-                          ? "bg-indigo-600 text-white shadow-md"
-                          : "text-gray-700 hover:text-indigo-600 hover:bg-indigo-50"
+                          ? "bg-[#139600] text-white"
+                          : "bg-[#139600] text-white"
                       }`}
+                      style={{
+                        boxShadow: isDropdownActive ? 'none' : 'none',
+                      }}
                       tabIndex={0}
                       aria-haspopup="true"
                       aria-expanded={isDropdownActive ? "true" : "false"}
@@ -169,7 +171,7 @@ const Header = () => {
                       </svg>
                     </button>
                     <div
-                      className="absolute left-0 top-full mt-1 w-56 bg-white border border-blue-100 rounded-xl shadow-xl opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-200 z-40"
+                      className="absolute left-0 top-full mt-1 w-56 bg-white border-none rounded-none shadow-none opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-200 z-40"
                       tabIndex={-1}
                     >
                       {item.dropdown.map((sub, subIdx) => {
@@ -178,11 +180,16 @@ const Header = () => {
                           <a
                             key={sub.href}
                             href={sub.href}
-                            className={`flex items-center px-5 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                            className={`flex items-center px-5 py-2 text-base font-bold rounded-none transition-colors duration-200 border-l-4 ${
                               isSubActive
-                                ? "bg-blue-600 text-white"
-                                : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                                ? "border-[#139600] bg-white text-black"
+                                : "border-transparent bg-white text-black hover:border-[#139600] hover:bg-gray-50"
                             }`}
+                            style={{
+                              ...(isSubActive
+                                ? { boxShadow: 'none' }
+                                : {}),
+                            }}
                             tabIndex={0}
                           >
                             {sub.icon}
@@ -199,11 +206,14 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-medium text-sm transition-colors duration-200 px-3 py-2 flex items-center ${
+                    className={`font-medium text-xs transition-colors duration-200 px-2 py-2 flex items-center gap-1.5 ${
                       isActive
-                        ? "bg-indigo-600 text-white shadow-md"
-                        : "text-gray-700 hover:text-indigo-600 hover:bg-indigo-50"
-                    } rounded-xl`}
+                        ? "bg-[#139600] text-white"
+                        : "bg-[#139600] text-white"
+                    } rounded-none`}
+                    style={{
+                      boxShadow: 'none',
+                    }}
                   >
                     {item.icon}
                     {item.label}

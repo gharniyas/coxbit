@@ -42,7 +42,7 @@ export default function Home() {
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl backdrop-blur-sm"
                 onClick={() => router.push("/facilities")}
               >
-                Explore Our Services
+                Explore Services
               </button>
               <button
                 className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/30 transform hover:scale-105 transition-all duration-300 shadow-xl"
@@ -103,7 +103,7 @@ export default function Home() {
           {/* Building & Infrastructure Showcase */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              Our World-Class Infrastructure
+              World-Class Infrastructure
             </h2>
             <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               State-of-the-art buildings and facilities designed for
@@ -157,7 +157,7 @@ export default function Home() {
           {/* Scrolling Photos & Videos Gallery */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              Our Research & Activities Gallery
+              Research & Activities Gallery
             </h2>
             <p className="text-xl text-gray-600 text-center mb-8 max-w-3xl mx-auto">
               Explore our state-of-the-art facilities, research activities, and
@@ -370,7 +370,7 @@ export default function Home() {
                 <span className="text-white text-2xl">🎯</span>
               </div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-                Our Vision
+                Vision
               </h3>
               <p className="text-gray-700 leading-relaxed">
                 To develop high-end laboratories, biobased products through
@@ -384,7 +384,7 @@ export default function Home() {
                 <span className="text-white text-2xl">🚀</span>
               </div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                Our Goals
+                Goals
               </h3>
               <ul className="text-gray-700 space-y-2">
                 <li>

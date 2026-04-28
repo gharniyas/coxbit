@@ -9,35 +9,30 @@ import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
 const Footer = () => {
   const navigationLinks = [
     { href: "/", label: "Home", icon: <AiOutlineHome size={16} /> },
-    { 
-      label: "About", 
-      icon: <MdOutlineInfo size={16} />,
-      submenu: [
-        { href: "/about", label: "About Coxbit" },
-        { href: "/coxbit-team", label: "Coxbit Team" },
-      ]
-    },
+    { href: "/about", label: "About", icon: <MdOutlineInfo size={16} /> },
     { 
       label: "Facilities", 
       icon: <BsBuilding size={16} />,
       submenu: [
-        { href: "/facilities#lab", label: "Laboratory Services" },
+        { href: "/facilities#lab", label: "State of Art Laboratory Services" },
         { href: "/facilities#entrepreneurship", label: "Entrepreneurship Services" },
-        { href: "/facilities#skill", label: "Skill Building" },
+        { href: "/facilities#skill", label: "Skill and Capacity Building" },
+        { href: "/facilities#services", label: "Services Offered" },
       ]
     },
-    { href: "/events-news", label: "Event & Training", icon: <BsCalendarEvent size={16} /> },
+    { href: "/projects", label: "Projects", icon: <MdOutlineScience size={16} /> },
     { 
       label: "Eco System Partners",
       icon: <MdOutlineScience size={16} />,
       submenu: [
-        { href: "#tnapex", label: "TNApex" },
-        { href: "#edi", label: "EDI" },
         { href: "#startuptn", label: "Startup TN" },
+        { href: "#edi", label: "EDII-TN" },
+        { href: "#tnapex", label: "TNAPEx" },
       ]
     },
-    { href: "/contact", label: "Contact Us", icon: <MdOutlineContactPhone size={16} /> },
     { href: "/startup-opportunities", label: "Startup Opportunities", icon: <MdOutlineScience size={16} /> },
+    { href: "/events-news", label: "Event & Training", icon: <BsCalendarEvent size={16} /> },
+    { href: "/contact", label: "Contact Us", icon: <MdOutlineContactPhone size={16} /> },
   ];
 
   const quickLinks = [
@@ -81,8 +76,8 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
                   <Image
-                    src="/TNA logo.jpg"
-                    alt="TNAU Logo"
+                    src="/innovation logo.jpg"
+                    alt="Innovation Logo"
                     width={50}
                     height={50}
                     className="w-full h-auto object-contain rounded"
@@ -90,8 +85,8 @@ const Footer = () => {
                 </div>
                 <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
                   <Image
-                    src="/innovation logo.jpg"
-                    alt="Innovation Logo"
+                    src="/TNA logo.jpg"
+                    alt="TNAU Logo"
                     width={50}
                     height={50}
                     className="w-full h-auto object-contain rounded"

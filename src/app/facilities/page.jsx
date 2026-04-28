@@ -208,13 +208,13 @@ export default function Facilities() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Our Facilities
+              Facilities
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -599,7 +599,7 @@ export default function Facilities() {
         {/* Contact for Facility Access */}
         <section className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Access Our Facilities?
+            Ready to Access the Facilities?
           </h2>
           <p className="text-xl mb-6 opacity-90">
             Contact us to schedule facility visits, equipment usage, or discuss

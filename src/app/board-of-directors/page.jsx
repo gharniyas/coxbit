@@ -90,7 +90,7 @@ export default function BoardOfDirectors() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-16">
@@ -109,9 +109,7 @@ export default function BoardOfDirectors() {
         {/* Chairman Section */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Chairman
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Chairman</h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -173,7 +171,7 @@ export default function BoardOfDirectors() {
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Board of Directors
+              Board of Directors
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Expert directors from various departments of TNAU providing
@@ -290,8 +288,8 @@ export default function BoardOfDirectors() {
               <p className="text-gray-600 leading-relaxed">
                 As a Section 8 company under the Companies Act 2013, Centre of
                 Excellence in Biotechnology operates with the full backing and
-                governance oversight of Tamil Nadu Agricultural University. Our
-                board comprises distinguished directors from various TNAU
+                governance oversight of Tamil Nadu Agricultural University.
+                Board comprises distinguished directors from various TNAU
                 departments, ensuring seamless integration of academic
                 excellence with innovative biotechnology research and
                 development.
