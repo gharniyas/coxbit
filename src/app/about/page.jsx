@@ -60,12 +60,6 @@ export default function About() {
     },
   ];
 
-
-
-
-
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -208,12 +202,17 @@ export default function About() {
                   <div
                     key={i}
                     className={`bg-gradient-to-br rounded-xl p-6 border hover:shadow-lg transition-shadow ${
-                      i === 0 ? 'from-blue-50 to-indigo-100 border-blue-200' :
-                      i === 1 ? 'from-purple-50 to-pink-100 border-purple-200' :
-                      i === 2 ? 'from-amber-50 to-orange-100 border-amber-200' :
-                      i === 3 ? 'from-emerald-50 to-green-100 border-emerald-200' :
-                      i === 4 ? 'from-cyan-50 to-blue-100 border-cyan-200' :
-                      'from-rose-50 to-red-100 border-rose-200'
+                      i === 0
+                        ? "from-blue-50 to-indigo-100 border-blue-200"
+                        : i === 1
+                          ? "from-purple-50 to-pink-100 border-purple-200"
+                          : i === 2
+                            ? "from-amber-50 to-orange-100 border-amber-200"
+                            : i === 3
+                              ? "from-emerald-50 to-green-100 border-emerald-200"
+                              : i === 4
+                                ? "from-cyan-50 to-blue-100 border-cyan-200"
+                                : "from-rose-50 to-red-100 border-rose-200"
                     }`}
                   >
                     <div className="text-4xl mb-3">{area.icon}</div>
