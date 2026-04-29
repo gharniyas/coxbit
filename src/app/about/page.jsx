@@ -11,20 +11,17 @@ import {
   MdPeople,
 } from "react-icons/md";
 import CoxbitTeam from "@/components/CoxbitTeam";
+import TabNavigation from "../components/TabNavigation";
 
 export default function About() {
-  const [activeTab, setActiveTab] = useState("about");
+  const [activeTab, setActiveTab] = useState(0);
   const [expandedFacility, setExpandedFacility] = useState(null);
 
   const tabs = [
-    { id: "about", label: "About COXBIT", icon: <MdInfo size={20} /> },
-    { id: "why", label: "Why COXBIT", icon: <MdLightbulb size={20} /> },
-    {
-      id: "focus",
-      label: "Key Focus Areas",
-      icon: <MdTrackChanges size={20} />,
-    },
-    { id: "team", label: "COXBIT Team", icon: <MdPeople size={20} /> },
+    { label: "About COXBIT", icon: <MdInfo size={20} /> },
+    { label: "Why COXBIT", icon: <MdLightbulb size={20} /> },
+    { label: "Key Focus Areas", icon: <MdTrackChanges size={20} /> },
+    { label: "COXBIT Team", icon: <MdPeople size={20} /> },
   ];
 
   const focusAreas = [
@@ -71,29 +68,12 @@ export default function About() {
         </div>
 
         {/* Tab Navigation */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 mb-6 overflow-x-auto">
-          <div className="flex min-w-max">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 px-6 py-4 font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 border-b-4 whitespace-nowrap ${
-                  activeTab === tab.id
-                    ? "border-indigo-600 text-indigo-600 bg-indigo-100"
-                    : "border-transparent text-gray-600 hover:text-indigo-600 hover:bg-gray-50"
-                }`}
-              >
-                {tab.icon}
-                <span>{tab.label}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+        <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
         {/* Tab Content */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 md:p-8">
           {/* About COXBIT */}
-          {activeTab === "about" && (
+          {activeTab === 0 && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 About COXBIT
@@ -142,7 +122,7 @@ export default function About() {
           )}
 
           {/* Why COXBIT */}
-          {activeTab === "why" && (
+          {activeTab === 1 && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why COXBIT
@@ -192,7 +172,7 @@ export default function About() {
           )}
 
           {/* Key Focus Areas */}
-          {activeTab === "focus" && (
+          {activeTab === 2 && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Key Focus Areas
@@ -227,7 +207,7 @@ export default function About() {
           )}
 
           {/* COXBIT Team */}
-          {activeTab === "team" && <CoxbitTeam />}
+          {activeTab === 3 && <CoxbitTeam />}
         </div>
 
         {/* Contact CTA */}

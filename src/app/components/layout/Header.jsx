@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { CiBellOn } from "react-icons/ci";
 import { HiMenu, HiX } from "react-icons/hi";
 import {
   MdOutlineInfo,
-  MdOutlinePeople,
   MdOutlineScience,
   MdOutlineContactPhone,
   MdOutlineRocketLaunch,
   MdOutlineHandshake,
 } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsBuilding, BsCalendarEvent, BsPeopleFill } from "react-icons/bs";
+import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
 import { FaFlask, FaChalkboardTeacher, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -35,8 +33,8 @@ const Header = () => {
       icon: <BsBuilding size={16} />,
       dropdown: [
         {
-          href: "/facilities#lab",
-          label: "State of Art Laboratory Services",
+          href: "/facilities/sals",
+          label: "SALS - Shared Access Lab Services",
           icon: <FaFlask size={14} className="mr-2" />,
         },
         {
@@ -66,17 +64,17 @@ const Header = () => {
       icon: <MdOutlineHandshake size={16} />,
       dropdown: [
         {
-          href: "#startuptn",
+          href: "/ecosystem-partners/startuptn",
           label: "Startup TN",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
         {
-          href: "#edi",
+          href: "/ecosystem-partners/edii",
           label: "EDII-TN",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
         {
-          href: "#tnapex",
+          href: "/ecosystem-partners/tnapex",
           label: "TNAPEx",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
@@ -109,17 +107,17 @@ const Header = () => {
 
   return (
     <header className="bg-gradient-to-r from-white via-blue-50 to-indigo-50 shadow-xl backdrop-blur-md border-b border-blue-100/20 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex justify-between items-center h-14">
+      <div className="flex justify-between items-center h-20">
         {/* Logo Section */}
         <div
           className="flex-shrink-0 flex items-center pl-2 overflow-hidden rounded-lg"
-          style={{ width: 120, height: 60 }}
+          style={{ width: 160, height: 75 }}
         >
           <Image
             src="/logo.jpeg"
             alt="COXBIT Logo"
-            width={200}
-            height={100}
+            width={260}
+            height={130}
             priority
             className="w-full h-full object-cover"
             style={{ objectPosition: "center" }}
@@ -128,7 +126,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center" style={{ background: '#139600', borderRadius: '0px' }}>
-          <div className="flex items-stretch gap-1">
+          <div className="flex items-stretch gap-0">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 // Check if any dropdown item is active (including hash links)
@@ -142,13 +140,13 @@ const Header = () => {
                     tabIndex={0}
                   >
                     <button
-                      className={`font-medium text-xs flex items-center gap-1.5 focus:outline-none px-2 py-2 transition-colors duration-200 rounded-none ${
+                      className={`font-semibold text-sm flex items-center gap-2 focus:outline-none px-4 py-5 transition-colors duration-200 rounded-none ${
                         isDropdownActive
-                          ? "bg-[#139600] text-white"
-                          : "bg-[#139600] text-white"
+                          ? "bg-[#0f7a00] text-white"
+                          : "bg-[#139600] text-white hover:bg-[#0f7a00]"
                       }`}
                       style={{
-                        boxShadow: isDropdownActive ? 'none' : 'none',
+                        boxShadow: 'none',
                       }}
                       tabIndex={0}
                       aria-haspopup="true"
@@ -180,7 +178,7 @@ const Header = () => {
                           <a
                             key={sub.href}
                             href={sub.href}
-                            className={`flex items-center px-5 py-2 text-base font-bold rounded-none transition-colors duration-200 border-l-4 ${
+                            className={`flex items-center px-5 py-3 text-sm font-semibold rounded-none transition-colors duration-200 border-l-4 ${
                               isSubActive
                                 ? "border-[#139600] bg-white text-black"
                                 : "border-transparent bg-white text-black hover:border-[#139600] hover:bg-gray-50"
@@ -206,10 +204,10 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-medium text-xs transition-colors duration-200 px-2 py-2 flex items-center gap-1.5 ${
+                    className={`font-semibold text-sm transition-colors duration-200 px-4 py-5 flex items-center gap-2 ${
                       isActive
-                        ? "bg-[#139600] text-white"
-                        : "bg-[#139600] text-white"
+                        ? "bg-[#0f7a00] text-white"
+                        : "bg-[#139600] text-white hover:bg-[#0f7a00]"
                     } rounded-none`}
                     style={{
                       boxShadow: 'none',
@@ -224,26 +222,8 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* Right Side: Notification, Profile, and Mobile Menu */}
+        {/* Right Side: Mobile Menu */}
         <div className="flex items-center space-x-4">
-          {/* Notification Icon */}
-          <button
-            title="Notifications"
-            className="text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200 relative"
-          >
-            <CiBellOn size={24} />
-            {/* Optional notification badge */}
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-          </button>
-
-          {/* Profile Avatar */}
-          <div
-            title="Profile"
-            className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-sm font-semibold text-white cursor-pointer hover:from-blue-600 hover:to-blue-700 transition-all duration-200 shadow-md"
-          >
-            U
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
