@@ -55,12 +55,12 @@ export default function CoxbitTeam() {
             key={member.id}
             className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="relative h-64">
+            <div className="relative h-120">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover"
+                className="object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
