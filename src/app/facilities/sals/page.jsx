@@ -116,7 +116,7 @@ export default function SALS() {
             {currentFacility.fullTitle}
           </h2>
           
-          <div className="space-y-3 text-gray-700 leading-relaxed max-h-96 overflow-y-auto pr-2">
+          <div className="space-y-3 text-gray-700 leading-relaxed pr-2">
             {currentFacility.content.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}

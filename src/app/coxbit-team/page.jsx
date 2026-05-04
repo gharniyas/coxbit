@@ -63,13 +63,13 @@ export default function CoxbitTeam() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Operations & Support Team
           </h2>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-4">
             {coreTeam.map((member) => (
               <div
                 key={member.id}
                 className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="relative h-96">
+                <div className="relative h-48">
                   <Image
                     src={member.image}
                     alt={member.name}

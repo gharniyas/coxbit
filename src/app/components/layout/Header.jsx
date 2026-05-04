@@ -111,22 +111,25 @@ const Header = () => {
         {/* Logo Section */}
         <div
           className="flex-shrink-0 flex items-center pl-2 overflow-hidden rounded-lg"
-          style={{ width: 160, height: 75 }}
+          style={{ width: 110, height: 60 }}
         >
           <Image
             src="/logo.jpeg"
             alt="COXBIT Logo"
-            width={260}
-            height={130}
+            width={120}
+            height={60}
             priority
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             style={{ objectPosition: "center" }}
           />
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center" style={{ background: '#139600', borderRadius: '0px' }}>
-          <div className="flex items-stretch gap-0">
+        <nav
+          className="hidden md:flex items-center"
+          style={{ background: "#139600", borderRadius: "0px" }}
+        >
+          <div className="flex items-stretch gap-0 whitespace-nowrap overflow-x-hidden">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 // Check if any dropdown item is active (including hash links)
@@ -140,13 +143,13 @@ const Header = () => {
                     tabIndex={0}
                   >
                     <button
-                      className={`font-semibold text-sm flex items-center gap-2 focus:outline-none px-4 py-5 transition-colors duration-200 rounded-none ${
+                      className={`font-semibold text-xs md:text-sm flex items-center gap-0.5 focus:outline-none px-1.5 py-2 transition-colors duration-200 rounded-none ${
                         isDropdownActive
                           ? "bg-[#0f7a00] text-white"
                           : "bg-[#139600] text-white hover:bg-[#0f7a00]"
                       }`}
                       style={{
-                        boxShadow: 'none',
+                        boxShadow: "none",
                       }}
                       tabIndex={0}
                       aria-haspopup="true"
@@ -178,15 +181,13 @@ const Header = () => {
                           <a
                             key={sub.href}
                             href={sub.href}
-                            className={`flex items-center px-5 py-3 text-sm font-semibold rounded-none transition-colors duration-200 border-l-4 ${
+                            className={`flex items-center px-2 py-1.5 text-xs md:text-sm font-semibold rounded-none transition-colors duration-200 border-l-4 ${
                               isSubActive
                                 ? "border-[#139600] bg-white text-black"
                                 : "border-transparent bg-white text-black hover:border-[#139600] hover:bg-gray-50"
                             }`}
                             style={{
-                              ...(isSubActive
-                                ? { boxShadow: 'none' }
-                                : {}),
+                              ...(isSubActive ? { boxShadow: "none" } : {}),
                             }}
                             tabIndex={0}
                           >
@@ -204,13 +205,13 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-semibold text-sm transition-colors duration-200 px-4 py-5 flex items-center gap-2 ${
+                    className={`font-semibold text-xs md:text-sm transition-colors duration-200 px-1.5 py-2 flex items-center gap-0.5 ${
                       isActive
                         ? "bg-[#0f7a00] text-white"
                         : "bg-[#139600] text-white hover:bg-[#0f7a00]"
                     } rounded-none`}
                     style={{
-                      boxShadow: 'none',
+                      boxShadow: "none",
                     }}
                   >
                     {item.icon}
@@ -221,18 +222,13 @@ const Header = () => {
             })}
           </div>
         </nav>
-
-        {/* Right Side: Mobile Menu */}
-        <div className="flex items-center space-x-4">
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-          </button>
-        </div>
+        <button
+          className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+        </button>
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -243,7 +239,7 @@ const Header = () => {
               if (item.dropdown) {
                 return (
                   <div key={item.label} className="mb-2">
-                    <div className="font-medium text-gray-700 text-sm mb-1">
+                    <div className="font-medium text-gray-700 text-base md:text-lg mb-1">
                       {item.label}
                     </div>
                     <div className="pl-3">
@@ -251,7 +247,7 @@ const Header = () => {
                         <a
                           key={sub.href}
                           href={sub.href}
-                          className="block py-2 px-3 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 text-sm font-medium"
+                          className="block py-2 px-3 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 text-base md:text-lg font-medium"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {sub.label}
@@ -266,7 +262,7 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`block py-2 px-3 rounded-md font-medium text-sm transition-all duration-200 ${
+                    className={`block py-2 px-3 rounded-md font-medium text-base md:text-lg transition-all duration-200 ${
                       isActive
                         ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
                         : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
