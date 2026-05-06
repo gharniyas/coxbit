@@ -49,7 +49,7 @@ const Header = () => {
           icon: <FaChalkboardTeacher size={14} className="mr-2" />,
         },
         {
-          href: "/facilities#services",
+          href: "/facilities/serviceoffered",
           label: "Services Offered",
           icon: <FaFlask size={14} className="mr-2" />,
         },
