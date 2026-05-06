@@ -302,6 +302,263 @@ export default function EventsNews() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Forthcoming Trainings 2026-2027 */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            List of Forthcoming Trainings during COXBIT 2026-2027
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white rounded-xl shadow-lg">
+              <thead>
+                <tr className="bg-blue-100 text-blue-900">
+                  <th className="px-4 py-2 text-left">S. No</th>
+                  <th className="px-4 py-2 text-left">Training</th>
+                  <th className="px-4 py-2 text-left">Date of Training</th>
+                  <th className="px-4 py-2 text-left">
+                    Registration Details & QR
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-800">
+                <tr>
+                  <td className="px-4 py-2">1</td>
+                  <td className="px-4 py-2">
+                    Metabolomics and Proteomics using Advanced Analytical
+                    Platforms
+                  </td>
+                  <td className="px-4 py-2">18–22 May 2026</td>
+                  <td className="px-4 py-2">
+                    <a
+                      href="https://forms.gle/c7akbwTHQFNLYWsD6"
+                      className="text-blue-600 underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Register
+                    </a>
+                    <div className="mt-2 flex justify-center">
+                      <Image
+                        src="/Events%20-%20Trainings/5%20-%20News/2025-2026/qr1.png"
+                        alt="QR code for Metabolomics and Proteomics registration"
+                        width={96}
+                        height={96}
+                        className="w-24 h-24 mx-auto"
+                        unoptimized
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">2</td>
+                  <td className="px-4 py-2">
+                    Bioinformatics for Molecular Docking and Simulation
+                  </td>
+                  <td className="px-4 py-2">25–29 May 2026</td>
+                  <td className="px-4 py-2">
+                    <a
+                      href="https://forms.gle/FeGGwPiXnouJKmyw8"
+                      className="text-blue-600 underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Register
+                    </a>
+                    <div className="mt-2 flex justify-center">
+                      <Image
+                        src="/Events%20-%20Trainings/5%20-%20News/2025-2026/qr2.png"
+                        alt="QR code for Bioinformatics registration"
+                        width={96}
+                        height={96}
+                        className="w-24 h-24 mx-auto"
+                        unoptimized
+                      />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">3</td>
+                  <td className="px-4 py-2">
+                    Invitro Micropropagation Techniques
+                  </td>
+                  <td className="px-4 py-2">01–05 June 2026</td>
+                  <td className="px-4 py-2">
+                    <a
+                      href="https://forms.gle/abTC8oKWzuLW4r418"
+                      className="text-blue-600 underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Register
+                    </a>
+                    <div className="mt-2 flex justify-center">
+                      <Image
+                        src="/Events%20-%20Trainings/5%20-%20News/2025-2026/qr3.png"
+                        alt="QR code for Invitro Micropropagation registration"
+                        width={96}
+                        height={96}
+                        className="w-24 h-24 mx-auto"
+                        unoptimized
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Completed Trainings */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Details of Completed Training
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white rounded-xl shadow-lg">
+              <thead>
+                <tr className="bg-green-100 text-green-900">
+                  <th className="px-4 py-2 text-left">S. No</th>
+                  <th className="px-4 py-2 text-left">Date</th>
+                  <th className="px-4 py-2 text-left">Name of the Event</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-800">
+                <tr>
+                  <td className="px-4 py-2">1</td>
+                  <td className="px-4 py-2">15.06.2022 to 17.06.2022</td>
+                  <td className="px-4 py-2">
+                    Workshop on GCMS Based Metabolomics: Principles and
+                    Applications
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">2</td>
+                  <td className="px-4 py-2">28.07.2022 to 29.07.2022</td>
+                  <td className="px-4 py-2">
+                    Hands on training on “LC-MS based non-targeted metabolomics
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">3</td>
+                  <td className="px-4 py-2">14.07.2022 to 15.07.2022</td>
+                  <td className="px-4 py-2">
+                    Workshop on HPLC “Principles and Application in Plant
+                    Metabolomics”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">4</td>
+                  <td className="px-4 py-2">23.01.2023 to 24.01.2023</td>
+                  <td className="px-4 py-2">
+                    VCS Hands on training on High throughput analysis of
+                    Protein: “MALDI TOF”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">5</td>
+                  <td className="px-4 py-2">16.10.2023 to 17.10.2023</td>
+                  <td className="px-4 py-2">
+                    Hands on training on Innovative solutions for Protein
+                    characterization: “MALDI TOF- MS”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">6</td>
+                  <td className="px-4 py-2">28.11.2023 to 29.11.2023</td>
+                  <td className="px-4 py-2">
+                    Hands on training on Non-Targeted Metabolomics: Applications
+                    of “LC-MS & HPLC” in Plant Metabolomics
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">7</td>
+                  <td className="px-4 py-2">21.12.2023 to 22.12.2023</td>
+                  <td className="px-4 py-2">
+                    Hands on training on High throughput platforms for
+                    Metabolomics: GCMSMS
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">8</td>
+                  <td className="px-4 py-2">23.01.2024 to 24.01.2024</td>
+                  <td className="px-4 py-2">
+                    VCS Hands on Training in High throughput Analysis of
+                    Protein: MALDI TOF
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">9</td>
+                  <td className="px-4 py-2">07.11.2024 to 08.11.2024</td>
+                  <td className="px-4 py-2">
+                    Hands on Training in “LC-MS approaches for Exploration of
+                    Nutraceuticals from Edible Plants”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">10</td>
+                  <td className="px-4 py-2">27.11.2024 to 28.11.2024</td>
+                  <td className="px-4 py-2">
+                    Hands on training in Small Molecule Identification Platforms
+                    for Metabolomics: GCMSMS
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">11</td>
+                  <td className="px-4 py-2">05.02.2025 to 06.02.2025</td>
+                  <td className="px-4 py-2">
+                    Hands on Training in Peptide Mass fingerprinting,
+                    identification of protein by MALDI-TOF-MS
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">12</td>
+                  <td className="px-4 py-2">29.03.2025</td>
+                  <td className="px-4 py-2">
+                    One day exposure visit training on Entrepreneurship in
+                    Agri-Biotech Practices
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">13</td>
+                  <td className="px-4 py-2">30.4.2025</td>
+                  <td className="px-4 py-2">
+                    Seminar on Molecular Ecology:From DNA to ecosystem-a
+                    molecular insight into ecology
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">14</td>
+                  <td className="px-4 py-2">03.05.2025</td>
+                  <td className="px-4 py-2">
+                    Training Programme on “Microgreens: Superfood and Startup
+                    Ideas”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">15</td>
+                  <td className="px-4 py-2">17.05.2025</td>
+                  <td className="px-4 py-2">
+                    Hands-on training on “Vettiver Cultivation in Terrace
+                    Garden”
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">16</td>
+                  <td className="px-4 py-2">29.10.2025</td>
+                  <td className="px-4 py-2">
+                    Strategic Action Plan Preparation for MSMEs
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2">17</td>
+                  <td className="px-4 py-2">05.11.2025</td>
+                  <td className="px-4 py-2">
+                    MSSRF, Social alpha and COXBIT organized outreach program
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">

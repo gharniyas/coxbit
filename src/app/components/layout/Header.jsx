@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
   const pathname = usePathname();
 
   const navigationItems = [
@@ -106,7 +107,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-white via-blue-50 to-indigo-50 shadow-xl backdrop-blur-md border-b border-blue-100/20 px-4 py-2 fixed top-0 left-0 w-full z-30">
+    <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
       <div className="flex justify-between items-center h-20">
         {/* Logo Section */}
         <div
@@ -125,35 +126,49 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav
-          className="hidden md:flex items-center"
-          style={{ background: "#139600", borderRadius: "0px" }}
-        >
-          <div className="flex items-stretch gap-0 whitespace-nowrap overflow-x-hidden">
+        <nav className="hidden md:flex items-center bg-transparent">
+          <div className="flex flex-wrap items-stretch gap-0 whitespace-normal">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
-                // Check if any dropdown item is active (including hash links)
                 const isDropdownActive = item.dropdown.some((sub) =>
                   isActiveLink(sub.href),
                 );
+                const isOpen = openDropdown === idx;
                 return (
                   <div
                     key={item.label}
-                    className="relative group flex items-stretch mx-1"
+                    className="relative flex items-stretch mx-1"
                     tabIndex={0}
+                    onBlur={(e) => {
+                      // Only close if focus leaves the dropdown area
+                      if (!e.currentTarget.contains(e.relatedTarget)) {
+                        setOpenDropdown(null);
+                      }
+                    }}
                   >
                     <button
-                      className={`font-semibold text-xs md:text-sm flex items-center gap-0.5 focus:outline-none px-1.5 py-2 transition-colors duration-200 rounded-none ${
-                        isDropdownActive
-                          ? "bg-[#0f7a00] text-white"
-                          : "bg-[#139600] text-white hover:bg-[#0f7a00]"
+                      className={`font-semibold text-xs md:text-sm flex items-center gap-0.5 focus:outline-none px-2 py-2 transition-colors duration-200 rounded hover:bg-gray-100 ${
+                        isDropdownActive || isOpen
+                          ? "text-blue-700"
+                          : "text-black"
                       }`}
-                      style={{
-                        boxShadow: "none",
-                      }}
+                      style={{ boxShadow: "none", background: "none" }}
                       tabIndex={0}
                       aria-haspopup="true"
-                      aria-expanded={isDropdownActive ? "true" : "false"}
+                      aria-expanded={isOpen ? "true" : "false"}
+                      onClick={() => setOpenDropdown(isOpen ? null : idx)}
+                      onKeyDown={(e) => {
+                        if (
+                          e.key === "Enter" ||
+                          e.key === " " ||
+                          e.key === "ArrowDown"
+                        ) {
+                          setOpenDropdown(idx);
+                        }
+                        if (e.key === "Escape") {
+                          setOpenDropdown(null);
+                        }
+                      }}
                     >
                       {item.icon}
                       {item.label}
@@ -172,7 +187,7 @@ const Header = () => {
                       </svg>
                     </button>
                     <div
-                      className="absolute left-0 top-full mt-1 w-56 bg-white border-none rounded-none shadow-none opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto transition-opacity duration-200 z-40"
+                      className={`absolute left-0 top-full mt-1 w-56 bg-white border border-gray-200 rounded shadow-lg transition-opacity duration-200 z-40 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                       tabIndex={-1}
                     >
                       {item.dropdown.map((sub, subIdx) => {
@@ -181,15 +196,16 @@ const Header = () => {
                           <a
                             key={sub.href}
                             href={sub.href}
-                            className={`flex items-center px-2 py-1.5 text-xs md:text-sm font-semibold rounded-none transition-colors duration-200 border-l-4 ${
+                            className={`flex items-center px-3 py-2 text-xs md:text-sm font-semibold rounded transition-colors duration-200 border-l-4 ${
                               isSubActive
-                                ? "border-[#139600] bg-white text-black"
-                                : "border-transparent bg-white text-black hover:border-[#139600] hover:bg-gray-50"
+                                ? "border-blue-700 bg-blue-50 text-blue-700"
+                                : "border-transparent bg-white text-black hover:border-blue-700 hover:bg-gray-50"
                             }`}
                             style={{
                               ...(isSubActive ? { boxShadow: "none" } : {}),
                             }}
                             tabIndex={0}
+                            onClick={() => setOpenDropdown(null)}
                           >
                             {sub.icon}
                             {sub.label}
@@ -205,14 +221,10 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-semibold text-xs md:text-sm transition-colors duration-200 px-1.5 py-2 flex items-center gap-0.5 ${
-                      isActive
-                        ? "bg-[#0f7a00] text-white"
-                        : "bg-[#139600] text-white hover:bg-[#0f7a00]"
-                    } rounded-none`}
-                    style={{
-                      boxShadow: "none",
-                    }}
+                    className={`font-semibold text-xs md:text-sm transition-colors duration-200 px-2 py-2 flex items-center gap-0.5 rounded hover:bg-gray-100 ${
+                      isActive ? "text-blue-700" : "text-black"
+                    }`}
+                    style={{ boxShadow: "none", background: "none" }}
                   >
                     {item.icon}
                     {item.label}
