@@ -39,8 +39,8 @@ const Header = () => {
           icon: <FaFlask size={14} className="mr-2" />,
         },
         {
-          href: "/facilities#entrepreneurship",
-          label: "Entrepreneurship Services",
+          href: "/facilities/entrepreneurship",
+          label: "Technology Driven Entrepreneurship",
           icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
         },
         {
@@ -65,26 +65,16 @@ const Header = () => {
       icon: <MdOutlineHandshake size={16} />,
       dropdown: [
         {
-          href: "/ecosystem-partners/startuptn",
-          label: "Startup TN",
+          href: "/partners",
+          label: "Partners",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
         {
-          href: "/ecosystem-partners/edii",
-          label: "EDII-TN",
-          icon: <FaCheckCircle size={14} className="mr-2" />,
-        },
-        {
-          href: "/ecosystem-partners/tnapex",
-          label: "TNAPEx",
-          icon: <FaCheckCircle size={14} className="mr-2" />,
+          href: "/partners#startup-opportunities",
+          label: "Startup Opportunities",
+          icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
         },
       ],
-    },
-    {
-      href: "/startup-opportunities",
-      label: "Startup Opportunities",
-      icon: <MdOutlineRocketLaunch size={16} />,
     },
     {
       href: "/events-news",

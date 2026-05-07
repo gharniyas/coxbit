@@ -5,39 +5,49 @@ export default function CoxbitTeam() {
   const coreTeam = [
     {
       id: 1,
-      name: "Mr. R. Ram Kumar",
+      name: "Mr. R. Ramkumar",
       qualification: "MBA",
       designation: "Chief Executive Officer, COXBIT",
       image: "/Team Members/ram kumar.jpg",
+      phone: "8870281435",
+      email: "ramceotnau@gmail.com",
     },
     {
       id: 2,
-      name: "M. Selva Radhika Malar",
+      name: "Tmt. M. Selva Radhika Malar",
       qualification: "MBA",
       designation: "Manager, COXBIT",
       image: "/Team Members/Radhika.jpeg",
+      phone: "7373509696",
+      email: "coebiotech@gmail.com",
     },
     {
       id: 3,
-      name: "Dr. KAVIYAPRIYA M",
-      qualification: "Ph.D. (Plant Biotechnology)",
+      name: "Dr. M. Kaviyapriya",
+      qualification: "",
       designation: "Research Associate, COXBIT",
       image: "/kaviya.jpeg",
+      phone: "9488141034",
+      email: "drkpm2026@zohomail.in",
     },
     {
       id: 4,
-      name: "Th. K. Muthu Vignesh",
-      qualification: "M.Com, IB",
+      name: "K. Muthu Vignesh",
+      qualification: "M. Com (International Business)",
       designation: "Accounts Manager, COXBIT",
       image:
         "/Team Members/Th. K. Muthu Vignesh, M.Com, IB - Accounts Manager.jpg",
+      phone: "9942217653",
+      email: "vikey05@gmail.com",
     },
     {
       id: 5,
       name: "Ms. D. Kiruthika",
-      qualification: "M.Com",
-      designation: "Office Assistant, COXBIT",
+      qualification: "M. Com (FCA)",
+      designation: "Assistant Accounts Officer, COXBIT",
       image: "/Team Members/Ms. D. Kiruthika, M.Com - Office Assistant.jpg",
+      phone: "8270676271",
+      email: "coeboffice@gmail.com",
     },
   ];
 
@@ -49,20 +59,19 @@ export default function CoxbitTeam() {
         Biotechnology who drive innovation, research excellence, and
         administrative efficiency.
       </p>
-      <div className="grid lg:grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-3 gap-6">
         {coreTeam.map((member) => (
           <div
             key={member.id}
-            className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
           >
-            <div className="relative h-120">
+            <div className="relative w-40 h-48 mt-6 rounded-xl overflow-hidden">
               <Image
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
             <div className="p-6 text-center">
               <h3 className="text-xl font-bold mb-2">
@@ -74,8 +83,24 @@ export default function CoxbitTeam() {
                 )}
               </h3>
               {member.designation && (
-                <p className="text-blue-600 font-medium">
+                <p className="text-blue-600 font-medium mb-2">
                   {member.designation}
+                </p>
+              )}
+              {member.phone && (
+                <p className="text-gray-700 text-sm mb-1">
+                  <span className="font-medium">Phone:</span> {member.phone}
+                </p>
+              )}
+              {member.email && (
+                <p className="text-gray-700 text-sm">
+                  <span className="font-medium">Email:</span>{" "}
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="text-blue-600 hover:underline break-all"
+                  >
+                    {member.email}
+                  </a>
                 </p>
               )}
             </div>

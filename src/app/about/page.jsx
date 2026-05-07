@@ -60,12 +60,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Hero Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-            Centre of Excellence in Biotechnology
-          </h1>
-        </div>
+        {/* Hero Section removed as requested */}
 
         {/* Tab Navigation */}
         <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
@@ -210,23 +205,7 @@ export default function About() {
           {activeTab === 3 && <CoxbitTeam />}
         </div>
 
-        {/* Contact CTA */}
-        <div className="mt-8 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl shadow-xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-3">
-            Ready to Innovate with COXBIT?
-          </h2>
-          <p className="mb-6 opacity-90">
-            Whether it's developing a novel biotech solution, scaling a startup
-            or enabling industry-ready technologies, COXBIT stands as a catalyst
-            for innovation.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get in Touch
-          </a>
-        </div>
+        {/* Contact CTA removed as requested */}
       </div>
     </div>
   );

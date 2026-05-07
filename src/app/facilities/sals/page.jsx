@@ -12,9 +12,10 @@ export default function SALS() {
       fullTitle: "1. Molecular Biology Laboratory – Shared Innovation Facility",
       color: "blue",
       content: [
-        "The Molecular Biology Laboratory at COXBIT is a fully equipped, state-of-the-art facility designed to support advanced research, innovation and product development in agriculture and biotechnology. The laboratory houses essential equipment including RO water systems, digital autoclaves, laminar airflow chambers, PCR and real-time PCR systems, electrophoresis units, gel documentation systems and tissue lyser, along with supporting instruments such as centrifuges, sonicators, incubators and ultra-low temperature freezers (-80°C and -20°C). Additional analytical tools such as Soxhlet apparatus, weighing balances, pH meters and water purification systems further strengthen its research capabilities.",
-        "A key strength of this facility is its shared-access model, where common laboratory infrastructure is made available to startups, students, researchers and innovators utilizing the cabin and floor space facilities. This enables users to carry out experimental work, validate concepts and develop products without the burden of investing in high-cost instrumentation.",
-        "By offering free access to essential common facilities, COXBIT significantly lowers entry barriers, accelerates research activities and fosters a collaborative innovation ecosystem. This initiative plays a crucial role in translating ideas into viable technologies and products, making the laboratory a strong enabler of entrepreneurship and applied biotechnology research."
+        "The Molecular Biology Laboratory at the Centre of Excellence in Biotechnology (COXBIT) plays <b>a crucial role in strengthening the biotechnology ecosystem</b> by serving as an integrated and innovation-driven platform for startups, students, researchers and industries. Its importance lies in its ability to <b>transform scientific knowledge into real-world solutions</b>, enabling advanced research and product development that address key challenges in agriculture, healthcare, food technology and environmental sustainability. The laboratory provides a supportive environment where ideas can be designed, tested, and refined into practical applications, ensuring that research moves beyond theory into impactful outcomes.",
+        "A key significance of the laboratory is its role as a <b>bridge between academia and industry</b>, fostering interdisciplinary collaboration and promoting translational research that leads to scalable and commercially viable technologies. By aligning academic research with industrial needs, it ensures relevance, efficiency and innovation in biotechnology advancements. For startups, the lab is highly valuable as it <b>reduces entry barriers</b> by offering mentorship, incubation support, and shared resources, enabling them to convert early-stage ideas into prototypes and market-ready solutions while accelerating innovation cycles.",
+        "The laboratory is equally important for industries, as it provides <b>customized research support, product validation and quality assessment</b>, helping improve product reliability, ensure compliance, and enhance competitiveness. This collaborative approach strengthens industrial innovation and shortens development timelines. With a strong focus on sustainability and bio-based solutions, the lab contributes to the development of environmentally responsible technologies that meet future demands.",
+        "Overall, the Molecular Biology Laboratory at COXBIT acts as a <b>catalyst for scientific excellence, entrepreneurship and economic growth</b>, while also supporting skill development, knowledge dissemination and the creation of impactful solutions to emerging societal challenges."
       ],
       equipment: [
         "RO Water Systems",
@@ -104,9 +105,6 @@ export default function SALS() {
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-2">State of Art Laboratory Facilities</h1>
-        <p className="text-xl text-gray-600 text-center mb-6">Shared Access Laboratory Services (SALS)</p>
-        
         {/* Facility Tabs */}
         <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
@@ -118,7 +116,7 @@ export default function SALS() {
           
           <div className="space-y-3 text-gray-700 leading-relaxed pr-2">
             {currentFacility.content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
           </div>
 

@@ -15,7 +15,7 @@ const Footer = () => {
       icon: <BsBuilding size={16} />,
       submenu: [
         { href: "/facilities#lab", label: "State of Art Laboratory Services" },
-        { href: "/facilities#entrepreneurship", label: "Entrepreneurship Services" },
+        { href: "/facilities#entrepreneurship", label: "Technology Driven Entrepreneurship" },
         { href: "/facilities#skill", label: "Skill and Capacity Building" },
         { href: "/facilities#services", label: "Services Offered" },
       ]

@@ -69,14 +69,15 @@ export default function CoxbitTeam() {
                 key={member.id}
                 className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="relative h-48">
+                <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    fill
-                    className="object-cover object-center"
+                    width={80}
+                    height={80}
+                    className="object-cover object-center rounded-full border-4 border-white shadow-md"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold mb-2">
