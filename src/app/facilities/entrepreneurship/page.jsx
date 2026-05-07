@@ -1,14 +1,14 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 const tabs = [
-  { id: 0, label: 'Cabin Space' },
-  { id: 1, label: 'Floor / Knowledge Space' },
+  { id: 0, label: "Cabin Space" },
+  { id: 1, label: "Floor / Knowledge Space" },
 ];
 
 const tabContent = [
   {
-    title: 'Cabin Space',
+    title: "Cabin Space",
     content: `
       <p>Cabin spaces are designed for startups, entrepreneurs, and innovators seeking a dedicated, private environment to develop their ideas and grow their ventures. These spaces offer essential infrastructure, high-speed internet, and access to shared resources, fostering productivity and collaboration within a professional setting.</p>
       <ul class="list-disc ml-6 mt-2">
@@ -52,7 +52,7 @@ const tabContent = [
     `,
   },
   {
-    title: 'Floor / Knowledge Space',
+    title: "Floor / Knowledge Space",
     content: `
       <p>Floor and knowledge spaces provide an open, collaborative environment ideal for knowledge sharing, workshops, and team-based activities. These areas are perfect for early-stage entrepreneurs, students, and research groups who benefit from a dynamic, interactive setting.</p>
       <ul class="list-disc ml-6 mt-2">
@@ -91,7 +91,9 @@ export default function EntrepreneurshipFacilities() {
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-4">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-6">Entrepreneurship Facilities</h1>
+        <h1 className="text-3xl font-bold text-center mb-6">
+          Entrepreneurship Facilities
+        </h1>
         <div className="flex justify-center mb-6">
           {tabs.map((tab, idx) => (
             <button
@@ -99,8 +101,8 @@ export default function EntrepreneurshipFacilities() {
               onClick={() => setActiveTab(idx)}
               className={`px-6 py-2 font-semibold rounded-t-lg border-b-2 transition-all duration-200 ${
                 activeTab === idx
-                  ? 'border-indigo-600 text-indigo-600 bg-white'
-                  : 'border-transparent text-gray-600 bg-gray-100 hover:text-indigo-600'
+                  ? "border-indigo-600 text-indigo-600 bg-white"
+                  : "border-transparent text-gray-600 bg-gray-100 hover:text-indigo-600"
               }`}
             >
               {tab.label}
@@ -108,8 +110,13 @@ export default function EntrepreneurshipFacilities() {
           ))}
         </div>
         <div className="bg-white rounded-b-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold mb-4">{tabContent[activeTab].title}</h2>
-          <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: tabContent[activeTab].content }} />
+          <h2 className="text-2xl font-bold mb-4">
+            {tabContent[activeTab].title}
+          </h2>
+          <div
+            className="text-gray-700 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: tabContent[activeTab].content }}
+          />
         </div>
       </div>
     </div>
