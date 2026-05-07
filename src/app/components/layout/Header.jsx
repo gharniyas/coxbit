@@ -61,7 +61,7 @@ const Header = () => {
       icon: <MdOutlineScience size={16} />,
     },
     {
-      label: "Eco System Partners",
+      label: "Startup Ecosystem",
       icon: <MdOutlineHandshake size={16} />,
       dropdown: [
         {

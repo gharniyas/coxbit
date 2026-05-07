@@ -112,7 +112,7 @@ export default function CoxbitTeam() {
     {
       id: 3,
       name: "Dr. M. Kaviyapriya",
-      qualification: "",
+      qualification: "Ph. D in Plant Biotechnology",
       designation: "Research Associate, COXBIT",
       image: "/kaviya.jpeg",
       phone: "9488141034",
@@ -243,7 +243,7 @@ export default function CoxbitTeam() {
       {/* Core Team Section */}
       <div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-          COXBIT Core Team
+          COXBIT Team
         </h2>
         <div className="grid lg:grid-cols-3 gap-6">
           {coreTeam.map((member) => (
