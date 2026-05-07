@@ -44,7 +44,7 @@ const Header = () => {
           icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
         },
         {
-          href: "/facilities#skill",
+          href: "/facilities/skill",
           label: "Skill and Capacity Building",
           icon: <FaChalkboardTeacher size={14} className="mr-2" />,
         },
