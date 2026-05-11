@@ -65,12 +65,12 @@ const Header = () => {
       icon: <MdOutlineHandshake size={16} />,
       dropdown: [
         {
-          href: "/partners",
+          href: "/startup-ecosystem/partners",
           label: "Partners",
           icon: <FaCheckCircle size={14} className="mr-2" />,
         },
         {
-          href: "/partners#startup-opportunities",
+          href: "/startup-ecosystem/startup-opportunities",
           label: "Startup Opportunities",
           icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
         },
