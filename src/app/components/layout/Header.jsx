@@ -98,21 +98,62 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex justify-between items-center h-20">
+      <div className="flex justify-between items-center h-24">
         {/* Logo Section */}
         <div
-          className="flex-shrink-0 flex items-center pl-2 overflow-hidden rounded-lg"
-          style={{ width: 110, height: 60 }}
+          className="flex-shrink-0 flex items-center pl-2"
+          style={{ height: 90 }}
         >
-          <Image
-            src="/logo.jpeg"
-            alt="COXBIT Logo"
-            width={120}
-            height={60}
-            priority
-            className="w-full h-full object-contain"
-            style={{ objectPosition: "center" }}
-          />
+          <div
+            style={{
+              height: 75,
+              width: 120,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src="/logo.jpeg"
+              alt="COXBIT Logo"
+              fill={false}
+              width={120}
+              height={75}
+              priority
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              height: 90,
+              width: 450,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+            }}
+          >
+            <Image
+              src="/logo-2.png"
+              alt="COEB Logo"
+              fill={false}
+              width={450}
+              height={90}
+              priority
+              style={{
+                objectFit: "contain",
+                objectPosition: "left center",
+                width: "100%",
+                height: "auto",
+                maxHeight: 90,
+              }}
+            />
+          </div>
         </div>
 
         {/* Desktop Navigation */}
