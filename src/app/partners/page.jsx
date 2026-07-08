@@ -1,9 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 const tabs = [
   {
     label: "Startup TN",
+    images: [],
     content: (
       <div>
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -56,6 +58,7 @@ const tabs = [
   },
   {
     label: "EDII-TN",
+    images: [],
     content: (
       <div>
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -102,6 +105,7 @@ const tabs = [
   },
   {
     label: "TNAPEx",
+    images: ["/TNAPEx/DSC09238.JPG","/TNAPEx/ACS visit.JPG","/TNAPEx/Recovered_jpg_file(4240).jpg","/TNAPEx/Recovered_jpg_file(4291).jpg"],
     content: (
       <div>
         <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -178,6 +182,15 @@ export default function Partners() {
           ))}
         </div>
         <div className="bg-white rounded-b-lg shadow-lg p-8">
+          {tabs[activeTab].images?.length > 0 && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              {tabs[activeTab].images.map((src, i) => (
+                <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
+                  <Image src={src} alt={tabs[activeTab].label} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
           {tabs[activeTab].content}
         </div>
       </div>

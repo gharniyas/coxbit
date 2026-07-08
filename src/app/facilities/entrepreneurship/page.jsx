@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 const tabs = [
-  { id: 0, label: "Cabin Space" },
-  { id: 1, label: "Floor / Knowledge Space" },
+  { id: 0, label: "Cabin Space", images: ["/cabin/IMG_1565.JPG","/cabin/IMG_1573.JPG","/cabin/IMG_1612.JPG","/cabin/IMG_1617.JPG"] },
+  { id: 1, label: "Floor / Knowledge Space", images: ["/Facility Photos/Floor Space (2).JPG","/Facility Photos/Floor Space (3).JPG","/Facility Photos/Floor Space (4).JPG","/Facility Photos/Work space.jpg"] },
 ];
 
 const tabContent = [
@@ -108,6 +109,15 @@ export default function EntrepreneurshipFacilities() {
           ))}
         </div>
         <div className="bg-white rounded-b-lg shadow-lg p-6">
+          {tabs[activeTab].images?.length > 0 && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              {tabs[activeTab].images.map((src, i) => (
+                <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
+                  <Image src={src} alt={tabs[activeTab].label} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
           <h2 className="text-2xl font-bold mb-4">
             {tabContent[activeTab].title}
           </h2>

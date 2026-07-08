@@ -22,69 +22,69 @@ const Header = () => {
     {
       href: "/",
       label: "Home",
-      icon: <AiOutlineHome size={16} />,
+      icon: <AiOutlineHome size={24} />,
     },
     {
       href: "/about",
       label: "About",
-      icon: <MdOutlineInfo size={16} />,
+      icon: <MdOutlineInfo size={24} />,
     },
     {
       label: "Facilities",
-      icon: <BsBuilding size={16} />,
+      icon: <BsBuilding size={24} />,
       dropdown: [
         {
           href: "/facilities/sals",
           label: "SALS - Shared Access Lab Services",
-          icon: <FaFlask size={14} className="mr-2" />,
+          icon: <FaFlask size={18} className="mr-2" />,
         },
         {
           href: "/facilities/entrepreneurship",
           label: "Technology Driven Entrepreneurship",
-          icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
+          icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
         },
         {
           href: "/facilities/skill",
           label: "Skill and Capacity Building",
-          icon: <FaChalkboardTeacher size={14} className="mr-2" />,
+          icon: <FaChalkboardTeacher size={18} className="mr-2" />,
         },
         {
           href: "/facilities/serviceoffered",
           label: "Services Offered",
-          icon: <FaFlask size={14} className="mr-2" />,
+          icon: <FaFlask size={18} className="mr-2" />,
         },
       ],
     },
     {
       href: "/projects",
       label: "Projects",
-      icon: <MdOutlineScience size={16} />,
+      icon: <MdOutlineScience size={24} />,
     },
     {
       label: "Startup Ecosystem",
-      icon: <MdOutlineHandshake size={16} />,
+      icon: <MdOutlineHandshake size={24} />,
       dropdown: [
         {
           href: "/startup-ecosystem/partners",
           label: "Partners",
-          icon: <FaCheckCircle size={14} className="mr-2" />,
+          icon: <FaCheckCircle size={18} className="mr-2" />,
         },
         {
           href: "/startup-ecosystem/startup-opportunities",
           label: "Startup Opportunities",
-          icon: <MdOutlineRocketLaunch size={14} className="mr-2" />,
+          icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
         },
       ],
     },
     {
       href: "/events-news",
       label: "Event & Training",
-      icon: <BsCalendarEvent size={16} />,
+      icon: <BsCalendarEvent size={24} />,
     },
     {
       href: "/contact",
       label: "Contact Us",
-      icon: <MdOutlineContactPhone size={16} />,
+      icon: <MdOutlineContactPhone size={24} />,
     },
   ];
 
@@ -98,10 +98,10 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex justify-between items-center h-24">
+      <div className="flex items-center justify-between h-24">
         {/* Logo Section */}
         <div
-          className="flex-shrink-0 flex items-center pl-2"
+          className="flex-shrink-0 flex items-center gap-2 pl-2"
           style={{ height: 90 }}
         >
           <div
@@ -132,7 +132,7 @@ const Header = () => {
           <div
             style={{
               height: 90,
-              width: 450,
+              width: 380,
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
@@ -142,7 +142,7 @@ const Header = () => {
               src="/logo-2.png"
               alt="COEB Logo"
               fill={false}
-              width={450}
+              width={380}
               height={90}
               priority
               style={{
@@ -157,8 +157,8 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center bg-transparent">
-          <div className="flex flex-wrap items-stretch gap-0 whitespace-normal">
+        <nav className="hidden md:flex items-center bg-green-700 rounded-lg px-2 flex-shrink-0">
+          <div className="flex flex-nowrap items-stretch">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 const isDropdownActive = item.dropdown.some((sub) =>
@@ -168,20 +168,19 @@ const Header = () => {
                 return (
                   <div
                     key={item.label}
-                    className="relative flex items-stretch mx-1"
+                    className="relative flex items-stretch"
                     tabIndex={0}
                     onBlur={(e) => {
-                      // Only close if focus leaves the dropdown area
                       if (!e.currentTarget.contains(e.relatedTarget)) {
                         setOpenDropdown(null);
                       }
                     }}
                   >
                     <button
-                      className={`font-semibold text-xs md:text-sm flex items-center gap-0.5 focus:outline-none px-2 py-2 transition-colors duration-200 rounded hover:bg-gray-100 ${
+                      className={`font-bold text-sm flex items-center gap-1 focus:outline-none px-3 py-2 transition-colors duration-200 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
                         isDropdownActive || isOpen
-                          ? "text-blue-700"
-                          : "text-black"
+                          ? "border-yellow-400"
+                          : "border-transparent"
                       }`}
                       style={{ boxShadow: "none", background: "none" }}
                       tabIndex={0}
@@ -189,11 +188,7 @@ const Header = () => {
                       aria-expanded={isOpen ? "true" : "false"}
                       onClick={() => setOpenDropdown(isOpen ? null : idx)}
                       onKeyDown={(e) => {
-                        if (
-                          e.key === "Enter" ||
-                          e.key === " " ||
-                          e.key === "ArrowDown"
-                        ) {
+                        if (e.key === "Enter" || e.key === " " || e.key === "ArrowDown") {
                           setOpenDropdown(idx);
                         }
                         if (e.key === "Escape") {
@@ -203,38 +198,25 @@ const Header = () => {
                     >
                       {item.icon}
                       {item.label}
-                      <svg
-                        className="w-3 h-3 ml-1"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M19 9l-7 7-7-7"
-                        />
+                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     <div
                       className={`absolute left-0 top-full mt-1 w-56 bg-white border border-gray-200 rounded shadow-lg transition-opacity duration-200 z-40 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
                       tabIndex={-1}
                     >
-                      {item.dropdown.map((sub, subIdx) => {
+                      {item.dropdown.map((sub) => {
                         const isSubActive = isActiveLink(sub.href);
                         return (
                           <a
                             key={sub.href}
                             href={sub.href}
-                            className={`flex items-center px-3 py-2 text-xs md:text-sm font-semibold rounded transition-colors duration-200 border-l-4 ${
+                            className={`flex items-center px-3 py-2 text-sm font-semibold transition-colors duration-200 border-l-4 ${
                               isSubActive
-                                ? "border-blue-700 bg-blue-50 text-blue-700"
-                                : "border-transparent bg-white text-black hover:border-blue-700 hover:bg-gray-50"
+                                ? "border-green-700 bg-green-50 text-green-700"
+                                : "border-transparent bg-white text-black hover:border-green-700 hover:bg-gray-50"
                             }`}
-                            style={{
-                              ...(isSubActive ? { boxShadow: "none" } : {}),
-                            }}
                             tabIndex={0}
                             onClick={() => setOpenDropdown(null)}
                           >
@@ -252,8 +234,8 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-semibold text-xs md:text-sm transition-colors duration-200 px-2 py-2 flex items-center gap-0.5 rounded hover:bg-gray-100 ${
-                      isActive ? "text-blue-700" : "text-black"
+                    className={`font-bold text-sm transition-colors duration-200 px-3 py-2 flex items-center gap-1 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
+                      isActive ? "border-yellow-400" : "border-transparent"
                     }`}
                     style={{ boxShadow: "none", background: "none" }}
                   >
@@ -266,7 +248,7 @@ const Header = () => {
           </div>
         </nav>
         <button
-          className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none transition-colors duration-200"
+          className="md:hidden text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >

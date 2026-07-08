@@ -3,7 +3,25 @@ export default function Facilities() {
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-4">Facilities</h1>
-        <p className="text-xl text-gray-600 text-center mb-12">State of art laboratory facilities</p>
+        <p className="text-xl text-gray-600 text-center mb-8">State of art laboratory facilities</p>
+
+        {/* Facility Photo Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {[
+            "/Facility Photos/CoEB building.jpg",
+            "/Facility Photos/Board Room.jpg",
+            "/Facility Photos/Molecularbiology lab.jpg",
+            "/Facility Photos/Tissue culture facility.jpg",
+            "/Facility Photos/Exhibition Hall.JPG",
+            "/Facility Photos/Cabin Space.jpg",
+            "/Facility Photos/Cold Room.jpg",
+            "/Facility Photos/Bioinformatics - Server Room.jpg",
+          ].map((src, i) => (
+            <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
+              <img src={src} alt="Facility" className="object-cover w-full h-full" />
+            </div>
+          ))}
+        </div>
 
         {/* Services Offered Section */}
         <div className="mb-8 flex justify-center">

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import TabNavigation from '../../components/TabNavigation';
 
 export default function SALS() {
@@ -9,6 +10,8 @@ export default function SALS() {
     {
       id: 0,
       title: "Molecular Biology Lab",
+      images: ["/Shared lab facility/IMG_1579.JPG","/Shared lab facility/IMG_1600.JPG","/Shared lab facility/IMG_1629.JPG","/Shared lab facility/IMG_5254.JPG"],
+      imageLabel: "Shared Lab Facility",
       fullTitle: "1. Molecular Biology Laboratory – Shared Innovation Facility",
       color: "blue",
       content: [
@@ -38,6 +41,8 @@ export default function SALS() {
     {
       id: 1,
       title: "Proteomics & Metabolomics",
+      images: ["/Proteomics and metabolomics/IMG-20260424-WA0014.jpg","/Proteomics and metabolomics/IMG-20260424-WA0015.jpg","/Proteomics and metabolomics/IMG-20260424-WA0016.jpg","/Proteomics and metabolomics/IMG-20260424-WA0017.jpg"],
+      imageLabel: "Proteomics & Metabolomics Facility",
       fullTitle: "2. High-Throughput Proteomics & Metabolomics Facility",
       color: "green",
       content: [
@@ -57,6 +62,8 @@ export default function SALS() {
     {
       id: 2,
       title: "Tissue Culture Facility",
+      images: ["/Common facilities/DSC03480.JPG"],
+      imageLabel: "Common Facilities",
       fullTitle: "3. Micropropagation and Plant Tissue Culture Facility",
       color: "purple",
       content: [
@@ -70,6 +77,8 @@ export default function SALS() {
     {
       id: 3,
       title: "Cold Room Facility",
+      images: ["/Facility Photos/Cold Room.jpg"],
+      imageLabel: "Cold Room Facility",
       fullTitle: "4. Advanced Cold Room Facility for Research & Storage",
       color: "cyan",
       content: [
@@ -87,6 +96,8 @@ export default function SALS() {
     {
       id: 4,
       title: "Bioinformatics Server",
+      images: ["/Facility Photos/Bioinformatics - Server Room.jpg"],
+      imageLabel: "Bioinformatics Server Room",
       fullTitle: "5. Advanced Bioinformatics Server for AI-Driven Agri-Biotech Research",
       color: "orange",
       content: [
@@ -113,6 +124,16 @@ export default function SALS() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
             {currentFacility.fullTitle}
           </h2>
+
+          {currentFacility.images && (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              {currentFacility.images.map((src, i) => (
+                <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
+                  <Image src={src} alt={currentFacility.imageLabel} fill className="object-cover" />
+                </div>
+              ))}
+            </div>
+          )}
           
           <div className="space-y-3 text-gray-700 leading-relaxed pr-2">
             {currentFacility.content.map((paragraph, index) => (
