@@ -71,86 +71,50 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Centre of excellence in Biotechnology (COXBIT) is being
-                  established at Tamil Nadu Agricultural University with funding
-                  support from Government of Tamil Nadu to create world class
-                  infrastructure for Biotech Research and Innovation.
+                  The Centre of Excellence in Biotechnology (COXBIT) is a
+                  pioneering initiative established at Tamil Nadu Agricultural
+                  University (TNAU) with the support of the Government of Tamil
+                  Nadu. Operating under a{" "}
+                  <strong>Public–Private Partnership (PPP)</strong> mode,
+                  COXBIT serves as a dynamic platform to foster innovation,
+                  accelerate biotechnology research and translate scientific
+                  discoveries into scalable, real-world solutions.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Research and development activities will be carried out under
-                  public-private partnership mode to develop super active
-                  enzymes/bio molecules, biobased products, hormones for fruit
-                  ripening, plant growth stimulants and similar bio-inputs for
-                  the commercial benefit of farmers.
+                  COXBIT is designed to bridge the gap between academia,
+                  industry and startups, creating a collaborative ecosystem
+                  that nurtures innovation from concept to commercialization.
+                  With access to state-of-the-art laboratories, advanced
+                  instrumentation and domain expertise and technology-driven
+                  entrepreneurship infrastructure, the centre empowers
+                  researchers, entrepreneurs and enterprises to develop
+                  cutting-edge technologies and high-impact biobased products.
                 </p>
               </div>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Independent and free-standing Section 8 company by leveraging
-                  strengths of TNAU-BIOTECH COUNCIL FOR ESTABLISHMENT OF CENTRE
-                  OF EXCELLENCE IN BIOTECHNOLOGY was registered as Section 8
-                  Company under the Companies Act 2013 on 16th of August 2018.
+                  The centre focuses on advancing biomolecules, high-performance
+                  enzymes, plant growth stimulants, sustainable agricultural
+                  bio-inputs, biopharmaceuticals, functional foods and
+                  nutraceuticals, while enabling technologies that enhance crop
+                  productivity, improve post-harvest management and support
+                  climate-resilient agriculture.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  The instrument facility was established at COXBIT to initiate
-                  high end research on genomics and metabolomics by the
-                  researchers.
+                  COXBIT provides <strong>end-to-end support</strong> including
+                  product development, incubation support, technology
+                  validation, industry collaboration and market linkage,
+                  helping innovators transform ideas into impactful solutions.
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Building & Infrastructure Showcase */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              World-Class Infrastructure
-            </h2>
-            <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              State-of-the-art buildings and facilities designed for
-              cutting-edge biotechnology research
-            </p>
-
-            {/* Building Photos Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8 max-w-5xl mx-auto">
-              {/* Main Building */}
-              <div className="relative group">
-                <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
-                  <Image
-                    src="/building/IMG_5188.JPG"
-                    alt="COXBIT Main Building"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-600/20 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">Main Building</h3>
-                    <p className="text-blue-100">
-                      Modern architectural design with world-class facilities
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Research Complex */}
-              <div className="relative group">
-                <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
-                  <Image
-                    src="/building/IMG_5195.JPG"
-                    alt="COXBIT Research Complex"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/80 via-indigo-600/20 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white">
-                    <h3 className="text-2xl font-bold mb-2">
-                      Research Complex
-                    </h3>
-                    <p className="text-indigo-100">
-                      Advanced laboratories with premium equipment
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-8 text-center">
+              <button
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                onClick={() => router.push("/about")}
+              >
+                Read More About Us
+              </button>
             </div>
           </div>
 
@@ -325,41 +289,6 @@ export default function Home() {
                   </div>
                 </div>
               </Marquee>
-            </div>
-
-            {/* Video Section */}
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
-                Featured Video
-              </h3>
-              <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                <video
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-auto"
-                  poster="/logo.png"
-                >
-                  <source
-                    src="/Scrolling Photos/WhatsApp Video 2024-01-29 at 1.44.20 PM.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-800 mb-2">
-                    COXBIT Research & Innovation Showcase
-                  </h4>
-                  <p className="text-gray-600">
-                    Take a virtual tour of our Centre of Excellence in
-                    Biotechnology and witness our commitment to advancing
-                    agricultural biotechnology through cutting-edge research and
-                    innovation.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 

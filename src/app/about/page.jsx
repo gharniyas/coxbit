@@ -40,6 +40,9 @@ export default function About() {
     { title: "Industry Collaboration", desc: "Strengthening industry–academia collaboration", icon: "🤝" },
     { title: "Skill Development", desc: "Building skilled human resources through training", icon: "🎓" },
     { title: "Advanced Labs", desc: "Providing advanced analytical and research facilities", icon: "🔬" },
+    { title: "Bioinformatics", desc: "Leveraging computational tools and data analysis for biological research", icon: "🧫" },
+    { title: "Food Processing", desc: "Advancing technologies and techniques for modern food processing", icon: "🌾" },
+    { title: "AI in Agri", desc: "Applying AI-driven solutions to enhance agricultural practices", icon: "🤖" },
   ];
 
   return (
@@ -113,7 +116,10 @@ export default function About() {
                       : i === 2 ? "from-amber-50 to-orange-100 border-amber-200"
                       : i === 3 ? "from-emerald-50 to-green-100 border-emerald-200"
                       : i === 4 ? "from-cyan-50 to-blue-100 border-cyan-200"
-                      : "from-rose-50 to-red-100 border-rose-200"
+                      : i === 5 ? "from-rose-50 to-red-100 border-rose-200"
+                      : i === 6 ? "from-teal-50 to-lime-100 border-teal-200"
+                      : i === 7 ? "from-yellow-50 to-orange-100 border-yellow-200"
+                      : "from-violet-50 to-fuchsia-100 border-violet-200"
                     }`}
                   >
                     <div className="text-4xl mb-3">{area.icon}</div>

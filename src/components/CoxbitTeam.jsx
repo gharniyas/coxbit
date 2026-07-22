@@ -56,22 +56,6 @@ export default function CoxbitTeam() {
       image: "/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. R. Umarani.jpg",
     },
     {
-      id: 6,
-      name: "Dr. M.K. Kalarani",
-      position: "Board of Director",
-      qualification: "Ph.D.",
-      department: "Special Officer (Publications), TNAU ",
-      image: "/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. M.K. Kalarani.jpg",
-    },
-    {
-      id: 7,
-      name: "Dr. P. Balasubramaniam",
-      position: "Board of Director",
-      qualification: "Ph.D.",
-      department: "Director, NRM, TNAU",
-      image: "/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. P. Balasubramaniam.jpg",
-    },
-    {
       id: 8,
       name: "Dr. M. Shanthi",
       position: "Board of Director",
