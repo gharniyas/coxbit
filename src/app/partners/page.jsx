@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
+import ImageCarousel from "../components/ImageCarousel";
 
 const tabs = [
   {
@@ -183,13 +183,11 @@ export default function Partners() {
         </div>
         <div className="bg-white rounded-b-lg shadow-lg p-8">
           {tabs[activeTab].images?.length > 0 && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              {tabs[activeTab].images.map((src, i) => (
-                <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
-                  <Image src={src} alt={tabs[activeTab].label} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
+            <ImageCarousel
+              key={activeTab}
+              images={tabs[activeTab].images}
+              alt={tabs[activeTab].label}
+            />
           )}
           {tabs[activeTab].content}
         </div>

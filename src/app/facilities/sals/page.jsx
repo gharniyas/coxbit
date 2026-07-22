@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import TabNavigation from '../../components/TabNavigation';
+import ImageCarousel from '../../components/ImageCarousel';
 
 export default function SALS() {
   const [activeTab, setActiveTab] = useState(0);
@@ -126,13 +126,11 @@ export default function SALS() {
           </h2>
 
           {currentFacility.images && (
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-              {currentFacility.images.map((src, i) => (
-                <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
-                  <Image src={src} alt={currentFacility.imageLabel} fill className="object-cover" />
-                </div>
-              ))}
-            </div>
+            <ImageCarousel
+              key={currentFacility.id}
+              images={currentFacility.images}
+              alt={currentFacility.imageLabel}
+            />
           )}
           
           <div className="space-y-3 text-gray-700 leading-relaxed pr-2">

@@ -5,6 +5,12 @@
   --foreground: #171717;
 }
 
+/* Increase base font size site-wide (Tailwind text-* utilities use rem,
+   so this scales all text consistently across every page). */
+html {
+  font-size: 135%;
+}
+
 /* Marquee animations */
 @keyframes marquee {
   0% {

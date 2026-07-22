@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import ImageCarousel from "../components/ImageCarousel";
 
 export default function EventsNews() {
   const forthcomingTrainings = [
@@ -88,8 +88,10 @@ export default function EventsNews() {
         {/* Photo Gallery */}
         <section className="mb-10">
           <h2 className="text-2xl font-bold text-center mb-4">Training & Events Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
+          <ImageCarousel
+            heightClass="h-96"
+            alt="Training"
+            images={[
               "/Training and events/DSC03474.JPG",
               "/Training and events/IMG_9076.JPG",
               "/Training and events/14.JPG",
@@ -98,12 +100,8 @@ export default function EventsNews() {
               "/Events - Trainings/2 - Hands on training on High throughput analysis of Protein/Training Participants.JPG",
               "/Events - Trainings/3 - LCMS Training/_DSC0260.JPG",
               "/Events - Trainings/4 - GCMS Training/_DSC1451.JPG",
-            ].map((src, i) => (
-              <div key={i} className="relative h-44 rounded-xl overflow-hidden shadow">
-                <Image src={src} alt="Training" fill className="object-cover" />
-              </div>
-            ))}
-          </div>
+            ]}
+          />
         </section>
         {/* Forthcoming Trainings */}
         <section className="mb-16">

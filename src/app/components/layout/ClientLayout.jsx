@@ -21,7 +21,7 @@ export default function ClientLayout({ children }) {
         {!noLayout && <Header />}
         <main
           className={`flex-1 p-4 bg-gradient-to-br from-slate-50/80 via-blue-50/80 to-indigo-50/80 backdrop-blur-sm ${
-            noLayout ? "pt-0" : "pt-32"
+            noLayout ? "pt-0" : "pt-36"
           }`}
         >
           {children}

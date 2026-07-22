@@ -1,3 +1,5 @@
+import ImageCarousel from "../components/ImageCarousel";
+
 export default function Facilities() {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
@@ -6,8 +8,10 @@ export default function Facilities() {
         <p className="text-xl text-gray-600 text-center mb-8">State of art laboratory facilities</p>
 
         {/* Facility Photo Gallery */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-          {[
+        <ImageCarousel
+          heightClass="h-96"
+          alt="Facility"
+          images={[
             "/Facility Photos/CoEB building.jpg",
             "/Facility Photos/Board Room.jpg",
             "/Facility Photos/Molecularbiology lab.jpg",
@@ -16,12 +20,8 @@ export default function Facilities() {
             "/Facility Photos/Cabin Space.jpg",
             "/Facility Photos/Cold Room.jpg",
             "/Facility Photos/Bioinformatics - Server Room.jpg",
-          ].map((src, i) => (
-            <div key={i} className="relative h-40 rounded-xl overflow-hidden shadow">
-              <img src={src} alt="Facility" className="object-cover w-full h-full" />
-            </div>
-          ))}
-        </div>
+          ]}
+        />
 
         {/* Services Offered Section */}
         <div className="mb-8 flex justify-center">

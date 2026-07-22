@@ -15,8 +15,7 @@ export default function Contact() {
           </h2>
           <p className="text-gray-700 font-semibold mb-2">Director</p>
           <p className="text-gray-600 text-center mb-2 text-sm">
-            Biotech Council for Establishment of Centre of Excellence in
-            Biotechnology (COXBIT)
+            Centre of Excellence in Biotechnology (COXBIT)
           </p>
           <p className="text-gray-600 text-center mb-2 text-sm">
             Tamil Nadu Agricultural University Campus

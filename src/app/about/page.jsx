@@ -1,6 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import {
   MdInfo,
   MdLightbulb,
@@ -9,6 +8,7 @@ import {
 } from "react-icons/md";
 import CoxbitTeam from "@/components/CoxbitTeam";
 import TabNavigation from "../components/TabNavigation";
+import ImageCarousel from "../components/ImageCarousel";
 
 const bannerImages = [
   "/About coxbit/1.jpg",
@@ -25,12 +25,6 @@ const bannerImages = [
 
 export default function About() {
   const [activeTab, setActiveTab] = useState(0);
-  const [currentBanner, setCurrentBanner] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => setCurrentBanner(prev => (prev + 1) % bannerImages.length), 3500);
-    return () => clearInterval(timer);
-  }, []);
 
   const tabs = [
     { label: "About COXBIT", icon: <MdInfo size={20} /> },
@@ -58,26 +52,7 @@ export default function About() {
           {activeTab === 0 && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">About COXBIT</h2>
-              <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-lg mb-6">
-                {bannerImages.map((src, i) => (
-                  <div
-                    key={i}
-                    className="absolute inset-0 transition-opacity duration-700"
-                    style={{ opacity: i === currentBanner ? 1 : 0 }}
-                  >
-                    <Image src={src} alt="COXBIT" fill className="object-cover" />
-                  </div>
-                ))}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
-                  {bannerImages.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setCurrentBanner(i)}
-                      className={`h-2 rounded-full transition-all ${i === currentBanner ? "bg-white w-4" : "bg-white/50 w-2"}`}
-                    />
-                  ))}
-                </div>
-              </div>
+              <ImageCarousel heightClass="h-[500px]" alt="COXBIT" images={bannerImages} />
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
                 <p>
                   The Centre of Excellence in Biotechnology (COXBIT) is a pioneering initiative established at Tamil Nadu Agricultural University (TNAU) with the support of the Government of Tamil Nadu. Operating under a <strong>Public–Private Partnership (PPP)</strong> mode, COXBIT serves as a dynamic platform to foster innovation, accelerate biotechnology research and translate scientific discoveries into scalable, real-world solutions.
@@ -99,13 +74,11 @@ export default function About() {
           {activeTab === 1 && (
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why COXBIT</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                {["/MoA/IMG_3485.JPG", "/MoA/IMG_9481.JPG", "/MoA/IMG_9487.JPG", "/MoA/IMG_9748.JPG"].map((src, i) => (
-                  <div key={i} className="relative h-36 rounded-xl overflow-hidden shadow">
-                    <Image src={src} alt="MoA" fill className="object-cover" />
-                  </div>
-                ))}
-              </div>
+              <ImageCarousel
+                heightClass="h-72"
+                alt="MoA"
+                images={["/MoA/IMG_3485.JPG", "/MoA/IMG_9481.JPG", "/MoA/IMG_9487.JPG", "/MoA/IMG_9748.JPG"]}
+              />
               <p className="text-gray-700 leading-relaxed mb-6">
                 At COXBIT, we emphasize four core transformations that innovators and startups undergo during their journey. These transformations are designed to ensure that early-stage ideas evolve into scalable, impactful and market-ready biotechnology solutions.
               </p>

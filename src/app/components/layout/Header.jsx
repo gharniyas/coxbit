@@ -98,11 +98,11 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex items-center justify-between h-24">
+      <div className="flex items-center justify-between h-28">
         {/* Logo Section */}
         <div
           className="flex-shrink-0 flex items-center gap-2 pl-2"
-          style={{ height: 90 }}
+          style={{ height: 115 }}
         >
           <div
             style={{
@@ -131,8 +131,8 @@ const Header = () => {
           </div>
           <div
             style={{
-              height: 90,
-              width: 380,
+              height: 115,
+              width: 480,
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
@@ -142,15 +142,15 @@ const Header = () => {
               src="/logo-2.png"
               alt="COEB Logo"
               fill={false}
-              width={380}
-              height={90}
+              width={480}
+              height={115}
               priority
               style={{
                 objectFit: "contain",
                 objectPosition: "left center",
                 width: "100%",
                 height: "auto",
-                maxHeight: 90,
+                maxHeight: 115,
               }}
             />
           </div>

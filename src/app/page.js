@@ -715,8 +715,7 @@ export default function Home() {
                   Address
                 </h4>
                 <p className="leading-relaxed">
-                  Biotech Council for Establishment of Centre of Excellence in
-                  Biotechnology
+                  Centre of Excellence in Biotechnology
                   <br />
                   Tamil Nadu Agricultural University
                   <br />
