@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Marquee from "react-fast-marquee";
 
 export default function Home() {
   const router = useRouter();
@@ -68,46 +67,13 @@ export default function Home() {
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 text-center">
               About COXBIT
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  The Centre of Excellence in Biotechnology (COXBIT) is a
-                  pioneering initiative established at Tamil Nadu Agricultural
-                  University (TNAU) with the support of the Government of Tamil
-                  Nadu. Operating under a{" "}
-                  <strong>Public–Private Partnership (PPP)</strong> mode,
-                  COXBIT serves as a dynamic platform to foster innovation,
-                  accelerate biotechnology research and translate scientific
-                  discoveries into scalable, real-world solutions.
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  COXBIT is designed to bridge the gap between academia,
-                  industry and startups, creating a collaborative ecosystem
-                  that nurtures innovation from concept to commercialization.
-                  With access to state-of-the-art laboratories, advanced
-                  instrumentation and domain expertise and technology-driven
-                  entrepreneurship infrastructure, the centre empowers
-                  researchers, entrepreneurs and enterprises to develop
-                  cutting-edge technologies and high-impact biobased products.
-                </p>
-              </div>
-              <div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  The centre focuses on advancing biomolecules, high-performance
-                  enzymes, plant growth stimulants, sustainable agricultural
-                  bio-inputs, biopharmaceuticals, functional foods and
-                  nutraceuticals, while enabling technologies that enhance crop
-                  productivity, improve post-harvest management and support
-                  climate-resilient agriculture.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  COXBIT provides <strong>end-to-end support</strong> including
-                  product development, incubation support, technology
-                  validation, industry collaboration and market linkage,
-                  helping innovators transform ideas into impactful solutions.
-                </p>
-              </div>
-            </div>
+            <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
+              COXBIT is a Public–Private Partnership initiative at Tamil Nadu
+              Agricultural University that bridges academia, industry and
+              startups &mdash; offering state-of-the-art labs, advanced
+              instrumentation and end-to-end support to turn biotechnology
+              research into real-world, market-ready solutions.
+            </p>
             <div className="mt-8 text-center">
               <button
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
@@ -115,180 +81,6 @@ export default function Home() {
               >
                 Read More About Us
               </button>
-            </div>
-          </div>
-
-          {/* Scrolling Photos & Videos Gallery */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              Research & Activities Gallery
-            </h2>
-            <p className="text-xl text-gray-600 text-center mb-8 max-w-3xl mx-auto">
-              Explore our state-of-the-art facilities, research activities, and
-              sustainability initiatives through our visual showcase
-            </p>
-
-            {/* First Row - Left to Right */}
-            <div className="mb-6">
-              <Marquee
-                speed={50}
-                gradient={true}
-                gradientColor={[248, 250, 252]}
-                gradientWidth={100}
-              >
-                <div className="flex gap-6 mr-6">
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_1386.JPG"
-                      alt="COXBIT Research Facility"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Research Laboratory
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Advanced Equipment Setup
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_3387.JPG"
-                      alt="COXBIT Biotechnology Research"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Biotechnology Lab
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Cutting-edge Research
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_3396.JPG"
-                      alt="COXBIT Innovation Center"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">Innovation Hub</h4>
-                      <p className="text-sm opacity-90">
-                        Technology Development
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_3500.JPG"
-                      alt="COXBIT Analytical Facility"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Analytical Platform
-                      </h4>
-                      <p className="text-sm opacity-90">Mass Spectrometry</p>
-                    </div>
-                  </div>
-                </div>
-              </Marquee>
-            </div>
-
-            {/* Second Row - Right to Left */}
-            <div className="mb-6">
-              <Marquee
-                speed={40}
-                direction="right"
-                gradient={true}
-                gradientColor={[248, 250, 252]}
-                gradientWidth={100}
-              >
-                <div className="flex gap-6 mr-6">
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_3507.JPG"
-                      alt="COXBIT Team Collaboration"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Team Collaboration
-                      </h4>
-                      <p className="text-sm opacity-90">Research Excellence</p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_6216.JPG"
-                      alt="COXBIT Infrastructure"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        World-Class Infrastructure
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        State-of-the-art Facilities
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/IMG_6592.JPG"
-                      alt="COXBIT Research Activities"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Research Activities
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Innovation in Progress
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="relative w-80 h-60 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <Image
-                      src="/Scrolling Photos/Tree Planting.JPG"
-                      alt="COXBIT Sustainability Initiative"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
-                        Sustainability Initiative
-                      </h4>
-                      <p className="text-sm opacity-90">
-                        Tree Planting Program
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Marquee>
             </div>
           </div>
 
@@ -330,201 +122,133 @@ export default function Home() {
             </div>
           </div>
 
-          {/* CoE Services Section */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
+          {/* Explore COXBIT Section - condensed links mirroring the header submenus */}
+          <div className="mb-16">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              CoE in Biotechnology Services
+              Explore COXBIT
             </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Infrastructure Services */}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
-                    🏗️
-                  </span>
-                  Infrastructure Services (Charge Basis)
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
+                  🧬
+                </div>
+                <h3
+                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
+                  onClick={() => router.push("/about")}
+                >
+                  About
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Proteomic and
-                    metabolomic analytical facility
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Molecular
-                    Biology labs
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Tissue culture
-                    facility
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Bioinformatics
-                    server facilities
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Cold room
-                    facilities
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>Infrastructure
-                    facilities – Knowledge/Cabin space
-                  </li>
-                </ul>
+                <p className="text-gray-600 text-sm">
+                  Our mission, vision and journey as a PPP centre of excellence.
+                </p>
               </div>
 
-              {/* Professional Services */}
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
-                    💼
-                  </span>
-                  Professional Services
-                </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center">
-                    <span className="text-indigo-500 mr-2">•</span>Mentoring
-                    support/Knowledge sharing for PPP
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-indigo-500 mr-2">•</span>
-                    Investor/Industry Connect
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-indigo-500 mr-2">•</span>IPR Services
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-indigo-500 mr-2">•</span>Training and
-                    Development
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4 flex items-center">
-                <span className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
                   🏢
-                </span>
-                Common Facilities
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center">
-                    <span className="text-purple-500 mr-2">•</span>Conference
-                    hall
+                </div>
+                <h3
+                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
+                  onClick={() => router.push("/facilities")}
+                >
+                  Facilities
+                </h3>
+                <ul className="text-gray-600 text-sm space-y-1">
+                  <li>
+                    <a href="/facilities/sals" className="hover:text-blue-600">
+                      • SALS - Shared Access Lab Services
+                    </a>
                   </li>
-                  <li className="flex items-center">
-                    <span className="text-purple-500 mr-2">•</span>Board room
-                    utilization
+                  <li>
+                    <a
+                      href="/facilities/entrepreneurship"
+                      className="hover:text-blue-600"
+                    >
+                      • Technology Driven Entrepreneurship
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/facilities/serviceoffered"
+                      className="hover:text-blue-600"
+                    >
+                      • Services Offered
+                    </a>
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
 
-          {/* Equipment Section */}
-          <div className="bg-gradient-to-br from-white via-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl border border-purple-100/50 backdrop-blur-sm mb-16">
-            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-              <span className="text-white text-2xl">🔬</span>
-            </div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              High-End Research Equipment
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              High throughput Platform for Proteomics and Metabolomics featuring
-              state-of-the-art equipment:
-            </p>
-            <div className="grid md:grid-cols-2 gap-4">
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>Preparative
-                  HPLC System
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>UHPLC system
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>Nano LC System
-                </li>
-              </ul>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>MALDI TOF/TOF
-                  Mass Spectrometer
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>LCMS-8045
-                  Triple Quadrupole Mass Spectrometer
-                </li>
-                <li className="flex items-center">
-                  <span className="text-purple-500 mr-2">•</span>GCMS TQ-8040 NX
-                  Triple Quadrupole Mass Spectrometer
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Activities and Benefits */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Activities */}
-            <div className="bg-gradient-to-br from-white via-green-50 to-emerald-50 p-8 rounded-2xl shadow-xl border border-green-100/50 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">📋</span>
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
+                  🔬
+                </div>
+                <h3
+                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
+                  onClick={() => router.push("/projects")}
+                >
+                  Projects
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Research projects and initiatives underway at COXBIT.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-4">
-                Activities
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">•</span>Nurturing
-                  technology-oriented entrepreneurs and start-up firms
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">•</span>Bioproduct
-                  development and facilitating certification services
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">•</span>Nurturing
-                  young talents through skill development programmes
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">•</span>Resource
-                  mobilization and support research systematically
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 mt-1">•</span>Knowledge
-                  dissemination about bioproducts to farming community
-                </li>
-              </ul>
-            </div>
 
-            {/* Benefits */}
-            <div className="bg-gradient-to-br from-white via-orange-50 to-red-50 p-8 rounded-2xl shadow-xl border border-orange-100/50 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🌟</span>
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
+                  🤝
+                </div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  Startup Ecosystem
+                </h3>
+                <ul className="text-gray-600 text-sm space-y-1">
+                  <li>
+                    <a
+                      href="/startup-ecosystem/partners"
+                      className="hover:text-blue-600"
+                    >
+                      • Partners
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/startup-ecosystem/startup-opportunities"
+                      className="hover:text-blue-600"
+                    >
+                      • Startup Opportunities
+                    </a>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
-                Benefits of COXBIT
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2 mt-1">•</span>
-                  Development of novel biobased agri-inputs for farmers
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2 mt-1">•</span>Human
-                  resource development through training programs
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2 mt-1">•</span>Analytical
-                  facility access for students and researchers
-                </li>
-                <li className="flex items-start">
-                  <span className="text-orange-500 mr-2 mt-1">•</span>
-                  Large-scale agrotechnology transfer to farmers
-                </li>
-              </ul>
+
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
+                  📅
+                </div>
+                <h3
+                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
+                  onClick={() => router.push("/events-news")}
+                >
+                  Event & Training
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Upcoming events, workshops and training programmes.
+                </p>
+              </div>
+
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
+                  ✉️
+                </div>
+                <h3
+                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
+                  onClick={() => router.push("/contact")}
+                >
+                  Contact Us
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Get in touch with the COXBIT team.
+                </p>
+              </div>
             </div>
           </div>
 

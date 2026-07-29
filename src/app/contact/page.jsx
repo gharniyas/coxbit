@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 export default function Contact() {
@@ -6,9 +7,14 @@ export default function Contact() {
       <div className="w-full max-w-4xl bg-white/90 rounded-3xl shadow-2xl p-0 md:p-0 flex flex-col md:flex-row overflow-hidden border border-blue-100">
         {/* Profile Section */}
         <div className="flex-1 flex flex-col items-center justify-center bg-gradient-to-b from-blue-100/60 to-white p-10 md:p-12">
-          <div className="w-28 h-28 rounded-full bg-blue-200 border-4 border-blue-400 mb-4 flex items-center justify-center overflow-hidden">
-            {/* Placeholder for profile photo */}
-            <span className="text-4xl text-blue-700 font-bold">N</span>
+          <div className="w-28 h-28 rounded-full bg-blue-200 border-4 border-blue-400 mb-4 flex items-center justify-center overflow-hidden relative">
+            <Image
+              src="/COXBIT BOARD OF DIRECTORS PHOTOS/Dr. N. Senthil.jpg"
+              alt="Dr. N. Senthil"
+              fill
+              sizes="112px"
+              className="object-cover"
+            />
           </div>
           <h2 className="text-2xl font-bold text-blue-700 mb-1 tracking-tight">
             Dr. N. Senthil

@@ -27,7 +27,7 @@ export default function ImageCarousel({
 
   return (
     <div
-      className={`relative w-full ${heightClass} rounded-xl overflow-hidden shadow mb-6 bg-gray-900`}
+      className={`relative w-full ${heightClass} rounded-xl overflow-hidden shadow mb-6`}
     >
       {images.map((src, i) => (
         <div
@@ -35,7 +35,7 @@ export default function ImageCarousel({
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <Image src={src} alt={alt} fill className="object-contain" />
+          <Image src={src} alt={alt} fill className="object-cover" />
         </div>
       ))}
       {images.length > 1 && (

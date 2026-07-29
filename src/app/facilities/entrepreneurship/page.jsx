@@ -21,18 +21,18 @@ const tabContent = [
       <h3 class="text-lg font-semibold mt-6 mb-2">COXBIT Cabin Space Users</h3>
       <ol class="list-decimal ml-6">
         <li>M/s. Aviva Organics Stores</li>
-        <li>Dr. Jini Narayan</li>
-        <li>M/s. Oneomics Private Limited</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/16.jpg" alt="Dr. Jini Narayan" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>Dr. Jini Narayan</span></li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/14.jpg" alt="M/s. Oneomics Private Limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Oneomics Private Limited</span></li>
         <li>M/s. Thennaivanam</li>
-        <li>M/s. Sakthi Fertilizer Company</li>
-        <li>Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/15.jpg" alt="M/s. Sakthi Fertilizer Company" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Sakthi Fertilizer Company</span></li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/17.jpg" alt="Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution</span></li>
         <li>M/s. Bublbox E-Retail Private Limited</li>
         <li>M/s. CropTwin Agro Tech Pvt Ltd</li>
         <li>M/s. Meridian Machine Works</li>
         <li>Selvi. Prarthana V, Nehru Arts and Science College, CBE</li>
         <li>M/s. UnivZero Technologies Pvt Ltd</li>
-        <li>M/s. SS Tech</li>
-        <li>M/s. Valriya Vision Pvt Ltd</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/18.jpg" alt="M/s. SS Tech" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. SS Tech</span></li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/19.jpg" alt="M/s. Valriya Vision Pvt Ltd" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Valriya Vision Pvt Ltd</span></li>
         <li>M/s. Ziwwit Sustainable Technologies</li>
         <li>M/s. Sherpa Biotech</li>
         <li>M/s. Bharath Biofarm Pvt Ltd</li>
@@ -65,18 +65,18 @@ const tabContent = [
       <h3 class="text-lg font-semibold mt-6 mb-2">COXBIT Floor Space Users</h3>
       <ol class="list-decimal ml-6">
         <li>M/s. Tamil Nadu Startup and Innovation Mission</li>
-        <li>M/s. Nithilam Private limited</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/7.jpg" alt="M/s. Nithilam Private limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Nithilam Private limited</span></li>
         <li>M/s. Nature Mills</li>
-        <li>M/s. Insilicomics</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/8.jpg" alt="M/s. Insilicomics" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Insilicomics</span></li>
         <li>M/s. Pechi Foods Private Limited</li>
-        <li>M/s. Innogreen India Marketing</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/9.jpg" alt="M/s. Innogreen India Marketing" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Innogreen India Marketing</span></li>
         <li>M/s. V.R. Boom</li>
         <li>M/s. Cwitch industries</li>
-        <li>M/s. Leaders Desk</li>
-        <li>M/s. Anga Information Technology</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/10.jpg" alt="M/s. Leaders Desk" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Leaders Desk</span></li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/11.jpg" alt="M/s. Anga Information Technology" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Anga Information Technology</span></li>
         <li>M/s. Yatvik Enterprises</li>
-        <li>M/s. Miyabi Agro</li>
-        <li>M/s. Mitti Lifetek Pharmadx Private Limited</li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/12.jpg" alt="M/s. Miyabi Agro" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Miyabi Agro</span></li>
+        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/13.jpg" alt="M/s. Mitti Lifetek Pharmadx Private Limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Mitti Lifetek Pharmadx Private Limited</span></li>
         <li>M/s. Karva Technologies</li>
         <li>M/s. BiTs Informatics</li>
         <li>M/s. Home Ideas Technologies LLP</li>

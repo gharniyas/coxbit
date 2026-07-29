@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
-import { FaFlask, FaChalkboardTeacher, FaCheckCircle } from "react-icons/fa";
+import { FaFlask, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
@@ -42,11 +42,6 @@ const Header = () => {
           href: "/facilities/entrepreneurship",
           label: "Technology Driven Entrepreneurship",
           icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
-        },
-        {
-          href: "/facilities/skill",
-          label: "Skill and Capacity Building",
-          icon: <FaChalkboardTeacher size={18} className="mr-2" />,
         },
         {
           href: "/facilities/serviceoffered",
@@ -98,11 +93,11 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex items-center justify-between h-28">
+      <div className="flex items-center justify-start h-28">
         {/* Logo Section */}
         <div
           className="flex-shrink-0 flex items-center gap-2 pl-2"
-          style={{ height: 115 }}
+          style={{ height: 140 }}
         >
           <div
             style={{
@@ -131,8 +126,8 @@ const Header = () => {
           </div>
           <div
             style={{
-              height: 115,
-              width: 480,
+              height: 140,
+              width: 600,
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
@@ -142,15 +137,15 @@ const Header = () => {
               src="/logo-2.png"
               alt="COEB Logo"
               fill={false}
-              width={480}
-              height={115}
+              width={600}
+              height={140}
               priority
               style={{
                 objectFit: "contain",
                 objectPosition: "left center",
                 width: "100%",
                 height: "auto",
-                maxHeight: 115,
+                maxHeight: 140,
               }}
             />
           </div>
@@ -188,7 +183,11 @@ const Header = () => {
                       aria-expanded={isOpen ? "true" : "false"}
                       onClick={() => setOpenDropdown(isOpen ? null : idx)}
                       onKeyDown={(e) => {
-                        if (e.key === "Enter" || e.key === " " || e.key === "ArrowDown") {
+                        if (
+                          e.key === "Enter" ||
+                          e.key === " " ||
+                          e.key === "ArrowDown"
+                        ) {
                           setOpenDropdown(idx);
                         }
                         if (e.key === "Escape") {
@@ -198,8 +197,18 @@ const Header = () => {
                     >
                       {item.icon}
                       {item.label}
-                      <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      <svg
+                        className="w-3 h-3 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
                     <div
@@ -248,7 +257,7 @@ const Header = () => {
           </div>
         </nav>
         <button
-          className="md:hidden text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
+          className="md:hidden ml-auto text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
