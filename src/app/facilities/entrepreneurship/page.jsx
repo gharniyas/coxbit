@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import ImageCarousel from "../../components/ImageCarousel";
+import { startupProfiles } from "./data";
 
 const tabs = [
   { id: 0, label: "Cabin Space", images: ["/cabin/IMG_1565.JPG","/cabin/IMG_1573.JPG","/cabin/IMG_1612.JPG","/cabin/IMG_1617.JPG"] },
@@ -18,38 +20,6 @@ const tabContent = [
         <li>Support services for business development</li>
         <li>Networking opportunities with other resident startups</li>
       </ul>
-      <h3 class="text-lg font-semibold mt-6 mb-2">COXBIT Cabin Space Users</h3>
-      <ol class="list-decimal ml-6">
-        <li>M/s. Aviva Organics Stores</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/16.jpg" alt="Dr. Jini Narayan" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>Dr. Jini Narayan</span></li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/14.jpg" alt="M/s. Oneomics Private Limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Oneomics Private Limited</span></li>
-        <li>M/s. Thennaivanam</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/15.jpg" alt="M/s. Sakthi Fertilizer Company" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Sakthi Fertilizer Company</span></li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/17.jpg" alt="Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution</span></li>
-        <li>M/s. Bublbox E-Retail Private Limited</li>
-        <li>M/s. CropTwin Agro Tech Pvt Ltd</li>
-        <li>M/s. Meridian Machine Works</li>
-        <li>Selvi. Prarthana V, Nehru Arts and Science College, CBE</li>
-        <li>M/s. UnivZero Technologies Pvt Ltd</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/18.jpg" alt="M/s. SS Tech" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. SS Tech</span></li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/19.jpg" alt="M/s. Valriya Vision Pvt Ltd" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Valriya Vision Pvt Ltd</span></li>
-        <li>M/s. Ziwwit Sustainable Technologies</li>
-        <li>M/s. Sherpa Biotech</li>
-        <li>M/s. Bharath Biofarm Pvt Ltd</li>
-        <li>M/s. Skandax Nexus</li>
-        <li>M/s. Halal Agro Producers</li>
-        <li>M/s. TAK SFS Pvt Ltd</li>
-        <li>M/s. Quadrica</li>
-        <li>M/s. Themolife</li>
-        <li>M/s. Sparkle Consultancy</li>
-        <li>M/s. Gudimangalam FPO</li>
-        <li>M/s. SST Microgreen</li>
-        <li>M/s. Biofocus Scientific Solution Pvt Ltd.</li>
-        <li>Dr. Jithesh Vijayan</li>
-        <li>M/s. Ainiminds Technologies LLP</li>
-        <li>M/s. Uyrmey Bio-Research Private Limited</li>
-        <li>M/s. Ecozoe Technologies Private Limited</li>
-      </ol>
     `,
   },
   {
@@ -62,29 +32,92 @@ const tabContent = [
         <li>Opportunities for peer learning and mentorship</li>
         <li>Participation in community events and programs</li>
       </ul>
-      <h3 class="text-lg font-semibold mt-6 mb-2">COXBIT Floor Space Users</h3>
-      <ol class="list-decimal ml-6">
-        <li>M/s. Tamil Nadu Startup and Innovation Mission</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/7.jpg" alt="M/s. Nithilam Private limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Nithilam Private limited</span></li>
-        <li>M/s. Nature Mills</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/8.jpg" alt="M/s. Insilicomics" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Insilicomics</span></li>
-        <li>M/s. Pechi Foods Private Limited</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/9.jpg" alt="M/s. Innogreen India Marketing" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Innogreen India Marketing</span></li>
-        <li>M/s. V.R. Boom</li>
-        <li>M/s. Cwitch industries</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/10.jpg" alt="M/s. Leaders Desk" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Leaders Desk</span></li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/11.jpg" alt="M/s. Anga Information Technology" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Anga Information Technology</span></li>
-        <li>M/s. Yatvik Enterprises</li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/12.jpg" alt="M/s. Miyabi Agro" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Miyabi Agro</span></li>
-        <li class="flex flex-col items-start gap-2 my-4"><img src="/startup/13.jpg" alt="M/s. Mitti Lifetek Pharmadx Private Limited" class="w-full max-w-xs h-auto object-contain rounded-md border border-gray-200 shadow-sm shrink-0" /><span>M/s. Mitti Lifetek Pharmadx Private Limited</span></li>
-        <li>M/s. Karva Technologies</li>
-        <li>M/s. BiTs Informatics</li>
-        <li>M/s. Home Ideas Technologies LLP</li>
-        <li>M/s. DC4 Market Research</li>
-      </ol>
     `,
   },
 ];
+
+const startupLinkClass =
+  "font-medium text-indigo-700 underline decoration-indigo-300 underline-offset-4 transition hover:text-indigo-900 hover:decoration-indigo-500";
+
+const startupLists = {
+  0: [
+    "M/s. Aviva Organics Stores",
+    { name: "Dr. Jini Narayan", slug: startupProfiles["dr-jini-narayan"].slug },
+    {
+      name: "M/s. Oneomics Private Limited",
+      slug: startupProfiles.oneomics.slug,
+    },
+    "M/s. Thennaivanam",
+    {
+      name: "M/s. Sakthi Fertilizer Company",
+      slug: startupProfiles["sakthi-fertilizer"].slug,
+    },
+    {
+      name: "Selvan. D. Dhivvya Bhalan, Kalaignar Karunanidhi Institution",
+      slug: startupProfiles["dhivvya-bhalan"].slug,
+    },
+    "M/s. Bublbox E-Retail Private Limited",
+    "M/s. CropTwin Agro Tech Pvt Ltd",
+    "M/s. Meridian Machine Works",
+    "Selvi. Prarthana V, Nehru Arts and Science College, CBE",
+    "M/s. UnivZero Technologies Pvt Ltd",
+    { name: "M/s. SS Tech", slug: startupProfiles["ss-tech"].slug },
+    {
+      name: "M/s. Valriya Vision Pvt Ltd",
+      slug: startupProfiles["valriya-vision"].slug,
+    },
+    "M/s. Ziwwit Sustainable Technologies",
+    "M/s. Sherpa Biotech",
+    "M/s. Bharath Biofarm Pvt Ltd",
+    "M/s. Skandax Nexus",
+    "M/s. Halal Agro Producers",
+    "M/s. TAK SFS Pvt Ltd",
+    "M/s. Quadrica",
+    "M/s. Themolife",
+    "M/s. Sparkle Consultancy",
+    "M/s. Gudimangalam FPO",
+    "M/s. SST Microgreen",
+    "M/s. Biofocus Scientific Solution Pvt Ltd.",
+    "Dr. Jithesh Vijayan",
+    "M/s. Ainiminds Technologies LLP",
+    "M/s. Uyrmey Bio-Research Private Limited",
+    "M/s. Ecozoe Technologies Private Limited",
+  ],
+  1: [
+    "M/s. Tamil Nadu Startup and Innovation Mission",
+    {
+      name: "M/s. Nithilam Private Limited",
+      slug: startupProfiles.nithilam.slug,
+    },
+    "M/s. Nature Mills",
+    { name: "M/s. Insilicomics", slug: startupProfiles.insilicomics.slug },
+    "M/s. Pechi Foods Private Limited",
+    {
+      name: "M/s. Innogreen India Marketing",
+      slug: startupProfiles.innogreen.slug,
+    },
+    "M/s. V.R. Boom",
+    "M/s. Cwitch industries",
+    {
+      name: "M/s. Leaders Desk",
+      slug: startupProfiles["leaders-desk"].slug,
+    },
+    {
+      name: "M/s. Anga Information Technology",
+      slug: startupProfiles["anga-information-technology"].slug,
+    },
+    "M/s. Yatvik Enterprises",
+    { name: "M/s. Miyabi Agro", slug: startupProfiles["miyabi-agro"].slug },
+    {
+      name: "M/s. Mitti Lifetek Pharmadx Private Limited",
+      slug: startupProfiles["mitti-lifetek-pharmadx"].slug,
+    },
+    "M/s. Karva Technologies",
+    "M/s. BiTs Informatics",
+    "M/s. Home Ideas Technologies LLP",
+    "M/s. DC4 Market Research",
+  ],
+};
 
 export default function EntrepreneurshipFacilities() {
   const [activeTab, setActiveTab] = useState(0);
@@ -123,6 +156,29 @@ export default function EntrepreneurshipFacilities() {
             className="text-gray-700 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: tabContent[activeTab].content }}
           />
+          <h3 className="mt-6 mb-2 text-lg font-semibold text-gray-900">
+            COXBIT {tabContent[activeTab].title} Users
+          </h3>
+          <ol className="mt-4 ml-6 list-decimal space-y-2 text-gray-800">
+            {startupLists[activeTab].map((item) => {
+              const key = typeof item === "string" ? item : item.slug;
+
+              return (
+                <li key={key}>
+                  {typeof item === "string" ? (
+                    item
+                  ) : (
+                    <Link
+                      href={`/facilities/entrepreneurship/${item.slug}`}
+                      className={startupLinkClass}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
         </div>
       </div>
     </div>
