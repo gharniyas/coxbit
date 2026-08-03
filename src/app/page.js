@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -155,25 +156,25 @@ export default function Home() {
                 </h3>
                 <ul className="text-gray-600 text-sm space-y-1">
                   <li>
-                    <a href="/facilities/sals" className="hover:text-blue-600">
+                    <Link href="/facilities/sals" className="hover:text-blue-600">
                       • SALS - Shared Access Lab Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/facilities/entrepreneurship"
                       className="hover:text-blue-600"
                     >
                       • Technology Driven Entrepreneurship
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/facilities/serviceoffered"
                       className="hover:text-blue-600"
                     >
                       • Services Offered
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -202,20 +203,20 @@ export default function Home() {
                 </h3>
                 <ul className="text-gray-600 text-sm space-y-1">
                   <li>
-                    <a
+                    <Link
                       href="/startup-ecosystem/partners"
                       className="hover:text-blue-600"
                     >
                       • Partners
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="/startup-ecosystem/startup-opportunities"
                       className="hover:text-blue-600"
                     >
                       • Startup Opportunities
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
