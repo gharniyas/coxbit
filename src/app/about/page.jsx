@@ -46,16 +46,35 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-5">
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Centre of Excellence in Biotechnology
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            About COXBIT
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            Our mission, vision, key focus areas and the team driving the
+            Centre of Excellence in Biotechnology forward.
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 md:p-8">
+        <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8">
           {/* About COXBIT */}
           {activeTab === 0 && (
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">About COXBIT</h2>
-              <ImageCarousel heightClass="h-[500px]" alt="COXBIT" images={bannerImages} />
+              <div>
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">About COXBIT</h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+              </div>
+              <ImageCarousel alt="COXBIT" images={bannerImages} />
               <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
                 <p>
                   The Centre of Excellence in Biotechnology (COXBIT) is a pioneering initiative established at Tamil Nadu Agricultural University (TNAU) with the support of the Government of Tamil Nadu. Operating under a <strong>Public–Private Partnership (PPP)</strong> mode, COXBIT serves as a dynamic platform to foster innovation, accelerate biotechnology research and translate scientific discoveries into scalable, real-world solutions.
@@ -76,9 +95,11 @@ export default function About() {
           {/* Why COXBIT */}
           {activeTab === 1 && (
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why COXBIT</h2>
+              <div>
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">Why COXBIT</h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+              </div>
               <ImageCarousel
-                heightClass="h-72"
                 alt="MoA"
                 images={["/MoA/IMG_3485.JPG", "/MoA/IMG_9481.JPG", "/MoA/IMG_9487.JPG", "/MoA/IMG_9748.JPG"]}
               />
@@ -93,7 +114,7 @@ export default function About() {
                   { icon: "💼", text: "Evolving Innovative Biotech Solutions into Investment-Ready Ventures through Industry Linkages, Market Access and Investor Connect" },
                   { icon: "💰", text: "Enabling access to Government startup funding through scheme linkages, proposal support and guidance on funding opportunities" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+                  <div key={i} className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-sm shadow-sm">
                     <span className="text-3xl flex-shrink-0">{item.icon}</span>
                     <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
                   </div>
@@ -105,25 +126,18 @@ export default function About() {
           {/* Key Focus Areas */}
           {activeTab === 2 && (
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Focus Areas</h2>
+              <div>
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">Key Focus Areas</h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+              </div>
               <div className="grid md:grid-cols-3 gap-4">
                 {focusAreas.map((area, i) => (
                   <div
                     key={i}
-                    className={`bg-gradient-to-br rounded-xl p-6 border hover:shadow-lg transition-shadow ${
-                      i === 0 ? "from-blue-50 to-indigo-100 border-blue-200"
-                      : i === 1 ? "from-purple-50 to-pink-100 border-purple-200"
-                      : i === 2 ? "from-amber-50 to-orange-100 border-amber-200"
-                      : i === 3 ? "from-emerald-50 to-green-100 border-emerald-200"
-                      : i === 4 ? "from-cyan-50 to-blue-100 border-cyan-200"
-                      : i === 5 ? "from-rose-50 to-red-100 border-rose-200"
-                      : i === 6 ? "from-teal-50 to-lime-100 border-teal-200"
-                      : i === 7 ? "from-yellow-50 to-orange-100 border-yellow-200"
-                      : "from-violet-50 to-fuchsia-100 border-violet-200"
-                    }`}
+                    className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
                   >
                     <div className="text-4xl mb-3">{area.icon}</div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{area.title}</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">{area.title}</h3>
                     <p className="text-gray-600 text-sm">{area.desc}</p>
                   </div>
                 ))}

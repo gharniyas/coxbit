@@ -3,34 +3,31 @@ import React from "react";
 import { FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
-import { MdOutlineInfo, MdOutlinePeople, MdOutlineScience, MdOutlineContactPhone } from "react-icons/md";
+import { MdOutlineInfo, MdOutlineScience, MdOutlineContactPhone, MdOutlineHandshake } from "react-icons/md";
 import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
 
 const Footer = () => {
   const navigationLinks = [
     { href: "/", label: "Home", icon: <AiOutlineHome size={16} /> },
     { href: "/about", label: "About", icon: <MdOutlineInfo size={16} /> },
-    { 
-      label: "Facilities", 
+    {
+      label: "Facilities",
       icon: <BsBuilding size={16} />,
       submenu: [
-        { href: "/facilities#lab", label: "State of Art Laboratory Services" },
-        { href: "/facilities#entrepreneurship", label: "Technology Driven Entrepreneurship" },
-        { href: "/facilities#skill", label: "Skill and Capacity Building" },
-        { href: "/facilities#services", label: "Services Offered" },
+        { href: "/facilities/sals", label: "SALS - Shared Access Lab Services" },
+        { href: "/facilities/entrepreneurship", label: "Technology Driven Entrepreneurship" },
+        { href: "/facilities/serviceoffered", label: "Services Offered" },
       ]
     },
     { href: "/projects", label: "Projects", icon: <MdOutlineScience size={16} /> },
-    { 
-      label: "Eco System Partners",
-      icon: <MdOutlineScience size={16} />,
+    {
+      label: "Startup Ecosystem",
+      icon: <MdOutlineHandshake size={16} />,
       submenu: [
-        { href: "#startuptn", label: "Startup TN" },
-        { href: "#edi", label: "EDII-TN" },
-        { href: "#tnapex", label: "TNAPEx" },
+        { href: "/startup-ecosystem/partners", label: "Partners" },
+        { href: "/startup-ecosystem/startup-opportunities", label: "Startup Opportunities" },
       ]
     },
-    { href: "/startup-opportunities", label: "Startup Opportunities", icon: <MdOutlineScience size={16} /> },
     { href: "/events-news", label: "Event & Training", icon: <BsCalendarEvent size={16} /> },
     { href: "/contact", label: "Contact Us", icon: <MdOutlineContactPhone size={16} /> },
   ];
@@ -49,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#6B3F1D] text-white mt-16 relative overflow-hidden text-[1.1rem] md:text-[1.15rem]">
+    <footer className="bg-[#0a1f44] text-white mt-16 relative overflow-hidden text-[1.1rem] md:text-[1.15rem]">
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -62,12 +59,12 @@ const Footer = () => {
                 width={180}
                 height={60}
                 priority
-                className="h-14 w-auto object-contain mb-4"
+                className="h-14 w-auto object-contain mb-4 rounded"
               />
 
               {/* Partner Logos */}
               <div className="flex items-center space-x-3 mb-2">
-                <div className="text-sm md:text-base text-gray-200 mb-2">In partnership with:</div>
+                <div className="text-sm md:text-base text-blue-100 mb-2">In partnership with:</div>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
@@ -90,7 +87,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="text-gray-100 text-base md:text-lg leading-relaxed mb-6">
+            <p className="text-blue-100 text-base md:text-lg leading-relaxed mb-6">
               Centre of Excellence in Biotechnology at TNAU - Advancing
               agricultural biotechnology through research, innovation, and
               cutting-edge facilities for transformative agricultural solutions.
@@ -102,7 +99,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#c89b3c] hover:text-[#0a1f44] transition-colors duration-300"
                     aria-label={social.label}
                   >
                     <IconComponent className="text-2xl md:text-3xl" />
@@ -114,13 +111,13 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Navigation</h3>
+            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Navigation</h3>
             <ul className="space-y-3">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
                   {link.submenu ? (
                     <div>
-                      <div className="text-gray-300 text-base md:text-lg flex items-center gap-2 mb-2 font-medium">
+                      <div className="text-blue-100 text-base md:text-lg flex items-center gap-2 mb-2 font-medium">
                         <span className="text-white">{link.icon}</span>
                         {link.label}
                       </div>
@@ -129,7 +126,7 @@ const Footer = () => {
                           <li key={subIndex}>
                             <a
                               href={sub.href}
-                              className="text-gray-200 hover:text-white transition-colors duration-200 text-base md:text-lg block"
+                              className="text-blue-200 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
                             >
                               {sub.label}
                             </a>
@@ -140,9 +137,9 @@ const Footer = () => {
                   ) : (
                     <a
                       href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-base md:text-lg flex items-center gap-2 group"
+                      className="text-blue-100 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg flex items-center gap-2 group"
                     >
-                      <span className="text-white group-hover:text-gray-300">{link.icon}</span>
+                      <span className="text-white group-hover:text-[#c89b3c]">{link.icon}</span>
                       {link.label}
                     </a>
                   )}
@@ -153,13 +150,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-gray-200 hover:text-white transition-colors duration-200 text-base md:text-lg"
+                    className="text-blue-200 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg"
                   >
                     {link.label}
                   </a>
@@ -170,37 +167,37 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact Info</h3>
+            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Contact Info</h3>
             <div className="space-y-4 text-base md:text-lg">
               <div className="flex items-start gap-3">
-                <MdEmail className="text-white mt-1 flex-shrink-0" size={18} />
+                <MdEmail className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-gray-100 mb-1 font-medium text-base md:text-lg">Email</p>
+                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Email</p>
                   <a
                     href="mailto:coebiotech@tnau.ac.in"
-                    className="text-yellow-200 hover:text-yellow-100 transition-colors"
+                    className="text-white hover:text-[#c89b3c] transition-colors"
                   >
                     coebiotech@tnau.ac.in
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <MdPhone className="text-white mt-1 flex-shrink-0" size={18} />
+                <MdPhone className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-gray-100 mb-1 font-medium text-base md:text-lg">Phone</p>
+                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Phone</p>
                   <a
                     href="tel:+919487001028"
-                    className="text-yellow-200 hover:text-yellow-100 transition-colors block"
+                    className="text-white hover:text-[#c89b3c] transition-colors block"
                   >
                     +91 94870 01028
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <MdLocationOn className="text-white mt-1 flex-shrink-0" size={18} />
+                <MdLocationOn className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-gray-100 mb-1 font-medium text-base md:text-lg">Address</p>
-                  <p className="text-gray-200 leading-relaxed">
+                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Address</p>
+                  <p className="text-blue-200 leading-relaxed">
                     Tamil Nadu Agricultural University<br />
                     Coimbatore - 641 003<br />
                     Tamil Nadu, India
@@ -212,32 +209,32 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Biotechnology Center Section */}
-      <div className="border-t border-yellow-900/30 bg-[#5A2E0C] relative">
+      {/* Director Section */}
+      <div className="border-t border-white/10 bg-black/20 relative">
         <div className="relative max-w-7xl mx-auto px-4 py-8">
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-4">
+            <h3 className="font-serif text-xl font-bold text-white mb-4">
               Director, Centre of Excellence in Biotechnology
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
-                <p className="text-gray-100 font-medium mb-2 text-base md:text-lg">Organization</p>
-                <p className="text-gray-200 text-base md:text-lg">
+                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">Organization</p>
+                <p className="text-blue-200 text-base md:text-lg">
                   Tamil Nadu Agricultural University
                 </p>
-                <p className="text-gray-200 text-base md:text-lg">
+                <p className="text-blue-200 text-base md:text-lg">
                   Coimbatore - 641 003, Tamil Nadu, India
                 </p>
               </div>
               <div>
-                <p className="text-gray-100 font-medium mb-2 text-base md:text-lg">
+                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">
                   Digital Contact
                 </p>
                 <div className="space-y-1">
                   <div>
                     <a
                       href="mailto:coebiotech@tnau.ac.in"
-                      className="text-yellow-200 hover:text-yellow-100 transition-colors text-base md:text-lg"
+                      className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       coebiotech@tnau.ac.in
                     </a>
@@ -247,7 +244,7 @@ const Footer = () => {
                       href="http://tinyurl.com/mry6y9vf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-yellow-200 hover:text-yellow-100 transition-colors text-base md:text-lg"
+                      className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       Visit Website
                     </a>
@@ -255,12 +252,12 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <p className="text-gray-100 font-medium mb-2 text-base md:text-lg">Phone Numbers</p>
+                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">Phone Numbers</p>
                 <div className="space-y-1">
                   <div>
                     <a
                       href="tel:+919489056706"
-                      className="text-yellow-200 hover:text-yellow-100 transition-colors text-base md:text-lg"
+                      className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       +91 94870 01028
                     </a>
@@ -268,7 +265,7 @@ const Footer = () => {
                   <div>
                     <a
                       href="tel:+918870281435"
-                      className="text-yellow-200 hover:text-yellow-100 transition-colors text-base md:text-lg"
+                      className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       +91 88702 81435
                     </a>
@@ -276,7 +273,7 @@ const Footer = () => {
                   <div>
                     <a
                       href="tel:+917373509696"
-                      className="text-yellow-200 hover:text-yellow-100 transition-colors text-base md:text-lg"
+                      className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       +91 73735 09696
                     </a>
@@ -289,28 +286,28 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-yellow-900/30 bg-[#4B260A] relative">
+      <div className="border-t border-white/10 bg-black/30 relative">
         <div className="relative max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-gray-200 text-sm">
+            <div className="text-blue-200 text-sm">
               © {new Date().getFullYear()} COXBIT. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm">
               <a
                 href="/privacy"
-                className="text-gray-200 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-gray-200 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="/cookies"
-                className="text-gray-200 hover:text-white transition-colors"
+                className="text-blue-200 hover:text-white transition-colors"
               >
                 Cookie Policy
               </a>

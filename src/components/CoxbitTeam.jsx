@@ -127,16 +127,19 @@ export default function CoxbitTeam() {
     <div className="space-y-16">
       {/* Chairman Section */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-          Chairman
-        </h2>
+        <div className="text-center mb-4">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+            Chairman
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+        </div>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden">
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-hidden">
             <div className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 {/* Chairman Photo */}
                 <div className="lg:col-span-1 text-center">
-                  <div className="w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden shadow-2xl">
+                  <div className="w-48 h-48 mx-auto mb-6 rounded-sm overflow-hidden border border-gray-200">
                     <Image
                       src={chairman.image}
                       alt={chairman.name}
@@ -150,13 +153,13 @@ export default function CoxbitTeam() {
                 {/* Chairman Details */}
                 <div className="lg:col-span-2">
                   <div className="text-center lg:text-left">
-                    <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                    <h3 className="font-serif text-2xl font-bold text-[#0a1f44] mb-2">
                       {chairman.name}
                     </h3>
-                    <p className="text-xl text-blue-600 font-semibold mb-2">
+                    <p className="text-lg text-[#c89b3c] font-semibold mb-2">
                       {chairman.qualification}
                     </p>
-                    <p className="text-lg text-indigo-600 font-medium mb-4">
+                    <p className="text-base text-gray-700 font-medium mb-4">
                       {chairman.position}
                     </p>
                     <div className="space-y-2 text-gray-700">
@@ -168,7 +171,7 @@ export default function CoxbitTeam() {
                         <span className="font-semibold mr-2">Contact:</span>
                         <a
                           href={`tel:${chairman.phone}`}
-                          className="text-blue-600 hover:text-blue-800"
+                          className="text-[#0a1f44] hover:text-[#c89b3c]"
                         >
                           {chairman.phone}
                         </a>
@@ -184,18 +187,21 @@ export default function CoxbitTeam() {
 
       {/* Board Members Section */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-          Board of Directors
-        </h2>
+        <div className="text-center mb-4">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+            Board of Directors
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+        </div>
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {boardMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
               <div className="p-6 flex flex-col items-center">
                 {/* Member Photo */}
-                <div className="relative w-40 h-48 mb-6 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative w-40 h-48 mb-6 rounded-sm overflow-hidden border border-gray-200">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -205,13 +211,13 @@ export default function CoxbitTeam() {
                 </div>
                 {/* Member Details */}
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 font-semibold mb-1">
+                  <p className="text-[#c89b3c] font-semibold mb-1">
                     {member.qualification}
                   </p>
-                  <p className="text-sm text-indigo-600 font-medium mb-3">
+                  <p className="text-sm text-gray-700 font-medium mb-3">
                     {member.position}
                   </p>
                   <div className="text-sm text-gray-600 leading-relaxed">
@@ -226,16 +232,19 @@ export default function CoxbitTeam() {
 
       {/* Core Team Section */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-          COXBIT Team
-        </h2>
+        <div className="text-center mb-4">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+            COXBIT Team
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+        </div>
         <div className="grid lg:grid-cols-3 gap-6">
           {coreTeam.map((member) => (
             <div
               key={member.id}
-              className="bg-white rounded-2xl shadow-lg border border-blue-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+              className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col items-center"
             >
-              <div className="relative w-40 h-48 mt-6 rounded-xl overflow-hidden">
+              <div className="relative w-40 h-48 mt-6 rounded-sm overflow-hidden border border-gray-200">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -244,7 +253,7 @@ export default function CoxbitTeam() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-2">
+                <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
                   {member.name}{" "}
                   {member.qualification && (
                     <span className="text-gray-500 font-normal text-base">
@@ -253,7 +262,7 @@ export default function CoxbitTeam() {
                   )}
                 </h3>
                 {member.designation && (
-                  <p className="text-blue-600 font-medium mb-2">
+                  <p className="text-[#c89b3c] font-semibold mb-2">
                     {member.designation}
                   </p>
                 )}
@@ -267,7 +276,7 @@ export default function CoxbitTeam() {
                     <span className="font-medium">Email:</span>{" "}
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-blue-600 hover:underline break-all"
+                      className="text-[#0a1f44] hover:text-[#c89b3c] hover:underline break-all"
                     >
                       {member.email}
                     </a>

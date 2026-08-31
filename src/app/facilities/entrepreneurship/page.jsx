@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import ImageCarousel from "../../components/ImageCarousel";
+import TabNavigation from "../../components/TabNavigation";
 import { startupProfiles } from "./data";
 
 const tabs = [
@@ -37,7 +38,7 @@ const tabContent = [
 ];
 
 const startupLinkClass =
-  "font-medium text-indigo-700 underline decoration-indigo-300 underline-offset-4 transition hover:text-indigo-900 hover:decoration-indigo-500";
+  "font-medium text-[#0a1f44] underline decoration-[#c89b3c] underline-offset-4 transition hover:text-[#8a6a1f] hover:decoration-[#8a6a1f]";
 
 const startupLists = {
   0: [
@@ -123,25 +124,30 @@ export default function EntrepreneurshipFacilities() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 px-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Removed the 'Entrepreneurship Facilities' heading for a cleaner look */}
-        <div className="flex justify-center mb-6">
-          {tabs.map((tab, idx) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(idx)}
-              className={`px-6 py-2 font-semibold rounded-t-lg border-b-2 transition-all duration-200 ${
-                activeTab === idx
-                  ? "border-indigo-600 text-indigo-600 bg-white"
-                  : "border-transparent text-gray-600 bg-gray-100 hover:text-indigo-600"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Facilities
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Technology Driven Entrepreneurship
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            Cabin and floor / knowledge space infrastructure supporting startups,
+            entrepreneurs and innovators at COXBIT.
+          </p>
         </div>
-        <div className="bg-white rounded-b-lg shadow-lg p-6">
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <TabNavigation
+          tabs={tabs}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+        />
+        <div className="bg-white border border-gray-200 border-t-0 rounded-b-sm shadow-sm p-6">
           {tabs[activeTab].images?.length > 0 && (
             <ImageCarousel
               key={activeTab}
@@ -149,14 +155,14 @@ export default function EntrepreneurshipFacilities() {
               alt={tabs[activeTab].label}
             />
           )}
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-4">
             {tabContent[activeTab].title}
           </h2>
           <div
             className="text-gray-700 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: tabContent[activeTab].content }}
           />
-          <h3 className="mt-6 mb-2 text-lg font-semibold text-gray-900">
+          <h3 className="mt-6 mb-2 font-serif text-lg font-bold text-[#0a1f44]">
             COXBIT {tabContent[activeTab].title} Users
           </h3>
           <ol className="mt-4 ml-6 list-decimal space-y-2 text-gray-800">

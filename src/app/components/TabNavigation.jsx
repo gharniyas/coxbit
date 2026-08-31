@@ -2,23 +2,18 @@
 
 export default function TabNavigation({ tabs, activeTab, onTabChange }) {
   return (
-    <div className="flex border-b-4 border-gray-300 mb-0 bg-gray-100">
+    <div className="flex flex-wrap border-b border-gray-200 bg-white">
       {tabs.map((tab, index) => (
         <button
           key={index}
           onClick={() => onTabChange(index)}
-          className={`flex items-center gap-2 px-6 py-4 font-semibold text-base transition-all relative ${
+          className={`flex items-center gap-2 px-5 py-3.5 font-semibold text-sm transition-colors duration-200 border-b-2 -mb-px whitespace-nowrap ${
             activeTab === index
-              ? 'bg-blue-100 text-blue-600'
-              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              ? 'text-[#0a1f44] border-[#c89b3c]'
+              : 'text-gray-500 border-transparent hover:text-[#0a1f44] hover:border-gray-300'
           }`}
-          style={{
-            borderBottom: activeTab === index ? '4px solid #2563eb' : 'none',
-            marginBottom: activeTab === index ? '-4px' : '0',
-            zIndex: activeTab === index ? 10 : 1
-          }}
         >
-          {tab.icon && <span className="text-xl">{tab.icon}</span>}
+          {tab.icon && <span className="text-lg">{tab.icon}</span>}
           {tab.label}
         </button>
       ))}

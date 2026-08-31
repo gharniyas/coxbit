@@ -83,13 +83,33 @@ export default function EventsNews() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Capacity Building
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Events & Training
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            Forthcoming and completed workshops, hands-on trainings and
+            events for researchers and industry at COXBIT.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Photo Gallery */}
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-center mb-4">Training & Events Gallery</h2>
+        <section className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+              Training & Events Gallery
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
           <ImageCarousel
-            heightClass="h-96"
             alt="Training"
             images={[
               "/Training and events/DSC03474.JPG",
@@ -103,49 +123,56 @@ export default function EventsNews() {
             ]}
           />
         </section>
+
         {/* Forthcoming Trainings */}
         <section className="mb-16">
-          <h1 className="text-3xl font-bold text-center mb-8">
-            List of Forthcoming Trainings during COXBIT 2026-2027
-          </h1>
-          <div className="overflow-x-auto">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0a1f44]">
+              List of Forthcoming Trainings during COXBIT 2026-2027
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-blue-100">
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                <tr className="bg-[#0a1f44] text-white">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     S. No
                   </th>
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     Training
                   </th>
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     Date of Training
                   </th>
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     Registration Details & QR
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {forthcomingTrainings.map((training) => (
-                  <tr key={training.sno} className="bg-white">
-                    <td className="border-2 border-gray-300 px-4 py-3 font-bold text-center">
+                {forthcomingTrainings.map((training, idx) => (
+                  <tr
+                    key={training.sno}
+                    className={idx % 2 === 1 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#0a1f44]">
                       {training.sno}
                     </td>
-                    <td className="border-2 border-gray-300 px-4 py-3 font-semibold">
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
                       {training.training}
                     </td>
-                    <td className="border-2 border-gray-300 px-4 py-3 font-semibold">
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
                       {training.date}
                     </td>
-                    <td className="border-2 border-gray-300 px-4 py-3 text-center">
+                    <td className="border border-gray-200 px-4 py-3 text-center">
                       <a
                         href={training.registerLink}
-                        className="text-blue-600 hover:underline font-bold bg-blue-100 px-3 py-1 inline-block"
+                        className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-4 py-2 rounded-sm transition-colors duration-200"
                       >
                         Register
                       </a>
-                      <div className="mt-2 text-blue-600 font-semibold">
+                      <div className="mt-2 text-[#0a1f44] font-semibold text-sm">
                         QR code for {training.training.split(" ")[0]}
                       </div>
                     </td>
@@ -158,34 +185,40 @@ export default function EventsNews() {
 
         {/* Completed Trainings */}
         <section>
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Details of Completed Training
-          </h2>
-          <div className="overflow-x-auto">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0a1f44]">
+              Details of Completed Training
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-green-100">
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                <tr className="bg-[#0a1f44] text-white">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     S. No
                   </th>
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     Date
                   </th>
-                  <th className="border-2 border-blue-600 px-4 py-3 text-left text-blue-900 font-bold">
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     Name of the Event
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {completedTrainings.map((training) => (
-                  <tr key={training.sno} className="bg-white">
-                    <td className="border-2 border-gray-300 px-4 py-3 font-bold text-center">
+                {completedTrainings.map((training, idx) => (
+                  <tr
+                    key={training.sno}
+                    className={idx % 2 === 1 ? "bg-gray-50" : "bg-white"}
+                  >
+                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#0a1f44]">
                       {training.sno}
                     </td>
-                    <td className="border-2 border-gray-300 px-4 py-3 font-semibold">
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
                       {training.date}
                     </td>
-                    <td className="border-2 border-gray-300 px-4 py-3 font-semibold">
+                    <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
                       {training.event}
                     </td>
                   </tr>

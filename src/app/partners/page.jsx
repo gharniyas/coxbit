@@ -8,9 +8,10 @@ const tabs = [
     images: [],
     content: (
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
           Tamil Nadu Startup and Innovation Mission (StartupTN)
         </h2>
+        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The StartupTN is the Government of Tamil Nadu's dedicated initiative
@@ -41,16 +42,31 @@ const tabs = [
             innovation-led economic growth in Tamil Nadu.
           </p>
         </div>
-        <div className="mt-8 bg-green-50 border-l-4 border-green-500 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">
-            Key Support Areas:
+        <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-6">
+          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+            Key Support Areas
           </h3>
           <ul className="space-y-2 text-gray-700">
-            <li>• Incubation Support</li>
-            <li>• Mentorship</li>
-            <li>• Capacity Building</li>
-            <li>• Market Linkages</li>
-            <li>• Funding Opportunities</li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Incubation Support
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Mentorship
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Capacity Building
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Market Linkages
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Funding Opportunities
+            </li>
           </ul>
         </div>
       </div>
@@ -61,10 +77,11 @@ const tabs = [
     images: [],
     content: (
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
           Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil
           Nadu
         </h2>
+        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The Entrepreneurship Development and Innovation Institute (EDII-TN)
@@ -87,17 +104,35 @@ const tabs = [
             the agri, biotech and allied sectors.
           </p>
         </div>
-        <div className="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">
-            Key Support Services:
+        <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm p-6">
+          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+            Key Support Services
           </h3>
           <ul className="space-y-2 text-gray-700">
-            <li>• Training & Mentoring</li>
-            <li>• Incubation Support</li>
-            <li>• Financial Assistance</li>
-            <li>• Ecosystem Linkages</li>
-            <li>• Government Funding Schemes</li>
-            <li>• Seed Support</li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Training &amp; Mentoring
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Incubation Support
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Financial Assistance
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Ecosystem Linkages
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Government Funding Schemes
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Seed Support
+            </li>
           </ul>
         </div>
       </div>
@@ -108,10 +143,11 @@ const tabs = [
     images: ["/TNAPEx/DSC09238.JPG","/TNAPEx/ACS visit.JPG","/TNAPEx/Recovered_jpg_file(4240).jpg","/TNAPEx/Recovered_jpg_file(4291).jpg"],
     content: (
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
           Tamil Nadu Food Processing and Agri Export Promotion Corporation
           (TNAPEx)
         </h2>
+        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The Tamil Nadu Food Processing and Agri Export Promotion Corporation
@@ -141,17 +177,35 @@ const tabs = [
             market-ready food products.
           </p>
         </div>
-        <div className="mt-8 bg-purple-50 border-l-4 border-purple-500 p-6">
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">
-            Key Support Areas:
+        <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-6">
+          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+            Key Support Areas
           </h3>
           <ul className="space-y-2 text-gray-700">
-            <li>• Market Linkages</li>
-            <li>• Export Facilitation</li>
-            <li>• Infrastructure Access</li>
-            <li>• Branding & Certification</li>
-            <li>• Capacity Building</li>
-            <li>• Financial Assistance</li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Market Linkages
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Export Facilitation
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Infrastructure Access
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Branding &amp; Certification
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Capacity Building
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-[#c89b3c]">&rsaquo;</span>
+              Financial Assistance
+            </li>
           </ul>
         </div>
       </div>
@@ -163,33 +217,50 @@ export default function Partners() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-5xl mx-auto">
-        {/* Removed the 'Partners' heading for a cleaner look */}
-        <div className="flex justify-center mb-8">
-          {tabs.map((tab, idx) => (
-            <button
-              key={tab.label}
-              className={`px-6 py-2 mx-2 rounded-t-lg font-semibold border-b-2 transition-colors duration-200 ${
-                activeTab === idx
-                  ? "border-blue-600 text-blue-700 bg-white shadow"
-                  : "border-transparent text-gray-500 bg-gray-100 hover:bg-white"
-              }`}
-              onClick={() => setActiveTab(idx)}
-            >
-              {tab.label}
-            </button>
-          ))}
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Startup Ecosystem
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Ecosystem Partners
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            Government and institutional partners supporting biotech
+            startups and entrepreneurs at COXBIT.
+          </p>
         </div>
-        <div className="bg-white rounded-b-lg shadow-lg p-8">
-          {tabs[activeTab].images?.length > 0 && (
-            <ImageCarousel
-              key={activeTab}
-              images={tabs[activeTab].images}
-              alt={tabs[activeTab].label}
-            />
-          )}
-          {tabs[activeTab].content}
+      </div>
+
+      <div className="container mx-auto py-10 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {tabs.map((tab, idx) => (
+              <button
+                key={tab.label}
+                className={`px-6 py-2.5 rounded-sm font-semibold text-sm border transition-colors duration-200 ${
+                  activeTab === idx
+                    ? "border-[#c89b3c] bg-[#0a1f44] text-white"
+                    : "border-gray-200 text-[#0a1f44] bg-white hover:bg-gray-50"
+                }`}
+                onClick={() => setActiveTab(idx)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
+            {tabs[activeTab].images?.length > 0 && (
+              <ImageCarousel
+                key={activeTab}
+                images={tabs[activeTab].images}
+                alt={tabs[activeTab].label}
+              />
+            )}
+            {tabs[activeTab].content}
+          </div>
         </div>
       </div>
     </div>

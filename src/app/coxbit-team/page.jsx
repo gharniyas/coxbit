@@ -42,45 +42,50 @@ export default function CoxbitTeam() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              COXBIT Team
-            </span>
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Centre of Excellence in Biotechnology
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            COXBIT Team
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
             Meet the dedicated professionals at the Centre of Excellence in
             Biotechnology who drive innovation, research excellence, and
             administrative efficiency.
           </p>
         </div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Core Team */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Operations & Support Team
-          </h2>
-          <div className="grid lg:grid-cols-3 gap-4">
+        <section>
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+              Operations &amp; Support Team
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
+          <div className="grid lg:grid-cols-3 gap-6">
             {coreTeam.map((member) => (
               <div
                 key={member.id}
-                className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
               >
-                <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32">
+                <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32 bg-[#0a1f44]">
                   <Image
                     src={member.image}
                     alt={member.name}
                     width={80}
                     height={80}
-                    className="object-cover object-center rounded-full border-4 border-white shadow-md"
+                    className="object-cover object-center rounded-full border-4 border-white"
                   />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2">
+                  <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
                     {member.name}{" "}
                     {member.qualification && (
                       <span className="text-gray-500 font-normal text-base">
@@ -89,7 +94,7 @@ export default function CoxbitTeam() {
                     )}
                   </h3>
                   {member.designation && (
-                    <p className="text-blue-600 font-medium">
+                    <p className="text-[#c89b3c] font-semibold">
                       {member.designation}
                     </p>
                   )}

@@ -18,36 +18,37 @@ export default async function StartupProfilePage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 px-4 py-8">
-      <div className="mx-auto max-w-4xl">
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            {profile.space}
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            {profile.name}
+          </h1>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 py-8">
         <Link
           href="/facilities/entrepreneurship"
-          className="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-800"
+          className="inline-flex items-center text-sm font-semibold text-[#0a1f44] hover:text-[#8a6a1f]"
         >
-          Back to Entrepreneurship Facilities
+          &larr; Back to Entrepreneurship Facilities
         </Link>
 
-        <div className="mt-4 overflow-hidden rounded-2xl bg-white shadow-lg">
-          <div className="border-b border-gray-100 px-6 py-5">
-            <p className="text-sm font-semibold uppercase tracking-wide text-indigo-600">
-              {profile.space}
-            </p>
-            <h1 className="mt-2 text-3xl font-bold text-gray-900">
-              {profile.name}
-            </h1>
-          </div>
-
-          <div className="p-6">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-xl border border-gray-200 bg-gray-50 shadow-sm">
-              <Image
-                src={profile.image}
-                alt={profile.name}
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 448px"
-                priority
-              />
-            </div>
+        <div className="mt-4 bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden border border-gray-200 bg-gray-50 rounded-sm">
+            <Image
+              src={profile.image}
+              alt={profile.name}
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 100vw, 448px"
+              priority
+            />
           </div>
         </div>
       </div>

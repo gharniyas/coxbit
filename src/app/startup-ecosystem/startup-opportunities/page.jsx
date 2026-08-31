@@ -151,14 +151,17 @@ const StartupOpportunities = () => {
   ];
 
   return (
-    <div className="h-screen flex flex-col bg-gradient-to-br from-blue-50 via-white to-green-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">
+    <div className="h-screen flex flex-col bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Startup Ecosystem
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Start Your Innovation Journey Today
           </h1>
-          <p className="text-sm md:text-base leading-relaxed">
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
             Whether you are a student with an innovative idea, a researcher
             developing breakthrough technology, an entrepreneur building a
             startup, or an industry partner seeking collaboration, we are here
@@ -168,17 +171,17 @@ const StartupOpportunities = () => {
       </div>
 
       {/* Tab Navigation */}
-      <div className="bg-white shadow-md border-b">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex space-x-1 overflow-x-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 font-semibold whitespace-nowrap transition-colors ${
+                className={`px-6 py-3.5 font-semibold text-sm whitespace-nowrap transition-colors duration-200 border-b-2 -mb-px ${
                   activeTab === tab.id
-                    ? "text-blue-600 border-b-4 border-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-[#0a1f44] border-[#c89b3c]"
+                    : "text-gray-500 border-transparent hover:text-[#0a1f44] hover:border-gray-300"
                 }`}
               >
                 {tab.label}
@@ -194,10 +197,11 @@ const StartupOpportunities = () => {
           {/* Overview Tab */}
           {activeTab === "overview" && (
             <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-blue-800 mb-4">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Our Ecosystem
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
                 <p className="text-gray-700 text-lg leading-relaxed mb-4">
                   Our ecosystem brings together innovation, research,
                   technology, skill development, incubation support and industry
@@ -220,10 +224,11 @@ const StartupOpportunities = () => {
           {/* TRL Tab */}
           {activeTab === "trl" && (
             <div>
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h2 className="text-2xl font-bold text-blue-800 mb-4">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Technology Readiness Levels (TRL)
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
                 <p className="text-gray-700 mb-6">
                   Technology Readiness Level (TRL) is a globally recognized
                   framework used to measure the maturity level of a technology
@@ -233,14 +238,14 @@ const StartupOpportunities = () => {
                   {trlLevels.map((trl, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-lg p-4 hover:shadow-lg transition-shadow"
+                      className="bg-white border border-gray-200 rounded-sm p-4 hover:shadow-md transition-shadow duration-200"
                     >
                       <div className="flex items-center mb-3">
-                        <span className="bg-blue-600 text-white font-bold px-3 py-1 rounded-full text-xs">
+                        <span className="bg-[#0a1f44] text-white font-bold px-3 py-1 rounded-sm text-xs">
                           {trl.level}
                         </span>
                       </div>
-                      <h3 className="text-lg font-bold text-blue-800 mb-2">
+                      <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
                         {trl.title}
                       </h3>
                       <ul className="space-y-1">
@@ -249,7 +254,7 @@ const StartupOpportunities = () => {
                             key={i}
                             className="text-gray-700 text-xs flex items-start"
                           >
-                            <span className="text-blue-600 mr-2">•</span>
+                            <span className="text-[#c89b3c] mr-2">&rsaquo;</span>
                             <span>{item}</span>
                           </li>
                         ))}
@@ -264,21 +269,22 @@ const StartupOpportunities = () => {
           {/* Journey Tab */}
           {activeTab === "journey" && (
             <div>
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h2 className="text-2xl font-bold text-green-800 mb-6">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Startup Journey: From Idea to Enterprise
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
                 <div className="space-y-4">
                   {startupJourney.map((step, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-gradient-to-r from-green-50 to-white rounded-lg border-l-4 border-green-600 hover:shadow-md transition-shadow"
+                      className="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm hover:shadow-md transition-shadow duration-200"
                     >
-                      <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
+                      <div className="flex-shrink-0 w-8 h-8 bg-[#0a1f44] text-white rounded-full flex items-center justify-center font-bold text-sm">
                         {index + 1}
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-green-800 mb-1">
+                        <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-1">
                           {step.title}
                         </h3>
                         <p className="text-gray-700 text-sm">{step.desc}</p>
@@ -293,17 +299,18 @@ const StartupOpportunities = () => {
           {/* Funding Tab */}
           {activeTab === "funding" && (
             <div>
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h2 className="text-2xl font-bold text-purple-800 mb-6">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Types of Startup Funding
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
                 <div className="grid md:grid-cols-2 gap-4">
                   {fundingTypes.map((funding, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-lg p-5 hover:shadow-lg transition-shadow"
+                      className="bg-white border border-gray-200 rounded-sm p-5 hover:shadow-md transition-shadow duration-200"
                     >
-                      <h3 className="text-lg font-bold text-purple-800 mb-2">
+                      <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
                         {funding.title}
                       </h3>
                       <p className="text-gray-700 text-sm">{funding.desc}</p>
@@ -317,13 +324,14 @@ const StartupOpportunities = () => {
           {/* Support & FAQ Tab */}
           {activeTab === "support" && (
             <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h2 className="text-2xl font-bold text-orange-800 mb-4">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Key Startup Support COXBIT Offers
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
                 <div className="space-y-4 mb-6">
-                  <div className="bg-gradient-to-r from-orange-50 to-white border-l-4 border-orange-600 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
+                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
                       Government Startup Schemes
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -331,8 +339,8 @@ const StartupOpportunities = () => {
                       entrepreneurship programs, and sector-specific schemes.
                     </p>
                   </div>
-                  <div className="bg-gradient-to-r from-orange-50 to-white border-l-4 border-orange-600 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
+                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
                       Research & Innovation Funding
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -341,8 +349,8 @@ const StartupOpportunities = () => {
                       commercialization.
                     </p>
                   </div>
-                  <div className="bg-gradient-to-r from-orange-50 to-white border-l-4 border-orange-600 p-4 rounded-lg">
-                    <h3 className="text-lg font-bold text-orange-800 mb-2">
+                  <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
+                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
                       Industry Collaboration Support
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -353,7 +361,7 @@ const StartupOpportunities = () => {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-orange-800 mb-4">
+                <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-4">
                   Key Support Services
                 </h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -385,9 +393,9 @@ const StartupOpportunities = () => {
                   ].map((service, index) => (
                     <div
                       key={index}
-                      className="bg-orange-50 p-3 rounded-lg border border-orange-200"
+                      className="bg-white p-3 rounded-sm border border-gray-200"
                     >
-                      <h4 className="font-bold text-orange-800 mb-1 text-sm">
+                      <h4 className="font-bold text-[#0a1f44] mb-1 text-sm">
                         {service.title}
                       </h4>
                       <p className="text-gray-700 text-xs">{service.desc}</p>
@@ -396,10 +404,11 @@ const StartupOpportunities = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h2 className="text-2xl font-bold text-teal-800 mb-4">
+              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
                   Frequently Asked Questions (FAQ)
                 </h2>
+                <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
                 <div className="space-y-4">
                   {[
                     {
@@ -421,9 +430,9 @@ const StartupOpportunities = () => {
                   ].map((faq, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-r from-teal-50 to-white border-l-4 border-teal-600 p-4 rounded-lg"
+                      className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm p-4"
                     >
-                      <h3 className="text-base font-bold text-teal-800 mb-1">
+                      <h3 className="text-base font-bold text-[#0a1f44] mb-1">
                         {faq.q}
                       </h3>
                       <p className="text-gray-700 text-sm">{faq.a}</p>

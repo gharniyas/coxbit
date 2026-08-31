@@ -2,33 +2,32 @@
 
 export default function SkillFacilities() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white rounded-2xl shadow-xl p-10 max-w-lg w-full text-center border border-gray-200">
-        <h1 className="text-3xl font-bold text-indigo-700 mb-4">
-          Skill Facilities
-        </h1>
-        <p className="text-gray-600 text-lg mb-6">
-          This page is currently under development.
-        </p>
-        <div className="flex items-center justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-16 h-16 text-indigo-300 animate-pulse"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 6v6l4 2m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Facilities
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Skill Facilities
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            This page is currently under development.
+          </p>
         </div>
-        <p className="mt-6 text-gray-400 text-sm">
-          Please check back soon for updates.
-        </p>
+      </div>
+
+      <div className="container mx-auto px-4 py-16 flex items-center justify-center">
+        <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-10 max-w-lg w-full text-center">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-3">
+            Content Coming Soon
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          <p className="text-gray-600">
+            Please check back soon for updates.
+          </p>
+        </div>
       </div>
     </div>
   );

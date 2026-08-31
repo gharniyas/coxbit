@@ -73,61 +73,58 @@ export default function Projects() {
   const currentProject = projects[activeProject];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-6 px-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Removed the 'Projects' heading for a cleaner look */}
+    <div className="min-h-screen bg-gray-50">
+      {/* Page header banner */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Research &amp; Development
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Projects
+          </h1>
+          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+            Government and institution funded research projects and
+            programmes currently underway at COXBIT.
+          </p>
+        </div>
+      </div>
 
-        {/* Project Tabs */}
-        <TabNavigation
-          tabs={tabs}
-          activeTab={activeProject}
-          onTabChange={setActiveProject}
-        />
+      <div className="container mx-auto py-10 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Project Tabs */}
+          <TabNavigation
+            tabs={tabs}
+            activeTab={activeProject}
+            onTabChange={setActiveProject}
+          />
 
-        {/* Project Content */}
-        <div className="bg-white rounded-b-lg shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            {currentProject.fullTitle}
-          </h2>
+          {/* Project Content */}
+          <div className="bg-white border border-gray-200 border-t-0 rounded-sm shadow-sm p-6">
+            <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-2">
+              {currentProject.fullTitle}
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
 
-          <div className="space-y-3 text-gray-700 leading-relaxed max-h-96 overflow-y-auto pr-2">
-            {currentProject.content.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
+            <div className="space-y-3 text-gray-700 leading-relaxed max-h-96 overflow-y-auto pr-2">
+              {currentProject.content.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
 
-          <div
-            className="mt-6 border-l-4 p-4"
-            style={{
-              backgroundColor:
-                currentProject.color === "blue"
-                  ? "#eff6ff"
-                  : currentProject.color === "green"
-                    ? "#f0fdf4"
-                    : currentProject.color === "purple"
-                      ? "#faf5ff"
-                      : "#fff7ed",
-              borderColor:
-                currentProject.color === "blue"
-                  ? "#3b82f6"
-                  : currentProject.color === "green"
-                    ? "#10b981"
-                    : currentProject.color === "purple"
-                      ? "#a855f7"
-                      : "#f97316",
-            }}
-          >
-            {currentProject.outlay !== "N/A" && (
-              <p className="font-semibold text-gray-900">
-                Project Outlay: {currentProject.outlay}
+            <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
+              {currentProject.outlay !== "N/A" && (
+                <p className="font-semibold text-[#0a1f44]">
+                  Project Outlay: {currentProject.outlay}
+                </p>
+              )}
+              <p className="text-gray-700">
+                {currentProject.outlay !== "N/A"
+                  ? "Funded by: "
+                  : "Implemented by: "}
+                {currentProject.fundedBy}
               </p>
-            )}
-            <p className="text-gray-700">
-              {currentProject.outlay !== "N/A"
-                ? "Funded by: "
-                : "Implemented by: "}
-              {currentProject.fundedBy}
-            </p>
+            </div>
           </div>
         </div>
       </div>
