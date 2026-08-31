@@ -2,12 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function ImageCarousel({
-  images,
-  alt = "",
-  heightClass = "h-80",
-  intervalMs = 3000,
-}) {
+export default function ImageCarousel({ images, alt = "", intervalMs = 3000 }) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -26,16 +21,14 @@ export default function ImageCarousel({
   if (!images || images.length === 0) return null;
 
   return (
-    <div
-      className={`relative w-full ${heightClass} rounded-xl overflow-hidden shadow mb-6`}
-    >
+    <div className="relative w-full max-w-4xl mx-auto aspect-[3/2] rounded-xl overflow-hidden shadow mb-6 bg-gray-50">
       {images.map((src, i) => (
         <div
           key={src}
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <Image src={src} alt={alt} fill className="object-cover" />
+          <Image src={src} alt={alt} fill className="object-contain" />
         </div>
       ))}
       {images.length > 1 && (

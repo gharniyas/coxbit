@@ -1,405 +1,278 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import PreviewCard from "./components/PreviewCard";
+
+const sections = [
+  {
+    href: "/about",
+    title: "About COXBIT",
+    description:
+      "Our mission, vision, key focus areas and the team driving the Centre of Excellence in Biotechnology forward.",
+    image: "/About coxbit/About COXBIT.jpg",
+  },
+  {
+    href: "/facilities",
+    title: "Facilities",
+    description:
+      "State-of-the-art laboratories, instrumentation and infrastructure available for research and industry use.",
+    image: "/Facility Photos/CoEB building.jpg",
+    subLinks: [
+      { href: "/facilities/sals", label: "SALS - Shared Access Lab Services" },
+      {
+        href: "/facilities/entrepreneurship",
+        label: "Technology Driven Entrepreneurship",
+      },
+      { href: "/facilities/serviceoffered", label: "Services Offered" },
+    ],
+  },
+  {
+    href: "/projects",
+    title: "Projects",
+    description:
+      "Government and institution funded research projects and programmes currently underway at COXBIT.",
+    icon: "🔬",
+  },
+  {
+    href: "/startup-ecosystem/partners",
+    title: "Startup Ecosystem",
+    description:
+      "Ecosystem partners and technology-readiness opportunities supporting biotech startups and entrepreneurs.",
+    image: "/startup/10.jpg",
+    subLinks: [
+      { href: "/startup-ecosystem/partners", label: "Partners" },
+      {
+        href: "/startup-ecosystem/startup-opportunities",
+        label: "Startup Opportunities",
+      },
+    ],
+  },
+  {
+    href: "/events-news",
+    title: "Event & Training",
+    description:
+      "Forthcoming and completed workshops, hands-on trainings and events for researchers and industry.",
+    image: "/Events - Trainings/1 - Bioentrpreneurship Meet/IMG_1386.JPG",
+  },
+  {
+    href: "/contact",
+    title: "Contact Us",
+    description:
+      "Reach the COXBIT team and Director's office, or locate us at Tamil Nadu Agricultural University, Coimbatore.",
+    icon: "✉️",
+  },
+];
 
 export default function Home() {
-  const router = useRouter();
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Hero Banner Section with Background Image */}
-      <div className="relative min-h-screen">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/building/IMG_5188.JPG"
-            alt="COXBIT Main Building"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/40"></div>
-          {/* Gradient overlay for better text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-indigo-900/20 to-purple-900/30"></div>
-        </div>
+    <div className="min-h-screen bg-white">
+      {/* Tricolour identity strip */}
+      <div className="w-full h-1.5 flex">
+        <div className="flex-1 bg-orange-500" />
+        <div className="flex-1 bg-white border-y border-gray-200" />
+        <div className="flex-1 bg-green-700" />
+      </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 py-20 min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-white drop-shadow-2xl">
-                Centre of Excellence in Biotechnology
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-8 drop-shadow-lg">
-              Creating world-class infrastructure for Biotech Research and
-              Innovation at Tamil Nadu Agricultural University with funding
-              support from Government of Tamil Nadu.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl backdrop-blur-sm"
-                onClick={() => router.push("/facilities")}
-              >
-                Explore Services
-              </button>
-              <button
-                className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/30 hover:bg-white/30 transform hover:scale-105 transition-all duration-300 shadow-xl"
-                onClick={() => router.push("/about")}
-              >
-                Learn More
-              </button>
+      {/* Official masthead */}
+      <div className="bg-[#0a1f44] text-white">
+        <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/logo.jpeg"
+              alt="COXBIT"
+              width={36}
+              height={36}
+              className="object-contain bg-white rounded-full p-0.5"
+            />
+            <div className="text-xs md:text-sm leading-tight">
+              <p className="font-semibold">Government of Tamil Nadu</p>
+              <p className="text-blue-200">Tamil Nadu Agricultural University</p>
             </div>
           </div>
+          <p className="text-[11px] md:text-xs uppercase tracking-wide text-[#c89b3c] font-semibold border border-[#c89b3c]/50 rounded-sm px-3 py-1">
+            A Public&ndash;Private Partnership Initiative
+          </p>
         </div>
       </div>
 
-      {/* Main Content Section */}
-      <div className="relative z-10 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-transparent to-indigo-100/20"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-300/10 to-indigo-300/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-300/10 to-purple-300/10 rounded-full blur-3xl"></div>
+      {/* Hero */}
+      <section className="relative min-h-[480px] flex items-center">
+        <Image
+          src="/building/IMG_5188.JPG"
+          alt="COXBIT Main Building"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f44]/95 via-[#0a1f44]/80 to-[#0a1f44]/50" />
 
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          {/* About Section */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6 text-center">
+        <div className="relative z-10 container mx-auto px-4 py-16">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-sm font-semibold mb-3">
+            Centre of Excellence in Biotechnology
+          </p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-white max-w-3xl leading-tight mb-6">
+            COXBIT &ndash; Building World-Class Biotech Infrastructure
+          </h1>
+          <p className="text-blue-100 max-w-2xl leading-relaxed mb-8">
+            Creating world-class infrastructure for biotech research and
+            innovation at Tamil Nadu Agricultural University, with funding
+            support from the Government of Tamil Nadu.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Link
+              href="/facilities"
+              className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
+            >
+              Explore Facilities
+            </Link>
+            <Link
+              href="/about"
+              className="border border-white/60 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
+            >
               About COXBIT
-            </h2>
-            <p className="text-gray-700 leading-relaxed max-w-4xl mx-auto text-center">
-              COXBIT is a Public–Private Partnership initiative at Tamil Nadu
-              Agricultural University that bridges academia, industry and
-              startups &mdash; offering state-of-the-art labs, advanced
-              instrumentation and end-to-end support to turn biotechnology
-              research into real-world, market-ready solutions.
-            </p>
-            <div className="mt-8 text-center">
-              <button
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
-                onClick={() => router.push("/about")}
-              >
-                Read More About Us
-              </button>
-            </div>
-          </div>
-
-          {/* Vision and Goals */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-gradient-to-br from-white via-blue-50 to-indigo-50 p-8 rounded-2xl shadow-xl border border-blue-100/50 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🎯</span>
-              </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-                Vision
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                To develop high-end laboratories, biobased products through
-                public-private partnership and quality human resource in the
-                biotech sector.
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-white via-indigo-50 to-purple-50 p-8 rounded-2xl shadow-xl border border-indigo-100/50 backdrop-blur-sm">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-white text-2xl">🚀</span>
-              </div>
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                Goals
-              </h3>
-              <ul className="text-gray-700 space-y-2">
-                <li>
-                  • Position Tamil Nadu as a leader on the global biotechnology
-                  map
-                </li>
-                <li>
-                  • Foster investment and innovation in the biotechnology sector
-                </li>
-                <li>
-                  • Provide enabling environment and world class infrastructure
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Explore COXBIT Section - condensed links mirroring the header submenus */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              Explore COXBIT
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  🧬
-                </div>
-                <h3
-                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
-                  onClick={() => router.push("/about")}
-                >
-                  About
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Our mission, vision and journey as a PPP centre of excellence.
-                </p>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  🏢
-                </div>
-                <h3
-                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
-                  onClick={() => router.push("/facilities")}
-                >
-                  Facilities
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>
-                    <Link href="/facilities/sals" className="hover:text-blue-600">
-                      • SALS - Shared Access Lab Services
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/facilities/entrepreneurship"
-                      className="hover:text-blue-600"
-                    >
-                      • Technology Driven Entrepreneurship
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/facilities/serviceoffered"
-                      className="hover:text-blue-600"
-                    >
-                      • Services Offered
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  🔬
-                </div>
-                <h3
-                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
-                  onClick={() => router.push("/projects")}
-                >
-                  Projects
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Research projects and initiatives underway at COXBIT.
-                </p>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  🤝
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  Startup Ecosystem
-                </h3>
-                <ul className="text-gray-600 text-sm space-y-1">
-                  <li>
-                    <Link
-                      href="/startup-ecosystem/partners"
-                      className="hover:text-blue-600"
-                    >
-                      • Partners
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/startup-ecosystem/startup-opportunities"
-                      className="hover:text-blue-600"
-                    >
-                      • Startup Opportunities
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  📅
-                </div>
-                <h3
-                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
-                  onClick={() => router.push("/events-news")}
-                >
-                  Event & Training
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Upcoming events, workshops and training programmes.
-                </p>
-              </div>
-
-              <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-6 hover:shadow-2xl transition-shadow duration-300">
-                <div className="w-12 h-12 bg-pink-100 rounded-xl flex items-center justify-center mb-4 text-2xl">
-                  ✉️
-                </div>
-                <h3
-                  className="text-lg font-semibold text-gray-800 mb-2 cursor-pointer hover:text-blue-600"
-                  onClick={() => router.push("/contact")}
-                >
-                  Contact Us
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Get in touch with the COXBIT team.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Social Media Promotion Section */}
-          <div className="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100/50 p-8 mb-16">
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 text-center">
-              Connect With Us on Social Media
-            </h3>
-            <p className="text-xl text-gray-600 text-center mb-8 max-w-3xl mx-auto">
-              Stay updated with our latest research, innovations, and
-              biotechnology breakthroughs. Follow us on social media for
-              real-time updates and insights.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Facebook QR */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">📘</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
-                  Facebook
-                </h4>
-                <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
-                  <Image
-                    src="/QR Code - CoEB/QR - FB - CoEB.png"
-                    alt="Facebook QR Code - COXBIT"
-                    width={150}
-                    height={150}
-                    className="mx-auto"
-                  />
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Scan to follow our Facebook page for updates, events, and
-                  research highlights
-                </p>
-              </div>
-
-              {/* Instagram QR */}
-              <div className="bg-gradient-to-br from-pink-50 to-purple-100 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">📷</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
-                  Instagram
-                </h4>
-                <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
-                  <Image
-                    src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
-                    alt="Instagram QR Code - COXBIT"
-                    width={150}
-                    height={150}
-                    className="mx-auto"
-                  />
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Follow us on Instagram for behind-the-scenes content and
-                  visual updates
-                </p>
-              </div>
-
-              {/* LinkedIn QR */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
-                <div className="w-16 h-16 bg-blue-700 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-2xl">💼</span>
-                </div>
-                <h4 className="text-xl font-semibold text-gray-800 mb-4">
-                  LinkedIn
-                </h4>
-                <div className="bg-white rounded-lg p-4 mb-4 inline-block shadow-md">
-                  <Image
-                    src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
-                    alt="LinkedIn QR Code - COXBIT"
-                    width={150}
-                    height={150}
-                    className="mx-auto"
-                  />
-                </div>
-                <p className="text-gray-600 text-sm">
-                  Connect with us professionally for research collaborations and
-                  opportunities
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center">
-              <p className="text-gray-600 mb-4">
-                <strong>How to use:</strong> Simply point your smartphone camera
-                at any QR code above to instantly access our social media
-                profiles.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-                  #Biotechnology
-                </span>
-                <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
-                  #Research
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">
-                  #Innovation
-                </span>
-                <span className="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium">
-                  #Agriculture
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="bg-gradient-to-br from-gray-800 via-blue-900 to-indigo-900 text-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-bold mb-6 text-center">
-              Contact Information
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-lg font-semibold mb-3 text-blue-300">
-                  Address
-                </h4>
-                <p className="leading-relaxed">
-                  Centre of Excellence in Biotechnology
-                  <br />
-                  Tamil Nadu Agricultural University
-                  <br />
-                  Coimbatore – 641 003, Tamil Nadu, India
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-3 text-blue-300">
-                  Contact Details
-                </h4>
-                <div className="space-y-2">
-                  <p>
-                    <strong>Phone:</strong> +91 94870 01028 / +91 88702 81435 /
-                    +91 73735 09696
-                  </p>
-                  <p>
-                    <strong>Email:</strong>{" "}
-                    <a
-                      href="mailto:coebiotech@tnau.ac.in"
-                      className="text-blue-300 hover:text-blue-200"
-                    >
-                      coebiotech@tnau.ac.in
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Key sections - short version of every menubar page */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-10">
+          <h2 className="font-serif text-3xl font-bold text-[#0a1f44]">
+            Our Key Sections
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            A quick overview of every section of this portal. Select any card
+            below to view the complete details of that page.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sections.map((section) => (
+            <PreviewCard key={section.href} {...section} />
+          ))}
+        </div>
+      </section>
+
+      {/* In association with */}
+      <section className="bg-gray-50 border-y border-gray-200 py-10">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-6">
+            In Association With
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-10">
+            <Image
+              src="/TNA logo.jpg"
+              alt="Tamil Nadu Agricultural University"
+              width={70}
+              height={70}
+              className="object-contain rounded-full"
+            />
+            <Image
+              src="/innovation logo.jpg"
+              alt="Innovation Initiative"
+              width={70}
+              height={70}
+              className="object-contain rounded-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Social media */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-10">
+          <h2 className="font-serif text-3xl font-bold text-[#0a1f44]">
+            Connect With Us on Social Media
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Scan a QR code below or follow us for the latest research,
+            events and biotechnology updates from COXBIT.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+              Facebook
+            </h3>
+            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <Image
+                src="/QR Code - CoEB/QR - FB - CoEB.png"
+                alt="Facebook QR Code - COXBIT"
+                width={140}
+                height={140}
+                className="mx-auto"
+              />
+            </div>
+            <p className="text-gray-600 text-sm mt-4">
+              Scan to follow our Facebook page for updates, events and
+              research highlights.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+              Instagram
+            </h3>
+            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <Image
+                src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
+                alt="Instagram QR Code - COXBIT"
+                width={140}
+                height={140}
+                className="mx-auto"
+              />
+            </div>
+            <p className="text-gray-600 text-sm mt-4">
+              Follow us on Instagram for behind-the-scenes content and
+              visual updates.
+            </p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+              LinkedIn
+            </h3>
+            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <Image
+                src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
+                alt="LinkedIn QR Code - COXBIT"
+                width={140}
+                height={140}
+                className="mx-auto"
+              />
+            </div>
+            <p className="text-gray-600 text-sm mt-4">
+              Connect with us professionally for research collaborations
+              and opportunities.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-gray-600 text-sm mb-4">
+            <strong>How to use:</strong> Simply point your smartphone camera
+            at any QR code above to instantly access our social media
+            profiles.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+              #Biotechnology
+            </span>
+            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+              #Research
+            </span>
+            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+              #Innovation
+            </span>
+            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+              #Agriculture
+            </span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -57,6 +57,7 @@ const Header = () => {
     },
     {
       label: "Startup Ecosystem",
+      shortLabel: "Startups",
       icon: <MdOutlineHandshake size={24} />,
       dropdown: [
         {
@@ -74,6 +75,7 @@ const Header = () => {
     {
       href: "/events-news",
       label: "Event & Training",
+      shortLabel: "Events",
       icon: <BsCalendarEvent size={24} />,
     },
     {
@@ -93,22 +95,10 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex items-center justify-start h-28">
+      <div className="flex flex-wrap items-center justify-between min-h-28 gap-y-1 gap-x-2 py-1">
         {/* Logo Section */}
-        <div
-          className="flex-shrink-0 flex items-center gap-2 pl-2"
-          style={{ height: 140 }}
-        >
-          <div
-            style={{
-              height: 75,
-              width: 120,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              overflow: "hidden",
-            }}
-          >
+        <div className="flex-shrink-0 flex items-center gap-2 pl-2 h-full min-w-0">
+          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[70px] h-[44px] sm:w-[95px] sm:h-[60px] md:w-[110px] md:h-[68px] lg:w-[120px] lg:h-[75px]">
             <Image
               src="/logo.jpeg"
               alt="COXBIT Logo"
@@ -124,15 +114,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div
-            style={{
-              height: 140,
-              width: 600,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-            }}
-          >
+          <div className="flex items-center justify-start min-w-0 w-[120px] sm:w-[180px] md:w-[220px] lg:w-[240px] 2xl:w-[600px]">
             <Image
               src="/logo-2.png"
               alt="COEB Logo"
@@ -152,8 +134,8 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center bg-green-700 rounded-lg px-2 flex-shrink-0">
-          <div className="flex flex-nowrap items-stretch">
+        <nav className="hidden lg:flex items-center bg-green-700 rounded-lg px-1.5 2xl:px-2 flex-1 min-w-0">
+          <div className="flex flex-wrap items-stretch justify-between w-full">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 const isDropdownActive = item.dropdown.some((sub) =>
@@ -172,7 +154,7 @@ const Header = () => {
                     }}
                   >
                     <button
-                      className={`font-bold text-sm flex items-center gap-1 focus:outline-none px-3 py-2 transition-colors duration-200 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
+                      className={`font-bold text-xs 2xl:text-sm flex items-center gap-1 focus:outline-none px-1.5 2xl:px-3 py-2 transition-colors duration-200 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
                         isDropdownActive || isOpen
                           ? "border-yellow-400"
                           : "border-transparent"
@@ -195,8 +177,7 @@ const Header = () => {
                         }
                       }}
                     >
-                      {item.icon}
-                      {item.label}
+                      <span>{item.shortLabel || item.label}</span>
                       <svg
                         className="w-3 h-3 ml-1"
                         fill="none"
@@ -243,13 +224,12 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-bold text-sm transition-colors duration-200 px-3 py-2 flex items-center gap-1 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
+                    className={`font-bold text-xs 2xl:text-sm transition-colors duration-200 px-1.5 2xl:px-3 py-2 flex items-center gap-1 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
                       isActive ? "border-yellow-400" : "border-transparent"
                     }`}
                     style={{ boxShadow: "none", background: "none" }}
                   >
-                    {item.icon}
-                    {item.label}
+                    <span>{item.shortLabel || item.label}</span>
                   </a>
                 );
               }
@@ -257,7 +237,7 @@ const Header = () => {
           </div>
         </nav>
         <button
-          className="md:hidden ml-auto text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
+          className="lg:hidden ml-auto text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
@@ -267,7 +247,7 @@ const Header = () => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
           <nav className="px-4 py-3 space-y-2">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
