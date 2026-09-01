@@ -62,8 +62,14 @@ export default function SALS() {
     {
       id: 2,
       title: "Tissue Culture Facility",
-      images: ["/Common facilities/DSC03480.JPG"],
-      imageLabel: "Common Facilities",
+      images: [
+        "/Tissue culture/Tissue culture 1 b.png",
+        "/Tissue culture/1 a.png",
+        "/Tissue culture/1.jpeg",
+        "/Tissue culture/2.jpeg",
+        "/Tissue culture/3 (2).jpeg",
+      ],
+      imageLabel: "Tissue Culture Facility",
       fullTitle: "3. Micropropagation and Plant Tissue Culture Facility",
       color: "purple",
       content: [
@@ -77,7 +83,12 @@ export default function SALS() {
     {
       id: 3,
       title: "Cold Room Facility",
-      images: ["/Facility Photos/Cold Room.jpg"],
+      images: [
+        "/cold room/CR 1 (1).jpeg",
+        "/cold room/CR 1 (2).jpeg",
+        "/cold room/CR 1 (3).jpeg",
+        "/cold room/CR 4.jpeg",
+      ],
       imageLabel: "Cold Room Facility",
       fullTitle: "4. Advanced Cold Room Facility for Research & Storage",
       color: "cyan",
@@ -96,7 +107,7 @@ export default function SALS() {
     {
       id: 4,
       title: "Bioinformatics Server",
-      images: ["/Facility Photos/Bioinformatics - Server Room.jpg"],
+      images: ["/Bioinformatics Server.jpeg"],
       imageLabel: "Bioinformatics Server Room",
       fullTitle: "5. Advanced Bioinformatics Server for AI-Driven Agri-Biotech Research",
       color: "orange",

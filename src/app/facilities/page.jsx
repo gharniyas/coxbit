@@ -1,4 +1,33 @@
-import ImageCarousel from "../components/ImageCarousel";
+import Link from "next/link";
+import { FaFlask, FaRegListAlt } from "react-icons/fa";
+import { MdOutlineRocketLaunch } from "react-icons/md";
+
+const facilityLinks = [
+  {
+    href: "/facilities/sals",
+    title: "SALS",
+    subtitle: "Shared Access Lab Services",
+    description:
+      "Molecular biology, proteomics, tissue culture, cold room and bioinformatics infrastructure shared with startups and researchers.",
+    icon: <FaFlask size={26} />,
+  },
+  {
+    href: "/facilities/entrepreneurship",
+    title: "Technology Driven",
+    subtitle: "Entrepreneurship",
+    description:
+      "Cabin and floor / knowledge space supporting resident startups, entrepreneurs and innovators at COXBIT.",
+    icon: <MdOutlineRocketLaunch size={26} />,
+  },
+  {
+    href: "/facilities/serviceoffered",
+    title: "Services",
+    subtitle: "Offered",
+    description:
+      "Analytical charges for proteomics & metabolomics and server usage rates for COXBIT shared facilities.",
+    icon: <FaRegListAlt size={26} />,
+  },
+];
 
 export default function Facilities() {
   return (
@@ -19,84 +48,38 @@ export default function Facilities() {
       </div>
 
       <div className="max-w-5xl mx-auto px-4 py-12">
-        {/* Facility Photo Gallery */}
-        <ImageCarousel
-          alt="Facility"
-          images={[
-            "/Facility Photos/CoEB building.jpg",
-            "/Facility Photos/Board Room.jpg",
-            "/Facility Photos/Molecularbiology lab.jpg",
-            "/Facility Photos/Tissue culture facility.jpg",
-            "/Facility Photos/Exhibition Hall.JPG",
-            "/Facility Photos/Cabin Space.jpg",
-            "/Facility Photos/Cold Room.jpg",
-            "/Facility Photos/Bioinformatics - Server Room.jpg",
-          ]}
-        />
+        <p className="text-gray-700 leading-relaxed mb-10 max-w-3xl">
+          COXBIT offers shared laboratory infrastructure, dedicated startup
+          workspace and analytical services under one roof, lowering entry
+          barriers for students, researchers, startups and industry partners.
+          Explore each facility below.
+        </p>
 
-        {/* Services Offered Section */}
-        <div className="mb-8 flex justify-center">
-          <a
-            href="/facilities/serviceoffered"
-            className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
-          >
-            View Services Offered
-          </a>
-        </div>
-
-        <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
-            1. Molecular Biology Laboratory &ndash; Shared Innovation Facility
-          </h2>
-          <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
-
-          <div className="space-y-6 text-gray-700 leading-relaxed">
-            <p>
-              The Molecular Biology Laboratory at COXBIT is a fully equipped, state-of-the-art facility
-              designed to support advanced research, innovation and product development in agriculture and
-              biotechnology. The laboratory houses essential equipment including RO water systems, digital
-              autoclaves, laminar airflow chambers, PCR and real-time PCR systems, electrophoresis units,
-              gel documentation systems and tissue lyser, along with supporting instruments such as centrifuges,
-              sonicators, incubators and ultra-low temperature freezers (-80°C and -20°C). Additional analytical
-              tools such as Soxhlet apparatus, weighing balances, pH meters and water purification systems
-              further strengthen its research capabilities.
-            </p>
-
-            <p>
-              A key strength of this facility is its shared-access model, where common laboratory infrastructure
-              is made available to startups, students, researchers and innovators utilizing the cabin and floor
-              space facilities. This enables users to carry out experimental work, validate concepts and develop
-              products without the burden of investing in high-cost instrumentation.
-            </p>
-
-            <p>
-              By offering free access to essential common facilities, COXBIT significantly lowers entry barriers,
-              accelerates research activities and fosters a collaborative innovation ecosystem. This initiative
-              plays a crucial role in translating ideas into viable technologies and products, making the
-              laboratory a strong enabler of entrepreneurship and applied biotechnology research.
-            </p>
-          </div>
-
-          <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-6 rounded-sm">
-            <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">Key Equipment Available:</h3>
-            <ul className="grid md:grid-cols-2 gap-2 text-gray-700">
-              <li>&bull; RO Water Systems</li>
-              <li>&bull; Digital Autoclaves</li>
-              <li>&bull; Laminar Airflow Chambers</li>
-              <li>&bull; PCR & Real-time PCR Systems</li>
-              <li>&bull; Electrophoresis Units</li>
-              <li>&bull; Gel Documentation Systems</li>
-              <li>&bull; Tissue Lyser</li>
-              <li>&bull; Centrifuges</li>
-              <li>&bull; Sonicators</li>
-              <li>&bull; Incubators</li>
-              <li>&bull; Ultra-low Temperature Freezers (-80°C, -20°C)</li>
-              <li>&bull; Soxhlet Apparatus</li>
-              <li>&bull; Weighing Balances</li>
-              <li>&bull; pH Meters</li>
-              <li>&bull; Water Purification Systems</li>
-            </ul>
-          </div>
+        {/* Facility Navigation Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {facilityLinks.map((facility) => (
+            <Link
+              key={facility.href}
+              href={facility.href}
+              className="group bg-white border border-gray-200 rounded-sm shadow-sm p-6 flex flex-col hover:border-[#c89b3c] hover:shadow-md transition-all duration-200"
+            >
+              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#6b4226]/10 text-[#6b4226] mb-4 group-hover:bg-[#6b4226] group-hover:text-white transition-colors duration-200">
+                {facility.icon}
+              </div>
+              <h2 className="font-serif text-lg font-bold text-[#6b4226] leading-snug">
+                {facility.title}
+                <span className="block text-base font-semibold">
+                  {facility.subtitle}
+                </span>
+              </h2>
+              <p className="text-gray-600 text-sm mt-2 leading-relaxed flex-1">
+                {facility.description}
+              </p>
+              <span className="mt-4 text-sm font-semibold text-[#c89b3c] group-hover:text-[#6b4226]">
+                Explore &rarr;
+              </span>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

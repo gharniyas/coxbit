@@ -7,6 +7,7 @@ export default function PreviewCard({
   description,
   image,
   imageAlt,
+  imageClassName,
   icon,
   subLinks,
 }) {
@@ -18,7 +19,9 @@ export default function PreviewCard({
             src={image}
             alt={imageAlt || title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            className={`group-hover:scale-105 transition-transform duration-300 ${
+              imageClassName || "object-cover"
+            }`}
           />
         ) : (
           <div className="h-full w-full flex items-center justify-center text-5xl">

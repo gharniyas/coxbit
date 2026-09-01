@@ -6,8 +6,8 @@ import TabNavigation from "../../components/TabNavigation";
 import { startupProfiles } from "./data";
 
 const tabs = [
-  { id: 0, label: "Cabin Space", images: ["/cabin/IMG_1565.JPG","/cabin/IMG_1573.JPG","/cabin/IMG_1612.JPG","/cabin/IMG_1617.JPG"] },
-  { id: 1, label: "Floor / Knowledge Space", images: ["/Facility Photos/Floor Space (2).JPG","/Facility Photos/Floor Space (3).JPG","/Facility Photos/Floor Space (4).JPG","/Facility Photos/Work space.jpg"] },
+  { id: 0, label: "Cabin Space", images: ["/cabinspacing/cabin spacing-1.jpeg","/cabinspacing/cabin spacing-2.jpeg"] },
+  { id: 1, label: "Floor / Knowledge Space", images: ["/floor spacing/floor spacing-3.jpeg","/floor spacing/floor spacing-4.jpeg","/floor spacing/floor spacing-5.jpeg"] },
 ];
 
 const tabContent = [
@@ -128,7 +128,7 @@ export default function EntrepreneurshipFacilities() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8">
         <TabNavigation
           tabs={tabs}
           activeTab={activeTab}

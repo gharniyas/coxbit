@@ -151,7 +151,7 @@ const StartupOpportunities = () => {
   ];
 
   return (
-    <div className="h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
@@ -173,7 +173,7 @@ const StartupOpportunities = () => {
       {/* Tab Navigation */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex space-x-1 overflow-x-auto">
+          <div className="flex space-x-1 overflow-x-auto overflow-y-hidden">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
@@ -191,8 +191,8 @@ const StartupOpportunities = () => {
         </div>
       </div>
 
-      {/* Tab Content - Scrollable */}
-      <div className="flex-1 overflow-y-auto">
+      {/* Tab Content */}
+      <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 py-6">
           {/* Overview Tab */}
           {activeTab === "overview" && (

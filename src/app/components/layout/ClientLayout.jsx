@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
+import ChatWidget from "../ChatWidget";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
@@ -29,6 +30,7 @@ export default function ClientLayout({ children }) {
           {children}
         </main>
         {!noLayout && <Footer />}
+        <ChatWidget />
       </div>
     </div>
   );

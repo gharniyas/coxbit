@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineInfo, MdOutlineScience, MdOutlineContactPhone, MdOutlineHandshake } from "react-icons/md";
@@ -40,9 +40,16 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { href: "#", label: "LinkedIn", icon: FaLinkedinIn },
-    { href: "#", label: "Twitter", icon: FaTwitter },
-    { href: "#", label: "YouTube", icon: FaYoutube },
+    {
+      href: "https://www.facebook.com/profile.php?id=61550815515953",
+      label: "Facebook",
+      icon: FaFacebookF,
+    },
+    {
+      href: "https://www.instagram.com/coxbit_tnau?igsi=MW1oeGU4dDNzYTNpNg==",
+      label: "Instagram",
+      icon: FaInstagram,
+    },
   ];
 
   return (
@@ -99,6 +106,8 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#c89b3c] hover:text-[#6b4226] transition-colors duration-300"
                     aria-label={social.label}
                   >

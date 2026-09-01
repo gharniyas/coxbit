@@ -134,7 +134,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center bg-green-700 rounded-lg px-1.5 2xl:px-2 flex-1 min-w-0">
+        <nav className="hidden lg:flex items-center bg-[#6b4226] rounded-lg px-1.5 2xl:px-2 flex-1 min-w-0">
           <div className="flex flex-wrap items-stretch justify-between w-full">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
@@ -154,7 +154,7 @@ const Header = () => {
                     }}
                   >
                     <button
-                      className={`font-bold text-xs 2xl:text-sm flex items-center gap-1 focus:outline-none px-1.5 2xl:px-3 py-2 transition-colors duration-200 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
+                      className={`font-bold text-xs 2xl:text-sm flex items-center gap-1 focus:outline-none px-1.5 2xl:px-3 py-2 transition-colors duration-200 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
                         isDropdownActive || isOpen
                           ? "border-yellow-400"
                           : "border-transparent"
@@ -204,8 +204,8 @@ const Header = () => {
                             href={sub.href}
                             className={`flex items-center px-3 py-2 text-sm font-semibold transition-colors duration-200 border-l-4 ${
                               isSubActive
-                                ? "border-green-700 bg-green-50 text-green-700"
-                                : "border-transparent bg-white text-black hover:border-green-700 hover:bg-gray-50"
+                                ? "border-[#6b4226] bg-[#6b4226]/10 text-[#6b4226]"
+                                : "border-transparent bg-white text-black hover:border-[#6b4226] hover:bg-gray-50"
                             }`}
                             tabIndex={0}
                             onClick={() => setOpenDropdown(null)}
@@ -224,7 +224,7 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-bold text-xs 2xl:text-sm transition-colors duration-200 px-1.5 2xl:px-3 py-2 flex items-center gap-1 hover:bg-green-800 text-white border-b-4 whitespace-nowrap ${
+                    className={`font-bold text-xs 2xl:text-sm transition-colors duration-200 px-1.5 2xl:px-3 py-2 flex items-center gap-1 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
                       isActive ? "border-yellow-400" : "border-transparent"
                     }`}
                     style={{ boxShadow: "none", background: "none" }}

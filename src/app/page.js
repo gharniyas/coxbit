@@ -8,14 +8,14 @@ const sections = [
     title: "About COXBIT",
     description:
       "Our mission, vision, key focus areas and the team driving the Centre of Excellence in Biotechnology forward.",
-    image: "/About coxbit/About COXBIT.jpg",
+    image: "/About coxbit/IMG_6216.JPG",
   },
   {
     href: "/facilities",
     title: "Facilities",
     description:
       "State-of-the-art laboratories, instrumentation and infrastructure available for research and industry use.",
-    image: "/Facility Photos/CoEB building.jpg",
+    image: "/Tissue culture/Tissue culture 1 b.png",
     subLinks: [
       { href: "/facilities/sals", label: "SALS - Shared Access Lab Services" },
       {
@@ -30,14 +30,14 @@ const sections = [
     title: "Projects",
     description:
       "Government and institution funded research projects and programmes currently underway at COXBIT.",
-    icon: "🔬",
+    image: "/TNAPEx/DSC09238.JPG",
   },
   {
     href: "/startup-ecosystem/partners",
     title: "Startup Ecosystem",
     description:
       "Ecosystem partners and technology-readiness opportunities supporting biotech startups and entrepreneurs.",
-    image: "/startup/10.jpg",
+    image: "/Projects/20251029_104700.jpg (1).jpeg",
     subLinks: [
       { href: "/startup-ecosystem/partners", label: "Partners" },
       {
@@ -51,27 +51,21 @@ const sections = [
     title: "Event & Training",
     description:
       "Forthcoming and completed workshops, hands-on trainings and events for researchers and industry.",
-    image: "/Events - Trainings/1 - Bioentrpreneurship Meet/IMG_1386.JPG",
+    image: "/floor spacing/floor spacing-3.jpeg",
   },
   {
     href: "/contact",
     title: "Contact Us",
     description:
       "Reach the COXBIT team and Director's office, or locate us at Tamil Nadu Agricultural University, Coimbatore.",
-    icon: "✉️",
+    image: "/logo.jpeg",
+    imageClassName: "object-contain p-8 bg-white",
   },
 ];
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Tricolour identity strip */}
-      <div className="w-full h-1.5 flex">
-        <div className="flex-1 bg-orange-500" />
-        <div className="flex-1 bg-white border-y border-gray-200" />
-        <div className="flex-1 bg-green-700" />
-      </div>
-
       {/* Hero */}
       <section className="relative min-h-[480px] flex items-center">
         <Image
@@ -188,6 +182,14 @@ export default function Home() {
               Scan to follow our Facebook page for updates, events and
               research highlights.
             </p>
+            <a
+              href="https://www.facebook.com/profile.php?id=61550815515953"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+            >
+              Visit our Facebook Page &rarr;
+            </a>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
@@ -207,6 +209,14 @@ export default function Home() {
               Follow us on Instagram for behind-the-scenes content and
               visual updates.
             </p>
+            <a
+              href="https://www.instagram.com/coxbit_tnau?igsi=MW1oeGU4dDNzYTNpNg=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+            >
+              Visit our Instagram Page &rarr;
+            </a>
           </div>
 
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">

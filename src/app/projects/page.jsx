@@ -1,10 +1,26 @@
 "use client";
-import { useState } from "react";
-import TabNavigation from "../components/TabNavigation";
+import ImageCarousel from "../components/ImageCarousel";
+
+const colorClasses = {
+  blue: {
+    badge: "bg-blue-50 text-blue-700 border-blue-200",
+    accent: "border-l-blue-500",
+  },
+  green: {
+    badge: "bg-green-50 text-green-700 border-green-200",
+    accent: "border-l-green-500",
+  },
+  purple: {
+    badge: "bg-purple-50 text-purple-700 border-purple-200",
+    accent: "border-l-purple-500",
+  },
+  orange: {
+    badge: "bg-orange-50 text-orange-700 border-orange-200",
+    accent: "border-l-orange-500",
+  },
+};
 
 export default function Projects() {
-  const [activeProject, setActiveProject] = useState(0);
-
   const projects = [
     {
       id: 0,
@@ -68,10 +84,6 @@ export default function Projects() {
     },
   ];
 
-  const tabs = projects.map((p) => ({ label: p.title }));
-
-  const currentProject = projects[activeProject];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
@@ -92,39 +104,83 @@ export default function Projects() {
 
       <div className="container mx-auto py-10 px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Project Tabs */}
-          <TabNavigation
-            tabs={tabs}
-            activeTab={activeProject}
-            onTabChange={setActiveProject}
-          />
-
-          {/* Project Content */}
-          <div className="bg-white border border-gray-200 border-t-0 rounded-sm shadow-sm p-6">
-            <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-2">
-              {currentProject.fullTitle}
-            </h2>
-            <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
-
-            <div className="space-y-3 text-gray-700 leading-relaxed max-h-96 overflow-y-auto pr-2">
-              {currentProject.content.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+          {/* Photo Gallery */}
+          <section className="mb-12">
+            <div className="text-center mb-8">
+              <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
+                Projects Gallery
+              </h2>
+              <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
             </div>
+            <ImageCarousel
+              alt="COXBIT Projects"
+              images={[
+                "/Projects/20251029_104700.jpg (1).jpeg",
+                "/Projects/IMG_8346.JPG (2).jpeg",
+                "/Projects/Recovered_jpg_file(4247).jpg.jpeg",
+                "/Projects/Recovered_jpg_file(4263).jpg.jpeg",
+              ]}
+            />
+          </section>
 
-            <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
-              {currentProject.outlay !== "N/A" && (
-                <p className="font-semibold text-[#6b4226]">
-                  Project Outlay: {currentProject.outlay}
-                </p>
-              )}
-              <p className="text-gray-700">
-                {currentProject.outlay !== "N/A"
-                  ? "Funded by: "
-                  : "Implemented by: "}
-                {currentProject.fundedBy}
-              </p>
-            </div>
+          {/* Quick Jump Links */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {projects.map((project, index) => {
+              const colors = colorClasses[project.color] || colorClasses.blue;
+              return (
+                <a
+                  key={project.id}
+                  href={`#project-${project.id}`}
+                  className={`text-sm font-semibold px-4 py-2 rounded-full border ${colors.badge} hover:shadow-sm transition-shadow duration-200`}
+                >
+                  {index + 1}. {project.title}
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Projects List */}
+          <div className="space-y-8">
+            {projects.map((project, index) => {
+              const colors = colorClasses[project.color] || colorClasses.blue;
+              return (
+                <section
+                  key={project.id}
+                  id={`project-${project.id}`}
+                  className={`bg-white border border-gray-200 border-l-4 ${colors.accent} rounded-sm shadow-sm p-6 md:p-8 scroll-mt-24`}
+                >
+                  <span
+                    className={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border ${colors.badge} mb-3`}
+                  >
+                    Project {index + 1} of {projects.length}
+                  </span>
+                  <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-2">
+                    {project.fullTitle}
+                  </h2>
+                  <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+
+                  <div className="space-y-3 text-gray-700 leading-relaxed">
+                    {project.content.map((paragraph, pIndex) => (
+                      <p key={pIndex}>{paragraph}</p>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
+                    {project.outlay !== "N/A" && (
+                      <p className="font-semibold text-[#6b4226]">
+                        Project Outlay: {project.outlay}
+                      </p>
+                    )}
+                    <p className="text-gray-700">
+                      {project.outlay !== "N/A"
+                        ? "Funded by: "
+                        : "Implemented by: "}
+                      {project.fundedBy}
+                    </p>
+                  </div>
+                </section>
+              );
+            })}
           </div>
         </div>
       </div>
