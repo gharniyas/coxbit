@@ -4,7 +4,7 @@ export default function Facilities() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             COXBIT
@@ -12,7 +12,7 @@ export default function Facilities() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Facilities
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             State of art laboratory facilities
           </p>
         </div>
@@ -38,14 +38,14 @@ export default function Facilities() {
         <div className="mb-8 flex justify-center">
           <a
             href="/facilities/serviceoffered"
-            className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
+            className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
           >
             View Services Offered
           </a>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8">
-          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
             1. Molecular Biology Laboratory &ndash; Shared Innovation Facility
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -78,7 +78,7 @@ export default function Facilities() {
           </div>
 
           <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-6 rounded-sm">
-            <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">Key Equipment Available:</h3>
+            <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">Key Equipment Available:</h3>
             <ul className="grid md:grid-cols-2 gap-2 text-gray-700">
               <li>&bull; RO Water Systems</li>
               <li>&bull; Digital Autoclaves</li>

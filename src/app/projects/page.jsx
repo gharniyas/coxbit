@@ -75,7 +75,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Research &amp; Development
@@ -83,7 +83,7 @@ export default function Projects() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Projects
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Government and institution funded research projects and
             programmes currently underway at COXBIT.
           </p>
@@ -101,7 +101,7 @@ export default function Projects() {
 
           {/* Project Content */}
           <div className="bg-white border border-gray-200 border-t-0 rounded-sm shadow-sm p-6">
-            <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-2">
+            <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-2">
               {currentProject.fullTitle}
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
@@ -114,7 +114,7 @@ export default function Projects() {
 
             <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
               {currentProject.outlay !== "N/A" && (
-                <p className="font-semibold text-[#0a1f44]">
+                <p className="font-semibold text-[#6b4226]">
                   Project Outlay: {currentProject.outlay}
                 </p>
               )}

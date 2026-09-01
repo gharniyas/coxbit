@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#0a1f44] text-white mt-16 relative overflow-hidden text-[1.1rem] md:text-[1.15rem]">
+    <footer className="bg-[#4a2c17] text-white mt-16 relative overflow-hidden text-[1.1rem] md:text-[1.15rem]">
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,7 +64,7 @@ const Footer = () => {
 
               {/* Partner Logos */}
               <div className="flex items-center space-x-3 mb-2">
-                <div className="text-sm md:text-base text-blue-100 mb-2">In partnership with:</div>
+                <div className="text-sm md:text-base text-amber-100 mb-2">In partnership with:</div>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
@@ -87,7 +87,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed mb-6">
+            <p className="text-amber-100 text-base md:text-lg leading-relaxed mb-6">
               Centre of Excellence in Biotechnology at TNAU - Advancing
               agricultural biotechnology through research, innovation, and
               cutting-edge facilities for transformative agricultural solutions.
@@ -99,7 +99,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
-                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#c89b3c] hover:text-[#0a1f44] transition-colors duration-300"
+                    className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#c89b3c] hover:text-[#6b4226] transition-colors duration-300"
                     aria-label={social.label}
                   >
                     <IconComponent className="text-2xl md:text-3xl" />
@@ -117,7 +117,7 @@ const Footer = () => {
                 <li key={index}>
                   {link.submenu ? (
                     <div>
-                      <div className="text-blue-100 text-base md:text-lg flex items-center gap-2 mb-2 font-medium">
+                      <div className="text-amber-100 text-base md:text-lg flex items-center gap-2 mb-2 font-medium">
                         <span className="text-white">{link.icon}</span>
                         {link.label}
                       </div>
@@ -126,7 +126,7 @@ const Footer = () => {
                           <li key={subIndex}>
                             <a
                               href={sub.href}
-                              className="text-blue-200 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
+                              className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
                             >
                               {sub.label}
                             </a>
@@ -137,7 +137,7 @@ const Footer = () => {
                   ) : (
                     <a
                       href={link.href}
-                      className="text-blue-100 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg flex items-center gap-2 group"
+                      className="text-amber-100 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg flex items-center gap-2 group"
                     >
                       <span className="text-white group-hover:text-[#c89b3c]">{link.icon}</span>
                       {link.label}
@@ -156,7 +156,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-blue-200 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg"
+                    className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg"
                   >
                     {link.label}
                   </a>
@@ -172,7 +172,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MdEmail className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Email</p>
+                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Email</p>
                   <a
                     href="mailto:coebiotech@tnau.ac.in"
                     className="text-white hover:text-[#c89b3c] transition-colors"
@@ -184,7 +184,7 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MdPhone className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Phone</p>
+                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Phone</p>
                   <a
                     href="tel:+919487001028"
                     className="text-white hover:text-[#c89b3c] transition-colors block"
@@ -196,8 +196,8 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MdLocationOn className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
                 <div>
-                  <p className="text-blue-100 mb-1 font-medium text-base md:text-lg">Address</p>
-                  <p className="text-blue-200 leading-relaxed">
+                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Address</p>
+                  <p className="text-amber-200/80 leading-relaxed">
                     Tamil Nadu Agricultural University<br />
                     Coimbatore - 641 003<br />
                     Tamil Nadu, India
@@ -218,16 +218,16 @@ const Footer = () => {
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
-                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">Organization</p>
-                <p className="text-blue-200 text-base md:text-lg">
+                <p className="text-amber-100 font-medium mb-2 text-base md:text-lg">Organization</p>
+                <p className="text-amber-200/80 text-base md:text-lg">
                   Tamil Nadu Agricultural University
                 </p>
-                <p className="text-blue-200 text-base md:text-lg">
+                <p className="text-amber-200/80 text-base md:text-lg">
                   Coimbatore - 641 003, Tamil Nadu, India
                 </p>
               </div>
               <div>
-                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">
+                <p className="text-amber-100 font-medium mb-2 text-base md:text-lg">
                   Digital Contact
                 </p>
                 <div className="space-y-1">
@@ -252,7 +252,7 @@ const Footer = () => {
                 </div>
               </div>
               <div>
-                <p className="text-blue-100 font-medium mb-2 text-base md:text-lg">Phone Numbers</p>
+                <p className="text-amber-100 font-medium mb-2 text-base md:text-lg">Phone Numbers</p>
                 <div className="space-y-1">
                   <div>
                     <a
@@ -289,25 +289,25 @@ const Footer = () => {
       <div className="border-t border-white/10 bg-black/30 relative">
         <div className="relative max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-blue-200 text-sm">
+            <div className="text-amber-200/80 text-sm">
               © {new Date().getFullYear()} COXBIT. All rights reserved.
             </div>
             <div className="flex items-center gap-6 text-sm">
               <a
                 href="/privacy"
-                className="text-blue-200 hover:text-white transition-colors"
+                className="text-amber-200/80 hover:text-white transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="text-blue-200 hover:text-white transition-colors"
+                className="text-amber-200/80 hover:text-white transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="/cookies"
-                className="text-blue-200 hover:text-white transition-colors"
+                className="text-amber-200/80 hover:text-white transition-colors"
               >
                 Cookie Policy
               </a>

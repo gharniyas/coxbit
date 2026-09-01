@@ -44,7 +44,7 @@ export default function CoxbitTeam() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Centre of Excellence in Biotechnology
@@ -52,7 +52,7 @@ export default function CoxbitTeam() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             COXBIT Team
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Meet the dedicated professionals at the Centre of Excellence in
             Biotechnology who drive innovation, research excellence, and
             administrative efficiency.
@@ -64,7 +64,7 @@ export default function CoxbitTeam() {
         {/* Core Team */}
         <section>
           <div className="text-center mb-8">
-            <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
               Operations &amp; Support Team
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -75,7 +75,7 @@ export default function CoxbitTeam() {
                 key={member.id}
                 className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
               >
-                <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32 bg-[#0a1f44]">
+                <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32 bg-[#6b4226]">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -85,7 +85,7 @@ export default function CoxbitTeam() {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
+                  <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-2">
                     {member.name}{" "}
                     {member.qualification && (
                       <span className="text-gray-500 font-normal text-base">

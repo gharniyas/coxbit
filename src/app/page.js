@@ -72,28 +72,6 @@ export default function Home() {
         <div className="flex-1 bg-green-700" />
       </div>
 
-      {/* Official masthead */}
-      <div className="bg-[#0a1f44] text-white">
-        <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <Image
-              src="/logo.jpeg"
-              alt="COXBIT"
-              width={36}
-              height={36}
-              className="object-contain bg-white rounded-full p-0.5"
-            />
-            <div className="text-xs md:text-sm leading-tight">
-              <p className="font-semibold">Government of Tamil Nadu</p>
-              <p className="text-blue-200">Tamil Nadu Agricultural University</p>
-            </div>
-          </div>
-          <p className="text-[11px] md:text-xs uppercase tracking-wide text-[#c89b3c] font-semibold border border-[#c89b3c]/50 rounded-sm px-3 py-1">
-            A Public&ndash;Private Partnership Initiative
-          </p>
-        </div>
-      </div>
-
       {/* Hero */}
       <section className="relative min-h-[480px] flex items-center">
         <Image
@@ -103,7 +81,7 @@ export default function Home() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f44]/95 via-[#0a1f44]/80 to-[#0a1f44]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#6b4226]/95 via-[#6b4226]/80 to-[#6b4226]/50" />
 
         <div className="relative z-10 container mx-auto px-4 py-16">
           <p className="text-[#c89b3c] uppercase tracking-widest text-sm font-semibold mb-3">
@@ -112,7 +90,7 @@ export default function Home() {
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-white max-w-3xl leading-tight mb-6">
             COXBIT &ndash; Building World-Class Biotech Infrastructure
           </h1>
-          <p className="text-blue-100 max-w-2xl leading-relaxed mb-8">
+          <p className="text-amber-100 max-w-2xl leading-relaxed mb-8">
             Creating world-class infrastructure for biotech research and
             innovation at Tamil Nadu Agricultural University, with funding
             support from the Government of Tamil Nadu.
@@ -120,7 +98,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/facilities"
-              className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
+              className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200"
             >
               Explore Facilities
             </Link>
@@ -137,7 +115,7 @@ export default function Home() {
       {/* Key sections - short version of every menubar page */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-3xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-3xl font-bold text-[#6b4226]">
             Our Key Sections
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -182,7 +160,7 @@ export default function Home() {
       {/* Social media */}
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-3xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-3xl font-bold text-[#6b4226]">
             Connect With Us on Social Media
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -194,7 +172,7 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               Facebook
             </h3>
             <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
@@ -213,7 +191,7 @@ export default function Home() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               Instagram
             </h3>
             <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
@@ -232,7 +210,7 @@ export default function Home() {
           </div>
 
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-4">
+            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               LinkedIn
             </h3>
             <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
@@ -258,16 +236,16 @@ export default function Home() {
             profiles.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
               #Biotechnology
             </span>
-            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
               #Research
             </span>
-            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
               #Innovation
             </span>
-            <span className="bg-[#0a1f44]/5 text-[#0a1f44] border border-[#0a1f44]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
+            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
               #Agriculture
             </span>
           </div>

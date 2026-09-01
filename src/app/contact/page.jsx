@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Get In Touch
@@ -13,7 +13,7 @@ export default function Contact() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Contact Us
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Reach the COXBIT team and Director&apos;s office, or locate us at
             Tamil Nadu Agricultural University, Coimbatore.
           </p>
@@ -33,7 +33,7 @@ export default function Contact() {
                 className="object-cover"
               />
             </div>
-            <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+            <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
               Dr. N. Senthil
             </h2>
             <p className="text-gray-700 font-semibold mb-2">Director</p>
@@ -50,12 +50,12 @@ export default function Contact() {
             <div className="mt-4 w-full flex flex-col gap-2 items-center">
               <a
                 href="mailto:coebiotech@tnau.ac.in"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#0a1f44]/5 hover:bg-[#0a1f44]/10 text-[#0a1f44] font-medium transition-colors duration-200"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#6b4226]/5 hover:bg-[#6b4226]/10 text-[#6b4226] font-medium transition-colors duration-200"
               >
                 <HiOutlineMail className="w-5 h-5" />
                 coebiotech@tnau.ac.in
               </a>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#0a1f44]/5 text-[#0a1f44] font-medium">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#6b4226]/5 text-[#6b4226] font-medium">
                 <HiOutlinePhone className="w-5 h-5" />
                 +91 94870 01028
               </span>

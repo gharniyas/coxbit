@@ -110,7 +110,7 @@ const FundingPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Support &amp; Grants
@@ -118,13 +118,13 @@ const FundingPage = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Funding &amp; Grants
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Empowering innovation through strategic funding opportunities for
             biotechnology research, startups, and collaborative projects that
             drive scientific advancement.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <button className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
+            <button className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
               Apply for Funding
             </button>
             <button className="border border-white/60 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
@@ -138,7 +138,7 @@ const FundingPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226]">
               Funded By
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -165,7 +165,7 @@ const FundingPage = () => {
                   />
                 </a>
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+              <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
                 Government of Tamil Nadu
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm">
@@ -190,7 +190,7 @@ const FundingPage = () => {
                   />
                 </a>
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+              <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
                 Tamil Nadu Agricultural University
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm">
@@ -215,7 +215,7 @@ const FundingPage = () => {
                   />
                 </a>
               </div>
-              <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">NABARD</h3>
+              <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">NABARD</h3>
               <p className="text-gray-600 leading-relaxed text-sm">
                 National Bank for Agriculture and Rural Development supporting
                 agricultural innovation and rural development through strategic
@@ -227,7 +227,7 @@ const FundingPage = () => {
           {/* Additional funding information */}
           <div className="mt-12 text-center">
             <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-6 max-w-4xl mx-auto">
-              <h4 className="font-serif text-lg font-bold text-[#0a1f44] mb-3">
+              <h4 className="font-serif text-lg font-bold text-[#6b4226] mb-3">
                 Collaborative Funding Framework
               </h4>
               <p className="text-gray-600 leading-relaxed">
@@ -246,7 +246,7 @@ const FundingPage = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226]">
               Our Funding Programs
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -265,11 +265,11 @@ const FundingPage = () => {
                   className="bg-white border border-gray-200 rounded-sm shadow-sm p-8 hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-[#0a1f44] rounded-sm flex items-center justify-center mr-4">
+                    <div className="w-12 h-12 bg-[#6b4226] rounded-sm flex items-center justify-center mr-4">
                       <IconComponent className="text-2xl text-[#c89b3c]" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl font-bold text-[#0a1f44]">
+                      <h3 className="font-serif text-xl font-bold text-[#6b4226]">
                         {program.title}
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
@@ -287,7 +287,7 @@ const FundingPage = () => {
                   </p>
 
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-[#0a1f44] mb-3">
+                    <h4 className="font-semibold text-[#6b4226] mb-3">
                       Key Features:
                     </h4>
                     {program.features.map((feature, featureIndex) => (
@@ -298,7 +298,7 @@ const FundingPage = () => {
                     ))}
                   </div>
 
-                  <button className="w-full mt-6 bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
+                  <button className="w-full mt-6 bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
                     Learn More
                   </button>
                 </div>
@@ -313,7 +313,7 @@ const FundingPage = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0a1f44] mb-1">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226] mb-1">
                 Eligibility Criteria
               </h2>
               <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -325,7 +325,7 @@ const FundingPage = () => {
               <div className="space-y-4">
                 {eligibilityCriteria.map((criteria, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-6 h-6 bg-[#0a1f44]/5 border border-[#0a1f44]/10 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                    <div className="w-6 h-6 bg-[#6b4226]/5 border border-[#6b4226]/10 rounded-full flex items-center justify-center mr-4 mt-0.5">
                       <div className="w-2 h-2 bg-[#c89b3c] rounded-full"></div>
                     </div>
                     <span className="text-gray-700">{criteria}</span>
@@ -333,36 +333,36 @@ const FundingPage = () => {
                 ))}
               </div>
 
-              <button className="mt-8 bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
+              <button className="mt-8 bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
                 Check Eligibility
               </button>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
-              <h3 className="font-serif text-2xl font-bold text-[#0a1f44] mb-6">
+              <h3 className="font-serif text-2xl font-bold text-[#6b4226] mb-6">
                 Quick Stats
               </h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-serif font-bold text-[#0a1f44] mb-2">
+                  <div className="text-3xl font-serif font-bold text-[#6b4226] mb-2">
                     ₹50Cr+
                   </div>
                   <div className="text-gray-600">Total Funding Disbursed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-serif font-bold text-[#0a1f44] mb-2">
+                  <div className="text-3xl font-serif font-bold text-[#6b4226] mb-2">
                     150+
                   </div>
                   <div className="text-gray-600">Projects Funded</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-serif font-bold text-[#0a1f44] mb-2">
+                  <div className="text-3xl font-serif font-bold text-[#6b4226] mb-2">
                     25+
                   </div>
                   <div className="text-gray-600">Startups Incubated</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-serif font-bold text-[#0a1f44] mb-2">
+                  <div className="text-3xl font-serif font-bold text-[#6b4226] mb-2">
                     80%
                   </div>
                   <div className="text-gray-600">Success Rate</div>
@@ -377,7 +377,7 @@ const FundingPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226]">
               Application Process
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -394,10 +394,10 @@ const FundingPage = () => {
               {applicationProcess.map((step, index) => (
                 <div key={index} className="relative">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-[#0a1f44] rounded-full flex items-center justify-center text-[#c89b3c] font-bold text-xl mb-4 relative z-10">
+                    <div className="w-16 h-16 bg-[#6b4226] rounded-full flex items-center justify-center text-[#c89b3c] font-bold text-xl mb-4 relative z-10">
                       {step.step}
                     </div>
-                    <h3 className="text-lg font-semibold text-[#0a1f44] mb-2">
+                    <h3 className="text-lg font-semibold text-[#6b4226] mb-2">
                       {step.title}
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -412,18 +412,18 @@ const FundingPage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-[#0a1f44] text-white">
+      <section className="py-20 bg-[#6b4226] text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
             Ready to Apply for Funding?
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-amber-100 max-w-3xl mx-auto mb-8">
             Take the first step towards realizing your biotechnology innovation.
             Our funding team is ready to support your journey.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
+            <button className="bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
               Start Application
             </button>
             <button className="border border-white/60 text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-sm transition-colors duration-200">
@@ -434,17 +434,17 @@ const FundingPage = () => {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="text-lg font-semibold mb-2">Funding Office</h3>
-              <p className="text-blue-100">coebiotech@tnau.ac.in</p>
+              <p className="text-amber-100">coebiotech@tnau.ac.in</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">
                 Application Support
               </h3>
-              <p className="text-blue-100">+91 94870 01028</p>
+              <p className="text-amber-100">+91 94870 01028</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2">Office Hours</h3>
-              <p className="text-blue-100">Mon - Fri, 9:00 AM - 5:00 PM</p>
+              <p className="text-amber-100">Mon - Fri, 9:00 AM - 5:00 PM</p>
             </div>
           </div>
         </div>

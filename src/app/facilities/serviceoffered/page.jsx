@@ -77,7 +77,7 @@ const ServiceOffered = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Facilities
@@ -85,7 +85,7 @@ const ServiceOffered = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Services Offered
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Analytical and server usage charges for COXBIT shared facilities.
           </p>
         </div>
@@ -94,7 +94,7 @@ const ServiceOffered = () => {
       <div className="max-w-6xl mx-auto px-2 md:px-8 py-10">
         {services.map((service, idx) => (
           <div key={idx} className="mb-12">
-            <h2 className="font-serif text-xl md:text-2xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226]">
               {service.title}
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
@@ -105,7 +105,7 @@ const ServiceOffered = () => {
                     {service.table[0].map((header, i) => (
                       <th
                         key={i}
-                        className="px-4 py-3 border-b border-gray-200 bg-[#0a1f44] text-white font-semibold text-sm md:text-base text-left"
+                        className="px-4 py-3 border-b border-gray-200 bg-[#6b4226] text-white font-semibold text-sm md:text-base text-left"
                       >
                         {header}
                       </th>

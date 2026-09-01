@@ -153,7 +153,7 @@ const StartupOpportunities = () => {
   return (
     <div className="h-screen flex flex-col bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Startup Ecosystem
@@ -161,7 +161,7 @@ const StartupOpportunities = () => {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Start Your Innovation Journey Today
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Whether you are a student with an innovative idea, a researcher
             developing breakthrough technology, an entrepreneur building a
             startup, or an industry partner seeking collaboration, we are here
@@ -180,8 +180,8 @@ const StartupOpportunities = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-6 py-3.5 font-semibold text-sm whitespace-nowrap transition-colors duration-200 border-b-2 -mb-px ${
                   activeTab === tab.id
-                    ? "text-[#0a1f44] border-[#c89b3c]"
-                    : "text-gray-500 border-transparent hover:text-[#0a1f44] hover:border-gray-300"
+                    ? "text-[#6b4226] border-[#c89b3c]"
+                    : "text-gray-500 border-transparent hover:text-[#6b4226] hover:border-gray-300"
                 }`}
               >
                 {tab.label}
@@ -198,7 +198,7 @@ const StartupOpportunities = () => {
           {activeTab === "overview" && (
             <div className="space-y-6">
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Our Ecosystem
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
@@ -225,7 +225,7 @@ const StartupOpportunities = () => {
           {activeTab === "trl" && (
             <div>
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Technology Readiness Levels (TRL)
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
@@ -241,11 +241,11 @@ const StartupOpportunities = () => {
                       className="bg-white border border-gray-200 rounded-sm p-4 hover:shadow-md transition-shadow duration-200"
                     >
                       <div className="flex items-center mb-3">
-                        <span className="bg-[#0a1f44] text-white font-bold px-3 py-1 rounded-sm text-xs">
+                        <span className="bg-[#6b4226] text-white font-bold px-3 py-1 rounded-sm text-xs">
                           {trl.level}
                         </span>
                       </div>
-                      <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
+                      <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                         {trl.title}
                       </h3>
                       <ul className="space-y-1">
@@ -270,7 +270,7 @@ const StartupOpportunities = () => {
           {activeTab === "journey" && (
             <div>
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Startup Journey: From Idea to Enterprise
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -278,13 +278,13 @@ const StartupOpportunities = () => {
                   {startupJourney.map((step, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm hover:shadow-md transition-shadow duration-200"
+                      className="flex items-start gap-4 p-4 bg-gray-50 border border-gray-200 border-l-4 border-l-[#6b4226] rounded-sm hover:shadow-md transition-shadow duration-200"
                     >
-                      <div className="flex-shrink-0 w-8 h-8 bg-[#0a1f44] text-white rounded-full flex items-center justify-center font-bold text-sm">
+                      <div className="flex-shrink-0 w-8 h-8 bg-[#6b4226] text-white rounded-full flex items-center justify-center font-bold text-sm">
                         {index + 1}
                       </div>
                       <div>
-                        <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-1">
+                        <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-1">
                           {step.title}
                         </h3>
                         <p className="text-gray-700 text-sm">{step.desc}</p>
@@ -300,7 +300,7 @@ const StartupOpportunities = () => {
           {activeTab === "funding" && (
             <div>
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Types of Startup Funding
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -310,7 +310,7 @@ const StartupOpportunities = () => {
                       key={index}
                       className="bg-white border border-gray-200 rounded-sm p-5 hover:shadow-md transition-shadow duration-200"
                     >
-                      <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
+                      <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                         {funding.title}
                       </h3>
                       <p className="text-gray-700 text-sm">{funding.desc}</p>
@@ -325,13 +325,13 @@ const StartupOpportunities = () => {
           {activeTab === "support" && (
             <div className="space-y-6">
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Key Startup Support COXBIT Offers
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
                 <div className="space-y-4 mb-6">
                   <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
-                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
+                    <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                       Government Startup Schemes
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -340,7 +340,7 @@ const StartupOpportunities = () => {
                     </p>
                   </div>
                   <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
-                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
+                    <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                       Research & Innovation Funding
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -350,7 +350,7 @@ const StartupOpportunities = () => {
                     </p>
                   </div>
                   <div className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-4">
-                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">
+                    <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                       Industry Collaboration Support
                     </h3>
                     <p className="text-gray-700 text-sm">
@@ -361,7 +361,7 @@ const StartupOpportunities = () => {
                   </div>
                 </div>
 
-                <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-4">
+                <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-4">
                   Key Support Services
                 </h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -395,7 +395,7 @@ const StartupOpportunities = () => {
                       key={index}
                       className="bg-white p-3 rounded-sm border border-gray-200"
                     >
-                      <h4 className="font-bold text-[#0a1f44] mb-1 text-sm">
+                      <h4 className="font-bold text-[#6b4226] mb-1 text-sm">
                         {service.title}
                       </h4>
                       <p className="text-gray-700 text-xs">{service.desc}</p>
@@ -405,7 +405,7 @@ const StartupOpportunities = () => {
               </div>
 
               <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-1">
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Frequently Asked Questions (FAQ)
                 </h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
@@ -430,9 +430,9 @@ const StartupOpportunities = () => {
                   ].map((faq, index) => (
                     <div
                       key={index}
-                      className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm p-4"
+                      className="bg-gray-50 border border-gray-200 border-l-4 border-l-[#6b4226] rounded-sm p-4"
                     >
-                      <h3 className="text-base font-bold text-[#0a1f44] mb-1">
+                      <h3 className="text-base font-bold text-[#6b4226] mb-1">
                         {faq.q}
                       </h3>
                       <p className="text-gray-700 text-sm">{faq.a}</p>

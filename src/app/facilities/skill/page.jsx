@@ -4,7 +4,7 @@ export default function SkillFacilities() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Facilities
@@ -12,7 +12,7 @@ export default function SkillFacilities() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Skill Facilities
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             This page is currently under development.
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function SkillFacilities() {
 
       <div className="container mx-auto px-4 py-16 flex items-center justify-center">
         <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-10 max-w-lg w-full text-center">
-          <h2 className="font-serif text-2xl font-bold text-[#0a1f44] mb-3">
+          <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-3">
             Content Coming Soon
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />

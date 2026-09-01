@@ -128,7 +128,7 @@ export default function CoxbitTeam() {
       {/* Chairman Section */}
       <div>
         <div className="text-center mb-4">
-          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
             Chairman
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -153,7 +153,7 @@ export default function CoxbitTeam() {
                 {/* Chairman Details */}
                 <div className="lg:col-span-2">
                   <div className="text-center lg:text-left">
-                    <h3 className="font-serif text-2xl font-bold text-[#0a1f44] mb-2">
+                    <h3 className="font-serif text-2xl font-bold text-[#6b4226] mb-2">
                       {chairman.name}
                     </h3>
                     <p className="text-lg text-[#c89b3c] font-semibold mb-2">
@@ -171,7 +171,7 @@ export default function CoxbitTeam() {
                         <span className="font-semibold mr-2">Contact:</span>
                         <a
                           href={`tel:${chairman.phone}`}
-                          className="text-[#0a1f44] hover:text-[#c89b3c]"
+                          className="text-[#6b4226] hover:text-[#c89b3c]"
                         >
                           {chairman.phone}
                         </a>
@@ -188,7 +188,7 @@ export default function CoxbitTeam() {
       {/* Board Members Section */}
       <div>
         <div className="text-center mb-4">
-          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
             Board of Directors
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -211,7 +211,7 @@ export default function CoxbitTeam() {
                 </div>
                 {/* Member Details */}
                 <div className="text-center">
-                  <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
+                  <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-2">
                     {member.name}
                   </h3>
                   <p className="text-[#c89b3c] font-semibold mb-1">
@@ -233,7 +233,7 @@ export default function CoxbitTeam() {
       {/* Core Team Section */}
       <div>
         <div className="text-center mb-4">
-          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
             COXBIT Team
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -253,7 +253,7 @@ export default function CoxbitTeam() {
                 />
               </div>
               <div className="p-6 text-center">
-                <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-2">
+                <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-2">
                   {member.name}{" "}
                   {member.qualification && (
                     <span className="text-gray-500 font-normal text-base">
@@ -276,7 +276,7 @@ export default function CoxbitTeam() {
                     <span className="font-medium">Email:</span>{" "}
                     <a
                       href={`mailto:${member.email}`}
-                      className="text-[#0a1f44] hover:text-[#c89b3c] hover:underline break-all"
+                      className="text-[#6b4226] hover:text-[#c89b3c] hover:underline break-all"
                     >
                       {member.email}
                     </a>

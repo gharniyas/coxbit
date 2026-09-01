@@ -1,15 +1,16 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "./components/layout/ClientLayout";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
   subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata = {
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50`}
+        className={`${inter.variable} ${merriweather.variable} font-sans antialiased bg-gradient-to-br from-stone-50 via-amber-50 to-orange-50`}
       >
         <ClientLayout>{children}</ClientLayout>
       </body>

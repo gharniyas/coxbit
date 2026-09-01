@@ -20,7 +20,7 @@ export default async function StartupProfilePage({ params }) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             {profile.space}
@@ -34,7 +34,7 @@ export default async function StartupProfilePage({ params }) {
       <div className="mx-auto max-w-4xl px-4 py-8">
         <Link
           href="/facilities/entrepreneurship"
-          className="inline-flex items-center text-sm font-semibold text-[#0a1f44] hover:text-[#8a6a1f]"
+          className="inline-flex items-center text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f]"
         >
           &larr; Back to Entrepreneurship Facilities
         </Link>

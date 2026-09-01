@@ -116,7 +116,7 @@ export default function SALS() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Facilities
@@ -124,7 +124,7 @@ export default function SALS() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             SALS &ndash; Shared Access Lab Services
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Shared laboratory infrastructure and instrumentation made available to
             startups, students, researchers and industry partners.
           </p>
@@ -137,7 +137,7 @@ export default function SALS() {
 
         {/* Facility Content */}
         <div className="bg-white border border-gray-200 border-t-0 rounded-b-sm shadow-sm p-6">
-          <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+          <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
             {currentFacility.fullTitle}
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -159,7 +159,7 @@ export default function SALS() {
           {/* Equipment List */}
           {currentFacility.equipment && (
             <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-4 rounded-sm">
-              <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-3">Key Equipment Available:</h3>
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-3">Key Equipment Available:</h3>
               <ul className="grid md:grid-cols-2 gap-2 text-gray-700">
                 {currentFacility.equipment.map((item, index) => (
                   <li key={index}>&bull; {item}</li>
@@ -171,7 +171,7 @@ export default function SALS() {
           {/* Features List */}
           {currentFacility.features && (
             <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-4 rounded-sm">
-              <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-3">Key Capabilities:</h3>
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-3">Key Capabilities:</h3>
               <ul className="space-y-2 text-gray-700">
                 {currentFacility.features.map((item, index) => (
                   <li key={index}>&bull; {item}</li>
@@ -183,7 +183,7 @@ export default function SALS() {
           {/* Applications List */}
           {currentFacility.applications && (
             <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-4 rounded-sm">
-              <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-3">Applications:</h3>
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-3">Applications:</h3>
               <ul className="space-y-2 text-gray-700">
                 {currentFacility.applications.map((item, index) => (
                   <li key={index}>&bull; {item}</li>

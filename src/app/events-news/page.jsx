@@ -85,7 +85,7 @@ export default function EventsNews() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Capacity Building
@@ -93,7 +93,7 @@ export default function EventsNews() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Events & Training
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Forthcoming and completed workshops, hands-on trainings and
             events for researchers and industry at COXBIT.
           </p>
@@ -104,7 +104,7 @@ export default function EventsNews() {
         {/* Photo Gallery */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
               Training & Events Gallery
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -127,7 +127,7 @@ export default function EventsNews() {
         {/* Forthcoming Trainings */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
               List of Forthcoming Trainings during COXBIT 2026-2027
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -135,7 +135,7 @@ export default function EventsNews() {
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-[#0a1f44] text-white">
+                <tr className="bg-[#6b4226] text-white">
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     S. No
                   </th>
@@ -156,7 +156,7 @@ export default function EventsNews() {
                     key={training.sno}
                     className={idx % 2 === 1 ? "bg-gray-50" : "bg-white"}
                   >
-                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#0a1f44]">
+                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#6b4226]">
                       {training.sno}
                     </td>
                     <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
@@ -168,11 +168,11 @@ export default function EventsNews() {
                     <td className="border border-gray-200 px-4 py-3 text-center">
                       <a
                         href={training.registerLink}
-                        className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#0a1f44] font-semibold px-4 py-2 rounded-sm transition-colors duration-200"
+                        className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-4 py-2 rounded-sm transition-colors duration-200"
                       >
                         Register
                       </a>
-                      <div className="mt-2 text-[#0a1f44] font-semibold text-sm">
+                      <div className="mt-2 text-[#6b4226] font-semibold text-sm">
                         QR code for {training.training.split(" ")[0]}
                       </div>
                     </td>
@@ -186,7 +186,7 @@ export default function EventsNews() {
         {/* Completed Trainings */}
         <section>
           <div className="text-center mb-8">
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#0a1f44]">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
               Details of Completed Training
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
@@ -194,7 +194,7 @@ export default function EventsNews() {
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-[#0a1f44] text-white">
+                <tr className="bg-[#6b4226] text-white">
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
                     S. No
                   </th>
@@ -212,7 +212,7 @@ export default function EventsNews() {
                     key={training.sno}
                     className={idx % 2 === 1 ? "bg-gray-50" : "bg-white"}
                   >
-                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#0a1f44]">
+                    <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#6b4226]">
                       {training.sno}
                     </td>
                     <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">

@@ -6,7 +6,7 @@ const tabs = [
     label: "Startup TN",
     content: (
       <div>
-        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
+        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
           Tamil Nadu Startup and Innovation Mission (StartupTN)
         </h2>
         <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
@@ -41,7 +41,7 @@ const tabs = [
           </p>
         </div>
         <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-6">
-          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+          <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
             Key Support Areas
           </h3>
           <ul className="space-y-2 text-gray-700">
@@ -74,7 +74,7 @@ const tabs = [
     label: "EDII-TN",
     content: (
       <div>
-        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
+        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
           Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil
           Nadu
         </h2>
@@ -101,8 +101,8 @@ const tabs = [
             the agri, biotech and allied sectors.
           </p>
         </div>
-        <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#0a1f44] rounded-sm p-6">
-          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+        <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#6b4226] rounded-sm p-6">
+          <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
             Key Support Services
           </h3>
           <ul className="space-y-2 text-gray-700">
@@ -139,7 +139,7 @@ const tabs = [
     label: "TNAPEx",
     content: (
       <div>
-        <h2 className="font-serif text-3xl font-bold text-[#0a1f44] mb-1">
+        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
           Tamil Nadu Food Processing and Agri Export Promotion Corporation
           (TNAPEx)
         </h2>
@@ -174,7 +174,7 @@ const tabs = [
           </p>
         </div>
         <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] rounded-sm p-6">
-          <h3 className="font-serif text-xl font-bold text-[#0a1f44] mb-3">
+          <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
             Key Support Areas
           </h3>
           <ul className="space-y-2 text-gray-700">
@@ -215,7 +215,7 @@ export default function Partners() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Startup Ecosystem
@@ -223,7 +223,7 @@ export default function Partners() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             Ecosystem Partners
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Government and institutional partners supporting biotech
             startups and entrepreneurs at COXBIT.
           </p>
@@ -238,8 +238,8 @@ export default function Partners() {
                 key={tab.label}
                 className={`px-6 py-2.5 rounded-sm font-semibold text-sm border transition-colors duration-200 ${
                   activeTab === idx
-                    ? "border-[#c89b3c] bg-[#0a1f44] text-white"
-                    : "border-gray-200 text-[#0a1f44] bg-white hover:bg-gray-50"
+                    ? "border-[#c89b3c] bg-[#6b4226] text-white"
+                    : "border-gray-200 text-[#6b4226] bg-white hover:bg-gray-50"
                 }`}
                 onClick={() => setActiveTab(idx)}
               >

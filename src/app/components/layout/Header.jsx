@@ -261,7 +261,7 @@ const Header = () => {
                         <a
                           key={sub.href}
                           href={sub.href}
-                          className="block py-2 px-3 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 text-base md:text-lg font-medium"
+                          className="block py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
                           onClick={() => setIsMobileMenuOpen(false)}
                         >
                           {sub.label}
@@ -278,8 +278,8 @@ const Header = () => {
                     href={item.href}
                     className={`block py-2 px-3 rounded-md font-medium text-base md:text-lg transition-all duration-200 ${
                       isActive
-                        ? "text-blue-600 bg-blue-50 border-l-4 border-blue-600"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                        ? "text-[#6b4226] bg-[#c89b3c]/10 border-l-4 border-[#6b4226]"
+                        : "text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

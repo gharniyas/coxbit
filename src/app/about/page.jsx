@@ -48,7 +48,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
-      <div className="bg-[#0a1f44] text-white">
+      <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
           <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
             Centre of Excellence in Biotechnology
@@ -56,7 +56,7 @@ export default function About() {
           <h1 className="font-serif text-3xl md:text-4xl font-bold">
             About COXBIT
           </h1>
-          <p className="text-blue-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
             Our mission, vision, key focus areas and the team driving the
             Centre of Excellence in Biotechnology forward.
           </p>
@@ -71,7 +71,7 @@ export default function About() {
           {activeTab === 0 && (
             <div className="space-y-6">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">About COXBIT</h2>
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226]">About COXBIT</h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
               </div>
               <ImageCarousel alt="COXBIT" images={bannerImages} />
@@ -96,7 +96,7 @@ export default function About() {
           {activeTab === 1 && (
             <div className="space-y-6">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">Why COXBIT</h2>
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226]">Why COXBIT</h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
               </div>
               <ImageCarousel
@@ -127,7 +127,7 @@ export default function About() {
           {activeTab === 2 && (
             <div className="space-y-6">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-[#0a1f44]">Key Focus Areas</h2>
+                <h2 className="font-serif text-2xl font-bold text-[#6b4226]">Key Focus Areas</h2>
                 <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
               </div>
               <div className="grid md:grid-cols-3 gap-4">
@@ -137,7 +137,7 @@ export default function About() {
                     className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
                   >
                     <div className="text-4xl mb-3">{area.icon}</div>
-                    <h3 className="font-serif text-lg font-bold text-[#0a1f44] mb-2">{area.title}</h3>
+                    <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">{area.title}</h3>
                     <p className="text-gray-600 text-sm">{area.desc}</p>
                   </div>
                 ))}

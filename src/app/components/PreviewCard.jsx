@@ -12,7 +12,7 @@ export default function PreviewCard({
 }) {
   return (
     <div className="group bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col">
-      <Link href={href} className="block relative h-40 w-full bg-[#0a1f44] overflow-hidden">
+      <Link href={href} className="block relative h-40 w-full bg-[#6b4226] overflow-hidden">
         {image ? (
           <Image
             src={image}
@@ -30,7 +30,7 @@ export default function PreviewCard({
 
       <div className="p-5 flex flex-col flex-1">
         <Link href={href}>
-          <h3 className="font-serif text-lg font-bold text-[#0a1f44] group-hover:text-[#8a6a1f] transition-colors duration-200">
+          <h3 className="font-serif text-lg font-bold text-[#6b4226] group-hover:text-[#8a6a1f] transition-colors duration-200">
             {title}
           </h3>
         </Link>
@@ -44,7 +44,7 @@ export default function PreviewCard({
               <li key={sub.href}>
                 <Link
                   href={sub.href}
-                  className="text-sm text-[#0a1f44] hover:text-[#8a6a1f] hover:underline flex items-center gap-1.5"
+                  className="text-sm text-[#6b4226] hover:text-[#8a6a1f] hover:underline flex items-center gap-1.5"
                 >
                   <span className="text-[#c89b3c]">&rsaquo;</span>
                   {sub.label}
@@ -56,7 +56,7 @@ export default function PreviewCard({
 
         <Link
           href={href}
-          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#0a1f44] hover:text-[#8a6a1f] transition-colors duration-200"
+          className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200"
         >
           View Full Details
           <span aria-hidden="true">&rarr;</span>
