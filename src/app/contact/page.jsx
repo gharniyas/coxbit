@@ -30,7 +30,7 @@ export default function Contact() {
                 alt="Dr. N. Senthil"
                 fill
                 sizes="112px"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
@@ -75,6 +75,95 @@ export default function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full h-full"
               ></iframe>
+            </div>
+          </div>
+        </div>
+
+        {/* Social media */}
+        <div className="max-w-5xl mx-auto mt-16">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-3xl font-bold text-[#6b4226]">
+              Connect With Us on Social Media
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Scan a QR code below or follow us for the latest research,
+              events and biotechnology updates from COXBIT.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
+                Facebook
+              </h3>
+              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+                <Image
+                  src="/QR Code - CoEB/QR - FB - CoEB.png"
+                  alt="Facebook QR Code - COXBIT"
+                  width={140}
+                  height={140}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="text-gray-600 text-sm mt-4">
+                Scan to follow our Facebook page for updates, events and
+                research highlights.
+              </p>
+              <a
+                href="https://www.facebook.com/profile.php?id=61550815515953"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+              >
+                Visit our Facebook Page &rarr;
+              </a>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
+                Instagram
+              </h3>
+              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+                <Image
+                  src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
+                  alt="Instagram QR Code - COXBIT"
+                  width={140}
+                  height={140}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="text-gray-600 text-sm mt-4">
+                Follow us on Instagram for behind-the-scenes content and
+                visual updates.
+              </p>
+              <a
+                href="https://www.instagram.com/coxbit_tnau?igsi=MW1oeGU4dDNzYTNpNg=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+              >
+                Visit our Instagram Page &rarr;
+              </a>
+            </div>
+
+            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
+                LinkedIn
+              </h3>
+              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+                <Image
+                  src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
+                  alt="LinkedIn QR Code - COXBIT"
+                  width={140}
+                  height={140}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="text-gray-600 text-sm mt-4">
+                Connect with us professionally for research collaborations
+                and opportunities.
+              </p>
             </div>
           </div>
         </div>

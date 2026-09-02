@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   MdInfo,
   MdLightbulb,
@@ -23,8 +24,11 @@ const bannerImages = [
   "/About coxbit/Tree Planting.JPG",
 ];
 
-export default function About() {
-  const [activeTab, setActiveTab] = useState(0);
+function AboutContent() {
+  const searchParams = useSearchParams();
+  const tabParam = parseInt(searchParams.get("tab"), 10);
+  const initialTab = tabParam >= 0 && tabParam <= 3 ? tabParam : 0;
+  const [activeTab, setActiveTab] = useState(initialTab);
 
   const tabs = [
     { label: "About COXBIT", icon: <MdInfo size={20} /> },
@@ -150,5 +154,13 @@ export default function About() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function About() {
+  return (
+    <Suspense fallback={null}>
+      <AboutContent />
+    </Suspense>
   );
 }

@@ -9,6 +9,12 @@ const sections = [
     description:
       "Our mission, vision, key focus areas and the team driving the Centre of Excellence in Biotechnology forward.",
     image: "/About coxbit/IMG_6216.JPG",
+    subLinks: [
+      { href: "/about?tab=0", label: "About COXBIT" },
+      { href: "/about?tab=1", label: "Why COXBIT" },
+      { href: "/about?tab=2", label: "Key Focus Areas" },
+      { href: "/about?tab=3", label: "COXBIT Team" },
+    ],
   },
   {
     href: "/facilities",
@@ -31,9 +37,15 @@ const sections = [
     description:
       "Government and institution funded research projects and programmes currently underway at COXBIT.",
     image: "/TNAPEx/DSC09238.JPG",
+    subLinks: [
+      { href: "/projects/details?tab=0", label: "DBT Phenomics Platform" },
+      { href: "/projects/details?tab=1", label: "Native Species Seed Vault" },
+      { href: "/projects/details?tab=2", label: "TNAPEx MSME Programme" },
+      { href: "/projects/details?tab=3", label: "BIRAC E-YUVA Programme" },
+    ],
   },
   {
-    href: "/startup-ecosystem/partners",
+    href: "/startup-ecosystem",
     title: "Startup Ecosystem",
     description:
       "Ecosystem partners and technology-readiness opportunities supporting biotech startups and entrepreneurs.",
@@ -133,20 +145,30 @@ export default function Home() {
             In Association With
           </p>
           <div className="flex flex-wrap items-center justify-center gap-10">
-            <Image
-              src="/TNA logo.jpg"
-              alt="Tamil Nadu Agricultural University"
-              width={70}
-              height={70}
-              className="object-contain rounded-full"
-            />
-            <Image
-              src="/innovation logo.jpg"
-              alt="Innovation Initiative"
-              width={70}
-              height={70}
-              className="object-contain rounded-full"
-            />
+            <Link
+              href="/startup-ecosystem/partners?tab=2"
+              className="hover:opacity-80 transition-opacity duration-200"
+            >
+              <Image
+                src="/TNA logo.jpg"
+                alt="Tamil Nadu Agricultural University"
+                width={70}
+                height={70}
+                className="object-contain rounded-full"
+              />
+            </Link>
+            <Link
+              href="/startup-ecosystem/partners?tab=1"
+              className="hover:opacity-80 transition-opacity duration-200"
+            >
+              <Image
+                src="/innovation logo.jpg"
+                alt="Innovation Initiative"
+                width={70}
+                height={70}
+                className="object-contain rounded-full"
+              />
+            </Link>
           </div>
         </div>
       </section>
