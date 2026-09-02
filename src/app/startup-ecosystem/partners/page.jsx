@@ -8,7 +8,7 @@ const partners = [
   {
     id: 0,
     label: "Startup TN",
-    title: "1. Tamil Nadu Startup and Innovation Mission (StartupTN)",
+    title: "Tamil Nadu Startup and Innovation Mission (StartupTN)",
     content: (
       <>
         <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -75,7 +75,7 @@ const partners = [
     id: 1,
     label: "EDII-TN",
     title:
-      "2. Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil Nadu",
+      "Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil Nadu",
     content: (
       <>
         <div className="space-y-6 text-gray-700 leading-relaxed">
@@ -138,7 +138,7 @@ const partners = [
     id: 2,
     label: "TNAPEx",
     title:
-      "3. Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)",
+      "Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)",
     content: (
       <>
         <div className="space-y-6 text-gray-700 leading-relaxed">

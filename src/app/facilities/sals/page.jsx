@@ -12,7 +12,7 @@ export default function SALS() {
       title: "Molecular Biology Lab",
       images: ["/Shared lab facility/IMG_1579.JPG","/Shared lab facility/IMG_1600.JPG","/Shared lab facility/IMG_1629.JPG","/Shared lab facility/IMG_5254.JPG"],
       imageLabel: "Shared Lab Facility",
-      fullTitle: "1. Molecular Biology Laboratory – Shared Innovation Facility",
+      fullTitle: "Molecular Biology Laboratory – Shared Innovation Facility",
       color: "blue",
       content: [
         "The Molecular Biology Laboratory at the Centre of Excellence in Biotechnology (COXBIT) plays <b>a crucial role in strengthening the biotechnology ecosystem</b> by serving as an integrated and innovation-driven platform for startups, students, researchers and industries. Its importance lies in its ability to <b>transform scientific knowledge into real-world solutions</b>, enabling advanced research and product development that address key challenges in agriculture, healthcare, food technology and environmental sustainability. The laboratory provides a supportive environment where ideas can be designed, tested, and refined into practical applications, ensuring that research moves beyond theory into impactful outcomes.",
@@ -43,7 +43,7 @@ export default function SALS() {
       title: "Proteomics & Metabolomics",
       images: ["/Proteomics and metabolomics/IMG-20260424-WA0014.jpg","/Proteomics and metabolomics/IMG-20260424-WA0017.jpg","/Proteomics and metabolomics/IMG-20260424-WA0018.jpg","/Proteomics and metabolomics/IMG-20260424-WA0019.jpg","/Proteomics and metabolomics/IMG-20260424-WA0020.jpg","/Proteomics and metabolomics/IMG-20260424-WA0021.jpg"],
       imageLabel: "Proteomics & Metabolomics Facility",
-      fullTitle: "2. High-Throughput Proteomics & Metabolomics Facility",
+      fullTitle: "High-Throughput Proteomics & Metabolomics Facility",
       color: "green",
       content: [
         "The Centre of Excellence in Biotechnology (COXBIT) has established a state-of-the-art high-throughput facility dedicated to advanced proteomics and metabolomics research, enabling precise and comprehensive analysis of complex biological samples. The facility is equipped with advanced instrumentation, including the GC-MS/MS (Shimadzu Nexis GC–2030 coupled with TQ-8040 NX Triple Quadrupole Mass Spectrometer), UHPLC coupled with LC-MS/MS (Shimadzu LCMS-8045 with PDA and fluorescence detector), Preparative HPLC System with RID, PDA and fraction collector, and Nano LC coupled with MALDI TOF/TOF Mass Spectrometer (Shimadzu Axima Performance).",
@@ -70,7 +70,7 @@ export default function SALS() {
         "/Tissue culture/3 (2).jpeg",
       ],
       imageLabel: "Tissue Culture Facility",
-      fullTitle: "3. Micropropagation and Plant Tissue Culture Facility",
+      fullTitle: "Micropropagation and Plant Tissue Culture Facility",
       color: "purple",
       content: [
         "The Plant Tissue Culture Facility at COXBIT is a well-established, state-of-the-art unit designed to support advanced research, innovation and entrepreneurship in plant biotechnology. The facility is comprehensively equipped to handle all stages of plant tissue culture and micropropagation, providing an ideal platform for commercial R&D applications, product development and skill training.",
@@ -90,7 +90,7 @@ export default function SALS() {
         "/cold room/CR 4.jpeg",
       ],
       imageLabel: "Cold Room Facility",
-      fullTitle: "4. Advanced Cold Room Facility for Research & Storage",
+      fullTitle: "Advanced Cold Room Facility for Research & Storage",
       color: "cyan",
       content: [
         "The Centre of Excellence in Biotechnology (COXBIT) offers advanced cold room facilities designed to support startups, researchers and industry partners in the safe storage and preservation of valuable biological materials. These facilities play a critical role in maintaining the viability and quality of samples for long-term research and development applications.",
@@ -109,7 +109,7 @@ export default function SALS() {
       title: "Bioinformatics Server",
       images: ["/Bioinformatics Server.jpeg"],
       imageLabel: "Bioinformatics Server Room",
-      fullTitle: "5. Advanced Bioinformatics Server for AI-Driven Agri-Biotech Research",
+      fullTitle: "Advanced Bioinformatics Server for AI-Driven Agri-Biotech Research",
       color: "orange",
       content: [
         "The Bioinformatics Server Facility at COXBIT is a high-performance computational platform established to support startups and students engaged in AI-driven biological data analysis and agri-biotechnology innovation. The facility is powered by a DELL high-performance server with 512 GB RAM, enabling efficient processing and analysis of large-scale datasets generated from genomics, transcriptomics, proteomics, metabolomics and agricultural research systems. This infrastructure is critical for enabling precision agriculture, crop improvement, and sustainable agri-food system development through advanced data-driven research.",

@@ -260,28 +260,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-
-        <div className="mt-8 text-center">
-          <p className="text-gray-600 text-sm mb-4">
-            <strong>How to use:</strong> Simply point your smartphone camera
-            at any QR code above to instantly access our social media
-            profiles.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
-              #Biotechnology
-            </span>
-            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
-              #Research
-            </span>
-            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
-              #Innovation
-            </span>
-            <span className="bg-[#6b4226]/5 text-[#6b4226] border border-[#6b4226]/10 px-4 py-1.5 rounded-full text-xs font-semibold">
-              #Agriculture
-            </span>
-          </div>
-        </div>
       </section>
     </div>
   );
