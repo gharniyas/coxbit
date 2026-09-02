@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import ImageCarousel from "../components/ImageCarousel";
 
 export default function EventsNews() {
   const featuredEvent = {
@@ -39,20 +38,17 @@ export default function EventsNews() {
       training:
         "Metabolomics and Proteomics using Advanced Analytical Platforms",
       date: "18–22 May 2026",
-      status: "Upcoming",
-      registerLink: "#",
+      status: "Completed",
     },
     {
       training: "Bioinformatics for Molecular Docking and Simulation",
       date: "25–29 May 2026",
-      status: "Upcoming",
-      registerLink: "#",
+      status: "Completed",
     },
     {
       training: "Invitro Micropropagation Techniques",
       date: "01–05 June 2026",
-      status: "Upcoming",
-      registerLink: "#",
+      status: "Completed",
     },
     {
       training: "Workshop on GCMS Based Metabolomics: Principles and Applications",
@@ -128,57 +124,9 @@ export default function EventsNews() {
         </div>
       </div>
 
-      {/* 2025-26 Highlights Marquee */}
-      <section className="bg-white border-b border-gray-200 py-8">
-        <div className="text-center mb-6 px-4">
-          <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
-            2025–26 Event Highlights
-          </h2>
-          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
-        </div>
-        <Marquee pauseOnHover gradient={false} speed={45}>
-          {highlightImages.map((src) => (
-            <div
-              key={src}
-              className="relative w-[22rem] h-64 md:w-[28rem] md:h-80 mx-4 rounded-sm overflow-hidden border border-gray-200 shrink-0 bg-white"
-            >
-              <Image
-                src={src}
-                alt="COXBIT 2025-26 event highlight"
-                fill
-                className="object-contain"
-              />
-            </div>
-          ))}
-        </Marquee>
-      </section>
-
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Photo Gallery */}
-        <section className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
-              Training & Events Gallery
-            </h2>
-            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
-          </div>
-          <ImageCarousel
-            alt="Training"
-            images={[
-              "/Training and events/DSC03474.JPG",
-              "/Training and events/IMG_9076.JPG",
-              "/Training and events/14.JPG",
-              "/Training and events/k.JPG",
-              "/Events - Trainings/1 - Bioentrpreneurship Meet/IMG_1386.JPG",
-              "/Events - Trainings/2 - Hands on training on High throughput analysis of Protein/Training Participants.JPG",
-              "/Events - Trainings/3 - LCMS Training/_DSC0260.JPG",
-              "/Events - Trainings/4 - GCMS Training/_DSC1451.JPG",
-            ]}
-          />
-        </section>
-
         {/* Featured Upcoming Event */}
-        <section className="mb-16">
+        <section>
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1 text-center md:text-left">
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#c89b3c]/15 text-[#8a6a1f] mb-3">
@@ -208,7 +156,7 @@ export default function EventsNews() {
         </section>
 
         {/* Trainings & Events */}
-        <section>
+        <section className="mt-16">
           <div className="text-center mb-8">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
               Trainings & Events at COXBIT
@@ -293,6 +241,33 @@ export default function EventsNews() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* 2025-26 Highlights Marquee */}
+        <section className="mt-16">
+          <div className="text-center mb-6">
+            <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
+              2025–26 Event Highlights
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
+          <div className="bg-white border border-gray-200 rounded-sm shadow-sm py-8">
+            <Marquee pauseOnHover gradient={false} speed={45}>
+              {highlightImages.map((src) => (
+                <div
+                  key={src}
+                  className="relative w-[22rem] h-64 md:w-[28rem] md:h-80 mx-4 rounded-sm overflow-hidden border border-gray-200 shrink-0 bg-white"
+                >
+                  <Image
+                    src={src}
+                    alt="COXBIT 2025-26 event highlight"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </Marquee>
           </div>
         </section>
       </div>

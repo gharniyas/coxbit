@@ -41,7 +41,7 @@ export default function SALS() {
     {
       id: 1,
       title: "Proteomics & Metabolomics",
-      images: ["/Proteomics and metabolomics/IMG-20260424-WA0014.jpg","/Proteomics and metabolomics/IMG-20260424-WA0015.jpg","/Proteomics and metabolomics/IMG-20260424-WA0016.jpg","/Proteomics and metabolomics/IMG-20260424-WA0017.jpg"],
+      images: ["/Proteomics and metabolomics/IMG-20260424-WA0014.jpg","/Proteomics and metabolomics/IMG-20260424-WA0017.jpg","/Proteomics and metabolomics/IMG-20260424-WA0018.jpg","/Proteomics and metabolomics/IMG-20260424-WA0019.jpg","/Proteomics and metabolomics/IMG-20260424-WA0020.jpg","/Proteomics and metabolomics/IMG-20260424-WA0021.jpg"],
       imageLabel: "Proteomics & Metabolomics Facility",
       fullTitle: "2. High-Throughput Proteomics & Metabolomics Facility",
       color: "green",

@@ -1,15 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import ImageCarousel from "../../components/ImageCarousel";
 
-const tabs = [
+const colorClasses = {
+  blue: {
+    badge: "bg-blue-50 text-blue-700 border-blue-200",
+    accent: "border-l-blue-500",
+  },
+  green: {
+    badge: "bg-green-50 text-green-700 border-green-200",
+    accent: "border-l-green-500",
+  },
+  purple: {
+    badge: "bg-purple-50 text-purple-700 border-purple-200",
+    accent: "border-l-purple-500",
+  },
+};
+
+const partners = [
   {
+    id: 0,
     label: "Startup TN",
+    color: "blue",
+    title: "Tamil Nadu Startup and Innovation Mission (StartupTN)",
     content: (
-      <div>
-        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
-          Tamil Nadu Startup and Innovation Mission (StartupTN)
-        </h2>
-        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
+      <>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The StartupTN is the Government of Tamil Nadu's dedicated initiative
@@ -67,18 +81,17 @@ const tabs = [
             </li>
           </ul>
         </div>
-      </div>
+      </>
     ),
   },
   {
+    id: 1,
     label: "EDII-TN",
+    color: "green",
+    title:
+      "Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil Nadu",
     content: (
-      <div>
-        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
-          Entrepreneurship Development and Innovation Institute (EDII-TN), Tamil
-          Nadu
-        </h2>
-        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
+      <>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The Entrepreneurship Development and Innovation Institute (EDII-TN)
@@ -132,18 +145,17 @@ const tabs = [
             </li>
           </ul>
         </div>
-      </div>
+      </>
     ),
   },
   {
+    id: 2,
     label: "TNAPEx",
+    color: "purple",
+    title:
+      "Tamil Nadu Food Processing and Agri Export Promotion Corporation (TNAPEx)",
     content: (
-      <div>
-        <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
-          Tamil Nadu Food Processing and Agri Export Promotion Corporation
-          (TNAPEx)
-        </h2>
-        <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
+      <>
         <div className="space-y-6 text-gray-700 leading-relaxed">
           <p>
             The Tamil Nadu Food Processing and Agri Export Promotion Corporation
@@ -204,14 +216,12 @@ const tabs = [
             </li>
           </ul>
         </div>
-      </div>
+      </>
     ),
   },
 ];
 
 export default function Partners() {
-  const [activeTab, setActiveTab] = useState(0);
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Page header banner */}
@@ -232,23 +242,66 @@ export default function Partners() {
 
       <div className="container mx-auto py-10 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {tabs.map((tab, idx) => (
-              <button
-                key={tab.label}
-                className={`px-6 py-2.5 rounded-sm font-semibold text-sm border transition-colors duration-200 ${
-                  activeTab === idx
-                    ? "border-[#c89b3c] bg-[#6b4226] text-white"
-                    : "border-gray-200 text-[#6b4226] bg-white hover:bg-gray-50"
-                }`}
-                onClick={() => setActiveTab(idx)}
-              >
-                {tab.label}
-              </button>
-            ))}
+          {/* Photo Gallery */}
+          <section className="mb-12">
+            <div className="text-center mb-8">
+              <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
+                Partners Gallery
+              </h2>
+              <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+            </div>
+            <ImageCarousel
+              alt="COXBIT Ecosystem Partners"
+              images={[
+                "/TNAPEx/ACS visit.JPG",
+                "/TNAPEx/DSC09238.JPG",
+                "/TNAPEx/Recovered_jpg_file(4240).jpg",
+                "/TNAPEx/Recovered_jpg_file(4291).jpg",
+                "/TNAPEx/Recovered_jpg_file(4298).jpg",
+                "/TNAPEx/WhatsApp Image 2026-06-05 at 17.26.10.jpeg",
+              ]}
+            />
+          </section>
+
+          {/* Quick Jump Links */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {partners.map((partner, index) => {
+              const colors = colorClasses[partner.color] || colorClasses.blue;
+              return (
+                <a
+                  key={partner.id}
+                  href={`#partner-${partner.id}`}
+                  className={`text-sm font-semibold px-4 py-2 rounded-full border ${colors.badge} hover:shadow-sm transition-shadow duration-200`}
+                >
+                  {index + 1}. {partner.label}
+                </a>
+              );
+            })}
           </div>
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
-            {tabs[activeTab].content}
+
+          {/* Partners List */}
+          <div className="space-y-8">
+            {partners.map((partner, index) => {
+              const colors = colorClasses[partner.color] || colorClasses.blue;
+              return (
+                <section
+                  key={partner.id}
+                  id={`partner-${partner.id}`}
+                  className={`bg-white border border-gray-200 border-l-4 ${colors.accent} rounded-sm shadow-sm p-6 md:p-8 scroll-mt-24`}
+                >
+                  <span
+                    className={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border ${colors.badge} mb-3`}
+                  >
+                    Partner {index + 1} of {partners.length}
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-[#6b4226] mb-1">
+                    {partner.title}
+                  </h2>
+                  <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
+                  {partner.content}
+                </section>
+              );
+            })}
           </div>
         </div>
       </div>

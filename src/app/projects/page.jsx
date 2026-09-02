@@ -119,6 +119,10 @@ export default function Projects() {
                 "/Projects/IMG_8346.JPG (2).jpeg",
                 "/Projects/Recovered_jpg_file(4247).jpg.jpeg",
                 "/Projects/Recovered_jpg_file(4263).jpg.jpeg",
+                "/Projects/1.png",
+                "/Projects/2.JPG",
+                "/Projects/3.JPG",
+                "/Projects/4.JPG",
               ]}
             />
           </section>

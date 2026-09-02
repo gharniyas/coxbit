@@ -38,11 +38,11 @@ const services = [
       <>
         <b>Link:</b>{" "}
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSf2Eewl3JCSRh93XODl2C8XLaPbGMgJ96aTdSTBWXHsNAjTbQ/viewform"
+          href="https://share.google/BgN8a6dDoDECpcikM"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Google Form
+          Analytical Facility at CoEB
         </a>
       </>
     ),
