@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import { events } from "./eventsData";
 
 export default function EventsNews() {
   const featuredEvent = {
@@ -31,79 +33,6 @@ export default function EventsNews() {
     "/2025-2026/WhatsApp Image 2025-07-18 at 11.21.14 AM.jpeg",
     "/2025-2026/WhatsApp Image 2025-07-29 at 10.40.35 AM.jpeg",
     "/2025-2026/WhatsApp Image 2025-08-08 at 6.04.43 PM.jpeg",
-  ];
-
-  const trainings = [
-    {
-      training:
-        "Metabolomics and Proteomics using Advanced Analytical Platforms",
-      date: "18–22 May 2026",
-      status: "Completed",
-    },
-    {
-      training: "Bioinformatics for Molecular Docking and Simulation",
-      date: "25–29 May 2026",
-      status: "Completed",
-    },
-    {
-      training: "Invitro Micropropagation Techniques",
-      date: "01–05 June 2026",
-      status: "Completed",
-    },
-    {
-      training: "Workshop on GCMS Based Metabolomics: Principles and Applications",
-      date: "15.06.2022 to 17.06.2022",
-      status: "Completed",
-    },
-    {
-      training: 'Hands on training on "LC-MS based non-targeted metabolomics',
-      date: "28.07.2022 to 29.07.2022",
-      status: "Completed",
-    },
-    {
-      training:
-        'Workshop on HPLC "Principles and Application in Plant Metabolomics"',
-      date: "14.07.2022 to 15.07.2022",
-      status: "Completed",
-    },
-    {
-      training:
-        'VCS Hands on training on High throughput analysis of Protein: "MALDI TOF"',
-      date: "23.01.2023 to 24.01.2023",
-      status: "Completed",
-    },
-    {
-      training:
-        "One day exposure visit training on Entrepreneurship in Agri-Biotech Practices",
-      date: "29.03.2025",
-      status: "Completed",
-    },
-    {
-      training:
-        "Seminar on Molecular Ecology:From DNA to ecosystem-a molecular insight into ecology",
-      date: "30.4.2025",
-      status: "Completed",
-    },
-    {
-      training: 'Training Programme on "Microgreens: Superfood and Startup Ideas"',
-      date: "03.05.2025",
-      status: "Completed",
-    },
-    {
-      training: 'Hands-on training on "Vettiver Cultivation in Terrace Garden"',
-      date: "17.05.2025",
-      status: "Completed",
-    },
-    {
-      training: "Strategic Action Plan Preparation for MSMEs",
-      date: "29.10.2025",
-      status: "Completed",
-    },
-    {
-      training: "MSSRF, Social alpha and COXBIT organized outreach program",
-      date: "05.11.2025",
-      status: "Completed",
-    },
   ];
 
   return (
@@ -180,62 +109,42 @@ export default function EventsNews() {
                     Status
                   </th>
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
-                    Registration
+                    Details
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {trainings.map((training, idx) => (
+                {events.map((event, idx) => (
                   <tr
-                    key={idx}
-                    className={idx % 2 === 1 ? "bg-gray-50" : "bg-white"}
+                    key={event.slug}
+                    className={idx % 2 === 1 ? "bg-amber-50/40" : "bg-white"}
                   >
                     <td className="border border-gray-200 px-4 py-3 font-bold text-center text-[#6b4226]">
-                      {idx + 1}
+                      {event.sno}
                     </td>
                     <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
-                      {training.training}
+                      <Link
+                        href={`/events-news/${event.slug}`}
+                        className="text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+                      >
+                        {event.title}
+                      </Link>
                     </td>
                     <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
-                      {training.date}
+                      {event.date}
                     </td>
                     <td className="border border-gray-200 px-4 py-3">
-                      <span
-                        className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                          training.status === "Upcoming"
-                            ? "bg-[#c89b3c]/15 text-[#8a6a1f]"
-                            : "bg-green-100 text-green-700"
-                        }`}
-                      >
-                        {training.status}
+                      <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
+                        Completed
                       </span>
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-center">
-                      {training.status === "Upcoming" ? (
-                        <>
-                          <a
-                            href={training.registerLink}
-                            className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-4 py-2 rounded-sm transition-colors duration-200"
-                          >
-                            Register
-                          </a>
-                          {training.qrImage ? (
-                            <Image
-                              src={training.qrImage}
-                              alt={`QR code to register for ${training.training}`}
-                              width={90}
-                              height={90}
-                              className="mx-auto mt-2 border border-gray-200 rounded-sm"
-                            />
-                          ) : (
-                            <div className="mt-2 text-[#6b4226] font-semibold text-sm">
-                              QR code for {training.training.split(" ")[0]}
-                            </div>
-                          )}
-                        </>
-                      ) : (
-                        <span className="text-gray-400">&mdash;</span>
-                      )}
+                      <Link
+                        href={`/events-news/${event.slug}`}
+                        className="inline-block text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+                      >
+                        View Details &rarr;
+                      </Link>
                     </td>
                   </tr>
                 ))}
