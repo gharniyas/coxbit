@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { use } from "react";
@@ -30,6 +31,32 @@ export default function EventDetail({ params }) {
           <h1 className="font-serif text-2xl md:text-4xl font-bold">
             {event.title}
           </h1>
+          {event.registerLink && (
+            <div className="flex flex-wrap items-center gap-4 mt-4">
+              <a
+                href={event.registerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+              >
+                Register
+              </a>
+              {event.qrImage && (
+                <div className="text-center">
+                  <Image
+                    src={event.qrImage}
+                    alt={`QR code to register for ${event.title}`}
+                    width={100}
+                    height={100}
+                    className="border border-white/40 rounded-sm bg-white"
+                  />
+                  <p className="text-xs text-amber-100 font-semibold mt-1">
+                    Scan to Register
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

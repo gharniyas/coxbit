@@ -8,7 +8,7 @@ const sections = [
     title: "About COXBIT",
     description:
       "Our mission, vision, key focus areas and the team driving the Centre of Excellence in Biotechnology forward.",
-    image: "/About coxbit/IMG_6216.JPG",
+    image: "/Scrolling Photos/IMG_3507.JPG",
     subLinks: [
       { href: "/about?tab=0", label: "About COXBIT" },
       { href: "/about?tab=1", label: "Why COXBIT" },
@@ -77,6 +77,44 @@ const sections = [
       "Reach the COXBIT team and Director's office, or locate us at Tamil Nadu Agricultural University, Coimbatore.",
     image: "/logo.jpeg",
     imageClassName: "object-contain p-8 bg-white",
+  },
+];
+
+const socialLinks = [
+  {
+    name: "Facebook",
+    qr: "/social media/Facebook.png",
+    desc: "Scan to follow our Facebook page for updates, events and research highlights.",
+    link: "https://www.facebook.com/profile.php?id=61550815515953",
+    cta: "Visit our Facebook Page",
+  },
+  {
+    name: "Instagram",
+    qr: "/social media/Instagram.png",
+    desc: "Follow us on Instagram for behind-the-scenes content and visual updates.",
+    link: "https://www.instagram.com/coxbit_tnau/?hl=en",
+    cta: "Visit our Instagram Page",
+  },
+  {
+    name: "LinkedIn",
+    qr: "/social media/LinkedIN Page.png",
+    desc: "Connect with us professionally for research collaborations and opportunities.",
+    link: "https://www.linkedin.com/company/coxbit-centre-of-excellence-in-biotechnology/?viewAsMember=true",
+    cta: "Visit our LinkedIn Page",
+  },
+  {
+    name: "YouTube",
+    qr: "/social media/COXBIT Youtube.png",
+    desc: "Watch our videos for event highlights, tutorials and campus updates.",
+    link: "https://youtube.com/@coxbitoffical?si=1lTaIbZyyHVURewq",
+    cta: "Visit our YouTube Channel",
+  },
+  {
+    name: "WhatsApp",
+    qr: "/social media/WhatsApp Image 2026-08-01 at 09.32.43.jpeg",
+    desc: "Join our WhatsApp channel for instant updates and announcements.",
+    link: "https://whatsapp.com/channel/0029VbDPIatDjiOetWdvui01",
+    cta: "Join our WhatsApp Channel",
   },
 ];
 
@@ -149,31 +187,35 @@ export default function Home() {
           <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-6">
             In Association With
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-10">
-            <Link
-              href="/startup-ecosystem/partners?tab=2"
+          <div className="flex flex-wrap items-center justify-center gap-12">
+            <a
+              href="https://www.tnapex.tn.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity duration-200"
             >
               <Image
                 src="/TNA logo.jpg"
-                alt="Tamil Nadu Agricultural University"
-                width={70}
-                height={70}
+                alt="Tamil Nadu Agri Processing and Exports (TNAPEx)"
+                width={110}
+                height={110}
                 className="object-contain rounded-full"
               />
-            </Link>
-            <Link
-              href="/startup-ecosystem/partners?tab=1"
+            </a>
+            <a
+              href="https://www.editn.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity duration-200"
             >
               <Image
                 src="/innovation logo.jpg"
-                alt="Innovation Initiative"
-                width={70}
-                height={70}
+                alt="Entrepreneurship Development and Innovation Institute (EDII-TN)"
+                width={110}
+                height={110}
                 className="object-contain rounded-full"
               />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -191,79 +233,35 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
-              Facebook
-            </h3>
-            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
-              <Image
-                src="/QR Code - CoEB/QR - FB - CoEB.png"
-                alt="Facebook QR Code - COXBIT"
-                width={140}
-                height={140}
-                className="mx-auto"
-              />
-            </div>
-            <p className="text-gray-600 text-sm mt-4">
-              Scan to follow our Facebook page for updates, events and
-              research highlights.
-            </p>
-            <a
-              href="https://www.facebook.com/profile.php?id=61550815515953"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {socialLinks.map((social) => (
+            <div
+              key={social.name}
+              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center"
             >
-              Visit our Facebook Page &rarr;
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
-              Instagram
-            </h3>
-            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
-              <Image
-                src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
-                alt="Instagram QR Code - COXBIT"
-                width={140}
-                height={140}
-                className="mx-auto"
-              />
+              <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
+                {social.name}
+              </h3>
+              <div className="bg-white border border-amber-200/70 rounded-sm p-3 inline-block">
+                <Image
+                  src={social.qr}
+                  alt={`${social.name} QR Code - COXBIT`}
+                  width={140}
+                  height={140}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="text-gray-600 text-sm mt-4">{social.desc}</p>
+              <a
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+              >
+                {social.cta} &rarr;
+              </a>
             </div>
-            <p className="text-gray-600 text-sm mt-4">
-              Follow us on Instagram for behind-the-scenes content and
-              visual updates.
-            </p>
-            <a
-              href="https://www.instagram.com/coxbit_tnau?igsi=MW1oeGU4dDNzYTNpNg=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
-            >
-              Visit our Instagram Page &rarr;
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
-            <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
-              LinkedIn
-            </h3>
-            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
-              <Image
-                src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
-                alt="LinkedIn QR Code - COXBIT"
-                width={140}
-                height={140}
-                className="mx-auto"
-              />
-            </div>
-            <p className="text-gray-600 text-sm mt-4">
-              Connect with us professionally for research collaborations
-              and opportunities.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
     </div>

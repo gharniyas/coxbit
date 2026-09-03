@@ -8,7 +8,7 @@ import {
   MdOutlineHandshake,
 } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
-import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
+import { BsBuilding, BsCalendarEvent, BsThreeDotsVertical } from "react-icons/bs";
 import { FaFlask, FaCheckCircle } from "react-icons/fa";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -16,6 +16,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
+  const [mobileOpenDropdown, setMobileOpenDropdown] = useState(null); // Track which mobile accordion section is expanded
   const pathname = usePathname();
 
   const navigationItems = [
@@ -98,7 +99,7 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between min-h-28 gap-y-1 gap-x-2 py-1">
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pl-2 h-full min-w-0">
-          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[80px] h-[50px] sm:w-[108px] sm:h-[68px] md:w-[125px] md:h-[78px] lg:w-[136px] lg:h-[85px]">
+          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[80px] h-[50px] sm:w-[108px] sm:h-[68px] md:w-[125px] md:h-[78px] lg:w-[96px] lg:h-[60px] xl:w-[118px] xl:h-[74px] 2xl:w-[136px] 2xl:h-[85px]">
             <Image
               src="/logo.jpeg"
               alt="COXBIT Logo"
@@ -114,7 +115,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="flex items-center justify-start shrink-0 h-[68px] sm:h-[90px] md:h-[104px] lg:h-[116px]">
+          <div className="flex items-center justify-start shrink-0 h-[68px] sm:h-[90px] md:h-[104px] lg:h-[80px] xl:h-[100px] 2xl:h-[116px]">
             <Image
               src="/logo-2.png"
               alt="COEB Logo"
@@ -130,7 +131,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[84px] h-[84px] md:w-[100px] md:h-[100px] lg:w-[112px] lg:h-[112px]">
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[84px] h-[84px] md:w-[100px] md:h-[100px] lg:w-[76px] lg:h-[76px] xl:w-[94px] xl:h-[94px] 2xl:w-[112px] 2xl:h-[112px]">
             <Image
               src="/TN-logo.png"
               alt="Government of Tamil Nadu Logo"
@@ -146,7 +147,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[118px] h-[118px] md:w-[140px] md:h-[140px] lg:w-[158px] lg:h-[158px]">
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[118px] h-[118px] md:w-[140px] md:h-[140px] lg:w-[106px] lg:h-[106px] xl:w-[132px] xl:h-[132px] 2xl:w-[158px] 2xl:h-[158px]">
             <Image
               src="/TNAU-logo.png"
               alt="Tamil Nadu Agricultural University Logo"
@@ -165,8 +166,8 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center bg-[#6b4226] rounded-lg px-1.5 2xl:px-2 flex-1 min-w-0">
-          <div className="flex flex-wrap items-stretch justify-between w-full">
+        <nav className="hidden lg:flex items-center bg-[#6b4226] rounded-lg px-1 xl:px-1.5 2xl:px-2 flex-1 min-w-0">
+          <div className="flex flex-nowrap items-stretch justify-between w-full">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 const isDropdownActive = item.dropdown.some((sub) =>
@@ -185,7 +186,7 @@ const Header = () => {
                     }}
                   >
                     <button
-                      className={`font-bold text-xs 2xl:text-sm flex items-center gap-1 focus:outline-none px-1.5 2xl:px-3 py-2 transition-colors duration-200 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
+                      className={`font-bold text-[11px] xl:text-xs 2xl:text-sm flex items-center gap-0.5 xl:gap-1 focus:outline-none px-1 xl:px-1.5 2xl:px-3 py-2 transition-colors duration-200 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
                         isDropdownActive || isOpen
                           ? "border-yellow-400"
                           : "border-transparent"
@@ -210,7 +211,7 @@ const Header = () => {
                     >
                       <span>{item.shortLabel || item.label}</span>
                       <svg
-                        className="w-3 h-3 ml-1"
+                        className="w-3 h-3 ml-0.5 xl:ml-1 shrink-0"
                         fill="none"
                         stroke="currentColor"
                         strokeWidth="2"
@@ -255,7 +256,7 @@ const Header = () => {
                   <a
                     key={item.href}
                     href={item.href}
-                    className={`font-bold text-xs 2xl:text-sm transition-colors duration-200 px-1.5 2xl:px-3 py-2 flex items-center gap-1 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
+                    className={`font-bold text-[11px] xl:text-xs 2xl:text-sm transition-colors duration-200 px-1 xl:px-1.5 2xl:px-3 py-2 flex items-center gap-0.5 xl:gap-1 hover:bg-[#54331c] text-white border-b-4 whitespace-nowrap ${
                       isActive ? "border-yellow-400" : "border-transparent"
                     }`}
                     style={{ boxShadow: "none", background: "none" }}
@@ -268,7 +269,7 @@ const Header = () => {
           </div>
         </nav>
         <button
-          className="lg:hidden ml-auto text-white hover:text-yellow-400 focus:outline-none transition-colors duration-200"
+          className="lg:hidden ml-auto text-[#6b4226] hover:text-[#c89b3c] focus:outline-none transition-colors duration-200"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle mobile menu"
         >
@@ -282,23 +283,46 @@ const Header = () => {
           <nav className="px-4 py-3 space-y-2">
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
+                const isDropdownActive = item.dropdown.some((sub) =>
+                  isActiveLink(sub.href),
+                );
+                const isExpanded = mobileOpenDropdown === idx;
                 return (
                   <div key={item.label} className="mb-2">
-                    <div className="font-medium text-gray-700 text-base md:text-lg mb-1">
-                      {item.label}
-                    </div>
-                    <div className="pl-3">
-                      {item.dropdown.map((sub) => (
-                        <a
-                          key={sub.href}
-                          href={sub.href}
-                          className="block py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {sub.label}
-                        </a>
-                      ))}
-                    </div>
+                    <button
+                      type="button"
+                      className={`w-full flex items-center justify-between py-2 px-3 rounded-md font-medium text-base md:text-lg transition-colors duration-200 ${
+                        isDropdownActive
+                          ? "text-[#6b4226] bg-[#c89b3c]/10"
+                          : "text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10"
+                      }`}
+                      aria-expanded={isExpanded ? "true" : "false"}
+                      onClick={() =>
+                        setMobileOpenDropdown(isExpanded ? null : idx)
+                      }
+                    >
+                      <span>{item.label}</span>
+                      <BsThreeDotsVertical
+                        size={18}
+                        className={`transition-transform duration-200 ${
+                          isExpanded ? "rotate-90" : ""
+                        }`}
+                      />
+                    </button>
+                    {isExpanded && (
+                      <div className="pl-3">
+                        {item.dropdown.map((sub) => (
+                          <a
+                            key={sub.href}
+                            href={sub.href}
+                            className="block py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {sub.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 );
               } else {

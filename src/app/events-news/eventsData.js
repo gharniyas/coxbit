@@ -1,3 +1,20 @@
+export const featuredEvent = {
+  slug: "industry-entrepreneurship-career-connect-2026",
+  date: "29–30 October 2026",
+  title: "Industry, Entrepreneurship & Career Connect 2026",
+  images: ["/events&training/upcoming event.jpeg"],
+  registerLink: "https://forms.gle/iEyUUJacnUumvBxn6",
+  qrImage: "/events&training/upcoming event qr code.jpeg",
+  content: `
+    <p>The Industry, Entrepreneurship &amp; Career Connect 2026 is an industry&ndash;academia convergence platform organized by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), Coimbatore, on 29&ndash;30 October 2026.</p>
+    <p>The event brings together students, researchers, industries, MSMEs, startups, entrepreneurs, investors and alumni to explore opportunities for career development, entrepreneurship, technology transfer, industry collaboration and commercialization.</p>
+    <p>The programme features three concurrent sector-specific industry meets covering Agri-Food Industry, Bioinformatics &amp; Artificial Intelligence, and Horticultural Industry, along with a Job Fair, Entrepreneurship Meet, TNAU Alumni Connect, Industry &amp; Technology Exhibition, and COXBIT Incubation Showcase.</p>
+    <p>The event provides a platform to connect talent with industry, showcase innovative technologies and products, facilitate business networking, identify collaboration opportunities, and promote startup and commercialization prospects within the COXBIT innovation ecosystem.</p>
+    <h3>Venue</h3>
+    <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University Campus, Coimbatore &ndash; 641 003, Tamil Nadu, India.</p>
+  `,
+};
+
 export const events = [
   {
     slug: "connect-and-grow-food-business-meet",
@@ -128,7 +145,7 @@ export const events = [
     sno: 6,
     date: "05.11.2025",
     title: "MSSRF, Social Alpha and COXBIT Organized Outreach Program",
-    images: ["/events&training/6.jpg"],
+    images: ["/events&training/6.jpeg"],
     content: `
       <h2 class="font-serif text-xl font-bold text-[#6b4226] mb-2">SOCIAL ALPHA TEC(H)TONIC &ndash; Innovations for Agriculture and Rural Livelihoods</h2>
       <p class="font-semibold">05.11.2025 | COXBIT, Tamil Nadu Agricultural University (TNAU), Coimbatore</p>
@@ -147,7 +164,7 @@ export const events = [
     sno: 7,
     date: "29.10.2025",
     title: "Strategic Action Plan Preparation for MSMEs",
-    images: [],
+    images: ["/events&training/Strategic Action Plan Preparation for MSMEs.jpeg"],
     content: `
       <p class="font-semibold">29.10.2025 | COXBIT, TNAU</p>
       <p>Under the TNAPEx&ndash;RAMP Programme, a dedicated support programme was organized at COXBIT, Tamil Nadu Agricultural University, for 10 selected MSMEs to strengthen their business capabilities and support new product development.</p>
@@ -370,4 +387,7 @@ export const events = [
   },
 ];
 
-export const getEventBySlug = (slug) => events.find((e) => e.slug === slug);
+export const getEventBySlug = (slug) =>
+  slug === featuredEvent.slug
+    ? featuredEvent
+    : events.find((e) => e.slug === slug);

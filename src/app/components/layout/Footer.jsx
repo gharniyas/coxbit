@@ -1,6 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdOutlineInfo, MdOutlineScience, MdOutlineContactPhone, MdOutlineHandshake } from "react-icons/md";
@@ -46,9 +52,24 @@ const Footer = () => {
       icon: FaFacebookF,
     },
     {
-      href: "https://www.instagram.com/coxbit_tnau?igsi=MW1oeGU4dDNzYTNpNg==",
+      href: "https://www.instagram.com/coxbit_tnau/?hl=en",
       label: "Instagram",
       icon: FaInstagram,
+    },
+    {
+      href: "https://www.linkedin.com/company/coxbit-centre-of-excellence-in-biotechnology/?viewAsMember=true",
+      label: "LinkedIn",
+      icon: FaLinkedinIn,
+    },
+    {
+      href: "https://youtube.com/@coxbitoffical?si=1lTaIbZyyHVURewq",
+      label: "YouTube",
+      icon: FaYoutube,
+    },
+    {
+      href: "https://whatsapp.com/channel/0029VbDPIatDjiOetWdvui01",
+      label: "WhatsApp",
+      icon: FaWhatsapp,
     },
   ];
 
@@ -74,24 +95,34 @@ const Footer = () => {
                 <div className="text-sm md:text-base text-amber-100 mb-2">In partnership with:</div>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
-                  <Image
-                    src="/innovation logo.jpg"
-                    alt="Innovation Logo"
-                    width={50}
-                    height={50}
-                    className="w-full h-auto object-contain rounded"
-                  />
-                </div>
-                <div className="w-[50px] h-[50px] flex items-center bg-white/10 rounded-lg p-2">
+                <a
+                  href="https://www.tnapex.tn.gov.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[76px] h-[76px] flex items-center bg-white/10 hover:bg-white/20 rounded-lg p-2 transition-colors duration-200"
+                >
                   <Image
                     src="/TNA logo.jpg"
-                    alt="TNAU Logo"
-                    width={50}
-                    height={50}
+                    alt="TNAPEx - Tamil Nadu Agri Processing and Exports"
+                    width={76}
+                    height={76}
                     className="w-full h-auto object-contain rounded"
                   />
-                </div>
+                </a>
+                <a
+                  href="https://www.editn.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[76px] h-[76px] flex items-center bg-white/10 hover:bg-white/20 rounded-lg p-2 transition-colors duration-200"
+                >
+                  <Image
+                    src="/innovation logo.jpg"
+                    alt="EDII-TN - Entrepreneurship Development and Innovation Institute"
+                    width={76}
+                    height={76}
+                    className="w-full h-auto object-contain rounded"
+                  />
+                </a>
               </div>
             </div>
             <p className="text-amber-100 text-base md:text-lg leading-relaxed mb-6">

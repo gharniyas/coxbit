@@ -3,16 +3,9 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { events } from "./eventsData";
+import { events, featuredEvent } from "./eventsData";
 
 export default function EventsNews() {
-  const featuredEvent = {
-    training: "COXBIT Industry, Entrepreneurship and Career Connect 2026",
-    date: "29–30 October 2026",
-    registerLink: "#",
-    qrImage: "/Training and events/WhatsApp Image 2026-09-01 at 4.53.49 PM.jpeg",
-  };
-
   const highlightImages = [
     "/2025-2026/WhatsApp Image 2025-06-02 at 12.53.03 PM(1).jpeg",
     "/2025-2026/WhatsApp Image 2025-06-02 at 12.53.03 PM.jpeg",
@@ -58,29 +51,52 @@ export default function EventsNews() {
         <section id="upcoming-events" className="scroll-mt-24">
           <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1 text-center md:text-left">
-              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#c89b3c]/15 text-[#8a6a1f] mb-3">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#6b4226] text-white mb-3">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
+                </span>
                 Upcoming Event
               </span>
-              <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226]">
-                {featuredEvent.training}
-              </h2>
+              <Link href={`/events-news/${featuredEvent.slug}`}>
+                <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200">
+                  {featuredEvent.title}
+                </h2>
+              </Link>
               <p className="text-gray-700 font-semibold mt-1">
                 {featuredEvent.date}
               </p>
-              <a
-                href={featuredEvent.registerLink}
-                className="inline-block mt-4 bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
-              >
-                Register
-              </a>
+              <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
+                <a
+                  href={featuredEvent.registerLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+                >
+                  Register
+                </a>
+                <Link
+                  href={`/events-news/${featuredEvent.slug}`}
+                  className="inline-block border border-[#6b4226] text-[#6b4226] hover:bg-[#6b4226]/10 font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+                >
+                  View Details
+                </Link>
+              </div>
             </div>
-            <Image
-              src={featuredEvent.qrImage}
-              alt={`QR code to register for ${featuredEvent.training}`}
-              width={150}
-              height={150}
-              className="border border-gray-200 rounded-sm shrink-0"
-            />
+            {featuredEvent.qrImage && (
+              <div className="text-center shrink-0">
+                <Image
+                  src={featuredEvent.qrImage}
+                  alt={`QR code to register for ${featuredEvent.title}`}
+                  width={120}
+                  height={120}
+                  className="border border-gray-200 rounded-sm"
+                />
+                <p className="text-xs text-gray-600 font-semibold mt-1">
+                  Scan to Register
+                </p>
+              </div>
+            )}
           </div>
         </section>
 
