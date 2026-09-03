@@ -99,7 +99,7 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between min-h-28 gap-y-1 gap-x-2 py-1">
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pl-2 h-full min-w-0">
-          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[80px] h-[50px] sm:w-[108px] sm:h-[68px] md:w-[125px] md:h-[78px] lg:w-[96px] lg:h-[60px] xl:w-[118px] xl:h-[74px] 2xl:w-[136px] 2xl:h-[85px]">
+          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[92px] h-[58px] sm:w-[122px] sm:h-[76px] md:w-[140px] md:h-[88px] lg:w-[110px] lg:h-[69px] xl:w-[132px] xl:h-[83px] 2xl:w-[152px] 2xl:h-[95px]">
             <Image
               src="/logo.jpeg"
               alt="COXBIT Logo"
@@ -115,7 +115,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="flex items-center justify-start shrink-0 h-[68px] sm:h-[90px] md:h-[104px] lg:h-[80px] xl:h-[100px] 2xl:h-[116px]">
+          <div className="flex items-center justify-start shrink-0 h-[86px] sm:h-[112px] md:h-[128px] lg:h-[102px] xl:h-[124px] 2xl:h-[142px]">
             <Image
               src="/logo-2.png"
               alt="COEB Logo"
@@ -131,7 +131,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[84px] h-[84px] md:w-[100px] md:h-[100px] lg:w-[76px] lg:h-[76px] xl:w-[94px] xl:h-[94px] 2xl:w-[112px] 2xl:h-[112px]">
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[64px] h-[64px] md:w-[76px] md:h-[76px] lg:w-[58px] lg:h-[58px] xl:w-[70px] xl:h-[70px] 2xl:w-[84px] 2xl:h-[84px]">
             <Image
               src="/TN-logo.png"
               alt="Government of Tamil Nadu Logo"
@@ -147,7 +147,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[118px] h-[118px] md:w-[140px] md:h-[140px] lg:w-[106px] lg:h-[106px] xl:w-[132px] xl:h-[132px] 2xl:w-[158px] 2xl:h-[158px]">
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[98px] h-[98px] md:w-[116px] md:h-[116px] lg:w-[88px] lg:h-[88px] xl:w-[108px] xl:h-[108px] 2xl:w-[130px] 2xl:h-[130px]">
             <Image
               src="/TNAU-logo.png"
               alt="Tamil Nadu Agricultural University Logo"
