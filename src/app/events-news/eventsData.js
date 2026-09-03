@@ -12,6 +12,8 @@ export const featuredEvent = {
     <p>The event provides a platform to connect talent with industry, showcase innovative technologies and products, facilitate business networking, identify collaboration opportunities, and promote startup and commercialization prospects within the COXBIT innovation ecosystem.</p>
     <h3>Venue</h3>
     <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University Campus, Coimbatore &ndash; 641 003, Tamil Nadu, India.</p>
+    <h3>Registration</h3>
+    <p>Registration link: <a href="https://forms.gle/iEyUUJacnUumvBxn6" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://forms.gle/iEyUUJacnUumvBxn6</a></p>
   `,
 };
 
