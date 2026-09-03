@@ -64,6 +64,11 @@ const sections = [
     description:
       "Forthcoming and completed workshops, hands-on trainings and events for researchers and industry.",
     image: "/floor spacing/floor spacing-3.jpeg",
+    subLinks: [
+      { href: "/events-news#upcoming-events", label: "Upcoming Events" },
+      { href: "/events-news#trainings-events", label: "Training & Events" },
+      { href: "/events-news#highlights", label: "Highlights" },
+    ],
   },
   {
     href: "/contact",
@@ -122,12 +127,12 @@ export default function Home() {
       <section className="container mx-auto px-4 py-16">
         <div className="text-center mb-10">
           <h2 className="font-serif text-3xl font-bold text-[#6b4226]">
-            Our Key Sections
+            Discover COXBIT
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A quick overview of every section of this portal. Select any card
-            below to view the complete details of that page.
+            Explore what COXBIT offers &mdash; from labs and projects to
+            startup support and events.
           </p>
         </div>
 

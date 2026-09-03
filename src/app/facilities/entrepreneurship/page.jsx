@@ -6,15 +6,30 @@ import TabNavigation from "../../components/TabNavigation";
 import { startupProfiles } from "./data";
 
 const tabs = [
-  { id: 0, label: "Cabin Space", images: ["/cabinspacing/cabin spacing-1.jpeg","/cabinspacing/cabin spacing-2.jpeg"] },
-  { id: 1, label: "Floor / Knowledge Space", images: ["/floor spacing/floor spacing-3.jpeg","/floor spacing/floor spacing-4.jpeg","/floor spacing/floor spacing-5.jpeg"] },
+  {
+    id: 0,
+    label: "Cabin Space",
+    images: [
+      "/cabinspacing/cabin spacing-1.jpeg",
+      "/cabinspacing/cabin spacing-2.jpeg",
+    ],
+  },
+  {
+    id: 1,
+    label: "Floor / Knowledge Space",
+    images: [
+      "/floor spacing/floor spacing-3.jpeg",
+      "/floor spacing/floor spacing-4.jpeg",
+      "/floor spacing/floor spacing-5.jpeg",
+    ],
+  },
 ];
 
 const tabContent = [
   {
     title: "Cabin Space",
     content: `
-      <p>Cabin spaces are designed for startups, entrepreneurs, and innovators seeking a dedicated, private environment to develop their ideas and grow their ventures. These spaces offer essential infrastructure, high-speed internet, and access to shared resources, fostering productivity and collaboration within a professional setting.</p>
+      <p>Individual air-conditioned (AC) cabins for startups, established companies, R&amp;D organizations, and institutions to showcase technologies, products, research outcomes, and innovations.</p>
       <ul class="list-disc ml-6 mt-2">
         <li>Private, lockable cabins for focused work</li>
         <li>Access to meeting rooms and common facilities</li>
@@ -26,9 +41,9 @@ const tabContent = [
   {
     title: "Floor / Knowledge Space",
     content: `
-      <p>Floor and knowledge spaces provide an open, collaborative environment ideal for knowledge sharing, workshops, and team-based activities. These areas are perfect for early-stage entrepreneurs, students, and research groups who benefit from a dynamic, interactive setting.</p>
+      <p>Individual floor spaces for companies and innovators to conduct projects, develop prototypes, present ideas and research concepts, and access opportunities for mentoring, collaboration, and R&amp;D support.</p>
       <ul class="list-disc ml-6 mt-2">
-        <li>Open workstations and flexible seating</li>
+        <li>Open space and flexible seating</li>
         <li>Access to seminar and training rooms</li>
         <li>Opportunities for peer learning and mentorship</li>
         <li>Participation in community events and programs</li>
@@ -54,8 +69,6 @@ const startupLists = {
     link("sakthi-fertilizer"),
     link("dhivvya-bhalan"),
     link("bublbox-eretail"),
-    link("croptwin-agro-tech"),
-    "M/s. Meridian Machine Works",
     link("prarthana-v"),
     link("univzero-technologies"),
     link("ss-tech"),
@@ -64,7 +77,6 @@ const startupLists = {
     link("sherpa-biotech"),
     link("bharath-biofarm"),
     link("skandax-nexus"),
-    "M/s. Halal Agro Producers",
     link("tak-sfs"),
     link("quadrica"),
     link("themolife"),
@@ -93,8 +105,6 @@ const startupLists = {
     link("insilicomics"),
     link("pechi-foods"),
     link("innogreen"),
-    "M/s. V.R. Boom",
-    "M/s. Cwitch industries",
     link("leaders-desk"),
     link("anga-information-technology"),
     link("yatvik-enterprises"),
@@ -122,8 +132,8 @@ export default function EntrepreneurshipFacilities() {
             Technology Driven Entrepreneurship
           </h1>
           <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
-            Cabin and floor / knowledge space infrastructure supporting startups,
-            entrepreneurs and innovators at COXBIT.
+            Cabin and floor / knowledge space infrastructure supporting
+            startups, entrepreneurs and innovators at COXBIT.
           </p>
         </div>
       </div>

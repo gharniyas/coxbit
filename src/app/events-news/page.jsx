@@ -126,7 +126,7 @@ export default function EventsNews() {
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Featured Upcoming Event */}
-        <section>
+        <section id="upcoming-events" className="scroll-mt-24">
           <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1 text-center md:text-left">
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#c89b3c]/15 text-[#8a6a1f] mb-3">
@@ -156,7 +156,7 @@ export default function EventsNews() {
         </section>
 
         {/* Trainings & Events */}
-        <section className="mt-16">
+        <section id="trainings-events" className="mt-16 scroll-mt-24">
           <div className="text-center mb-8">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
               Trainings & Events at COXBIT
@@ -245,7 +245,7 @@ export default function EventsNews() {
         </section>
 
         {/* 2025-26 Highlights Marquee */}
-        <section className="mt-16">
+        <section id="highlights" className="mt-16 scroll-mt-24">
           <div className="text-center mb-6">
             <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
               2025–26 Event Highlights

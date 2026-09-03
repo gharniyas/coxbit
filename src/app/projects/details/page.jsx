@@ -9,7 +9,7 @@ const projects = [
     id: 0,
     title: "DBT Phenomics Platform",
     fullTitle:
-      "1. COXBIT DBT–Supported Phenomics Platform for Climate-Smart Agriculture",
+      "COXBIT DBT–Supported Phenomics Platform for Climate-Smart Agriculture",
     outlay: "₹339.32 lakhs",
     fundedBy: "Department of Biotechnology (DBT), Government of India",
     content: [
@@ -24,7 +24,7 @@ const projects = [
     id: 1,
     title: "Native Species Seed Vault",
     fullTitle:
-      "2. Establishment of Native Species Seed Vault with Cryogenic Facility",
+      "Establishment of Native Species Seed Vault with Cryogenic Facility",
     outlay: "₹10.50 lakh",
     fundedBy: "Government of Tamil Nadu",
     content: [
@@ -38,7 +38,7 @@ const projects = [
     id: 2,
     title: "TNAPEx MSME Programme",
     fullTitle:
-      "3. COXBIT–TNAPEx Programme for MSME Food Product Development and Value Addition",
+      "COXBIT–TNAPEx Programme for MSME Food Product Development and Value Addition",
     outlay: "₹20,00,000",
     fundedBy: "TNAPEx–RAMP (Raising and Accelerating MSME Performance)",
     content: [
@@ -52,7 +52,7 @@ const projects = [
     id: 3,
     title: "BIRAC E-YUVA Programme",
     fullTitle:
-      "4. BIRAC E-YUVA Programme – Bio-Entrepreneurship and Innovation Support Initiative",
+      "BIRAC E-YUVA Programme – Bio-Entrepreneurship and Innovation Support Initiative",
     outlay: "N/A",
     fundedBy: "BIRAC, Department of Biotechnology, Government of India",
     content: [
@@ -64,14 +64,14 @@ const projects = [
 ];
 
 const galleryImages = [
-  "/Projects/20251029_104700.jpg (1).jpeg",
-  "/Projects/IMG_8346.JPG (2).jpeg",
-  "/Projects/Recovered_jpg_file(4247).jpg.jpeg",
-  "/Projects/Recovered_jpg_file(4263).jpg.jpeg",
   "/Projects/1.png",
   "/Projects/2.JPG",
   "/Projects/3.JPG",
   "/Projects/4.JPG",
+  "/Projects/20251029_104700.jpg (1).jpeg",
+  "/Projects/IMG_8346.JPG (2).jpeg",
+  "/Projects/Recovered_jpg_file(4247).jpg.jpeg",
+  "/Projects/Recovered_jpg_file(4263).jpg.jpeg",
 ];
 
 function ProjectDetailsContent() {

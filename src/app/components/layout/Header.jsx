@@ -97,14 +97,14 @@ const Header = () => {
     <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
       <div className="flex flex-wrap items-center justify-between min-h-28 gap-y-1 gap-x-2 py-1">
         {/* Logo Section */}
-        <div className="flex-shrink-0 flex items-center gap-2 pl-2 h-full min-w-0">
-          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[70px] h-[44px] sm:w-[95px] sm:h-[60px] md:w-[110px] md:h-[68px] lg:w-[120px] lg:h-[75px]">
+        <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pl-2 h-full min-w-0">
+          <div className="flex items-center justify-center overflow-hidden shrink-0 w-[80px] h-[50px] sm:w-[108px] sm:h-[68px] md:w-[125px] md:h-[78px] lg:w-[136px] lg:h-[85px]">
             <Image
               src="/logo.jpeg"
               alt="COXBIT Logo"
               fill={false}
-              width={120}
-              height={75}
+              width={136}
+              height={85}
               priority
               style={{
                 objectFit: "cover",
@@ -114,20 +114,51 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="flex items-center justify-start min-w-0 w-[120px] sm:w-[180px] md:w-[220px] lg:w-[240px] 2xl:w-[600px]">
+          <div className="flex items-center justify-start shrink-0 h-[68px] sm:h-[90px] md:h-[104px] lg:h-[116px]">
             <Image
               src="/logo-2.png"
               alt="COEB Logo"
               fill={false}
-              width={600}
-              height={140}
+              width={1860}
+              height={845}
               priority
               style={{
                 objectFit: "contain",
                 objectPosition: "left center",
+                width: "auto",
+                height: "100%",
+              }}
+            />
+          </div>
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[84px] h-[84px] md:w-[100px] md:h-[100px] lg:w-[112px] lg:h-[112px]">
+            <Image
+              src="/TN-logo.png"
+              alt="Government of Tamil Nadu Logo"
+              fill={false}
+              width={68}
+              height={68}
+              priority
+              style={{
+                objectFit: "contain",
+                objectPosition: "center",
                 width: "100%",
-                height: "auto",
-                maxHeight: 140,
+                height: "100%",
+              }}
+            />
+          </div>
+          <div className="hidden sm:flex items-center justify-center overflow-hidden shrink-0 w-[118px] h-[118px] md:w-[140px] md:h-[140px] lg:w-[158px] lg:h-[158px]">
+            <Image
+              src="/TNAU-logo.png"
+              alt="Tamil Nadu Agricultural University Logo"
+              fill={false}
+              width={68}
+              height={68}
+              priority
+              style={{
+                objectFit: "contain",
+                objectPosition: "center",
+                width: "100%",
+                height: "100%",
               }}
             />
           </div>
