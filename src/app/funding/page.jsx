@@ -108,7 +108,7 @@ const FundingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
@@ -151,7 +151,7 @@ const FundingPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Government of Tamil Nadu */}
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border border-gray-200 bg-white p-2">
                 <a
                   href="https://www.tn.gov.in"
@@ -176,7 +176,7 @@ const FundingPage = () => {
             </div>
 
             {/* TNAU */}
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border border-gray-200 bg-white p-2">
                 <a
                   href="https://tnau.ac.in"
@@ -201,7 +201,7 @@ const FundingPage = () => {
             </div>
 
             {/* NABARD */}
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8 text-center hover:shadow-md transition-shadow duration-200">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border border-gray-200 bg-white p-2">
                 <a
                   href="https://www.nabard.org"
@@ -262,7 +262,7 @@ const FundingPage = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-sm shadow-sm p-8 hover:shadow-md transition-shadow duration-200"
+                  className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8 hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-[#6b4226] rounded-sm flex items-center justify-center mr-4">
@@ -338,7 +338,7 @@ const FundingPage = () => {
               </button>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8">
               <h3 className="font-serif text-2xl font-bold text-[#6b4226] mb-6">
                 Quick Stats
               </h3>

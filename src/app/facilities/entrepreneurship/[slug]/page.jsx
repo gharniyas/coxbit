@@ -18,7 +18,7 @@ export default async function StartupProfilePage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -39,7 +39,7 @@ export default async function StartupProfilePage({ params }) {
           &larr; Back to Entrepreneurship Facilities
         </Link>
 
-        <div className="mt-4 bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+        <div className="mt-4 bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden border border-gray-200 bg-gray-50 rounded-sm">
             <Image
               src={profile.image}

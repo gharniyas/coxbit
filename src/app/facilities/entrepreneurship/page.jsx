@@ -43,7 +43,7 @@ const tabContent = [
     content: `
       <p>Individual floor spaces for companies and innovators to conduct projects, develop prototypes, present ideas and research concepts, and access opportunities for mentoring, collaboration, and R&amp;D support.</p>
       <ul class="list-disc ml-6 mt-2">
-        <li>Open space and flexible seating</li>
+        <li>Open space and seating</li>
         <li>Access to seminar and training rooms</li>
         <li>Opportunities for peer learning and mentorship</li>
         <li>Participation in community events and programs</li>
@@ -121,7 +121,7 @@ export default function EntrepreneurshipFacilities() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -144,7 +144,7 @@ export default function EntrepreneurshipFacilities() {
           activeTab={activeTab}
           onTabChange={setActiveTab}
         />
-        <div className="bg-white border border-gray-200 border-t-0 rounded-b-sm shadow-sm p-6">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 border-t-0 rounded-b-sm shadow-sm p-6">
           {tabs[activeTab].images?.length > 0 && (
             <ImageCarousel
               key={activeTab}

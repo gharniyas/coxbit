@@ -197,7 +197,7 @@ const StartupOpportunities = () => {
           {/* Overview Tab */}
           {activeTab === "overview" && (
             <div className="space-y-6">
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-8">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-8">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Our Ecosystem
                 </h2>
@@ -224,7 +224,7 @@ const StartupOpportunities = () => {
           {/* TRL Tab */}
           {activeTab === "trl" && (
             <div>
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Technology Readiness Levels (TRL)
                 </h2>
@@ -238,7 +238,7 @@ const StartupOpportunities = () => {
                   {trlLevels.map((trl, index) => (
                     <div
                       key={index}
-                      className="bg-white border border-gray-200 rounded-sm p-4 hover:shadow-md transition-shadow duration-200"
+                      className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-4 hover:shadow-md transition-shadow duration-200"
                     >
                       <div className="flex items-center mb-3">
                         <span className="bg-[#6b4226] text-white font-bold px-3 py-1 rounded-sm text-xs">
@@ -269,7 +269,7 @@ const StartupOpportunities = () => {
           {/* Journey Tab */}
           {activeTab === "journey" && (
             <div>
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Startup Journey: From Idea to Enterprise
                 </h2>
@@ -299,7 +299,7 @@ const StartupOpportunities = () => {
           {/* Funding Tab */}
           {activeTab === "funding" && (
             <div>
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Types of Startup Funding
                 </h2>
@@ -308,7 +308,7 @@ const StartupOpportunities = () => {
                   {fundingTypes.map((funding, index) => (
                     <div
                       key={index}
-                      className="bg-white border border-gray-200 rounded-sm p-5 hover:shadow-md transition-shadow duration-200"
+                      className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-5 hover:shadow-md transition-shadow duration-200"
                     >
                       <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">
                         {funding.title}
@@ -324,7 +324,7 @@ const StartupOpportunities = () => {
           {/* Support & FAQ Tab */}
           {activeTab === "support" && (
             <div className="space-y-6">
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Key Startup Support COXBIT Offers
                 </h2>
@@ -404,7 +404,7 @@ const StartupOpportunities = () => {
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
                 <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
                   Frequently Asked Questions (FAQ)
                 </h2>

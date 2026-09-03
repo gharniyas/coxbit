@@ -82,7 +82,7 @@ const sections = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Hero */}
       <section className="relative min-h-[480px] flex items-center">
         <Image
@@ -144,7 +144,7 @@ export default function Home() {
       </section>
 
       {/* In association with */}
-      <section className="bg-gray-50 border-y border-gray-200 py-10">
+      <section className="bg-amber-50/70 border-y border-amber-200/60 py-10">
         <div className="container mx-auto px-4 text-center">
           <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mb-6">
             In Association With
@@ -192,11 +192,11 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
             <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               Facebook
             </h3>
-            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
               <Image
                 src="/QR Code - CoEB/QR - FB - CoEB.png"
                 alt="Facebook QR Code - COXBIT"
@@ -219,11 +219,11 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
             <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               Instagram
             </h3>
-            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
               <Image
                 src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
                 alt="Instagram QR Code - COXBIT"
@@ -246,11 +246,11 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
             <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
               LinkedIn
             </h3>
-            <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
               <Image
                 src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
                 alt="LinkedIn QR Code - COXBIT"

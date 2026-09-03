@@ -107,7 +107,7 @@ export default function EventsNews() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -127,7 +127,7 @@ export default function EventsNews() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Featured Upcoming Event */}
         <section id="upcoming-events" className="scroll-mt-24">
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1 text-center md:text-left">
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#c89b3c]/15 text-[#8a6a1f] mb-3">
                 Upcoming Event
@@ -163,7 +163,7 @@ export default function EventsNews() {
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-x-auto">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-[#6b4226] text-white">
@@ -252,7 +252,7 @@ export default function EventsNews() {
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
           </div>
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm py-8">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm py-8">
             <Marquee pauseOnHover gradient={false} speed={45}>
               {highlightImages.map((src) => (
                 <div

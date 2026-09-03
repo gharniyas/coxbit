@@ -2,7 +2,7 @@
 
 export default function SkillFacilities() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -19,7 +19,7 @@ export default function SkillFacilities() {
       </div>
 
       <div className="container mx-auto px-4 py-16 flex items-center justify-center">
-        <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-10 max-w-lg w-full text-center">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-10 max-w-lg w-full text-center">
           <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-3">
             Content Coming Soon
           </h2>

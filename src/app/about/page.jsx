@@ -50,7 +50,7 @@ function AboutContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -70,7 +70,7 @@ function AboutContent() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <TabNavigation tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
-        <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 md:p-8">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8">
           {/* About COXBIT */}
           {activeTab === 0 && (
             <div className="space-y-6">
@@ -118,7 +118,7 @@ function AboutContent() {
                   { icon: "💼", text: "Evolving Innovative Biotech Solutions into Investment-Ready Ventures through Industry Linkages, Market Access and Investor Connect" },
                   { icon: "💰", text: "Enabling access to Government startup funding through scheme linkages, proposal support and guidance on funding opportunities" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-sm shadow-sm">
+                  <div key={i} className="flex items-start gap-3 p-4 bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm">
                     <span className="text-3xl flex-shrink-0">{item.icon}</span>
                     <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
                   </div>
@@ -138,7 +138,7 @@ function AboutContent() {
                 {focusAreas.map((area, i) => (
                   <div
                     key={i}
-                    className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
+                    className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
                   >
                     <div className="text-4xl mb-3">{area.icon}</div>
                     <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-2">{area.title}</h3>

@@ -134,7 +134,7 @@ export default function CoxbitTeam() {
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
         </div>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white border border-gray-200 rounded-sm shadow-sm overflow-hidden">
+          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm overflow-hidden">
             <div className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 {/* Chairman Photo */}
@@ -197,7 +197,7 @@ export default function CoxbitTeam() {
           {boardMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
+              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
             >
               <div className="p-6 flex flex-col items-center">
                 {/* Member Photo */}
@@ -242,7 +242,7 @@ export default function CoxbitTeam() {
           {coreTeam.map((member) => (
             <div
               key={member.id}
-              className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col items-center"
+              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden flex flex-col items-center"
             >
               <div className="relative w-40 h-48 mt-6 rounded-sm overflow-hidden border border-gray-200">
                 <Image

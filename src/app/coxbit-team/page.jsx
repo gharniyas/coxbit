@@ -42,7 +42,7 @@ export default function CoxbitTeam() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -73,7 +73,7 @@ export default function CoxbitTeam() {
             {coreTeam.map((member) => (
               <div
                 key={member.id}
-                className="bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
+                className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden"
               >
                 <div className="relative flex justify-center items-center h-24 md:h-28 lg:h-32 bg-[#6b4226]">
                   <Image

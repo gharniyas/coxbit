@@ -3,7 +3,7 @@ import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -21,7 +21,7 @@ export default function Contact() {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <div className="w-full max-w-4xl mx-auto bg-white border border-gray-200 rounded-sm shadow-sm flex flex-col md:flex-row overflow-hidden">
+        <div className="w-full max-w-4xl mx-auto bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm flex flex-col md:flex-row overflow-hidden">
           {/* Profile Section */}
           <div className="flex-1 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-gray-200 p-10 md:p-12">
             <div className="w-28 h-28 rounded-full bg-gray-100 border-4 border-[#c89b3c] mb-4 flex items-center justify-center overflow-hidden relative">
@@ -93,11 +93,11 @@ export default function Contact() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
               <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
                 Facebook
               </h3>
-              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
                 <Image
                   src="/QR Code - CoEB/QR - FB - CoEB.png"
                   alt="Facebook QR Code - COXBIT"
@@ -120,11 +120,11 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
               <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
                 Instagram
               </h3>
-              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
                 <Image
                   src="/QR Code - CoEB/QR - Insta - CoEB.jpeg"
                   alt="Instagram QR Code - COXBIT"
@@ -147,11 +147,11 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-sm shadow-sm p-6 text-center">
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 text-center">
               <h3 className="font-serif text-lg font-bold text-[#6b4226] mb-4">
                 LinkedIn
               </h3>
-              <div className="bg-white border border-gray-200 rounded-sm p-3 inline-block">
+              <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm p-3 inline-block">
                 <Image
                   src="/QR Code - CoEB/QR - Linkedin - CoEB.png"
                   alt="LinkedIn QR Code - COXBIT"

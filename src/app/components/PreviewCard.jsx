@@ -12,7 +12,7 @@ export default function PreviewCard({
   subLinks,
 }) {
   return (
-    <div className="group bg-white border border-gray-200 rounded-sm shadow-sm hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col">
+    <div className="group bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm hover:shadow-lg hover:border-[#c89b3c] transition-all duration-200 overflow-hidden flex flex-col">
       <Link href={href} className="block relative h-40 w-full bg-[#6b4226] overflow-hidden">
         {image ? (
           <Image
@@ -42,7 +42,7 @@ export default function PreviewCard({
         </p>
 
         {subLinks && subLinks.length > 0 && (
-          <ul className="mt-4 pt-4 border-t border-gray-100 space-y-1.5">
+          <ul className="mt-4 pt-4 border-t border-amber-200/60 space-y-1.5">
             {subLinks.map((sub) => (
               <li key={sub.href}>
                 <Link

@@ -85,7 +85,7 @@ function ProjectDetailsContent() {
   const currentProject = projects[activeTab];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
         <div className="container mx-auto px-4 py-10 md:py-14">
@@ -111,7 +111,7 @@ function ProjectDetailsContent() {
         />
 
         {/* Project Content */}
-        <div className="bg-white border border-gray-200 border-t-0 rounded-b-sm shadow-sm p-6">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 border-t-0 rounded-b-sm shadow-sm p-6">
           <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
             {currentProject.fullTitle}
           </h2>
