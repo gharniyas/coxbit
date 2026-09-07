@@ -28,7 +28,7 @@ const sections = [
         href: "/facilities/entrepreneurship",
         label: "Technology Driven Entrepreneurship",
       },
-      { href: "/facilities/serviceoffered", label: "Services Offered" },
+      { href: "/facilities/service-offered", label: "Services Offered" },
     ],
   },
   {

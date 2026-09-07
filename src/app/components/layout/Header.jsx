@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import {
@@ -45,7 +46,7 @@ const Header = () => {
           icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
         },
         {
-          href: "/facilities/serviceoffered",
+          href: "/facilities/service-offered",
           label: "Services Offered",
           icon: <FaFlask size={18} className="mr-2" />,
         },

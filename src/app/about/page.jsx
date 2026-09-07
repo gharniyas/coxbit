@@ -7,7 +7,7 @@ import {
   MdTrackChanges,
   MdPeople,
 } from "react-icons/md";
-import CoxbitTeam from "@/components/CoxbitTeam";
+import CoxbitTeam from "../components/CoxbitTeam";
 import TabNavigation from "../components/TabNavigation";
 import ImageCarousel from "../components/ImageCarousel";
 

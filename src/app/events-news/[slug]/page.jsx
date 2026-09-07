@@ -1,13 +1,15 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { use } from "react";
 import ImageCarousel from "../../components/ImageCarousel";
-import { getEventBySlug } from "../eventsData";
+import { events, featuredEvent, getEventBySlug } from "../eventsData";
 
-export default function EventDetail({ params }) {
-  const { slug } = use(params);
+export function generateStaticParams() {
+  return [...events, featuredEvent].map((event) => ({ slug: event.slug }));
+}
+
+export default async function EventDetail({ params }) {
+  const { slug } = await params;
   const event = getEventBySlug(slug);
 
   if (!event) {

@@ -22,7 +22,7 @@ const Footer = () => {
       submenu: [
         { href: "/facilities/sals", label: "SALS - Shared Access Lab Services" },
         { href: "/facilities/entrepreneurship", label: "Technology Driven Entrepreneurship" },
-        { href: "/facilities/serviceoffered", label: "Services Offered" },
+        { href: "/facilities/service-offered", label: "Services Offered" },
       ]
     },
     { href: "/projects", label: "Projects", icon: <MdOutlineScience size={16} /> },
