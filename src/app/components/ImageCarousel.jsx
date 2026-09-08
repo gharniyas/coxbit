@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "./CloudinaryImage";
 
 export default function ImageCarousel({ images, alt = "", intervalMs = 3000 }) {
   const [current, setCurrent] = useState(0);

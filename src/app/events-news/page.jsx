@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+import Image from "../components/CloudinaryImage";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { events, featuredEvent } from "./eventsData";

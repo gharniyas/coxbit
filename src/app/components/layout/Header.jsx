@@ -11,7 +11,7 @@ import {
 import { AiOutlineHome } from "react-icons/ai";
 import { BsBuilding, BsCalendarEvent, BsThreeDotsVertical } from "react-icons/bs";
 import { FaFlask, FaCheckCircle } from "react-icons/fa";
-import Image from "next/image";
+import Image from "../CloudinaryImage";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
