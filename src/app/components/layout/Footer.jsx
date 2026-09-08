@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../CloudinaryImage";
 import React from "react";
 import {
   FaFacebookF,

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "../components/CloudinaryImage";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 const socialLinks = [
