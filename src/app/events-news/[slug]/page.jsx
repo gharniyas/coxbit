@@ -2,7 +2,8 @@ import Image from "../../components/CloudinaryImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ImageCarousel from "../../components/ImageCarousel";
-import { events, featuredEvent, getEventBySlug } from "../eventsData";
+import { events, featuredEvent } from "../eventsData";
+import { getEventBySlugFromApi } from "../eventsApi";
 
 export function generateStaticParams() {
   return [...events, featuredEvent].map((event) => ({ slug: event.slug }));
@@ -10,7 +11,7 @@ export function generateStaticParams() {
 
 export default async function EventDetail({ params }) {
   const { slug } = await params;
-  const event = getEventBySlug(slug);
+  const event = await getEventBySlugFromApi(slug);
 
   if (!event) {
     notFound();

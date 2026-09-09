@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "../components/CloudinaryImage";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
 import { events, featuredEvent } from "./eventsData";
+import { normalizeEvent } from "./eventsApi";
 
 export default function EventsNews() {
-  const highlightImages = [
+  const staticHighlightImages = [
     "/2025-2026/WhatsApp Image 2025-06-02 at 12.53.03 PM(1).jpeg",
     "/2025-2026/WhatsApp Image 2025-06-02 at 12.53.03 PM.jpeg",
     "/2025-2026/WhatsApp Image 2025-06-02 at 12.53.05 PM.jpeg",
@@ -27,6 +28,44 @@ export default function EventsNews() {
     "/2025-2026/WhatsApp Image 2025-07-29 at 10.40.35 AM.jpeg",
     "/2025-2026/WhatsApp Image 2025-08-08 at 6.04.43 PM.jpeg",
   ];
+  const [content, setContent] = useState({
+    events: events.map((event) => ({ ...event, status: "completed" })),
+    upcoming: [{ ...featuredEvent, status: "upcoming" }],
+    highlights: [],
+  });
+
+  useEffect(() => {
+    let mounted = true;
+
+    fetch("/api/events", { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to load events.");
+        return res.json();
+      })
+      .then((data) => {
+        if (!mounted) return;
+        setContent({
+          events: (data.events || []).map(normalizeEvent),
+          upcoming: (data.upcoming || []).map(normalizeEvent),
+          highlights: data.highlights || [],
+        });
+      })
+      .catch(() => {});
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const currentFeaturedEvent = content.upcoming[0] || normalizeEvent(featuredEvent);
+  const visibleEvents = useMemo(
+    () => content.events.filter((event) => event.slug !== currentFeaturedEvent.slug),
+    [content.events, currentFeaturedEvent.slug]
+  );
+  const highlightImages =
+    content.highlights.length > 0
+      ? content.highlights.map((highlight) => highlight.image).filter(Boolean)
+      : staticHighlightImages;
 
   return (
     <div className="min-h-screen bg-amber-100/60">
@@ -58,36 +97,38 @@ export default function EventsNews() {
                 </span>
                 Upcoming Event
               </span>
-              <Link href={`/events-news/${featuredEvent.slug}`}>
+              <Link href={`/events-news/${currentFeaturedEvent.slug}`}>
                 <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200">
-                  {featuredEvent.title}
+                  {currentFeaturedEvent.title}
                 </h2>
               </Link>
               <p className="text-gray-700 font-semibold mt-1">
-                {featuredEvent.date}
+                {currentFeaturedEvent.date}
               </p>
               <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
-                <a
-                  href={featuredEvent.registerLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
-                >
-                  Register
-                </a>
+                {currentFeaturedEvent.registerLink && (
+                  <a
+                    href={currentFeaturedEvent.registerLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+                  >
+                    Register
+                  </a>
+                )}
                 <Link
-                  href={`/events-news/${featuredEvent.slug}`}
+                  href={`/events-news/${currentFeaturedEvent.slug}`}
                   className="inline-block border border-[#6b4226] text-[#6b4226] hover:bg-[#6b4226]/10 font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
                 >
                   View Details
                 </Link>
               </div>
             </div>
-            {featuredEvent.qrImage && (
+            {currentFeaturedEvent.qrImage && (
               <div className="text-center shrink-0">
                 <Image
-                  src={featuredEvent.qrImage}
-                  alt={`QR code to register for ${featuredEvent.title}`}
+                  src={currentFeaturedEvent.qrImage}
+                  alt={`QR code to register for ${currentFeaturedEvent.title}`}
                   width={120}
                   height={120}
                   className="border border-gray-200 rounded-sm"
@@ -130,7 +171,7 @@ export default function EventsNews() {
                 </tr>
               </thead>
               <tbody>
-                {events.map((event, idx) => (
+                {visibleEvents.map((event, idx) => (
                   <tr
                     key={event.slug}
                     className={idx % 2 === 1 ? "bg-amber-50/40" : "bg-white"}
@@ -151,7 +192,7 @@ export default function EventsNews() {
                     </td>
                     <td className="border border-gray-200 px-4 py-3">
                       <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-700">
-                        Completed
+                        {event.status === "upcoming" ? "Upcoming" : "Completed"}
                       </span>
                     </td>
                     <td className="border border-gray-200 px-4 py-3 text-center">
