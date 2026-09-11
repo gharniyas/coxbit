@@ -4,7 +4,7 @@ import OverviewPage from "../components/OverviewPage";
 
 const projectLinks = [
   {
-    href: "/projects/details?tab=0",
+    href: "/projects/dbt-phenomics-platform",
     title: "DBT Phenomics Platform",
     subtitle: "Climate-Smart Agriculture",
     description:
@@ -12,7 +12,7 @@ const projectLinks = [
     icon: <GiPlantSeed size={26} />,
   },
   {
-    href: "/projects/details?tab=1",
+    href: "/projects/native-species-seed-vault",
     title: "Native Species",
     subtitle: "Seed Vault",
     description:
@@ -20,7 +20,7 @@ const projectLinks = [
     icon: <FaSeedling size={26} />,
   },
   {
-    href: "/projects/details?tab=2",
+    href: "/projects/tnapex-msme-programme",
     title: "TNAPEx MSME",
     subtitle: "Programme",
     description:
@@ -28,7 +28,7 @@ const projectLinks = [
     icon: <FaStore size={26} />,
   },
   {
-    href: "/projects/details?tab=3",
+    href: "/projects/birac-e-yuva-programme",
     title: "BIRAC E-YUVA",
     subtitle: "Programme",
     description:

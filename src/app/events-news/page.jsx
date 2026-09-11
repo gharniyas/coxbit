@@ -57,10 +57,15 @@ export default function EventsNews() {
     };
   }, []);
 
-  const currentFeaturedEvent = content.upcoming[0] || normalizeEvent(featuredEvent);
+  const upcomingEvents =
+    content.upcoming.length > 0 ? content.upcoming : [normalizeEvent(featuredEvent)];
+  const upcomingSlugs = useMemo(
+    () => new Set(upcomingEvents.map((event) => event.slug)),
+    [upcomingEvents]
+  );
   const visibleEvents = useMemo(
-    () => content.events.filter((event) => event.slug !== currentFeaturedEvent.slug),
-    [content.events, currentFeaturedEvent.slug]
+    () => content.events.filter((event) => !upcomingSlugs.has(event.slug)),
+    [content.events, upcomingSlugs]
   );
   const highlightImages =
     content.highlights.length > 0
@@ -86,59 +91,62 @@ export default function EventsNews() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Featured Upcoming Event */}
-        <section id="upcoming-events" className="scroll-mt-24">
-          <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
-            <div className="flex-1 text-center md:text-left">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#6b4226] text-white mb-3">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
+        {/* Featured Upcoming Event(s) */}
+        <section id="upcoming-events" className="scroll-mt-24 space-y-6">
+          {upcomingEvents.map((event) => (
+            <div
+              key={event.slug}
+              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6"
+            >
+              <div className="flex-1 text-center md:text-left">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#6b4226] text-white mb-3">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
+                  </span>
+                  Upcoming Event
                 </span>
-                Upcoming Event
-              </span>
-              <Link href={`/events-news/${currentFeaturedEvent.slug}`}>
-                <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200">
-                  {currentFeaturedEvent.title}
-                </h2>
-              </Link>
-              <p className="text-gray-700 font-semibold mt-1">
-                {currentFeaturedEvent.date}
-              </p>
-              <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
-                {currentFeaturedEvent.registerLink && (
-                  <a
-                    href={currentFeaturedEvent.registerLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
-                  >
-                    Register
-                  </a>
-                )}
-                <Link
-                  href={`/events-news/${currentFeaturedEvent.slug}`}
-                  className="inline-block border border-[#6b4226] text-[#6b4226] hover:bg-[#6b4226]/10 font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
-                >
-                  View Details
+                <Link href={`/events-news/${event.slug}`}>
+                  <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200">
+                    {event.title}
+                  </h2>
                 </Link>
+                <p className="text-gray-700 font-semibold mt-1">{event.date}</p>
+                <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
+                  {event.registerLink && (
+                    <a
+                      href={event.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+                    >
+                      Register
+                    </a>
+                  )}
+                  <Link
+                    href={`/events-news/${event.slug}`}
+                    className="inline-block border border-[#6b4226] text-[#6b4226] hover:bg-[#6b4226]/10 font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+                  >
+                    View Details
+                  </Link>
+                </div>
               </div>
+              {event.qrImage && (
+                <div className="text-center shrink-0">
+                  <Image
+                    src={event.qrImage}
+                    alt={`QR code to register for ${event.title}`}
+                    width={120}
+                    height={120}
+                    className="border border-gray-200 rounded-sm"
+                  />
+                  <p className="text-xs text-gray-600 font-semibold mt-1">
+                    Scan to Register
+                  </p>
+                </div>
+              )}
             </div>
-            {currentFeaturedEvent.qrImage && (
-              <div className="text-center shrink-0">
-                <Image
-                  src={currentFeaturedEvent.qrImage}
-                  alt={`QR code to register for ${currentFeaturedEvent.title}`}
-                  width={120}
-                  height={120}
-                  className="border border-gray-200 rounded-sm"
-                />
-                <p className="text-xs text-gray-600 font-semibold mt-1">
-                  Scan to Register
-                </p>
-              </div>
-            )}
-          </div>
+          ))}
         </section>
 
         {/* Trainings & Events */}

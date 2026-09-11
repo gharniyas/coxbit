@@ -33,7 +33,11 @@ export default async function StartupProfilePage({ params }) {
 
       <div className="mx-auto max-w-4xl px-4 py-8">
         <Link
-          href="/facilities/entrepreneurship"
+          href={
+            profile.space === "Cabin Space"
+              ? "/facilities/entrepreneurship"
+              : "/facilities/entrepreneurship/floor-knowledge-space"
+          }
           className="inline-flex items-center text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f]"
         >
           &larr; Back to Entrepreneurship Facilities

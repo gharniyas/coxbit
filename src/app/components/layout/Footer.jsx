@@ -15,23 +15,72 @@ import { BsBuilding, BsCalendarEvent } from "react-icons/bs";
 const Footer = () => {
   const navigationLinks = [
     { href: "/", label: "Home", icon: <AiOutlineHome size={16} /> },
-    { href: "/about", label: "About", icon: <MdOutlineInfo size={16} /> },
+    {
+      label: "About",
+      icon: <MdOutlineInfo size={16} />,
+      submenu: [
+        { href: "/about", label: "About COXBIT" },
+        { href: "/about/why-coxbit", label: "Why COXBIT" },
+        { href: "/about/key-focus-areas", label: "Key Focus Areas" },
+        { href: "/about/team", label: "COXBIT Team" },
+      ],
+    },
     {
       label: "Facilities",
       icon: <BsBuilding size={16} />,
       submenu: [
-        { href: "/facilities/sals", label: "SALS - Shared Access Lab Services" },
-        { href: "/facilities/entrepreneurship", label: "Technology Driven Entrepreneurship" },
+        {
+          label: "SALS - Shared Access Lab Services",
+          submenu: [
+            { href: "/facilities/sals", label: "Molecular Biology Lab" },
+            { href: "/facilities/sals/proteomics-metabolomics", label: "Proteomics & Metabolomics" },
+            { href: "/facilities/sals/tissue-culture", label: "Tissue Culture Facility" },
+            { href: "/facilities/sals/cold-room", label: "Cold Room Facility" },
+            { href: "/facilities/sals/bioinformatics-server", label: "Bioinformatics Server" },
+          ],
+        },
+        {
+          label: "Technology Driven Entrepreneurship",
+          submenu: [
+            { href: "/facilities/entrepreneurship", label: "Cabin Space" },
+            { href: "/facilities/entrepreneurship/floor-knowledge-space", label: "Floor / Knowledge Space" },
+          ],
+        },
         { href: "/facilities/service-offered", label: "Services Offered" },
       ]
     },
-    { href: "/projects", label: "Projects", icon: <MdOutlineScience size={16} /> },
+    {
+      label: "Projects",
+      icon: <MdOutlineScience size={16} />,
+      submenu: [
+        { href: "/projects/dbt-phenomics-platform", label: "DBT Phenomics Platform" },
+        { href: "/projects/native-species-seed-vault", label: "Native Species Seed Vault" },
+        { href: "/projects/tnapex-msme-programme", label: "TNAPEx MSME Programme" },
+        { href: "/projects/birac-e-yuva-programme", label: "BIRAC E-YUVA Programme" },
+      ],
+    },
     {
       label: "Startup Ecosystem",
       icon: <MdOutlineHandshake size={16} />,
       submenu: [
-        { href: "/startup-ecosystem/partners", label: "Partners" },
-        { href: "/startup-ecosystem/startup-opportunities", label: "Startup Opportunities" },
+        {
+          label: "Partners",
+          submenu: [
+            { href: "/startup-ecosystem/partners", label: "Startup TN" },
+            { href: "/startup-ecosystem/partners/edii-tn", label: "EDII-TN" },
+            { href: "/startup-ecosystem/partners/tnapex", label: "TNAPEx" },
+          ],
+        },
+        {
+          label: "Startup Opportunities",
+          submenu: [
+            { href: "/startup-ecosystem/startup-opportunities", label: "Overview" },
+            { href: "/startup-ecosystem/startup-opportunities/trl-levels", label: "TRL Levels" },
+            { href: "/startup-ecosystem/startup-opportunities/journey", label: "Startup Journey" },
+            { href: "/startup-ecosystem/startup-opportunities/funding", label: "Funding" },
+            { href: "/startup-ecosystem/startup-opportunities/support-faq", label: "Support & FAQ" },
+          ],
+        },
       ]
     },
     { href: "/events-news", label: "Event & Training", icon: <BsCalendarEvent size={16} /> },
@@ -164,12 +213,32 @@ const Footer = () => {
                       <ul className="ml-7 space-y-2">
                         {link.submenu.map((sub, subIndex) => (
                           <li key={subIndex}>
-                            <a
-                              href={sub.href}
-                              className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
-                            >
-                              {sub.label}
-                            </a>
+                            {sub.submenu ? (
+                              <div>
+                                <div className="text-amber-100/90 text-base md:text-lg block font-medium">
+                                  {sub.label}
+                                </div>
+                                <ul className="ml-4 mt-2 space-y-2">
+                                  {sub.submenu.map((nested, nestedIndex) => (
+                                    <li key={nestedIndex}>
+                                      <a
+                                        href={nested.href}
+                                        className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
+                                      >
+                                        {nested.label}
+                                      </a>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <a
+                                href={sub.href}
+                                className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
+                              >
+                                {sub.label}
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>

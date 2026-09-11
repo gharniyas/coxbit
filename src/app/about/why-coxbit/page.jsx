@@ -1,0 +1,88 @@
+import ImageCarousel from "../../components/ImageCarousel";
+
+const transformations = [
+  {
+    icon: "🔬",
+    text: "Transforming Proof-of-Concepts into Market-Ready Biotech Products through Advanced Technical Validation and Infrastructure Support",
+  },
+  {
+    icon: "🚀",
+    text: "Shaping Early-Stage Ideas into Viable Enterprises through Strategic Mentoring, Capacity Building, and Technology-Driven Entrepreneurship Support",
+  },
+  {
+    icon: "👥",
+    text: "Strengthening Human Capital through Capacity Building Programs, Skill Development and Hands-on Training in Advanced Biotechnology",
+  },
+  {
+    icon: "💼",
+    text: "Evolving Innovative Biotech Solutions into Investment-Ready Ventures through Industry Linkages, Market Access and Investor Connect",
+  },
+  {
+    icon: "💰",
+    text: "Enabling access to Government startup funding through scheme linkages, proposal support and guidance on funding opportunities",
+  },
+];
+
+export default function WhyCoxbit() {
+  return (
+    <div className="min-h-screen bg-amber-100/60">
+      {/* Page header banner */}
+      <div className="bg-[#6b4226] text-white">
+        <div className="container mx-auto px-4 py-10 md:py-14">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Centre of Excellence in Biotechnology
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+            Why COXBIT
+          </h1>
+          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
+            The core transformations innovators and startups undergo on
+            their journey with us.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8">
+          <div className="space-y-6">
+            <div>
+              <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
+                Why COXBIT
+              </h2>
+              <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+            </div>
+            <ImageCarousel
+              alt="MoA"
+              images={[
+                "/MoA/IMG_3485.JPG",
+                "/MoA/IMG_9481.JPG",
+                "/MoA/IMG_9487.JPG",
+                "/MoA/IMG_9748.JPG",
+              ]}
+            />
+            <p className="text-gray-700 leading-relaxed mb-6">
+              At COXBIT, we emphasize four core transformations that
+              innovators and startups undergo during their journey. These
+              transformations are designed to ensure that early-stage ideas
+              evolve into scalable, impactful and market-ready biotechnology
+              solutions.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {transformations.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 p-4 bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm"
+                >
+                  <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

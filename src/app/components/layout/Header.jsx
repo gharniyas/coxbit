@@ -7,10 +7,20 @@ import {
   MdOutlineContactPhone,
   MdOutlineRocketLaunch,
   MdOutlineHandshake,
+  MdLightbulb,
+  MdTrackChanges,
+  MdPeople,
 } from "react-icons/md";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsBuilding, BsCalendarEvent, BsThreeDotsVertical } from "react-icons/bs";
-import { FaFlask, FaCheckCircle } from "react-icons/fa";
+import {
+  FaFlask,
+  FaCheckCircle,
+  FaSeedling,
+  FaStore,
+  FaLightbulb,
+} from "react-icons/fa";
+import { GiPlantSeed } from "react-icons/gi";
 import Image from "../CloudinaryImage";
 import { usePathname } from "next/navigation";
 
@@ -18,6 +28,7 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null); // Track which dropdown is open
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState(null); // Track which mobile accordion section is expanded
+  const [mobileOpenSubDropdown, setMobileOpenSubDropdown] = useState(null); // Track which nested mobile accordion section is expanded
   const pathname = usePathname();
 
   const navigationItems = [
@@ -27,23 +38,68 @@ const Header = () => {
       icon: <AiOutlineHome size={24} />,
     },
     {
-      href: "/about",
       label: "About",
       icon: <MdOutlineInfo size={24} />,
+      dropdown: [
+        {
+          href: "/about",
+          label: "About COXBIT",
+          icon: <MdOutlineInfo size={18} className="mr-2" />,
+        },
+        {
+          href: "/about/why-coxbit",
+          label: "Why COXBIT",
+          icon: <MdLightbulb size={18} className="mr-2" />,
+        },
+        {
+          href: "/about/key-focus-areas",
+          label: "Key Focus Areas",
+          icon: <MdTrackChanges size={18} className="mr-2" />,
+        },
+        {
+          href: "/about/team",
+          label: "COXBIT Team",
+          icon: <MdPeople size={18} className="mr-2" />,
+        },
+      ],
     },
     {
       label: "Facilities",
       icon: <BsBuilding size={24} />,
       dropdown: [
         {
-          href: "/facilities/sals",
           label: "SALS - Shared Access Lab Services",
           icon: <FaFlask size={18} className="mr-2" />,
+          dropdown: [
+            { href: "/facilities/sals", label: "Molecular Biology Lab" },
+            {
+              href: "/facilities/sals/proteomics-metabolomics",
+              label: "Proteomics & Metabolomics",
+            },
+            {
+              href: "/facilities/sals/tissue-culture",
+              label: "Tissue Culture Facility",
+            },
+            {
+              href: "/facilities/sals/cold-room",
+              label: "Cold Room Facility",
+            },
+            {
+              href: "/facilities/sals/bioinformatics-server",
+              label: "Bioinformatics Server",
+            },
+          ],
         },
         {
-          href: "/facilities/entrepreneurship",
           label: "Technology Driven Entrepreneurship",
           icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
+          dropdown: [
+            { href: "/facilities/entrepreneurship", label: "Cabin Space" },
+            {
+              href: "/facilities/entrepreneurship/floor-knowledge-space",
+              label: "Floor / Knowledge Space",
+            },
+          ],
         },
         {
           href: "/facilities/service-offered",
@@ -53,9 +109,30 @@ const Header = () => {
       ],
     },
     {
-      href: "/projects",
       label: "Projects",
       icon: <MdOutlineScience size={24} />,
+      dropdown: [
+        {
+          href: "/projects/dbt-phenomics-platform",
+          label: "DBT Phenomics Platform",
+          icon: <GiPlantSeed size={18} className="mr-2" />,
+        },
+        {
+          href: "/projects/native-species-seed-vault",
+          label: "Native Species Seed Vault",
+          icon: <FaSeedling size={18} className="mr-2" />,
+        },
+        {
+          href: "/projects/tnapex-msme-programme",
+          label: "TNAPEx MSME Programme",
+          icon: <FaStore size={18} className="mr-2" />,
+        },
+        {
+          href: "/projects/birac-e-yuva-programme",
+          label: "BIRAC E-YUVA Programme",
+          icon: <FaLightbulb size={18} className="mr-2" />,
+        },
+      ],
     },
     {
       label: "Startup Ecosystem",
@@ -63,14 +140,24 @@ const Header = () => {
       icon: <MdOutlineHandshake size={24} />,
       dropdown: [
         {
-          href: "/startup-ecosystem/partners",
           label: "Partners",
           icon: <FaCheckCircle size={18} className="mr-2" />,
+          dropdown: [
+            { href: "/startup-ecosystem/partners", label: "Startup TN" },
+            { href: "/startup-ecosystem/partners/edii-tn", label: "EDII-TN" },
+            { href: "/startup-ecosystem/partners/tnapex", label: "TNAPEx" },
+          ],
         },
         {
-          href: "/startup-ecosystem/startup-opportunities",
           label: "Startup Opportunities",
           icon: <MdOutlineRocketLaunch size={18} className="mr-2" />,
+          dropdown: [
+            { href: "/startup-ecosystem/startup-opportunities", label: "Overview" },
+            { href: "/startup-ecosystem/startup-opportunities/trl-levels", label: "TRL Levels" },
+            { href: "/startup-ecosystem/startup-opportunities/journey", label: "Startup Journey" },
+            { href: "/startup-ecosystem/startup-opportunities/funding", label: "Funding" },
+            { href: "/startup-ecosystem/startup-opportunities/support-faq", label: "Support & FAQ" },
+          ],
         },
       ],
     },
@@ -172,7 +259,9 @@ const Header = () => {
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 const isDropdownActive = item.dropdown.some((sub) =>
-                  isActiveLink(sub.href),
+                  sub.dropdown
+                    ? sub.dropdown.some((nested) => isActiveLink(nested.href))
+                    : isActiveLink(sub.href),
                 );
                 const isOpen = openDropdown === idx;
                 return (
@@ -230,6 +319,62 @@ const Header = () => {
                       tabIndex={-1}
                     >
                       {item.dropdown.map((sub) => {
+                        if (sub.dropdown) {
+                          const isNestedActive = sub.dropdown.some((nested) =>
+                            isActiveLink(nested.href),
+                          );
+                          return (
+                            <div key={sub.label} className="relative group">
+                              <div
+                                className={`flex items-center justify-between px-3 py-2 text-sm font-semibold transition-colors duration-200 border-l-4 cursor-default ${
+                                  isNestedActive
+                                    ? "border-[#6b4226] bg-[#6b4226]/10 text-[#6b4226]"
+                                    : "border-transparent bg-white text-black group-hover:border-[#6b4226] group-hover:bg-gray-50"
+                                }`}
+                              >
+                                <span className="flex items-center">
+                                  {sub.icon}
+                                  {sub.label}
+                                </span>
+                                <svg
+                                  className="w-3 h-3 ml-2 shrink-0 rotate-90"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M19 9l-7 7-7-7"
+                                  />
+                                </svg>
+                              </div>
+                              <div className="absolute right-full top-0 w-64 bg-white border border-gray-200 rounded shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50">
+                                {sub.dropdown.map((nested) => {
+                                  const isNestedItemActive = isActiveLink(
+                                    nested.href,
+                                  );
+                                  return (
+                                    <a
+                                      key={nested.href}
+                                      href={nested.href}
+                                      className={`block px-3 py-2 text-sm font-semibold transition-colors duration-200 border-l-4 ${
+                                        isNestedItemActive
+                                          ? "border-[#6b4226] bg-[#6b4226]/10 text-[#6b4226]"
+                                          : "border-transparent bg-white text-black hover:border-[#6b4226] hover:bg-gray-50"
+                                      }`}
+                                      onClick={() => setOpenDropdown(null)}
+                                    >
+                                      {nested.label}
+                                    </a>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        }
+
                         const isSubActive = isActiveLink(sub.href);
                         return (
                           <a
@@ -285,7 +430,9 @@ const Header = () => {
             {navigationItems.map((item, idx) => {
               if (item.dropdown) {
                 const isDropdownActive = item.dropdown.some((sub) =>
-                  isActiveLink(sub.href),
+                  sub.dropdown
+                    ? sub.dropdown.some((nested) => isActiveLink(nested.href))
+                    : isActiveLink(sub.href),
                 );
                 const isExpanded = mobileOpenDropdown === idx;
                 return (
@@ -312,16 +459,60 @@ const Header = () => {
                     </button>
                     {isExpanded && (
                       <div className="pl-3">
-                        {item.dropdown.map((sub) => (
-                          <a
-                            key={sub.href}
-                            href={sub.href}
-                            className="block py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            {sub.label}
-                          </a>
-                        ))}
+                        {item.dropdown.map((sub) => {
+                          if (sub.dropdown) {
+                            const subKey = `${idx}-${sub.label}`;
+                            const isSubExpanded =
+                              mobileOpenSubDropdown === subKey;
+                            return (
+                              <div key={sub.label} className="mb-1">
+                                <button
+                                  type="button"
+                                  className="w-full flex items-center justify-between py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
+                                  aria-expanded={isSubExpanded ? "true" : "false"}
+                                  onClick={() =>
+                                    setMobileOpenSubDropdown(
+                                      isSubExpanded ? null : subKey,
+                                    )
+                                  }
+                                >
+                                  <span>{sub.label}</span>
+                                  <BsThreeDotsVertical
+                                    size={16}
+                                    className={`transition-transform duration-200 ${
+                                      isSubExpanded ? "rotate-90" : ""
+                                    }`}
+                                  />
+                                </button>
+                                {isSubExpanded && (
+                                  <div className="pl-3">
+                                    {sub.dropdown.map((nested) => (
+                                      <a
+                                        key={nested.href}
+                                        href={nested.href}
+                                        className="block py-2 px-3 rounded-md text-gray-600 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                      >
+                                        {nested.label}
+                                      </a>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          }
+
+                          return (
+                            <a
+                              key={sub.href}
+                              href={sub.href}
+                              className="block py-2 px-3 rounded-md text-gray-700 hover:text-[#6b4226] hover:bg-[#c89b3c]/10 text-base md:text-lg font-medium"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {sub.label}
+                            </a>
+                          );
+                        })}
                       </div>
                     )}
                   </div>

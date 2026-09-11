@@ -1,6 +1,37 @@
 import Image from "./components/CloudinaryImage";
 import Link from "next/link";
 import PreviewCard from "./components/PreviewCard";
+import { featuredEvent } from "./events-news/eventsData";
+
+const announcements = [
+  {
+    icon: "🏢",
+    title: "Cabin & Floor Space",
+    description:
+      "AC cabins and floor / knowledge space available for startups and entrepreneurs at COXBIT.",
+    cta: "View Location",
+    href: "https://share.google/jYfCbpnv1CZE8ftZ3",
+    external: true,
+  },
+  {
+    icon: "📢",
+    title: featuredEvent.title,
+    description: `Registrations open for ${featuredEvent.date}. Reserve your spot today.`,
+    cta: "Register Now",
+    href: featuredEvent.registerLink,
+    external: true,
+    qrImage: featuredEvent.qrImage,
+  },
+  {
+    icon: "🧪",
+    title: "Analytical Facility at COXBIT, TNAU Campus",
+    description:
+      "Find and reach the Analytical Facility located at the COXBIT, TNAU Campus.",
+    cta: "View Location",
+    href: "https://share.google/HvkLMzoL5ATyAHnek",
+    external: true,
+  },
+];
 
 const sections = [
   {
@@ -10,10 +41,10 @@ const sections = [
       "Our mission, vision, key focus areas and the team driving the Centre of Excellence in Biotechnology forward.",
     image: "/Scrolling Photos/IMG_3507.JPG",
     subLinks: [
-      { href: "/about?tab=0", label: "About COXBIT" },
-      { href: "/about?tab=1", label: "Why COXBIT" },
-      { href: "/about?tab=2", label: "Key Focus Areas" },
-      { href: "/about?tab=3", label: "COXBIT Team" },
+      { href: "/about", label: "About COXBIT" },
+      { href: "/about/why-coxbit", label: "Why COXBIT" },
+      { href: "/about/key-focus-areas", label: "Key Focus Areas" },
+      { href: "/about/team", label: "COXBIT Team" },
     ],
   },
   {
@@ -38,10 +69,10 @@ const sections = [
       "Government and institution funded research projects and programmes currently underway at COXBIT.",
     image: "/TNAPEx/DSC09238.JPG",
     subLinks: [
-      { href: "/projects/details?tab=0", label: "DBT Phenomics Platform" },
-      { href: "/projects/details?tab=1", label: "Native Species Seed Vault" },
-      { href: "/projects/details?tab=2", label: "TNAPEx MSME Programme" },
-      { href: "/projects/details?tab=3", label: "BIRAC E-YUVA Programme" },
+      { href: "/projects/dbt-phenomics-platform", label: "DBT Phenomics Platform" },
+      { href: "/projects/native-species-seed-vault", label: "Native Species Seed Vault" },
+      { href: "/projects/tnapex-msme-programme", label: "TNAPEx MSME Programme" },
+      { href: "/projects/birac-e-yuva-programme", label: "BIRAC E-YUVA Programme" },
     ],
   },
   {
@@ -158,6 +189,72 @@ export default function Home() {
               About COXBIT
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Announcements */}
+      <section className="container mx-auto px-4 py-12">
+        <div className="text-center mb-8">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+            Notice Board
+          </p>
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
+            Announcements
+          </h2>
+          <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3" />
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {announcements.map((item) => (
+            <div
+              key={item.title}
+              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 flex flex-col"
+            >
+              <div className="flex items-start gap-4">
+                <span className="text-3xl shrink-0">{item.icon}</span>
+                <div className="flex-1">
+                  <h3 className="font-serif text-lg font-bold text-[#6b4226] leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-4 flex items-center justify-between gap-4">
+                {item.external ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                  >
+                    {item.cta}
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                  >
+                    {item.cta}
+                    <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                )}
+
+                {item.qrImage && (
+                  <Image
+                    src={item.qrImage}
+                    alt={`QR code to register for ${item.title}`}
+                    width={56}
+                    height={56}
+                    className="border border-gray-200 rounded-sm shrink-0"
+                  />
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
