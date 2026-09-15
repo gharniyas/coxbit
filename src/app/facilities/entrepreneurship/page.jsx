@@ -51,6 +51,12 @@ export default function CabinSpace() {
       images={[
         "/cabinspacing/cabin spacing-1.jpeg",
         "/cabinspacing/cabin spacing-2.jpeg",
+        "/cabinspacing/10.JPG",
+        "/cabinspacing/15.JPG",
+        "/cabinspacing/17.JPG",
+        "/cabinspacing/IMG_9658.JPG",
+        "/cabinspacing/IMG_9748.JPG",
+        "/cabinspacing/Sigend MoA with Aviva Organics.JPG",
       ]}
       content={`
         <p>Individual air-conditioned (AC) cabins for startups, established companies, R&amp;D organizations, and institutions to showcase technologies, products, research outcomes, and innovations.</p>

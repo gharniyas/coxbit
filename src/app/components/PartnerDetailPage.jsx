@@ -7,6 +7,8 @@ const galleryImages = [
   "/TNAPEx/Recovered_jpg_file(4291).jpg",
   "/TNAPEx/Recovered_jpg_file(4298).jpg",
   "/TNAPEx/WhatsApp Image 2026-06-05 at 17.26.10.jpeg",
+  "/TNAPEx/4D2A9912.JPG",
+  "/TNAPEx/FBM.jpeg",
 ];
 
 export default function PartnerDetailPage({ title, children }) {
