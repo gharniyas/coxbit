@@ -16,6 +16,7 @@ export default function ProjectDetailPage({
   content,
   outlay,
   fundedBy,
+  images,
 }) {
   return (
     <div className="min-h-screen bg-amber-100/60">
@@ -42,7 +43,7 @@ export default function ProjectDetailPage({
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
 
-          <ImageCarousel alt="COXBIT Projects" images={galleryImages} />
+          <ImageCarousel alt="COXBIT Projects" images={images || galleryImages} />
 
           <div className="space-y-3 text-gray-700 leading-relaxed">
             {content.map((paragraph, index) => (

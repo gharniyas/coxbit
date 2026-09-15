@@ -6,6 +6,12 @@ export default function DbtPhenomicsPlatform() {
       fullTitle="COXBIT DBT–Supported Phenomics Platform for Climate-Smart Agriculture"
       outlay="₹339.32 lakhs"
       fundedBy="Department of Biotechnology (DBT), Government of India"
+      images={[
+        "/dbt phenomics/1.png",
+        "/dbt phenomics/2.JPG",
+        "/dbt phenomics/3.JPG",
+        "/dbt phenomics/4.JPG",
+      ]}
       content={[
         "The Centre of Excellence in Biotechnology (COXBIT) has established an advanced Phenomics Platform as a DBT-funded programme, supported by the Department of Biotechnology (DBT), Government of India under the DBT–Builder Programme, with a project outlay of ₹339.32 lakhs. This facility represents a significant advancement in high-throughput plant phenotyping, enabling precise evaluation of crop responses under water deficit and environmental stress conditions.",
         "The platform enables precision phenotyping of mapping populations and diverse germplasm lines, supporting detailed analysis of growth, yield, and stress-responsive traits. It plays a crucial role in understanding drought adaptation mechanisms and identifying superior genotypes with enhanced water-use efficiency and climate resilience, thereby contributing to the development of climate-smart crop varieties.",
