@@ -6,6 +6,12 @@ export default function TnapexMsmeProgramme() {
       fullTitle="COXBIT–TNAPEx Programme for MSME Food Product Development and Value Addition"
       outlay="₹20,00,000"
       fundedBy="TNAPEx–RAMP (Raising and Accelerating MSME Performance)"
+      images={[
+        "/TNAPEx/ACS visit.JPG",
+        "/TNAPEx/FBM.jpeg",
+        "/TNAPEx/Recovered_jpg_file(4298).jpg",
+        "/TNAPEx/WhatsApp Image 2026-06-05 at 17.26.10.jpeg",
+      ]}
       content={[
         "The TNAPEx – Supporting MSMEs in New Product Design and Technical Assistance Initiative is a flagship programme aimed at strengthening innovation, entrepreneurship, and value addition in the food processing sector across Tamil Nadu. Implemented under the TNAPEx–RAMP (Raising and Accelerating MSME Performance) Programme, it focuses on transforming innovative ideas into commercially viable, market-ready food products with strong societal and market relevance.",
         "Under this initiative, the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University, Coimbatore, serves as a knowledge and technical partner, providing scientific expertise, infrastructure support, and mentoring for product development and commercialization. COXBIT enables the translation of laboratory-level innovations into scalable, industry-ready food solutions, effectively bridging the gap between research and the market.",

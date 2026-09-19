@@ -11,7 +11,7 @@ const galleryImages = [
   "/TNAPEx/FBM.jpeg",
 ];
 
-export default function PartnerDetailPage({ title, children }) {
+export default function PartnerDetailPage({ title, children, images }) {
   return (
     <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
@@ -37,7 +37,7 @@ export default function PartnerDetailPage({ title, children }) {
           </h2>
           <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-6" />
 
-          <ImageCarousel alt="COXBIT Ecosystem Partners" images={galleryImages} />
+          <ImageCarousel alt="COXBIT Ecosystem Partners" images={images || galleryImages} />
 
           {children}
         </div>

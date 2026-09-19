@@ -6,6 +6,13 @@ export default function NativeSpeciesSeedVault() {
       fullTitle="Establishment of Native Species Seed Vault with Cryogenic Facility"
       outlay="₹10.50 lakh"
       fundedBy="Government of Tamil Nadu"
+      images={[
+        "/native seed/1750895789466.jpg",
+        "/native seed/1756560778406.jpg",
+        "/native seed/1759791577525.jpg",
+        "/native seed/1762614115004.jpg",
+        "/native seed/1762615528170.jpg",
+      ]}
       content={[
         "The Centre of Excellence in Biotechnology (COXBIT) has obtained approval from the Government of Tamil Nadu for the project titled 'Establishment of a Native Species Seed Vault with Cryogenic Facility.' This initiative marks a significant step towards the conservation and safeguarding of Tamil Nadu's native and endemic plant genetic resources.",
         "The proposed Seed Vault will serve as a state-level germplasm repository, ensuring long-term preservation of indigenous plant species through cryogenic storage and advanced biotechnological conservation methods. By maintaining seeds and propagules at ultra-low temperatures, the facility will protect rare, threatened, and economically important native species from genetic erosion, habitat loss, and environmental stress, thereby strengthening biodiversity conservation efforts in the state.",

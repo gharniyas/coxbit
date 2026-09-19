@@ -2,7 +2,15 @@ import PartnerDetailPage from "../../components/PartnerDetailPage";
 
 export default function StartupTN() {
   return (
-    <PartnerDetailPage title="Tamil Nadu Startup and Innovation Mission (StartupTN)">
+    <PartnerDetailPage
+      title="Tamil Nadu Startup and Innovation Mission (StartupTN)"
+      images={[
+        "/StartupTN/3.JPG",
+        "/StartupTN/1760182487918.jpg",
+        "/StartupTN/IMG_1442.JPG",
+        "/StartupTN/StartupTN.jpeg",
+      ]}
+    >
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
           The StartupTN is the Government of Tamil Nadu's dedicated initiative
