@@ -145,7 +145,7 @@ export default function CoxbitTeam() {
                       alt={chairman.name}
                       width={192}
                       height={192}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                       priority
                     />
                   </div>

@@ -34,7 +34,7 @@ const startupJourney = [
 export default function Journey() {
   return (
     <StartupOpportunityPage>
-      <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6">
+      <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-4 md:px-4 md:py-5">
         <h2 className="font-serif text-2xl font-bold text-[#6b4226] mb-1">
           Startup Journey: From Idea to Enterprise
         </h2>

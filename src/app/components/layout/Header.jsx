@@ -183,8 +183,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-2 fixed top-0 left-0 w-full z-30">
-      <div className="flex flex-wrap items-center justify-between min-h-28 gap-y-1 gap-x-2 py-1">
+    <header className="bg-white shadow-xl backdrop-blur-md border-b border-gray-200 px-4 py-1 fixed top-0 left-0 w-full z-30">
+      <div className="flex flex-wrap items-center justify-between min-h-24 gap-y-1 gap-x-2">
         {/* Logo Section */}
         <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pl-2 h-full min-w-0">
           <div className="flex items-center justify-center overflow-hidden shrink-0 w-[92px] h-[58px] sm:w-[122px] sm:h-[76px] md:w-[140px] md:h-[88px] lg:w-[110px] lg:h-[69px] xl:w-[132px] xl:h-[83px] 2xl:w-[152px] 2xl:h-[95px]">
@@ -203,7 +203,7 @@ const Header = () => {
               }}
             />
           </div>
-          <div className="flex items-center justify-start shrink-0 h-[86px] sm:h-[112px] md:h-[128px] lg:h-[102px] xl:h-[124px] 2xl:h-[142px]">
+          <div className="flex items-center justify-start shrink-0 h-[80px] sm:h-[100px] md:h-[112px] lg:h-[90px] xl:h-[104px] 2xl:h-[116px]">
             <Image
               src="/logo-2.png"
               alt="COEB Logo"

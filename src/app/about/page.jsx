@@ -18,30 +18,26 @@ export default function About() {
     <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
-        <div className="container mx-auto px-4 py-10 md:py-14">
-          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+        <div className="container mx-auto px-4 pt-7 pb-4 md:pt-9 md:pb-5">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-1">
             Centre of Excellence in Biotechnology
           </p>
-          <h1 className="font-serif text-3xl md:text-4xl font-bold">
+          <h1 className="font-serif text-2xl md:text-3xl font-bold">
             About COXBIT
           </h1>
-          <p className="text-amber-100 mt-3 max-w-2xl leading-relaxed">
+          <p className="text-amber-100 mt-1 max-w-2xl leading-relaxed">
             Our mission and vision driving the Centre of Excellence in
             Biotechnology forward.
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8">
-          <div className="space-y-6">
-            <div>
-              <h2 className="font-serif text-2xl font-bold text-[#6b4226]">
-                About COXBIT
-              </h2>
-              <div className="w-16 h-1 bg-[#c89b3c] mt-3 mb-4" />
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-4">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-4 md:px-4 md:py-5">
+          <div className="space-y-3">
+            <div className="mx-auto w-full max-w-[min(64rem,max(28rem,calc((100vh-420px)*1.5)))]">
+              <ImageCarousel alt="COXBIT" images={bannerImages} />
             </div>
-            <ImageCarousel alt="COXBIT" images={bannerImages} />
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
                 The Centre of Excellence in Biotechnology (COXBIT) is a

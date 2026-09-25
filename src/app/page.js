@@ -6,18 +6,18 @@ import { featuredEvent } from "./events-news/eventsData";
 const announcements = [
   {
     icon: "🏢",
-    title: "Cabin & Floor Space",
+    title: "Cabin & Floor Space Registration",
     description:
       "AC cabins and floor / knowledge space available for startups and entrepreneurs at COXBIT.",
-    cta: "View Location",
+    cta: "Register Now",
     href: "https://share.google/jYfCbpnv1CZE8ftZ3",
     external: true,
   },
   {
     icon: "📢",
-    title: featuredEvent.title,
-    description: `Registrations open for ${featuredEvent.date}. Reserve your spot today.`,
-    cta: "Register Now",
+    title: "Event Registration",
+    description: `${featuredEvent.title} – registrations open for ${featuredEvent.date}. Reserve your spot today.`,
+    cta: "Register Event",
     href: featuredEvent.registerLink,
     external: true,
     qrImage: featuredEvent.qrImage,
@@ -27,7 +27,7 @@ const announcements = [
     title: "Analytical Facility at COXBIT, TNAU Campus",
     description:
       "Find and reach the Analytical Facility located at the COXBIT, TNAU Campus.",
-    cta: "View Location",
+    cta: "Sample Submission",
     href: "https://share.google/HvkLMzoL5ATyAHnek",
     external: true,
   },
