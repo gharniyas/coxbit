@@ -87,6 +87,8 @@ const Footer = () => {
     { href: "/contact", label: "Contact Us", icon: <MdOutlineContactPhone size={16} /> },
   ];
 
+  const navColumns = [[0, 1, 3, 5, 6], [2], [4]];
+
   const quickLinks = [
     { href: "/privacy", label: "Privacy Policy" },
     { href: "/terms", label: "Terms of Service" },
@@ -125,7 +127,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#4a2c17] text-white mt-16 relative overflow-hidden text-[1.1rem] md:text-[1.15rem]">
       {/* Main Footer Content */}
-      <div className="relative max-w-7xl mx-auto px-4 py-12">
+      <div className="relative max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
@@ -199,121 +201,86 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div>
-            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Navigation</h3>
-            <ul className="space-y-3">
-              {navigationLinks.map((link, index) => (
-                <li key={index}>
-                  {link.submenu ? (
-                    <div>
-                      <div className="text-amber-100 text-base md:text-lg flex items-center gap-2 mb-2 font-medium">
-                        <span className="text-white">{link.icon}</span>
-                        {link.label}
-                      </div>
-                      <ul className="ml-7 space-y-2">
-                        {link.submenu.map((sub, subIndex) => (
-                          <li key={subIndex}>
-                            {sub.submenu ? (
-                              <div>
-                                <div className="text-amber-100/90 text-base md:text-lg block font-medium">
-                                  {sub.label}
-                                </div>
-                                <ul className="ml-4 mt-2 space-y-2">
-                                  {sub.submenu.map((nested, nestedIndex) => (
-                                    <li key={nestedIndex}>
-                                      <a
-                                        href={nested.href}
-                                        className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
-                                      >
-                                        {nested.label}
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ) : (
-                              <a
-                                href={sub.href}
-                                className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg block"
-                              >
-                                {sub.label}
-                              </a>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-amber-100 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg flex items-center gap-2 group"
-                    >
-                      <span className="text-white group-hover:text-[#c89b3c]">{link.icon}</span>
-                      {link.label}
-                    </a>
-                  )}
-                </li>
+          <div className="lg:col-span-2">
+            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-4">Navigation</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-5">
+              {navColumns.map((indexes, colIndex) => (
+                <ul key={colIndex} className="space-y-3">
+                  {indexes.map((i) => {
+                    const link = navigationLinks[i];
+                    return (
+                      <li key={i}>
+                        {link.submenu ? (
+                          <div>
+                            <div className="text-amber-100 text-sm md:text-base flex items-center gap-2 mb-1.5 font-semibold">
+                              <span className="text-white">{link.icon}</span>
+                              {link.label}
+                            </div>
+                            <ul className="ml-6 space-y-1.5">
+                              {link.submenu.map((sub, subIndex) => (
+                                <li key={subIndex}>
+                                  {sub.submenu ? (
+                                    <div>
+                                      <div className="text-amber-100/90 text-sm md:text-base font-medium">
+                                        {sub.label}
+                                      </div>
+                                      <ul className="ml-3 mt-1 space-y-1">
+                                        {sub.submenu.map((nested, nestedIndex) => (
+                                          <li key={nestedIndex}>
+                                            <a
+                                              href={nested.href}
+                                              className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-sm md:text-base block"
+                                            >
+                                              {nested.label}
+                                            </a>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  ) : (
+                                    <a
+                                      href={sub.href}
+                                      className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-sm md:text-base block"
+                                    >
+                                      {sub.label}
+                                    </a>
+                                  )}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ) : (
+                          <a
+                            href={link.href}
+                            className="text-amber-100 hover:text-[#c89b3c] transition-colors duration-200 text-sm md:text-base font-semibold flex items-center gap-2 group"
+                          >
+                            <span className="text-white group-hover:text-[#c89b3c]">{link.icon}</span>
+                            {link.label}
+                          </a>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-base md:text-lg"
+                    className="text-amber-200/80 hover:text-[#c89b3c] transition-colors duration-200 text-sm md:text-base"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-serif text-xl font-bold text-[#c89b3c] mb-6">Contact Info</h3>
-            <div className="space-y-4 text-base md:text-lg">
-              <div className="flex items-start gap-3">
-                <MdEmail className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
-                <div>
-                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Email</p>
-                  <a
-                    href="mailto:coebiotech@tnau.ac.in"
-                    className="text-white hover:text-[#c89b3c] transition-colors"
-                  >
-                    coebiotech@tnau.ac.in
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MdPhone className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
-                <div>
-                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Phone</p>
-                  <a
-                    href="tel:+919487001028"
-                    className="text-white hover:text-[#c89b3c] transition-colors block"
-                  >
-                    +91 94870 01028
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <MdLocationOn className="text-[#c89b3c] mt-1 flex-shrink-0" size={18} />
-                <div>
-                  <p className="text-amber-100 mb-1 font-medium text-base md:text-lg">Address</p>
-                  <p className="text-amber-200/80 leading-relaxed">
-                    Tamil Nadu Agricultural University<br />
-                    Coimbatore - 641 003<br />
-                    Tamil Nadu, India
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
