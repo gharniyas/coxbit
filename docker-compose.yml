@@ -1,0 +1,46 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: coxbit-app:local
+    container_name: coxbit-app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      MONGODB_URI: mongodb://${MONGO_INITDB_ROOT_USERNAME:-coxbit}:${MONGO_INITDB_ROOT_PASSWORD:-coxbit}@mongo:27017/${MONGO_DB_NAME:-coxbit}?authSource=admin
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - coxbit-net
+
+  mongo:
+    image: mongo:4.4
+    container_name: coxbit-mongo
+    restart: unless-stopped
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME:-coxbit}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD:-coxbit}
+      MONGO_INITDB_DATABASE: ${MONGO_DB_NAME:-coxbit}
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - coxbit-net
+
+networks:
+  coxbit-net:
+    driver: bridge
+
+volumes:
+  mongo-data:
