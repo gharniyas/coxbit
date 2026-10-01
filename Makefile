@@ -1,4 +1,4 @@
-COMPOSE := docker compose
+COMPOSE := sudo docker compose
 
 .PHONY: help build up down restart logs logs-app logs-mongo ps clean shell-app shell-mongo
 
