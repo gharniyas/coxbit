@@ -26,17 +26,17 @@ fi
 echo "### Creating a dummy certificate for ${domains[0]} so nginx can start ..."
 cert_path="/etc/letsencrypt/live/${domains[0]}"
 mkdir -p "$data_path/conf/live/${domains[0]}"
-docker compose run --rm --entrypoint "\
+sudo docker compose run --rm --entrypoint "\
   openssl req -x509 -nodes -newkey rsa:$rsa_key_size -days 1 \
     -keyout '$cert_path/privkey.pem' \
     -out '$cert_path/fullchain.pem' \
     -subj '/CN=localhost'" certbot
 
 echo "### Starting nginx ..."
-docker compose up --force-recreate -d nginx
+sudo docker compose up --force-recreate -d nginx
 
 echo "### Deleting dummy certificate for ${domains[0]} ..."
-docker compose run --rm --entrypoint "\
+sudo docker compose run --rm --entrypoint "\
   rm -rf /etc/letsencrypt/live/${domains[0]} && \
   rm -rf /etc/letsencrypt/archive/${domains[0]} && \
   rm -rf /etc/letsencrypt/renewal/${domains[0]}.conf" certbot
@@ -52,7 +52,7 @@ if [ "$staging" != "0" ]; then
   staging_arg="--staging"
 fi
 
-docker compose run --rm --entrypoint "\
+sudo docker compose run --rm --entrypoint "\
   certbot certonly --webroot -w /var/www/certbot \
     $staging_arg \
     $domain_args \
@@ -62,6 +62,6 @@ docker compose run --rm --entrypoint "\
     --non-interactive --force-renewal" certbot
 
 echo "### Reloading nginx with the new certificate ..."
-docker compose exec nginx nginx -s reload
+sudo docker compose exec nginx nginx -s reload
 
 echo "### Done. coxbit.org is now served over HTTPS."
