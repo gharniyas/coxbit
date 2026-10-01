@@ -17,7 +17,7 @@ export const metadata = {
   title: "COXBIT",
   description: "COXBIT - Your trusted technology partner",
   icons: {
-    icon: "/logo.png",
+    icon: "/icon.png",
   },
 };
 
