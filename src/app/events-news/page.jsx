@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "../components/CloudinaryImage";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { events, featuredEvent } from "./eventsData";
+import { events } from "./eventsData";
 import { normalizeEvent } from "./eventsApi";
 
 export default function EventsNews() {
@@ -30,7 +30,7 @@ export default function EventsNews() {
   ];
   const [content, setContent] = useState({
     events: events.map((event) => ({ ...event, status: "completed" })),
-    upcoming: [{ ...featuredEvent, status: "upcoming" }],
+    upcoming: [],
     highlights: [],
   });
 
@@ -57,8 +57,7 @@ export default function EventsNews() {
     };
   }, []);
 
-  const upcomingEvents =
-    content.upcoming.length > 0 ? content.upcoming : [normalizeEvent(featuredEvent)];
+  const upcomingEvents = content.upcoming;
   const upcomingSlugs = useMemo(
     () => new Set(upcomingEvents.map((event) => event.slug)),
     [upcomingEvents]
@@ -93,6 +92,11 @@ export default function EventsNews() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Featured Upcoming Event(s) */}
         <section id="upcoming-events" className="scroll-mt-24 space-y-6">
+          {upcomingEvents.length === 0 && (
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 text-center text-gray-600 font-semibold">
+              No upcoming events
+            </div>
+          )}
           {upcomingEvents.map((event) => (
             <div
               key={event.slug}

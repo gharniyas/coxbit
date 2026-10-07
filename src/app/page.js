@@ -16,7 +16,6 @@ const announcements = [
   {
     icon: "📢",
     title: "Event Registration",
-    description: `${featuredEvent.title} – registrations open for ${featuredEvent.date}. Reserve your spot today.`,
     cta: "Register Event",
     href: featuredEvent.registerLink,
     external: true,
@@ -216,9 +215,11 @@ export default function Home() {
                   <h3 className="font-serif text-lg font-bold text-[#6b4226] leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                    {item.description}
-                  </p>
+                  {item.description && (
+                    <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -243,15 +244,6 @@ export default function Home() {
                   </Link>
                 )}
 
-                {item.qrImage && (
-                  <Image
-                    src={item.qrImage}
-                    alt={`QR code to register for ${item.title}`}
-                    width={56}
-                    height={56}
-                    className="border border-gray-200 rounded-sm shrink-0"
-                  />
-                )}
               </div>
             </div>
           ))}
