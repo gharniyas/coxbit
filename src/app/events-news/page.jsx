@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "../components/CloudinaryImage";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { events } from "./eventsData";
+import { events, featuredEvent } from "./eventsData";
 import { normalizeEvent } from "./eventsApi";
 
 export default function EventsNews() {
@@ -30,7 +30,7 @@ export default function EventsNews() {
   ];
   const [content, setContent] = useState({
     events: events.map((event) => ({ ...event, status: "completed" })),
-    upcoming: [],
+    upcoming: [{ ...featuredEvent, status: "upcoming" }],
     highlights: [],
   });
 
@@ -57,7 +57,8 @@ export default function EventsNews() {
     };
   }, []);
 
-  const upcomingEvents = content.upcoming;
+  const upcomingEvents =
+    content.upcoming.length > 0 ? content.upcoming : [normalizeEvent(featuredEvent)];
   const upcomingSlugs = useMemo(
     () => new Set(upcomingEvents.map((event) => event.slug)),
     [upcomingEvents]

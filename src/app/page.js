@@ -16,6 +16,7 @@ const announcements = [
   {
     icon: "📢",
     title: "Event Registration",
+    description: `${featuredEvent.title} – registrations open for ${featuredEvent.date}. Reserve your spot today.`,
     cta: "Register Event",
     href: featuredEvent.registerLink,
     external: true,
