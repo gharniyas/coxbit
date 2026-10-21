@@ -22,6 +22,9 @@ const floorSpaceUsers = [
   link("bits-informatics"),
   link("home-ideas-technologies"),
   link("dc4-market-research"),
+  link("jithesh-vijayan"),
+  link("coimbatore-ai"),
+  link("secular-foods"),
 ];
 
 export default function FloorKnowledgeSpace() {

@@ -100,7 +100,7 @@ export const startupProfiles = {
   },
   "dr-jini-narayan": {
     slug: "dr-jini-narayan",
-    name: "Dr. Jini Narayan",
+    name: "M/s. EDJS Biome Private Limited",
     image: "/startup/dr-jini-narayan-new.png",
     space: "Cabin Space",
   },
@@ -154,7 +154,7 @@ export const startupProfiles = {
   },
   "ss-tech": {
     slug: "ss-tech",
-    name: "M/s. SS Tech",
+    name: "M/s. SS Techlogix",
     image: "/startup/ss-tech-new.png",
     space: "Cabin Space",
   },
@@ -202,7 +202,7 @@ export const startupProfiles = {
   },
   themolife: {
     slug: "themolife",
-    name: "M/s. Themolife",
+    name: "M/s. Theomlife Pharmaceuticals",
     image: "/startup/themolife.png",
     space: "Cabin Space",
   },
@@ -220,7 +220,7 @@ export const startupProfiles = {
   },
   "sst-microgreen": {
     slug: "sst-microgreen",
-    name: "M/s. SST Microgreen",
+    name: "M/s. Samu Microgreens",
     image: "/startup/sst-microgreen.png",
     space: "Cabin Space",
   },
@@ -232,9 +232,9 @@ export const startupProfiles = {
   },
   "jithesh-vijayan": {
     slug: "jithesh-vijayan",
-    name: "Dr. Jithesh Vijayan",
+    name: "M/s. Neerpaasi Carbon Solutions Pvt. Ltd",
     image: "/startup/jithesh-vijayan.png",
-    space: "Cabin Space",
+    space: "Floor / Knowledge Space",
   },
   "ainiminds-technologies": {
     slug: "ainiminds-technologies",
@@ -260,13 +260,13 @@ export const startupProfiles = {
     slug: "coimbatore-ai",
     name: "M/s. Coimbatore.ai",
     image: "/startup/coimbatore-ai.png",
-    space: "Cabin Space",
+    space: "Floor / Knowledge Space",
   },
   "secular-foods": {
     slug: "secular-foods",
     name: "M/s. Secular Foods",
     image: "/startup/secular-foods.png",
-    space: "Cabin Space",
+    space: "Floor / Knowledge Space",
   },
   "pothigai-innovations": {
     slug: "pothigai-innovations",
