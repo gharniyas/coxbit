@@ -4,8 +4,8 @@ export const featuredEvents = [
     date: "25–27 November 2026",
     title: "3-Day Hands-on Workshop on Metabolomics to Drug Discovery",
     images: ["/events&training/inclicomics-upcoming event.jpeg"],
-    registerLink: "https://tinyurl.com/yts9da2y",
-    qrImage: "/events&training/inclicomics event qr code.jpeg",
+    registerLink: "https://tinyurl.com/3b2ftya7",
+    qrImage: "/events&training/tinyurl_qr_code.jpeg",
     content: `
       <p>A Collaborative Workshop by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), and Insilicomics Research Pvt. Ltd. &mdash; a 3-day hands-on workshop titled &ldquo;Metabolomics to Drug Discovery: From Bench to Bioinformatics &ndash; Discover, Dock &amp; Simulate&rdquo;.</p>
       <p>Join us for an intensive 3-day hands-on workshop covering the complete workflow from plant metabolite profiling to computational drug discovery, with practical exposure to GC-MS/MS, molecular docking, and molecular dynamics simulations.</p>
@@ -40,7 +40,7 @@ export const featuredEvents = [
         <li>Expert guidance and opportunities for research collaboration and networking</li>
       </ul>
       <h3>Registration</h3>
-      <p>Registration link: <a href="https://tinyurl.com/yts9da2y" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/yts9da2y</a></p>
+      <p>Registration link: <a href="https://tinyurl.com/3b2ftya7" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/3b2ftya7</a></p>
       <p>Contact: 7010816481 | 9487582156 | 9488141034<br />Email: coebiotech@tnau.ac.in<br />Web: coxbit.org | insilicomics.in</p>
     `,
   },
