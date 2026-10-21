@@ -2,11 +2,11 @@ import Image from "../../components/CloudinaryImage";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ImageCarousel from "../../components/ImageCarousel";
-import { events, featuredEvent } from "../eventsData";
+import { events, featuredEvents } from "../eventsData";
 import { getEventBySlugFromApi } from "../eventsApi";
 
 export function generateStaticParams() {
-  return [...events, featuredEvent].map((event) => ({ slug: event.slug }));
+  return [...events, ...featuredEvents].map((event) => ({ slug: event.slug }));
 }
 
 export default async function EventDetail({ params }) {

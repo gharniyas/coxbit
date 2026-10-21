@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "../components/CloudinaryImage";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
-import { events, featuredEvent } from "./eventsData";
+import { events, featuredEvents } from "./eventsData";
 import { normalizeEvent } from "./eventsApi";
 
 export default function EventsNews() {
@@ -30,7 +30,7 @@ export default function EventsNews() {
   ];
   const [content, setContent] = useState({
     events: events.map((event) => ({ ...event, status: "completed" })),
-    upcoming: [{ ...featuredEvent, status: "upcoming" }],
+    upcoming: featuredEvents.map((event) => ({ ...event, status: "upcoming" })),
     highlights: [],
   });
 
@@ -58,7 +58,9 @@ export default function EventsNews() {
   }, []);
 
   const upcomingEvents =
-    content.upcoming.length > 0 ? content.upcoming : [normalizeEvent(featuredEvent)];
+    content.upcoming.length > 0
+      ? content.upcoming
+      : featuredEvents.map(normalizeEvent);
   const upcomingSlugs = useMemo(
     () => new Set(upcomingEvents.map((event) => event.slug)),
     [upcomingEvents]
@@ -92,66 +94,92 @@ export default function EventsNews() {
 
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Featured Upcoming Event(s) */}
-        <section id="upcoming-events" className="scroll-mt-24 space-y-6">
-          {upcomingEvents.length === 0 && (
+        <section id="upcoming-events" className="scroll-mt-24">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
+              Upcoming Events
+            </h2>
+            <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
+          </div>
+          {upcomingEvents.length === 0 ? (
             <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 text-center text-gray-600 font-semibold">
               No upcoming events
             </div>
-          )}
-          {upcomingEvents.map((event) => (
-            <div
-              key={event.slug}
-              className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8 flex flex-col md:flex-row items-center gap-6"
-            >
-              <div className="flex-1 text-center md:text-left">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#6b4226] text-white mb-3">
-                  <span className="relative flex h-2.5 w-2.5">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
-                  </span>
-                  Upcoming Event
-                </span>
-                <Link href={`/events-news/${event.slug}`}>
-                  <h2 className="font-serif text-xl md:text-2xl font-bold text-[#6b4226] hover:text-[#8a6a1f] transition-colors duration-200">
-                    {event.title}
-                  </h2>
-                </Link>
-                <p className="text-gray-700 font-semibold mt-1">{event.date}</p>
-                <div className="flex flex-wrap gap-3 mt-4 justify-center md:justify-start">
-                  {event.registerLink && (
-                    <a
-                      href={event.registerLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
+          ) : (
+            <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[#6b4226] text-white">
+                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
+                      Event
+                    </th>
+                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
+                      Date
+                    </th>
+                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
+                      Registration
+                    </th>
+                    <th className="border border-gray-200 px-4 py-3 text-left font-semibold">
+                      Details
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {upcomingEvents.map((event, idx) => (
+                    <tr
+                      key={event.slug}
+                      className={idx % 2 === 1 ? "bg-amber-50/40" : "bg-white"}
                     >
-                      Register
-                    </a>
-                  )}
-                  <Link
-                    href={`/events-news/${event.slug}`}
-                    className="inline-block border border-[#6b4226] text-[#6b4226] hover:bg-[#6b4226]/10 font-semibold px-6 py-2.5 rounded-sm transition-colors duration-200"
-                  >
-                    View Details
-                  </Link>
-                </div>
-              </div>
-              {event.qrImage && (
-                <div className="text-center shrink-0">
-                  <Image
-                    src={event.qrImage}
-                    alt={`QR code to register for ${event.title}`}
-                    width={120}
-                    height={120}
-                    className="border border-gray-200 rounded-sm"
-                  />
-                  <p className="text-xs text-gray-600 font-semibold mt-1">
-                    Scan to Register
-                  </p>
-                </div>
-              )}
+                      <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700">
+                        <Link
+                          href={`/events-news/${event.slug}`}
+                          className="text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+                        >
+                          {event.title}
+                        </Link>
+                      </td>
+                      <td className="border border-gray-200 px-4 py-3 font-semibold text-gray-700 whitespace-nowrap">
+                        {event.date}
+                      </td>
+                      <td className="border border-gray-200 px-4 py-3">
+                        <div className="flex items-center gap-3">
+                          {event.registerLink && (
+                            <a
+                              href={event.registerLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-block bg-[#c89b3c] hover:bg-[#b3872e] text-[#6b4226] font-semibold px-4 py-1.5 rounded-sm text-sm whitespace-nowrap transition-colors duration-200"
+                            >
+                              Register
+                            </a>
+                          )}
+                          {event.qrImage && (
+                            <div className="text-center shrink-0">
+                              <Image
+                                src={event.qrImage}
+                                alt={`QR code to register for ${event.title}`}
+                                width={48}
+                                height={48}
+                                className="border border-gray-200 rounded-sm"
+                              />
+                            </div>
+                          )}
+                        </div>
+                      </td>
+                      <td className="border border-gray-200 px-4 py-3 text-center">
+                        <Link
+                          href={`/events-news/${event.slug}`}
+                          className="inline-block text-sm font-semibold text-[#6b4226] hover:text-[#8a6a1f] hover:underline"
+                        >
+                          View Details &rarr;
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
+          )}
         </section>
 
         {/* Trainings & Events */}

@@ -2,7 +2,12 @@
 import { useState, useEffect } from "react";
 import Image from "./CloudinaryImage";
 
-export default function ImageCarousel({ images, alt = "", intervalMs = 3000 }) {
+export default function ImageCarousel({
+  images,
+  alt = "",
+  intervalMs = 3000,
+  fullWidth = false,
+}) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -21,14 +26,23 @@ export default function ImageCarousel({ images, alt = "", intervalMs = 3000 }) {
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto aspect-[3/2] rounded-xl overflow-hidden shadow mb-6 bg-gray-50">
+    <div
+      className={`relative w-full rounded-xl overflow-hidden shadow mb-6 bg-gray-50 ${
+        fullWidth ? "aspect-[16/9]" : "max-w-4xl mx-auto aspect-[3/2]"
+      }`}
+    >
       {images.map((src, i) => (
         <div
           key={src}
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <Image src={src} alt={alt} fill className="object-contain" />
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className={fullWidth ? "object-cover" : "object-contain"}
+          />
         </div>
       ))}
       {images.length > 1 && (

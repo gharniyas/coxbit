@@ -1,10 +1,11 @@
 import Image from "./components/CloudinaryImage";
 import Link from "next/link";
 import PreviewCard from "./components/PreviewCard";
-import { featuredEvent } from "./events-news/eventsData";
+import { featuredEvents } from "./events-news/eventsData";
 
 const announcements = [
   {
+    id: "cabin-floor-space",
     icon: "🏢",
     title: "Cabin & Floor Space Registration",
     description:
@@ -14,15 +15,18 @@ const announcements = [
     external: true,
   },
   {
+    id: "event-registration",
     icon: "📢",
     title: "Event Registration",
-    description: `${featuredEvent.title} – registrations open for ${featuredEvent.date}. Reserve your spot today.`,
-    cta: "Register Event",
-    href: featuredEvent.registerLink,
-    external: true,
-    qrImage: featuredEvent.qrImage,
+    items: featuredEvents.map((event) => ({
+      description: `${event.title} – registrations open for ${event.date}. Reserve your spot today.`,
+      cta: "Register Event",
+      href: event.registerLink,
+      external: true,
+    })),
   },
   {
+    id: "analytical-facility",
     icon: "🧪",
     title: "Analytical Facility at COXBIT, TNAU Campus",
     description:
@@ -204,10 +208,10 @@ export default function Home() {
           <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 items-start">
           {announcements.map((item) => (
             <div
-              key={item.title}
+              key={item.id}
               className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 flex flex-col"
             >
               <div className="flex items-start gap-4">
@@ -224,28 +228,60 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-4 flex items-center justify-between gap-4">
-                {item.external ? (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
-                  >
-                    {item.cta}
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
-                  >
-                    {item.cta}
-                    <span aria-hidden="true">&rarr;</span>
-                  </Link>
-                )}
-
-              </div>
+              {item.items ? (
+                <div className="mt-4 space-y-4 divide-y divide-amber-200/70">
+                  {item.items.map((sub, idx) => (
+                    <div key={sub.href ?? idx} className={idx === 0 ? "" : "pt-4"}>
+                      {sub.description && (
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {sub.description}
+                        </p>
+                      )}
+                      {sub.external ? (
+                        <a
+                          href={sub.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                        >
+                          {sub.cta}
+                          <span aria-hidden="true">&rarr;</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={sub.href}
+                          className="inline-flex items-center gap-1.5 mt-2 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                        >
+                          {sub.cta}
+                          <span aria-hidden="true">&rarr;</span>
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="mt-4 flex items-center justify-between gap-4">
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                    >
+                      {item.cta}
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#c89b3c] hover:text-[#6b4226] transition-colors duration-200"
+                    >
+                      {item.cta}
+                      <span aria-hidden="true">&rarr;</span>
+                    </Link>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

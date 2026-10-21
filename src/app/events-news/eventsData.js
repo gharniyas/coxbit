@@ -1,24 +1,71 @@
-export const featuredEvent = {
-  slug: "industry-entrepreneurship-career-connect-2026",
-  date: "18–19 December 2026",
-  title: "Industry, Entrepreneurship & Career Connect 2026",
-  images: ["/events&training/upcoming event.jpeg"],
-  registerLink: "https://tinyurl.com/4c72muy4",
-  qrImage: "/events&training/upcomig_event_QR.jpeg",
-  content: `
-    <p>The Industry, Entrepreneurship &amp; Career Connect 2026 is an industry&ndash;academia convergence platform organized by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), Coimbatore, on 18&ndash;19 December 2026.</p>
-    <p>The event brings together students, researchers, industries, MSMEs, startups, entrepreneurs, investors and alumni to explore opportunities for career development, entrepreneurship, technology transfer, industry collaboration and commercialization.</p>
-    <p>The programme features three concurrent sector-specific industry meets covering Agri-Food Industry, Bioinformatics &amp; Artificial Intelligence, and Horticultural Industry, along with a Job Fair, Entrepreneurship Meet, TNAU Alumni Connect, Industry &amp; Technology Exhibition, and COXBIT Incubation Showcase.</p>
-    <p>The event provides a platform to connect talent with industry, showcase innovative technologies and products, facilitate business networking, identify collaboration opportunities, and promote startup and commercialization prospects within the COXBIT innovation ecosystem.</p>
-    <h3>Date</h3>
-    <p>December 18&ndash;19, 2026</p>
-    <h3>Venue</h3>
-    <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University Campus, Coimbatore &ndash; 641 003, Tamil Nadu, India.</p>
-    <h3>Registration</h3>
-    <p>Registration link: <a href="https://tinyurl.com/4c72muy4" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/4c72muy4</a></p>
-    <p>Contact: +91 9487001028; +91 8870281435; +91 7373509696</p>
-  `,
-};
+export const featuredEvents = [
+  {
+    slug: "metabolomics-to-drug-discovery-workshop",
+    date: "25–27 November 2026",
+    title: "3-Day Hands-on Workshop on Metabolomics to Drug Discovery",
+    images: ["/events&training/inclicomics-upcoming event.jpeg"],
+    registerLink: "https://tinyurl.com/yts9da2y",
+    qrImage: "/events&training/inclicomics event qr code.jpeg",
+    content: `
+      <p>A Collaborative Workshop by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), and Insilicomics Research Pvt. Ltd. &mdash; a 3-day hands-on workshop titled &ldquo;Metabolomics to Drug Discovery: From Bench to Bioinformatics &ndash; Discover, Dock &amp; Simulate&rdquo;.</p>
+      <p>Join us for an intensive 3-day hands-on workshop covering the complete workflow from plant metabolite profiling to computational drug discovery, with practical exposure to GC-MS/MS, molecular docking, and molecular dynamics simulations.</p>
+      <h3>Date</h3>
+      <p>November 25&ndash;27, 2026</p>
+      <h3>Venue</h3>
+      <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU) Campus, Coimbatore, Tamil Nadu.</p>
+      <h3>Registration Fee</h3>
+      <p>Rs. 4,000/- (Including GST). Limited to 30 participants.</p>
+      <h3>Who Can Participate?</h3>
+      <p>The workshop is open to:</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li>UG / PG / Ph.D. Students</li>
+        <li>Research Scholars</li>
+        <li>Faculty Members</li>
+        <li>Industry Professionals</li>
+        <li>Graduates and professionals from Life Sciences and related disciplines</li>
+      </ul>
+      <h3>Key Benefits</h3>
+      <p>Participants will gain practical exposure to:</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li>Plant metabolite profiling using GC-MS/MS</li>
+        <li>Sample preparation, injection and GC-MS/MS data interpretation</li>
+        <li>Molecular docking concepts, workflow and hands-on practice</li>
+        <li>Protein and ligand preparation for docking</li>
+        <li>Docking analysis including binding interactions and scoring</li>
+        <li>Molecular dynamics (MD) simulations</li>
+        <li>Protein-only and protein&ndash;ligand simulation workflows</li>
+        <li>MD trajectory analysis and interpretation</li>
+        <li>Integration of metabolomics with computational drug discovery</li>
+        <li>Working with real datasets and practical research workflows</li>
+        <li>Expert guidance and opportunities for research collaboration and networking</li>
+      </ul>
+      <h3>Registration</h3>
+      <p>Registration link: <a href="https://tinyurl.com/yts9da2y" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/yts9da2y</a></p>
+      <p>Contact: 7010816481 | 9487582156 | 9488141034<br />Email: coebiotech@tnau.ac.in<br />Web: coxbit.org | insilicomics.in</p>
+    `,
+  },
+  {
+    slug: "industry-entrepreneurship-career-connect-2026",
+    date: "18–19 December 2026",
+    title: "Industry, Entrepreneurship & Career Connect 2026",
+    images: ["/events&training/upcoming event.jpeg"],
+    registerLink: "https://tinyurl.com/4c72muy4",
+    qrImage: "/events&training/upcomig_event_QR.jpeg",
+    content: `
+      <p>The Industry, Entrepreneurship &amp; Career Connect 2026 is an industry&ndash;academia convergence platform organized by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), Coimbatore, on 18&ndash;19 December 2026.</p>
+      <p>The event brings together students, researchers, industries, MSMEs, startups, entrepreneurs, investors and alumni to explore opportunities for career development, entrepreneurship, technology transfer, industry collaboration and commercialization.</p>
+      <p>The programme features three concurrent sector-specific industry meets covering Agri-Food Industry, Bioinformatics &amp; Artificial Intelligence, and Horticultural Industry, along with a Job Fair, Entrepreneurship Meet, TNAU Alumni Connect, Industry &amp; Technology Exhibition, and COXBIT Incubation Showcase.</p>
+      <p>The event provides a platform to connect talent with industry, showcase innovative technologies and products, facilitate business networking, identify collaboration opportunities, and promote startup and commercialization prospects within the COXBIT innovation ecosystem.</p>
+      <h3>Date</h3>
+      <p>December 18&ndash;19, 2026</p>
+      <h3>Venue</h3>
+      <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University Campus, Coimbatore &ndash; 641 003, Tamil Nadu, India.</p>
+      <h3>Registration</h3>
+      <p>Registration link: <a href="https://tinyurl.com/4c72muy4" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/4c72muy4</a></p>
+      <p>Contact: +91 9487001028; +91 8870281435; +91 7373509696</p>
+    `,
+  },
+];
 
 export const events = [
   {
@@ -393,6 +440,5 @@ export const events = [
 ];
 
 export const getEventBySlug = (slug) =>
-  slug === featuredEvent.slug
-    ? featuredEvent
-    : events.find((e) => e.slug === slug);
+  featuredEvents.find((e) => e.slug === slug) ??
+  events.find((e) => e.slug === slug);

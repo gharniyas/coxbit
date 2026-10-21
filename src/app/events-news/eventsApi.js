@@ -1,4 +1,4 @@
-import { events as staticEvents, featuredEvent as staticFeaturedEvent } from "./eventsData";
+import { events as staticEvents, featuredEvents as staticFeaturedEvents } from "./eventsData";
 
 const DEFAULT_ADMIN_API_URL = "http://localhost:3001/api/public/content";
 
@@ -44,7 +44,7 @@ export function normalizeEvent(event) {
 export function getStaticEventsContent() {
   return {
     events: staticEvents.map((event) => ({ ...event, status: "completed" })),
-    upcoming: [{ ...staticFeaturedEvent, status: "upcoming" }],
+    upcoming: staticFeaturedEvents.map((event) => ({ ...event, status: "upcoming" })),
     highlights: [],
     images: [],
   };

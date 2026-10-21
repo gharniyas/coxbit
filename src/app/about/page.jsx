@@ -31,9 +31,9 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-2">
         <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-3 md:px-4 md:py-4">
-          <div className="space-y-3">
-            <div className="mx-auto w-full max-w-[min(50rem,max(24rem,calc((100vh-480px)*1.5)))]">
-              <ImageCarousel alt="COXBIT" images={bannerImages} />
+          <div className="space-y-4">
+            <div className="w-full">
+              <ImageCarousel alt="COXBIT" images={bannerImages} fullWidth />
             </div>
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-4">
               <p>
