@@ -7,7 +7,7 @@ const services = [
     title: "Analytical Charges for Proteomics & Metabolomics",
     table: [
       [
-        "Sl. No",
+        "S. No",
         "Analysis / Service",
         "Unit",
         "For TNAU (Total)",
@@ -16,7 +16,7 @@ const services = [
       ],
       [
         "1",
-        "GC-MS Volatile profiling + Data acquisition",
+        "GC-MS volatile profiling + Data acquisition",
         "Per sample",
         "2000",
         "2950",
@@ -32,7 +32,7 @@ const services = [
       ],
       ["3", "LC-MS/MS", "Per sample", "3000", "4720", "5900"],
       ["4", "HPLC (Standard+1 Sample)", "Per sample", "2000", "2950", "3540"],
-      ["5", "MALDI-TOFF", "Per Run", "2000", "3540", "4720"],
+      ["5", "MALDI-TOF", "Per Run", "2000", "3540", "4720"],
     ],
     note: (
       <>
@@ -54,14 +54,14 @@ const services = [
       [
         "1",
         "COXBIT - Cabin/Floor space users/TNAU",
-        "Rs. 0.60 per core/hour, Rs.14.40 per core/day",
-        "Rs.14.40 per core/hour, Rs.345.60 per core/day",
+        "Rs. 0.60 per core/hour, Rs. 14.40 per core/day",
+        "Rs. 14.40 per core/hour, Rs. 345.60 per core/day",
       ],
       [
         "2",
         "Other Academic Organizations",
-        "Rs. 0.80 per core/hour, Rs.19.20 per core/day",
-        "Rs.19.20 per core/hour, Rs.576.00 per core/day",
+        "Rs. 0.80 per core/hour, Rs. 19.20 per core/day",
+        "Rs. 19.20 per core/hour, Rs. 576.00 per core/day",
       ],
     ],
     note: (

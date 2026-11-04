@@ -34,7 +34,7 @@ export default function Facilities() {
     <OverviewPage
       eyebrow="COXBIT"
       title="Facilities"
-      description="State of art laboratory facilities"
+      description="State-of-the-art laboratory facilities"
       intro="COXBIT offers shared laboratory infrastructure, dedicated startup workspace and analytical services under one roof, lowering entry barriers for students, researchers, startups and industry partners. Explore each facility below."
       links={facilityLinks}
     />

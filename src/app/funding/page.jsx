@@ -135,7 +135,7 @@ const FundingPage = () => {
       </div>
 
       {/* Funded By Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226]">
@@ -247,7 +247,7 @@ const FundingPage = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#6b4226]">
-              Our Funding Programs
+              Our Funding Programmes
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

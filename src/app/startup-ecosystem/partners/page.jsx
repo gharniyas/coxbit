@@ -13,7 +13,7 @@ export default function StartupTN() {
     >
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
-          The StartupTN is the Government of Tamil Nadu's dedicated initiative
+          StartupTN is the Government of Tamil Nadu's dedicated initiative
           to build and strengthen a dynamic and inclusive startup ecosystem
           across all sectors, including biotechnology, food processing,
           agriculture, healthcare, information technology, manufacturing, and

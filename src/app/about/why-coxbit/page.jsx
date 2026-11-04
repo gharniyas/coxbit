@@ -28,14 +28,11 @@ export default function WhyCoxbit() {
     <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
-        <div className="container mx-auto px-4 pt-7 pb-4 md:pt-9 md:pb-5">
-          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-1">
-            Centre of Excellence in Biotechnology
-          </p>
-          <h1 className="font-serif text-2xl md:text-3xl font-bold">
+        <div className="container mx-auto px-4 py-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+          <h1 className="font-serif text-base md:text-lg font-bold">
             Why COXBIT
           </h1>
-          <p className="text-amber-100 mt-1 max-w-2xl leading-relaxed">
+          <p className="hidden md:block text-amber-100 text-xs leading-snug">
             The core transformations innovators and startups undergo on
             their journey with us.
           </p>
@@ -45,19 +42,20 @@ export default function WhyCoxbit() {
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-4">
         <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-4 md:px-4 md:py-5">
           <div className="space-y-3">
-            <div className="mx-auto w-full max-w-[min(64rem,max(28rem,calc((100vh-420px)*1.5)))]">
-            <ImageCarousel
-              alt="MoA"
-              images={[
-                "/MoA/IMG_3485.JPG",
-                "/MoA/IMG_9481.JPG",
-                "/MoA/IMG_9487.JPG",
-                "/MoA/IMG_9748.JPG",
-              ]}
-            />
+            <div className="w-full">
+              <ImageCarousel
+                alt="MoA"
+                images={[
+                  "/MoA/IMG_3485.JPG",
+                  "/MoA/IMG_9481.JPG",
+                  "/MoA/IMG_9487.JPG",
+                  "/MoA/IMG_9748.JPG",
+                ]}
+                fullWidth
+              />
             </div>
             <p className="text-gray-700 leading-relaxed mb-6">
-              At COXBIT, we emphasize four core transformations that
+              At COXBIT, we emphasize five core transformations that
               innovators and startups undergo during their journey. These
               transformations are designed to ensure that early-stage ideas
               evolve into scalable, impactful and market-ready biotechnology

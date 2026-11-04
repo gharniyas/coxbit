@@ -323,7 +323,7 @@ export const events = [
     sno: 12,
     date: "27.11.2024 to 28.11.2024",
     title:
-      "Hands on Training in Small Molecule Identification Platforms for Metabolomics: GCMSMS",
+      "Hands-on Training in Small Molecule Identification Platforms for Metabolomics: GCMSMS",
     images: ["/events&training/12.jpg"],
     content: `
       <h3>Objectives of the Course</h3>
@@ -340,11 +340,11 @@ export const events = [
     sno: 13,
     date: "07.11.2024 to 08.11.2024",
     title:
-      'Hands on Training in "LC-MS Approaches for Exploration of Nutraceuticals from Edible Plants"',
+      'Hands-on Training in "LC-MS Approaches for Exploration of Nutraceuticals from Edible Plants"',
     images: ["/events&training/13.jpg"],
     content: `
       <h3>Objective of the Course</h3>
-      <p>The Hands on Training Program in LCMS Approaches for Exploration of Nutraceuticals from Edible Plants provides a potential opportunity to PG, Ph.D. students and faculty to know more about the importance and identification of bioactive metabolites using advanced techniques.</p>
+      <p>The Hands-on Training Programme in LCMS Approaches for Exploration of Nutraceuticals from Edible Plants provides a potential opportunity to PG, Ph.D. students and faculty to know more about the importance and identification of bioactive metabolites using advanced techniques.</p>
       <h3>Training Content</h3>
       <p>The programme intends to impart hands on training to the participants on LCMS basic principles, instrumentation and application, LCMS/MS data interpretation and four hands-on sessions on instrumentation of LCMS, qualitative software, quantification basics, sensitivity and linearity, targeted MS and data processing, method development for unknown samples and maintenance of the LCMS/MS instrument etc.</p>
       <h3>Target Participants</h3>
@@ -358,7 +358,7 @@ export const events = [
     sno: 14,
     date: "23.01.2024 & 24.01.2024",
     title:
-      'VCS Hands on Training on High Throughput Analysis of Protein: "MALDI TOF"',
+      'VCS Hands-on Training on High Throughput Analysis of Protein: "MALDI TOF"',
     images: ["/events&training/14.jpg"],
     content: `
       <p>MALDI-TOF MS is one of the most potent proteomics methods that can be used for protein marker/biological markers discovery and helps breeders for selecting suitable cultivars adapted under diverse biotic and abiotic stresses/different developmental stages. It is used for identification of bacterial species, viruses, fungi and parasites. It provides precise, quick, easy and comprehensive information on new species and novel plant proteins. The training programme has been designed to develop trained human resource on basics of MALDI TOF, its software and hardware; sample preparation, analysis and interpretation of analysed data.</p>
@@ -373,7 +373,7 @@ export const events = [
     sno: 15,
     date: "21.12.2023 & 22.12.2023",
     title:
-      "Hands on Training in High Throughput Platforms for Metabolomics: GCMSMS",
+      "Hands-on Training in High Throughput Platforms for Metabolomics: GCMSMS",
     images: ["/events&training/15.jpg"],
     content: `
       <h3>Objectives of the Course</h3>
@@ -393,7 +393,7 @@ export const events = [
     sno: 16,
     date: "28.11.2023 & 29.11.2023",
     title:
-      'Hands on Training on Non-Targeted Metabolomics: Applications of "LC-MS & HPLC" in Plant Metabolomics',
+      'Hands-on Training on Non-Targeted Metabolomics: Applications of "LC-MS & HPLC" in Plant Metabolomics',
     images: ["/events&training/16.jpg"],
     content: `
       <p>LC-MS/MS instrument separates chemical mixtures, identifies and quantifies particular compounds or members in its pathway and substrate of enzymes. This instrument is primarily used in metabolomics for metabolite profiling using either targeted or non-targeted approaches.</p>
@@ -418,7 +418,7 @@ export const events = [
     sno: 17,
     date: "16.10.2023 to 17.10.2023",
     title:
-      'Hands on Training on Innovative Solutions for Protein Characterization: "MALDI TOF-MS"',
+      'Hands-on Training on Innovative Solutions for Protein Characterization: "MALDI TOF-MS"',
     images: ["/events&training/17 a.jpg", "/events&training/17 b.jpg"],
     content: `
       <p>MALDI-TOF MS is one of the most potent proteomics methods that can be used for protein marker/biological markers discovery and helps breeders for selecting suitable cultivars adapted under diverse biotic and abiotic stresses/different developmental stages. It is used for identification of bacterial species, viruses, fungi and parasites. It provides precise, quick, easy and comprehensive information on new species and novel plant proteins. The training programme has been designed to develop trained human resource on basics of MALDI TOF, its software and hardware; sample preparation, analysis and interpretation of analysed data.</p>

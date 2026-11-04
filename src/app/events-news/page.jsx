@@ -186,7 +186,7 @@ export default function EventsNews() {
         <section id="trainings-events" className="mt-16 scroll-mt-24">
           <div className="text-center mb-8">
             <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#6b4226]">
-              Trainings & Events at COXBIT
+              Training & Events at COXBIT
             </h2>
             <div className="w-16 h-1 bg-[#c89b3c] mx-auto mt-3 mb-4" />
           </div>

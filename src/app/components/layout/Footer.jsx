@@ -332,7 +332,7 @@ const Footer = () => {
                 <div className="space-y-1">
                   <div>
                     <a
-                      href="tel:+919489056706"
+                      href="tel:+919487001028"
                       className="text-[#c89b3c] hover:text-white transition-colors text-base md:text-lg"
                     >
                       +91 94870 01028
