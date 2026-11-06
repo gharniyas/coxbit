@@ -7,6 +7,7 @@ export default function ImageCarousel({
   alt = "",
   intervalMs = 3000,
   fullWidth = false,
+  className = "",
 }) {
   const [current, setCurrent] = useState(0);
 
@@ -27,9 +28,9 @@ export default function ImageCarousel({
 
   return (
     <div
-      className={`relative w-full rounded-xl overflow-hidden shadow mb-6 bg-gray-50 ${
-        fullWidth ? "aspect-[16/9]" : "max-w-4xl mx-auto aspect-[3/2]"
-      }`}
+      className={`relative w-full mx-auto rounded-xl overflow-hidden shadow mb-6 bg-gray-50 aspect-[3/2] ${
+        fullWidth ? "max-w-xl" : "max-w-4xl"
+      } ${className}`}
     >
       {images.map((src, i) => (
         <div
@@ -37,12 +38,7 @@ export default function ImageCarousel({
           className="absolute inset-0 transition-opacity duration-700"
           style={{ opacity: i === current ? 1 : 0 }}
         >
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className={fullWidth ? "object-cover" : "object-contain"}
-          />
+          <Image src={src} alt={alt} fill className="object-contain" />
         </div>
       ))}
       {images.length > 1 && (
