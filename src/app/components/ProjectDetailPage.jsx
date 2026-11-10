@@ -20,33 +20,29 @@ export default function ProjectDetailPage({
 }) {
   return (
     <div className="min-h-screen bg-amber-100/60">
-      {/* Page header banner */}
-      <div className="bg-[#6b4226] text-white">
-        <div className="container mx-auto px-4 py-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-          <h1 className="font-serif text-base md:text-lg font-bold">
-            Projects
-          </h1>
-          <p className="hidden md:block text-amber-100 text-xs leading-snug">
-            Government and institution funded research projects and
-            programmes currently underway at COXBIT.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-4">
-        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-4 md:px-4 md:py-5">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-2">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-3 md:px-4 md:py-4">
 
           <div className="w-full">
-            <ImageCarousel alt="COXBIT Projects" images={images || galleryImages} fullWidth />
+            <ImageCarousel
+              alt="COXBIT Projects"
+              images={images || galleryImages}
+              fullWidth
+              className="!max-w-2xl !mb-2"
+            />
           </div>
 
-          <div className="space-y-3 text-gray-700 leading-relaxed">
+          <h1 className="font-serif text-lg md:text-xl font-bold text-[#6b4226]">
+            Projects
+          </h1>
+
+          <div className="space-y-2 text-xs text-gray-700 leading-snug mt-3">
             {content.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
           </div>
 
-          <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-4 rounded-sm">
+          <div className="mt-6 bg-gray-50 border border-gray-200 border-l-4 border-l-[#c89b3c] p-4 rounded-sm text-xs">
             {outlay !== "N/A" && (
               <p className="font-semibold text-[#6b4226]">
                 Project Outlay: {outlay}

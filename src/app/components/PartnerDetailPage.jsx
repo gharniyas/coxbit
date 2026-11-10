@@ -14,27 +14,23 @@ const galleryImages = [
 export default function PartnerDetailPage({ title, children, images }) {
   return (
     <div className="min-h-screen bg-amber-100/60">
-      {/* Page header banner */}
-      <div className="bg-[#6b4226] text-white">
-        <div className="container mx-auto px-4 py-2 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-          <h1 className="font-serif text-base md:text-lg font-bold">
-            Ecosystem Partners
-          </h1>
-          <p className="hidden md:block text-amber-100 text-xs leading-snug">
-            Government and institutional partners supporting biotech
-            startups and entrepreneurs at COXBIT.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-4">
-        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-4 md:px-4 md:py-5">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-2">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm px-3 py-3 md:px-4 md:py-4">
 
           <div className="w-full">
-            <ImageCarousel alt="COXBIT Ecosystem Partners" images={images || galleryImages} fullWidth />
+            <ImageCarousel
+              alt="COXBIT Ecosystem Partners"
+              images={images || galleryImages}
+              fullWidth
+              className="!max-w-2xl !mb-2"
+            />
           </div>
 
-          {children}
+          <h1 className="font-serif text-lg md:text-xl font-bold text-[#6b4226]">
+            Ecosystem Partners
+          </h1>
+
+          <div className="mt-3 text-xs leading-snug">{children}</div>
         </div>
       </div>
     </div>

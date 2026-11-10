@@ -23,13 +23,13 @@ export default function About() {
               alt="COXBIT"
               images={bannerImages}
               fullWidth
-              className="!max-w-lg !mb-2"
+              className="!max-w-2xl !mb-2"
             />
           </div>
           <h1 className="font-serif text-lg md:text-xl font-bold text-[#6b4226]">
             About COXBIT
           </h1>
-          <div className="text-sm text-gray-700 leading-snug space-y-2 mt-3">
+          <div className="text-xs text-gray-700 leading-snug space-y-2 mt-3">
             <p>
               The Centre of Excellence in Biotechnology (COXBIT) is a
               pioneering initiative established at Tamil Nadu Agricultural

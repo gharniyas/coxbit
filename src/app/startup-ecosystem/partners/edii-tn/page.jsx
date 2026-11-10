@@ -26,7 +26,7 @@ export default function EdiiTn() {
         </p>
       </div>
       <div className="mt-8 bg-gray-50 border border-gray-200 border-l-4 border-l-[#6b4226] rounded-sm p-6">
-        <h3 className="font-serif text-xl font-bold text-[#6b4226] mb-3">
+        <h3 className="font-serif text-base font-bold text-[#6b4226] mb-3">
           Key Support Services
         </h3>
         <ul className="space-y-2 text-gray-700">
