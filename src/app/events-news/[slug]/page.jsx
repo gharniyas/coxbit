@@ -21,21 +21,21 @@ export default async function EventDetail({ params }) {
     <div className="min-h-screen bg-amber-100/60">
       {/* Page header banner */}
       <div className="bg-[#6b4226] text-white">
-        <div className="container mx-auto px-4 py-10 md:py-14">
+        <div className="container mx-auto px-4 py-1.5 md:py-2">
           <Link
             href="/events-news"
-            className="text-[#c89b3c] hover:text-amber-100 text-sm font-semibold inline-flex items-center gap-1.5 mb-4"
+            className="text-[#c89b3c] hover:text-amber-100 text-xs font-semibold inline-flex items-center gap-1.5 mb-1"
           >
             &larr; Back to Events &amp; Training
           </Link>
-          <p className="text-[#c89b3c] uppercase tracking-widest text-xs font-semibold mb-2">
+          <p className="text-[#c89b3c] uppercase tracking-widest text-[10px] font-semibold mb-0.5">
             {event.date}
           </p>
-          <h1 className="font-serif text-2xl md:text-4xl font-bold">
+          <h1 className="font-serif text-xs md:text-sm font-bold">
             {event.title}
           </h1>
           {event.registerLink && (
-            <div className="flex flex-wrap items-center gap-4 mt-4">
+            <div className="flex flex-wrap items-center gap-4 mt-3">
               <a
                 href={event.registerLink}
                 target="_blank"
@@ -63,8 +63,8 @@ export default async function EventDetail({ params }) {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-6 md:p-8">
+      <div className="max-w-4xl mx-auto px-4 py-4">
+        <div className="bg-gradient-to-b from-amber-50 to-white border border-amber-200/70 rounded-sm shadow-sm p-4 md:p-5">
           {event.images && event.images.length > 0 && (
             <div className="mb-6">
               <ImageCarousel alt={event.title} images={event.images} />
