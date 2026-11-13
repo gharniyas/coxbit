@@ -110,7 +110,9 @@ export const featuredEvents = [
     slug: "industry-entrepreneurship-career-connect-2026",
     date: "18–19 December 2026",
     title: "Industry, Entrepreneurship & Career Connect 2026",
-    images: ["/events&training/upcoming event.jpeg"],
+    images: [
+      "/events&training/Industry, Entrepreneurship & Career Connect 2026.jpeg",
+    ],
     registerLink: "https://tinyurl.com/4c72muy4",
     qrImage: "/events&training/upcomig_event_QR.jpeg",
     content: `
