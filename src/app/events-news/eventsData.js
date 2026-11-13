@@ -1,16 +1,78 @@
 export const featuredEvents = [
   {
+    slug: "agri-pitchfest-3-0-category-1",
+    date: "19 December 2026",
+    title: "Agri PitchFest 3.0 – Category I: Solve the Problem",
+    images: [
+      "/events&training/Agri PitchFest 3.0 category 1 final flyer.jpg.jpeg",
+    ],
+    registerLink: "https://tinyurl.com/4nsfnphe",
+    content: `
+      <p>Agri PitchFest 3.0 &ndash; &ldquo;Innovate today for tomorrow&rsquo;s agriculture&rdquo; &ndash; is organized by the Centre for Plant Molecular Biology and Biotechnology, TNAU E-YUVA &amp; Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University, Coimbatore, with support from BIRAC.</p>
+      <p>Agri PitchFest 3.0 is the third edition of an ideathon organised to foster problem-solving skills, critical thinking and innovation among students. This edition introduces two distinct categories to encourage students to approach real-world challenges from different perspectives. This edition of Agri PitchFest aims not only to improve the problem solving skills but also to identify unmet needs in specific domains or society.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li><strong>Category I &ndash; Solve the Problem:</strong> Developing innovative and practical solutions to pre-identified problem statements.</li>
+        <li><strong>Category II &ndash; Pitch the Problem:</strong> Identifying domain-specific problems.</li>
+      </ul>
+      <h3>Venue</h3>
+      <p>COXBIT, TNAU Campus, Coimbatore.</p>
+      <h3>Category I: Solve the Problem</h3>
+      <p>Open only to students of TNAU main campus, and constituent and affiliated colleges. Participants choose from 20 listed agri-innovation challenge statements and pitch their solutions.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li>Date: 19.12.2026</li>
+        <li>Prizes: 1st &ndash; Rs. 7,000/-, 2nd &ndash; Rs. 5,000/-, 3rd &ndash; Rs. 3,000/-</li>
+        <li>Registration free of cost. Last date for registration and submission of ideas: 30.11.2026</li>
+        <li>Registration link: <a href="https://tinyurl.com/4nsfnphe" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://tinyurl.com/4nsfnphe</a></li>
+      </ul>
+      <h3>Contact</h3>
+      <p>E-YUVA Centre, Department of Plant Biotechnology, CPMB&amp;B, TNAU, Coimbatore &ndash; 641003.<br />Email: uictnau@tnau.ac.in<br />Mobile: 9940972923</p>
+    `,
+  },
+  {
+    slug: "agri-pitchfest-3-0-category-2",
+    date: "18 December 2026",
+    title: "Agri PitchFest 3.0 – Category II: Pitch the Problem",
+    images: [
+      "/events&training/Agri PitchFest 3.0 category 2 (1).jpg.jpeg",
+    ],
+    registerLink: "https://bit.ly/3Wq10TU",
+    content: `
+      <p>Agri PitchFest 3.0 &ndash; &ldquo;Innovate today for tomorrow&rsquo;s agriculture&rdquo; &ndash; is organized by the Centre for Plant Molecular Biology and Biotechnology, TNAU E-YUVA &amp; Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University, Coimbatore, with support from BIRAC.</p>
+      <p>Agri PitchFest 3.0 is the third edition of an ideathon organised to foster problem-solving skills, critical thinking and innovation among students. This edition introduces two distinct categories to encourage students to approach real-world challenges from different perspectives. This edition of Agri PitchFest aims not only to improve the problem solving skills but also to identify unmet needs in specific domains or society.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li><strong>Category I &ndash; Solve the Problem:</strong> Developing innovative and practical solutions to pre-identified problem statements.</li>
+        <li><strong>Category II &ndash; Pitch the Problem:</strong> Identifying domain-specific problems.</li>
+      </ul>
+      <h3>Venue</h3>
+      <p>COXBIT, TNAU Campus, Coimbatore.</p>
+      <h3>Category II: Pitch the Problem</h3>
+      <p>Open for all &ndash; students of TNAU as well as institutions other than TNAU pursuing Arts, Science, Engineering or Technology programmes. Teams of two to three members identify a critical problem in their domain, establish its magnitude and explain why it warrants urgent attention.</p>
+      <ul class="list-disc ml-6 mt-2">
+        <li>Date: 18.12.2026</li>
+        <li>Team composition: 2&ndash;3 members per team</li>
+        <li>Presentation: an optional 2&ndash;3 slide PowerPoint presentation</li>
+        <li>Registration is free of cost. Spot registration allowed for this category.</li>
+        <li>Registration link: <a href="https://bit.ly/3Wq10TU" target="_blank" rel="noopener noreferrer" class="text-[#6b4226] underline">https://bit.ly/3Wq10TU</a></li>
+      </ul>
+      <h3>Contact</h3>
+      <p>E-YUVA Centre, Department of Plant Biotechnology, CPMB&amp;B, TNAU, Coimbatore &ndash; 641003.<br />Email: uictnau@tnau.ac.in<br />Mobile: 9940972923</p>
+    `,
+  },
+  {
     slug: "metabolomics-to-drug-discovery-workshop",
-    date: "25–27 November 2026",
+    date: "10–12 December 2026",
     title: "3-Day Hands-on Workshop on Metabolomics to Drug Discovery",
-    images: ["/events&training/inclicomics-upcoming event.jpeg"],
+    images: [
+      "/events&training/FINAL-DESIGN.pdf (1).jpg.jpeg",
+      "/events&training/inclicomics-upcoming event.jpeg",
+    ],
     registerLink: "https://tinyurl.com/3b2ftya7",
     qrImage: "/events&training/tinyurl_qr_code.jpeg",
     content: `
       <p>A Collaborative Workshop by the Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU), and Insilicomics Research Pvt. Ltd. &mdash; a 3-day hands-on workshop titled &ldquo;Metabolomics to Drug Discovery: From Bench to Bioinformatics &ndash; Discover, Dock &amp; Simulate&rdquo;.</p>
       <p>Join us for an intensive 3-day hands-on workshop covering the complete workflow from plant metabolite profiling to computational drug discovery, with practical exposure to GC-MS/MS, molecular docking, and molecular dynamics simulations.</p>
       <h3>Date</h3>
-      <p>November 25&ndash;27, 2026</p>
+      <p>December 10&ndash;12, 2026</p>
       <h3>Venue</h3>
       <p>Centre of Excellence in Biotechnology (COXBIT), Tamil Nadu Agricultural University (TNAU) Campus, Coimbatore, Tamil Nadu.</p>
       <h3>Registration Fee</h3>
